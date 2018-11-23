@@ -12,6 +12,13 @@ module.exports = {
         }
       }
     ],
-    '@neutrinojs/jest'
+    '@neutrinojs/jest',
+    [
+      '@neutrinojs/copy', {
+        patterns: [
+          { from: 'src/static/private/people.json', to: 'people.json' },
+        ],
+      },
+    ]
   ]
 };
