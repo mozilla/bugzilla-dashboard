@@ -1,8 +1,15 @@
 import { hot } from 'react-hot-loader';
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { withStyles } from '@material-ui/core';
 import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import routes from './routes';
+
+const styles = () => ({
+  container: {
+    fontFamily: 'Roboto',
+  },
+});
 
 class App extends Component {
   state = {
@@ -10,10 +17,11 @@ class App extends Component {
   };
 
   render() {
+    const { classes } = this.props;
     const { error } = this.state;
 
     return (
-      <div className="App">
+      <div className={classes.container}>
         {error && <ErrorPanel error={new Error(error)} />}
         <BrowserRouter>
           <Switch>
@@ -27,4 +35,4 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+export default hot(module)(withStyles(styles)(App));
