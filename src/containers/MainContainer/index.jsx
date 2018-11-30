@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import BugzillaComponentSummary from '../BugzillaComponentSummary';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 
@@ -126,7 +127,11 @@ class MainContainer extends Component {
                   {reporteesComponents
                     .sort(sortByComponentName)
                     .map(({ product, component }) => (
-                      <div key={component}>{`${product}::${component}`}</div>
+                      <BugzillaComponentSummary
+                        key={`${product}::${component}`}
+                        product={product}
+                        component={component}
+                      />
                     ))}
                 </div>
                 )}
