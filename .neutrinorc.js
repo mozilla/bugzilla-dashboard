@@ -17,6 +17,7 @@ module.exports = {
       '@neutrinojs/copy', {
         patterns: [
           { from: 'src/static/private/people.json', to: 'people.json' },
+          { from: 'src/static/triageOwners.json', to: 'triageOwners.json' },
         ],
       },
     ]

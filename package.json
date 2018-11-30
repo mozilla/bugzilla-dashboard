@@ -44,6 +44,7 @@
     "jest": "^23",
     "lint-staged": "^8.1.0",
     "neutrino": "^9.0.0-beta.1",
+    "node-fetch": "^2.3.0",
     "webpack": "^4",
     "webpack-cli": "^3",
     "webpack-dev-server": "^3"
