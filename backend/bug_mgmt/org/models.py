@@ -23,3 +23,41 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Category(models.Model):
+    '''
+    A Bugzilla component category
+    '''
+    name = models.CharField(unique=True, max_length=250)
+
+    class Meta:
+        ordering = ('name', )
+
+    def __str__(self):
+        return self.name
+
+
+class Component(models.Model):
+    '''
+    A Bugzilla component
+    '''
+    category = models.ForeignKey(
+        Category,
+        related_name='components',
+        on_delete=models.CASCADE,
+    )
+    name = models.CharField(max_length=250)
+    owner = models.ForeignKey(
+        Person,
+        related_name='components',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+    )
+
+    class Meta:
+        ordering = ('category', 'name', )
+
+    def __str__(self):
+        return '{} - {}'.format(self.category, self.name)
