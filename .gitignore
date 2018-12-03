@@ -65,3 +65,7 @@ build
 
 # Ignore private static content
 private
+
+# Django backend
+*.pyc
+*.sqlite3
