@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Our tools
+    'rest_framework',
+
     # Our apps
     'bug_mgmt.org',
 ]
