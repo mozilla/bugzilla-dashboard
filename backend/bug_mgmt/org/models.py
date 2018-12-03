@@ -1,6 +1,20 @@
 from django.db import models
 
 
+# Note: works on sqlite, not tested on Postgresql
+MANAGED_CTE_QUERY = '''
+WITH RECURSIVE
+  managed_by(id) AS (
+    values({0})
+    UNION
+    select p.id
+    from org_person as p, managed_by
+    where p.manager_id=managed_by.id
+  )
+SELECT * FROM org_person as p
+ WHERE p.id IN managed_by AND p.id != {0};
+'''
+
 class Person(models.Model):
     '''
     Someone in the Mozilla organisation
@@ -23,6 +37,15 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+    def list_managed(self):
+        '''
+        List recursively all the managed people under this person
+        '''
+        if not self.directs.exists():
+            return Person.objects.none()
+
+        return Person.objects.raw(MANAGED_CTE_QUERY.format(self.id))
 
 
 class Category(models.Model):
