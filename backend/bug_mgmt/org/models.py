@@ -47,6 +47,14 @@ class Person(models.Model):
 
         return Person.objects.raw(MANAGED_CTE_QUERY.format(self.id))
 
+    def list_all_components(self):
+        '''
+        List all components managed by this person & all his subordinates
+        '''
+        return Component.objects.filter(
+            owner__in=self.list_managed(),
+        )
+
 
 class Category(models.Model):
     '''

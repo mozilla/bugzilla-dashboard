@@ -52,7 +52,7 @@ class PersonSerializer(serializers.ModelSerializer):
     Get details about a person, hierarchy & components
     '''
     manager = PersonLightSerializer()
-    components = ComponentLightSerializer(many=True)
+    components = ComponentLightSerializer(many=True, source='list_all_components')
 
     class Meta:
         model = Person
