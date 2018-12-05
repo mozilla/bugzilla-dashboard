@@ -69,3 +69,9 @@ private
 # Django backend
 *.pyc
 *.sqlite3
+
+# virtualenv generated files/directories
+backend/bug_mgmt/bin/
+backend/bug_mgmt/lib/
+backend/bug_mgmt/pip-selfcheck.json
+backend/bug_mgmt/pyvenv.cfg
