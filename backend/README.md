@@ -3,8 +3,16 @@
 ## Setup
 
 ```
-mkvirtualenv -p /usr/bin/python3 bug_mgmt
+cd backend
+python3 -m venv bug_mgmt
 pip install -r requirements.txt
+source ./bug_mgmt/bin/activate
+./manage.py migrate
+```
+
+## Start server
+```
+python manage.py runserver
 ```
 
 ## Initial data

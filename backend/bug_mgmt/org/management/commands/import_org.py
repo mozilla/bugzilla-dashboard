@@ -28,9 +28,9 @@ class Command(BaseCommand):
             person, created = Person.objects.get_or_create(
                 email=person['mail'],
                 defaults={
-                    'bugzilla_email': person['bugzillaEmail'],
+                    'bugzilla_email': person.get('bugzillaEmail'),
                     'name': person['cn'],
-                    'title': person['title'],
+                    'title': person.get('title'),
                 }
             )
             if created:
@@ -38,7 +38,7 @@ class Command(BaseCommand):
 
         # Set all manager links
         for person in source:
-            if person['manager'] is None:
+            if person.get('manager') is None:
                 continue
 
             manager_mail = DN_EMAIL.search(person['manager']['dn'])
