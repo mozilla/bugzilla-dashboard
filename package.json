@@ -27,6 +27,7 @@
     "@material-ui/icons": "^3.0.1",
     "@mozilla-frontend-infra/components": "^2.0.0",
     "prop-types": "^15",
+    "query-string": "^6.2.0",
     "react": "^16",
     "react-dom": "^16",
     "react-hot-loader": "^4",
