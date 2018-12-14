@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = ({
+  header: {
+    margin: '0.5rem 0 0.5rem 0',
+  },
+});
 
 const sortByPersonName = (a, b) => (a.cn <= b.cn ? -1 : 1);
 
-const Reportees = ({ ldapEmail, partialOrg }) => (
-  <div style={{ margin: '0 1rem 0 0' }}>
-    <h4>Reportees</h4>
+const Reportees = ({ classes, ldapEmail, partialOrg }) => (
+  <div>
+    <h4 className={classes.header}>Reportees</h4>
     {Object.values(partialOrg)
       .filter(({ cn }) => cn !== ldapEmail)
       .sort(sortByPersonName)
@@ -18,8 +25,9 @@ const Reportees = ({ ldapEmail, partialOrg }) => (
 );
 
 Reportees.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
 };
 
-export default Reportees;
+export default withStyles(styles)(Reportees);

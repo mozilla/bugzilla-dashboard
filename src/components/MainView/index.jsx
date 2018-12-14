@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BugzillaComponent from '../BugzillaComponent';
+import { withStyles } from '@material-ui/core/styles';
+import BugzillaComponentSummary from '../BugzillaComponentSummary';
 import Reportees from '../Reportees';
+
+const styles = ({
+  header: {
+    margin: '0.5rem 0 0.5rem 0',
+  },
+});
 
 const sortByComponentName = (a, b) => {
   let result = (a.product <= b.product);
@@ -11,23 +18,41 @@ const sortByComponentName = (a, b) => {
   return result ? -1 : 1;
 };
 
-const MainView = ({ ldapEmail, partialOrg, bugzillaComponents }) => (
+const MainView = ({
+  classes, ldapEmail, partialOrg, bugzillaComponents, onComponentDrilldown,
+}) => (
   <div key={ldapEmail}>
-    <h3>{partialOrg[ldapEmail].cn}</h3>
+    <h3 className={classes.header}>{partialOrg[ldapEmail].cn}</h3>
     <div style={{ display: 'flex' }}>
       <Reportees ldapEmail={ldapEmail} partialOrg={partialOrg} />
       {Object.values(bugzillaComponents).length > 0 && (
         <div>
-          <h4>Components</h4>
+          <h4 className={classes.header}>Components</h4>
             {Object.values(bugzillaComponents)
               .sort(sortByComponentName)
               .map(({ component, product, metrics }) => (
-                <BugzillaComponent
+                <div
                   key={`${product}::${component}`}
-                  product={product}
-                  component={component}
-                  metrics={metrics}
-                />
+                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                >
+                  <BugzillaComponentSummary
+                    product={product}
+                    component={component}
+                    metrics={metrics}
+                  />
+                  {onComponentDrilldown && (
+                    <button
+                      name={`${product}::${component}`}
+                      value={{ product, component }}
+                      product={product}
+                      component={component}
+                      onClick={onComponentDrilldown}
+                      type="button"
+                    >
+                      Details
+                    </button>
+                  )}
+                </div>
               ))}
         </div>
       )}
@@ -36,13 +61,16 @@ const MainView = ({ ldapEmail, partialOrg, bugzillaComponents }) => (
 );
 
 MainView.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
   bugzillaComponents: PropTypes.shape({}),
+  onComponentDrilldown: PropTypes.func,
 };
 
 MainView.defaultProps = {
   bugzillaComponents: {},
+  onComponentDrilldown: undefined,
 };
 
-export default MainView;
+export default withStyles(styles)(MainView);
