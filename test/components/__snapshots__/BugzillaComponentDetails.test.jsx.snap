@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the details for a Bugzilla component 1`] = `
+<div
+  className="BugzillaComponentDetails-root-1"
+>
+  <div
+    className="BugzillaComponentDetails-header-2"
+  >
+    <div>
+      <h2
+        className="BugzillaComponentDetails-title-3"
+      >
+        Core::DOM: Core & HTML
+      </h2>
+      <h4
+        className="BugzillaComponentDetails-subtitle-4"
+      >
+        someone@mozilla.com
+      </h4>
+    </div>
+  </div>
+</div>
+`;

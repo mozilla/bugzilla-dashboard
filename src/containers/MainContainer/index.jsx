@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MainView from '../../components/MainView';
+import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
@@ -8,8 +9,9 @@ import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 class MainContainer extends Component {
     state = {
       ldapEmail: '',
-      bugzillaComponents: undefined,
+      bugzillaComponents: {},
       partialOrg: undefined,
+      showComponent: undefined,
     };
 
     static propTypes = {
@@ -23,9 +25,11 @@ class MainContainer extends Component {
     constructor(props) {
       super(props);
       const { ldapEmail } = this.props;
-      this.state = { ldapEmail };
+      this.state.ldapEmail = ldapEmail;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
+      this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
     }
 
     async componentDidMount() {
@@ -104,18 +108,42 @@ class MainContainer extends Component {
       this.retrieveData(ldapEmail);
     }
 
+    handleShowComponentDetails(event) {
+      event.preventDefault();
+      this.setState({
+        showComponent: {
+          product: event.target.getAttribute('product'),
+          component: event.target.getAttribute('component'),
+        },
+      });
+    }
+
+    handleComponentBackToMenu(event) {
+      event.preventDefault();
+      this.setState({ showComponent: undefined });
+    }
+
     render() {
       const {
-        ldapEmail, bugzillaComponents, partialOrg,
+        ldapEmail, showComponent, bugzillaComponents, partialOrg,
       } = this.state;
 
       return (
         <div>
-          {partialOrg && (
+          {showComponent && (
+            <BugzillaComponentDetails
+              {...bugzillaComponents[
+                `${showComponent.product}::${showComponent.component}`
+              ]}
+              onGoBack={this.handleComponentBackToMenu}
+            />
+          )}
+          {!showComponent && partialOrg && (
             <MainView
               ldapEmail={ldapEmail}
               partialOrg={partialOrg}
               bugzillaComponents={bugzillaComponents}
+              onComponentDrilldown={this.handleShowComponentDetails}
             />
           )}
         </div>

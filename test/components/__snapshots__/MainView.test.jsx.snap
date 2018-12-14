@@ -2,7 +2,9 @@
 
 exports[`renders Manager who has reportees 1`] = `
 <div>
-  <h3>
+  <h3
+    className="MainView-header-1"
+  >
     Manager
   </h3>
   <div
@@ -12,14 +14,10 @@ exports[`renders Manager who has reportees 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "margin": "0 1rem 0 0",
-        }
-      }
-    >
-      <h4>
+    <div>
+      <h4
+        className="Reportees-header-2"
+      >
         Reportees
       </h4>
       <div>
@@ -34,7 +32,9 @@ exports[`renders Manager who has reportees 1`] = `
       </div>
     </div>
     <div>
-      <h4>
+      <h4
+        className="MainView-header-1"
+      >
         Components
       </h4>
       <div
@@ -45,21 +45,21 @@ exports[`renders Manager who has reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::DOM: Core & HTML
-        </span>
-        <a
-          alt="Number of untriaged bugs"
-          href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-        >
-          944
-        </a>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::DOM: Core & HTML
+          </span>
+          <a
+            alt="Number of untriaged bugs"
+            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+          >
+            944
+          </a>
+        </div>
       </div>
       <div
         style={
@@ -69,15 +69,15 @@ exports[`renders Manager who has reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::DOM: IndexedDB
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::DOM: IndexedDB
+          </span>
+        </div>
       </div>
       <div
         style={
@@ -87,15 +87,15 @@ exports[`renders Manager who has reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::JavaScript Engine
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::JavaScript Engine
+          </span>
+        </div>
       </div>
       <div
         style={
@@ -105,15 +105,15 @@ exports[`renders Manager who has reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Toolkit::Async Tooling
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Toolkit::Async Tooling
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -122,7 +122,9 @@ exports[`renders Manager who has reportees 1`] = `
 
 exports[`renders Someone with no reportees 1`] = `
 <div>
-  <h3>
+  <h3
+    className="MainView-header-1"
+  >
     Someone
   </h3>
   <div
@@ -132,14 +134,10 @@ exports[`renders Someone with no reportees 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "margin": "0 1rem 0 0",
-        }
-      }
-    >
-      <h4>
+    <div>
+      <h4
+        className="Reportees-header-2"
+      >
         Reportees
       </h4>
       <div>
@@ -154,7 +152,9 @@ exports[`renders Someone with no reportees 1`] = `
       </div>
     </div>
     <div>
-      <h4>
+      <h4
+        className="MainView-header-1"
+      >
         Components
       </h4>
       <div
@@ -165,21 +165,21 @@ exports[`renders Someone with no reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::DOM: Core & HTML
-        </span>
-        <a
-          alt="Number of untriaged bugs"
-          href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-        >
-          944
-        </a>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::DOM: Core & HTML
+          </span>
+          <a
+            alt="Number of untriaged bugs"
+            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+          >
+            944
+          </a>
+        </div>
       </div>
       <div
         style={
@@ -189,15 +189,15 @@ exports[`renders Someone with no reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::DOM: IndexedDB
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::DOM: IndexedDB
+          </span>
+        </div>
       </div>
       <div
         style={
@@ -207,15 +207,15 @@ exports[`renders Someone with no reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Core::JavaScript Engine
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Core::JavaScript Engine
+          </span>
+        </div>
       </div>
       <div
         style={
@@ -225,15 +225,15 @@ exports[`renders Someone with no reportees 1`] = `
           }
         }
       >
-        <span
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
+        <div
+          className="BugzillaComponentSummary-root-3"
         >
-          Toolkit::Async Tooling
-        </span>
+          <span
+            className="BugzillaComponentSummary-componentText-4"
+          >
+            Toolkit::Async Tooling
+          </span>
+        </div>
       </div>
     </div>
   </div>
