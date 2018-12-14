@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import BugzillaComponentSummary from '../BugzillaComponentSummary';
+import MainView from '../../components/MainView';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
-
-const sortByPersonName = (a, b) => (a.cn <= b.cn ? -1 : 1);
-
-const sortByComponentName = (a, b) => {
-  let result = (a.product <= b.product);
-  if (a.product === b.product) {
-    result = a.component <= b.component;
-  }
-  return result ? -1 : 1;
-};
+import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 
 class MainContainer extends Component {
     state = {
       ldapEmail: '',
-      reporteesComponents: undefined,
+      bugzillaComponents: undefined,
       partialOrg: undefined,
     };
 
@@ -50,24 +41,45 @@ class MainContainer extends Component {
       return partialOrg;
     }
 
-    async reporteeComponents(bzOwners, partialOrg) {
+    async bugzillaComponents(bzOwners, partialOrg) {
       // bzOwners uses the bugzilla email address as the key
       // while partialOrg uses the LDAP email address
-      const reporteesComponents = Object.values(partialOrg)
+      /* eslint-disable no-param-reassign */
+      const bugzillaComponents = Object.values(partialOrg)
         .reduce((result, { bugzillaEmail, mail }) => {
           const componentsOwned = bzOwners[bugzillaEmail] || bzOwners[mail];
           if (componentsOwned) {
             componentsOwned.forEach(({ product, component }) => {
-              result.push({
+              if (!result[`${product}::${component}`]) {
+                result[`${product}::${component}`] = {};
+              }
+              result[`${product}::${component}`] = {
                 bugzillaEmail: bugzillaEmail || mail,
                 product,
                 component,
-              });
+                metrics: {},
+              };
             });
           }
           return result;
-        }, []);
-      this.setState({ reporteesComponents });
+        }, {});
+      /* eslint-enable no-param-reassign */
+      // This will list the components but will not show metrics
+      this.setState({ bugzillaComponents });
+
+      // Let's fetch the metrics for each component
+      Object.values(bugzillaComponents)
+        .map(async ({ product, component }) => {
+          const metric = 'untriaged';
+          const { count, link } = await getBugsCountAndLink(product, component, metric);
+          bugzillaComponents[`${product}::${component}`].metrics = {
+            [metric]: {
+              count,
+              link,
+            },
+          };
+          this.setState({ bugzillaComponents });
+        });
     }
 
     async retrieveData(ldapEmail) {
@@ -75,13 +87,13 @@ class MainContainer extends Component {
         getBugzillaOwners(),
         this.getReportees(ldapEmail),
       ]);
-      this.reporteeComponents(bzOwners, partialOrg);
+      this.bugzillaComponents(bzOwners, partialOrg);
     }
 
     handleChange(event) {
       this.setState({
         ldapEmail: event.target.value,
-        reporteesComponents: undefined,
+        bugzillaComponents: undefined,
         partialOrg: undefined,
       });
     }
@@ -93,43 +105,18 @@ class MainContainer extends Component {
     }
 
     render() {
-      const { ldapEmail, reporteesComponents, partialOrg } = this.state;
+      const {
+        ldapEmail, bugzillaComponents, partialOrg,
+      } = this.state;
 
       return (
         <div>
           {partialOrg && (
-            <div key={ldapEmail}>
-              <h3>{partialOrg[ldapEmail].cn}</h3>
-              <div style={{ display: 'flex' }}>
-                {partialOrg && (
-                  <div style={{ margin: '0 1rem 0 0' }}>
-                    <h4>Reportees</h4>
-                      {Object.values(partialOrg)
-                        .filter(({ cn }) => cn !== ldapEmail)
-                        .sort(sortByPersonName)
-                        .map(({ cn, mail }) => (
-                          <div key={mail}>
-                            <span>{`${cn} `}</span>
-                          </div>
-                        ))}
-                  </div>
-                )}
-                {reporteesComponents && reporteesComponents.length > 0 && (
-                <div>
-                  <h4>Components</h4>
-                  {reporteesComponents
-                    .sort(sortByComponentName)
-                    .map(({ product, component }) => (
-                      <BugzillaComponentSummary
-                        key={`${product}::${component}`}
-                        product={product}
-                        component={component}
-                      />
-                    ))}
-                </div>
-                )}
-              </div>
-            </div>
+            <MainView
+              ldapEmail={ldapEmail}
+              partialOrg={partialOrg}
+              bugzillaComponents={bugzillaComponents}
+            />
           )}
         </div>
       );
