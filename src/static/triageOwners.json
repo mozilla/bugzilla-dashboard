@@ -1,4 +1,24 @@
 {
+    "someone@mydomain.com": [
+        {
+            "product": "Core",
+            "component": "DOM"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Core & HTML"
+        }
+    ],
+    "manager@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "JavaScript Engine: JIT"
+        },
+        {
+            "product": "Core",
+            "component": "JavaScript Engine"
+        }
+    ],
     "nobody@mozilla.org": [
         {
             "product": "NSS",

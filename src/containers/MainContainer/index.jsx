@@ -97,13 +97,6 @@ class MainContainer extends Component {
 
       return (
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="ldapEmail">
-                LDAP email address:
-              <input id="ldapEmail" type="text" value={ldapEmail} onChange={this.handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
           {partialOrg && (
             <div key={ldapEmail}>
               <h3>{partialOrg[ldapEmail].cn}</h3>
