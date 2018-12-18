@@ -1,9 +1,10 @@
 import { hot } from 'react-hot-loader';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { withStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
-import routes from './routes';
+import Main from '../views/Main';
 
 const styles = () => ({
   container: {
@@ -12,6 +13,10 @@ const styles = () => ({
 });
 
 class App extends Component {
+  static propTypes = {
+    classes: PropTypes.shape({}).isRequired,
+  };
+
   state = {
     error: undefined,
   };
@@ -25,9 +30,7 @@ class App extends Component {
         {error && <ErrorPanel error={new Error(error)} />}
         <BrowserRouter>
           <Switch>
-            {routes.map(props => (
-              <Route key={props.path} {...props} />
-            ))}
+            <Route path="/" component={Main} />
           </Switch>
         </BrowserRouter>
       </div>
