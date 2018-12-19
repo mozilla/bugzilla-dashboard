@@ -3,7 +3,18 @@ module.exports = {
     root: __dirname,
   },
   use: [
-    '@neutrinojs/airbnb',
+    ['@neutrinojs/airbnb',
+      {
+        eslint: {
+          rules: {
+            'react/prop-types': 'off',
+            'react/prefer-stateless-function': 'off',
+            'react/no-access-state-in-setstate': 'off',
+            'react/forbid-prop-types': 'off',
+          }
+        }
+      }
+    ],
     [
       '@neutrinojs/react',
       {
