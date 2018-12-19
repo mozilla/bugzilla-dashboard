@@ -1,32 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import MainTabs from '../MainTabs';
+import BugzillaComponents from '../BugzillaComponents';
+import Reportees from '../Reportees';
 
-const styles = ({
-  content: {
-    display: 'flex',
-  },
-  header: {
-    margin: '0.5rem 0 0 0',
-  },
-});
+class MainView extends React.Component {
+  renderTabContents() {
+    const {
+      ldapEmail, partialOrg, onPersonDetails, teamComponents,
+      bugzillaComponents, onComponentDetails, selectedTabIndex,
+    } = this.props;
+    switch (selectedTabIndex) {
+      case 0: {
+        return (
+          <Reportees
+            ldapEmail={ldapEmail}
+            partialOrg={partialOrg}
+            onPersonDetails={onPersonDetails}
+          />
+        );
+      }
+      case 1: {
+        return (
+          <BugzillaComponents
+            bugzillaComponents={teamComponents}
+            onComponentDetails={onComponentDetails}
+          />
+        );
+      }
+      case 2: {
+        return (
+          <BugzillaComponents
+            bugzillaComponents={bugzillaComponents}
+            onComponentDetails={onComponentDetails}
+          />
+        );
+      }
+      default: {
+        return null;
+      }
+    }
+  }
 
-const MainView = ({
-  ldapEmail, partialOrg, bugzillaComponents, teamComponents,
-  onComponentDetails, onPersonDetails,
-}) => (
-  <div>
-    <MainTabs
-      ldapEmail={ldapEmail}
-      partialOrg={partialOrg}
-      onPersonDetails={onPersonDetails}
-      teamComponents={teamComponents}
-      onComponentDetails={onComponentDetails}
-      bugzillaComponents={bugzillaComponents}
-    />
-  </div>
-);
+  render() {
+    return this.renderTabContents();
+  }
+}
 
 MainView.propTypes = {
   ldapEmail: PropTypes.string.isRequired,
@@ -35,6 +53,7 @@ MainView.propTypes = {
   teamComponents: PropTypes.arrayOf(PropTypes.shape({})),
   onComponentDetails: PropTypes.func.isRequired,
   onPersonDetails: PropTypes.func.isRequired,
+  selectedTabIndex: PropTypes.number.isRequired,
 };
 
 MainView.defaultProps = {
@@ -42,4 +61,4 @@ MainView.defaultProps = {
   teamComponents: [],
 };
 
-export default withStyles(styles)(MainView);
+export default MainView;

@@ -15,6 +15,7 @@ it('renders Someone with no reportees', () => {
         teams={{}}
         onComponentDetails={() => null}
         onPersonDetails={() => null}
+        selectedTabIndex={0}
       />
     ))
     .toJSON();
@@ -31,6 +32,7 @@ it('renders Manager who has reportees', () => {
         teams={{}}
         onComponentDetails={() => null}
         onPersonDetails={() => null}
+        selectedTabIndex={0}
       />
     ))
     .toJSON();
@@ -47,6 +49,7 @@ it('renders Manager who has reportees and teams', () => {
         teams={Object.values(teamsConfig)}
         onComponentDetails={() => null}
         onPersonDetails={() => null}
+        selectedTabIndex={0}
       />
     ))
     .toJSON();
