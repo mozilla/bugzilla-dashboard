@@ -5,6 +5,7 @@ import BugzillaComponentDetails from '../../components/BugzillaComponentDetails'
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
+import METRICS from '../../utils/bugzilla/metrics';
 
 class MainContainer extends Component {
     state = {
@@ -74,14 +75,10 @@ class MainContainer extends Component {
       // Let's fetch the metrics for each component
       Object.values(bugzillaComponents)
         .map(async ({ product, component }) => {
-          const metric = 'untriaged';
-          const { count, link } = await getBugsCountAndLink(product, component, metric);
-          bugzillaComponents[`${product}::${component}`].metrics = {
-            [metric]: {
-              count,
-              link,
-            },
-          };
+          const { metrics } = bugzillaComponents[`${product}::${component}`];
+          await Promise.all(Object.keys(METRICS).map(async (metric) => {
+            metrics[metric] = await getBugsCountAndLink(product, component, metric);
+          }));
           this.setState({ bugzillaComponents });
         });
     }

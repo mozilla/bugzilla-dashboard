@@ -3,30 +3,46 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = ({
-  root: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flex: '1',
-    margin: '0 1rem 0 0',
+  metric: {
+    textAlign: 'center',
   },
-  componentText: {
-    margin: '0 1rem 0 0',
+  button: {
+    display: 'none',
   },
 });
 
-const linkToQuery = (key, metrics, alt) => (
-  <a href={metrics[key].link} alt={alt}>{metrics[key].count}</a>
+const linkToQuery = (key, metrics) => (
+  <a href={metrics[key].link}>{metrics[key].count}</a>
 );
 
 const BugzillaComponentSummary = ({
-  classes, product, component, metrics,
+  classes, product, component, metrics, onComponentDrilldown,
 }) => (
-  <div className={classes.root}>
-    <span className={classes.componentText}>{`${product}::${component}`}</span>
-    {metrics.untriaged
-      && linkToQuery('untriaged', metrics, 'Number of untriaged bugs')
-    }
-  </div>
+  <tr>
+    <td>{`${product}::${component}`}</td>
+    {Object.keys(metrics).map(metric => (
+      metrics[metric] && (
+        <td key={metric} className={classes.metric}>
+          {linkToQuery(metric, metrics)}
+        </td>
+      )
+    ))}
+    {onComponentDrilldown && (
+      <td>
+        <button
+          className={classes.button}
+          name={`${product}::${component}`}
+          value={{ product, component }}
+          product={product}
+          component={component}
+          onClick={onComponentDrilldown}
+          type="button"
+        >
+          Details
+        </button>
+      </td>
+    )}
+  </tr>
 );
 
 BugzillaComponentSummary.propTypes = {
@@ -34,10 +50,12 @@ BugzillaComponentSummary.propTypes = {
   product: PropTypes.string.isRequired,
   component: PropTypes.string.isRequired,
   metrics: PropTypes.shape({}),
+  onComponentDrilldown: PropTypes.func,
 };
 
 BugzillaComponentSummary.defaultProps = {
   metrics: {},
+  onComponentDrilldown: undefined,
 };
 
 export default withStyles(styles)(BugzillaComponentSummary);

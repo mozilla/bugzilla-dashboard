@@ -1,10 +1,7 @@
 import { stringify } from 'query-string';
-import fetchJson from '../fetchJson';
 import settings from './settings';
+import queryBugzilla from './queryBugzilla';
 import METRICS from './metrics';
-
-const queryBugzilla = async queryParameters => (
-  fetchJson(`${settings.BZ_HOST}/rest/bug?${queryParameters}`));
 
 const getBugzillaComponentLink = queryParameters => (
   `${settings.BZ_HOST}/buglist.cgi?${stringify(queryParameters)}`);
@@ -14,11 +11,11 @@ const getBugsCountAndLink = async (product, component, metric) => {
   const baseParams = {
     product,
     component,
-    ...METRICS[metric],
+    ...METRICS[metric].parameters,
   };
   const link = getBugzillaComponentLink(baseParams);
   const { bug_count = 0 } = await queryBugzilla(
-    stringify({ ...baseParams, count_only: 1 }),
+    { ...baseParams, count_only: 1 },
   );
   return { count: bug_count, link };
 };

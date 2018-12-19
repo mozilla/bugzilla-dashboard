@@ -3,10 +3,30 @@
 /* eslint-disable no-multi-spaces */
 const METRICS = {
     untriaged: {
-        f1: 'bug_severity', o1: 'notequals',    v1: 'enhancement',
-        f2: 'keywords',     o2: 'notsubstring', v2: 'meta',
-        f3: 'resolution',   o3: 'isempty',
-        limit: 0,
+        label: 'Untriaged',
+        parameters: {
+            chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
+            priority: '--',
+            resolution: '---',
+            f1: 'flagtypes.name', o1: 'notsubstring', v1: 'needinfo',
+        },
+    },
+    needinfo: {
+        label: 'Needinfo',
+        parameters: {
+            chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
+            priority: '--',
+            resolution: '---',
+            f1: 'flagtypes.name', o1: 'substring', v1: 'needinfo',
+        },
+    },
+    P1: {
+        label: 'P1s',
+        parameters: {
+            chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
+            priority: 'P1',
+            resolution: '---',
+        },
     },
 };
 
