@@ -12,11 +12,39 @@
     "manager@mozilla.com": [
         {
             "product": "Core",
-            "component": "JavaScript Engine: JIT"
+            "component": "DOM: Events"
         },
         {
             "product": "Core",
-            "component": "JavaScript Engine"
+            "component": "Drag and Drop"
+        },
+        {
+            "product": "Core",
+            "component": "Editor"
+        },
+        {
+            "product": "Core",
+            "component": "Event Handling"
+        },
+        {
+            "product": "Core",
+            "component": "HTML: Form Submission"
+        },
+        {
+            "product": "Core",
+            "component": "HTML: Parser"
+        },
+        {
+            "product": "Core",
+            "component": "Keyboard: Navigation"
+        },
+        {
+            "product": "Core",
+            "component": "Selection"
+        },
+        {
+            "product": "Core",
+            "component": "Serializers"
         }
     ],
     "nobody@mozilla.org": [
