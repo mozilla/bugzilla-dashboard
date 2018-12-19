@@ -7,7 +7,9 @@ exports[`renders the details for a Bugzilla component 1`] = `
   <div
     className="BugzillaComponentDetails-header-2"
   >
-    <div>
+    <div
+      className="BugzillaComponentDetails-content-5"
+    >
       <h2
         className="BugzillaComponentDetails-title-3"
       >
@@ -18,6 +20,7 @@ exports[`renders the details for a Bugzilla component 1`] = `
       >
         someone@mozilla.com
       </h4>
+      <div />
     </div>
   </div>
 </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import BugzillaGraph from '../../containers/BugzillaGraph';
+import METRICS from '../../utils/bugzilla/metrics';
 
 const styles = ({
   root: {},
@@ -14,6 +16,9 @@ const styles = ({
   subtitle: {
     margin: '0',
     color: 'gray',
+  },
+  content: {
+    width: '100%',
   },
 });
 
@@ -33,12 +38,25 @@ const BugzillaComponentDetails = ({
           <ArrowBack />
         </a>
       )}
-      <div>
+      <div className={classes.content}>
         <h2 className={classes.title}>{`${product}::${component}`}</h2>
         <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
         {Object.values(metrics).map(metric => (
           metrics[metric] && linkToQuery(metric, metrics, `Number of ${metric} bugs`)
         ))}
+        <BugzillaGraph
+          label={`${product}::${component}`}
+          queries={[
+            {
+              label: 'No priority',
+              parameters: {
+                product,
+                component,
+                ...METRICS.untriaged,
+              },
+            },
+          ]}
+        />
       </div>
     </div>
   </div>

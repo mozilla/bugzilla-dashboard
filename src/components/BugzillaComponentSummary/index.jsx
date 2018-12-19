@@ -6,9 +6,6 @@ const styles = ({
   metric: {
     textAlign: 'center',
   },
-  button: {
-    display: 'none',
-  },
 });
 
 const linkToQuery = (key, metrics) => (
@@ -30,7 +27,6 @@ const BugzillaComponentSummary = ({
     {onComponentDrilldown && (
       <td>
         <button
-          className={classes.button}
           name={`${product}::${component}`}
           value={{ product, component }}
           product={product}
