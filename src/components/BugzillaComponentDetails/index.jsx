@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import DetailView from '../DetailView';
+import BugzillaGraph from '../../containers/BugzillaGraph';
+import METRICS from '../../utils/bugzilla/metrics';
 
 const styles = ({
   subtitle: {
@@ -17,6 +19,9 @@ const styles = ({
   },
   metricLink: {
     textAlign: 'center',
+  },
+  content: {
+    width: '100%',
   },
 });
 
@@ -36,6 +41,27 @@ const BugzillaComponentDetails = ({
           </div>
         )
       ))}
+      <BugzillaGraph
+        label={`${product}::${component}`}
+        queries={[
+          {
+            label: 'No priority',
+            parameters: {
+              product,
+              component,
+              ...METRICS.untriaged.parameters,
+            },
+          },
+          {
+            label: 'Needinfo',
+            parameters: {
+              product,
+              component,
+              ...METRICS.needinfo.parameters,
+            },
+          },
+        ]}
+      />
     </div>
   </DetailView>
 
