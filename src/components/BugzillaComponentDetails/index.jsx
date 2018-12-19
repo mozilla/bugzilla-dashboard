@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import DetailView from '../DetailView';
+import BugzillaGraph from '../../containers/BugzillaGraph';
+import METRICS from '../../utils/bugzilla/metrics';
 
 const styles = ({
   subtitle: {
@@ -10,14 +12,32 @@ const styles = ({
   },
   metric: {
     display: 'grid',
-    gridTemplateColumns: '0.5fr 0.5fr',
+    gridTemplateColumns: '100px 20px',
   },
   metricLabel: {
     textTransform: 'capitalize',
   },
   metricLink: {
-    textAlign: 'center',
+    textAlign: 'right',
   },
+  graphs: {
+    display: 'flex',
+  },
+});
+
+const constructQuery = (metrics, product, component) => Object.values(metrics).map((metric) => {
+  const { label, parameters } = metric;
+  // We need all bugs regardless of their resolution in order to decrease/increase
+  // the number of open bugs per date
+  delete parameters.resolution;
+  return {
+    label,
+    parameters: {
+      product,
+      component,
+      ...parameters,
+    },
+  };
 });
 
 const BugzillaComponentDetails = ({
@@ -26,7 +46,7 @@ const BugzillaComponentDetails = ({
   <DetailView title={`${product}::${component}`} onGoBack={onGoBack}>
     <div>
       <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
-      {Object.keys(metrics).map(metric => (
+      {Object.keys(metrics).sort().map(metric => (
         metrics[metric] && (
           <div key={metric} className={classes.metric}>
             <span className={classes.metricLabel}>{metric}</span>
@@ -36,6 +56,10 @@ const BugzillaComponentDetails = ({
           </div>
         )
       ))}
+      <BugzillaGraph
+        label={`${product}::${component}`}
+        queries={constructQuery(METRICS, product, component)}
+      />
     </div>
   </DetailView>
 

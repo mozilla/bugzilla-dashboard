@@ -81,6 +81,7 @@ class MainContainer extends Component {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(METRICS).map(async (metric) => {
             metrics[metric] = await getBugsCountAndLink(product, component, metric);
+            metrics[metric].label = METRICS[metric].label;
           }));
           this.setState({ bugzillaComponents });
         });
