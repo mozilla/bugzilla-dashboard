@@ -2,21 +2,19 @@
 
 exports[`renders Manager who has reportees 1`] = `
 <div>
-  <h3
-    className="MainView-header-1"
+  <h2
+    className="MainView-header-2"
   >
     Manager
-  </h3>
+  </h2>
   <div
-    style={
-      Object {
-        "display": "flex",
-      }
-    }
+    className="MainView-content-1"
   >
-    <div>
+    <div
+      className="Reportees-root-3"
+    >
       <h4
-        className="Reportees-header-2"
+        className="Reportees-header-4"
       >
         Reportees
       </h4>
@@ -32,89 +30,58 @@ exports[`renders Manager who has reportees 1`] = `
       </div>
     </div>
     <div>
-      <h4
-        className="MainView-header-1"
+      <h3
+        className="MainView-header-2"
       >
         Components
-      </h4>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::DOM: Core & HTML
-          </span>
-          <a
-            alt="Number of untriaged bugs"
-            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-          >
-            944
-          </a>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::DOM: IndexedDB
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::JavaScript Engine
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Toolkit::Async Tooling
-          </span>
-        </div>
-      </div>
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th />
+            <th>
+              Untriaged
+            </th>
+            <th>
+              Needinfo
+            </th>
+            <th>
+              P1s
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Core::DOM: Core & HTML
+            </td>
+            <td
+              className="BugzillaComponentSummary-metric-5"
+            >
+              <a
+                href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+              >
+                944
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Core::DOM: IndexedDB
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Core::JavaScript Engine
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Toolkit::Async Tooling
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -122,21 +89,19 @@ exports[`renders Manager who has reportees 1`] = `
 
 exports[`renders Someone with no reportees 1`] = `
 <div>
-  <h3
-    className="MainView-header-1"
+  <h2
+    className="MainView-header-2"
   >
     Someone
-  </h3>
+  </h2>
   <div
-    style={
-      Object {
-        "display": "flex",
-      }
-    }
+    className="MainView-content-1"
   >
-    <div>
+    <div
+      className="Reportees-root-3"
+    >
       <h4
-        className="Reportees-header-2"
+        className="Reportees-header-4"
       >
         Reportees
       </h4>
@@ -152,89 +117,58 @@ exports[`renders Someone with no reportees 1`] = `
       </div>
     </div>
     <div>
-      <h4
-        className="MainView-header-1"
+      <h3
+        className="MainView-header-2"
       >
         Components
-      </h4>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::DOM: Core & HTML
-          </span>
-          <a
-            alt="Number of untriaged bugs"
-            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-          >
-            944
-          </a>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::DOM: IndexedDB
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Core::JavaScript Engine
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <div
-          className="BugzillaComponentSummary-root-3"
-        >
-          <span
-            className="BugzillaComponentSummary-componentText-4"
-          >
-            Toolkit::Async Tooling
-          </span>
-        </div>
-      </div>
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th />
+            <th>
+              Untriaged
+            </th>
+            <th>
+              Needinfo
+            </th>
+            <th>
+              P1s
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Core::DOM: Core & HTML
+            </td>
+            <td
+              className="BugzillaComponentSummary-metric-5"
+            >
+              <a
+                href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+              >
+                944
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Core::DOM: IndexedDB
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Core::JavaScript Engine
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Toolkit::Async Tooling
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
