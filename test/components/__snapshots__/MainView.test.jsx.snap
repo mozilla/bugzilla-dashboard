@@ -13,17 +13,74 @@ exports[`renders Manager who has reportees 1`] = `
     <div
       className="Reportees-root-3"
     >
-      <h4
+      <h3
         className="Reportees-header-4"
       >
         Reportees
-      </h4>
-      <div>
+      </h3>
+      <div
+        height="1rem"
+      >
+         
+      </div>
+      <div
+        className="Reportees-person-6"
+      >
+        <span
+          name="manager@mozilla.com"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex="0"
+          value="manager@mozilla.com"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-7 Reportees-icon-5"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
         <span>
           Manager 
         </span>
       </div>
-      <div>
+      <div
+        className="Reportees-person-6"
+      >
+        <span
+          name="someone@mozilla.com"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex="0"
+          value="someone@mozilla.com"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-7 Reportees-icon-5"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
         <span>
           Someone 
         </span>
@@ -31,21 +88,29 @@ exports[`renders Manager who has reportees 1`] = `
     </div>
     <div>
       <h3
-        className="MainView-header-2"
+        className="BugzillaComponents-header-16"
       >
         Components
       </h3>
       <table>
         <thead>
           <tr>
-            <th />
-            <th>
+            <th
+              colSpan="2"
+            />
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               Untriaged
             </th>
-            <th>
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               Needinfo
             </th>
-            <th>
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               P1s
             </th>
           </tr>
@@ -53,10 +118,37 @@ exports[`renders Manager who has reportees 1`] = `
         <tbody>
           <tr>
             <td>
+              <div
+                component="DOM: Core & HTML"
+                name="Core::DOM: Core & HTML"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::DOM: Core & HTML
             </td>
             <td
-              className="BugzillaComponentSummary-metric-5"
+              className="BugzillaComponents-metric-17"
             >
               <a
                 href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
@@ -67,15 +159,96 @@ exports[`renders Manager who has reportees 1`] = `
           </tr>
           <tr>
             <td>
+              <div
+                component="DOM: IndexedDB"
+                name="Core::DOM: IndexedDB"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::DOM: IndexedDB
             </td>
           </tr>
           <tr>
             <td>
+              <div
+                component="JavaScript Engine"
+                name="Core::JavaScript Engine"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::JavaScript Engine
             </td>
           </tr>
           <tr>
+            <td>
+              <div
+                component="Async Tooling"
+                name="Toolkit::Async Tooling"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Toolkit"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
             <td>
               Toolkit::Async Tooling
             </td>
@@ -100,17 +273,74 @@ exports[`renders Someone with no reportees 1`] = `
     <div
       className="Reportees-root-3"
     >
-      <h4
+      <h3
         className="Reportees-header-4"
       >
         Reportees
-      </h4>
-      <div>
+      </h3>
+      <div
+        height="1rem"
+      >
+         
+      </div>
+      <div
+        className="Reportees-person-6"
+      >
+        <span
+          name="manager@mozilla.com"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex="0"
+          value="manager@mozilla.com"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-7 Reportees-icon-5"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
         <span>
           Manager 
         </span>
       </div>
-      <div>
+      <div
+        className="Reportees-person-6"
+      >
+        <span
+          name="someone@mozilla.com"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex="0"
+          value="someone@mozilla.com"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-7 Reportees-icon-5"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
         <span>
           Someone 
         </span>
@@ -118,21 +348,29 @@ exports[`renders Someone with no reportees 1`] = `
     </div>
     <div>
       <h3
-        className="MainView-header-2"
+        className="BugzillaComponents-header-16"
       >
         Components
       </h3>
       <table>
         <thead>
           <tr>
-            <th />
-            <th>
+            <th
+              colSpan="2"
+            />
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               Untriaged
             </th>
-            <th>
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               Needinfo
             </th>
-            <th>
+            <th
+              className="BugzillaComponents-metricLabel-18"
+            >
               P1s
             </th>
           </tr>
@@ -140,10 +378,37 @@ exports[`renders Someone with no reportees 1`] = `
         <tbody>
           <tr>
             <td>
+              <div
+                component="DOM: Core & HTML"
+                name="Core::DOM: Core & HTML"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::DOM: Core & HTML
             </td>
             <td
-              className="BugzillaComponentSummary-metric-5"
+              className="BugzillaComponents-metric-17"
             >
               <a
                 href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
@@ -154,15 +419,96 @@ exports[`renders Someone with no reportees 1`] = `
           </tr>
           <tr>
             <td>
+              <div
+                component="DOM: IndexedDB"
+                name="Core::DOM: IndexedDB"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::DOM: IndexedDB
             </td>
           </tr>
           <tr>
             <td>
+              <div
+                component="JavaScript Engine"
+                name="Core::JavaScript Engine"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Core"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
+            <td>
               Core::JavaScript Engine
             </td>
           </tr>
           <tr>
+            <td>
+              <div
+                component="Async Tooling"
+                name="Toolkit::Async Tooling"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                product="Toolkit"
+                role="button"
+                tabIndex="0"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </td>
             <td>
               Toolkit::Async Tooling
             </td>

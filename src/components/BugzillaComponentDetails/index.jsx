@@ -1,47 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import ArrowBack from '@material-ui/icons/ArrowBack';
+import DetailView from '../DetailView';
 
 const styles = ({
-  root: {},
-  header: {
-    display: 'flex',
-  },
-  title: {
-    margin: '0',
-  },
   subtitle: {
-    margin: '0',
+    margin: '0 0 0.5rem',
     color: 'gray',
+  },
+  metric: {
+    display: 'grid',
+    gridTemplateColumns: '0.5fr 0.5fr',
+  },
+  metricLabel: {
+    textTransform: 'capitalize',
+  },
+  metricLink: {
+    textAlign: 'center',
   },
 });
 
-const linkToQuery = (key, metrics, alt) => (
-  <a href={metrics[key].link} alt={alt}>{metrics[key].count}</a>
-);
-
-// TODO: Perhaps a CSS grid will align the back arrow and title better
-// TODO: Receive the name of the person rather than the bugzilla email address
 const BugzillaComponentDetails = ({
   classes, bugzillaEmail, product, component, metrics = {}, onGoBack,
 }) => (
-  <div className={classes.root}>
-    <div className={classes.header}>
-      {onGoBack && (
-        <a href="/" onClick={onGoBack} rel="noopener noreferrer">
-          <ArrowBack />
-        </a>
-      )}
-      <div>
-        <h2 className={classes.title}>{`${product}::${component}`}</h2>
-        <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
-        {Object.values(metrics).map(metric => (
-          metrics[metric] && linkToQuery(metric, metrics, `Number of ${metric} bugs`)
-        ))}
-      </div>
+  <DetailView title={`${product}::${component}`} onGoBack={onGoBack}>
+    <div>
+      <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
+      {Object.keys(metrics).map(metric => (
+        metrics[metric] && (
+          <div key={metric} className={classes.metric}>
+            <span className={classes.metricLabel}>{metric}</span>
+            <a className={classes.metricLink} href={metrics[metric].link}>
+              {metrics[metric].count}
+            </a>
+          </div>
+        )
+      ))}
     </div>
-  </div>
+  </DetailView>
+
 );
 
 BugzillaComponentDetails.propTypes = {
@@ -50,12 +47,11 @@ BugzillaComponentDetails.propTypes = {
   product: PropTypes.string.isRequired,
   component: PropTypes.string.isRequired,
   metrics: PropTypes.shape({}),
-  onGoBack: PropTypes.func,
+  onGoBack: PropTypes.func.isRequired,
 };
 
 BugzillaComponentDetails.defaultProps = {
   metrics: {},
-  onGoBack: undefined,
 };
 
 export default withStyles(styles)(BugzillaComponentDetails);

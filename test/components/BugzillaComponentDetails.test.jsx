@@ -8,6 +8,7 @@ it('renders the details for a Bugzilla component', () => {
     .create((
       <BugzillaComponentDetails
         {...bugzillaComponents['Core::DOM: Core & HTML']}
+        onGoBack={() => null}
       />
     ))
     .toJSON();

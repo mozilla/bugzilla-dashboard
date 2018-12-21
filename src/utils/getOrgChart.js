@@ -22,6 +22,9 @@ const orgChart = (people) => {
         };
       }
     }
+    if (!org[mail].bugzillaEmail) {
+      org[mail].bugzillaEmail = mail;
+    }
   });
   return org;
 };

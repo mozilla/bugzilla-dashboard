@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MainView from '../../components/MainView';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
+import PersonDetails from '../../components/PersonDetails';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
@@ -13,6 +14,7 @@ class MainContainer extends Component {
       bugzillaComponents: {},
       partialOrg: undefined,
       showComponent: undefined,
+      showPerson: undefined,
     };
 
     static propTypes = {
@@ -30,6 +32,7 @@ class MainContainer extends Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
+      this.handleShowPersonDetails = this.handleShowPersonDetails.bind(this);
       this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
     }
 
@@ -107,40 +110,62 @@ class MainContainer extends Component {
 
     handleShowComponentDetails(event) {
       event.preventDefault();
+      const product = event.target.parentElement.getAttribute('product');
+      const component = event.target.parentElement.getAttribute('component');
+      this.setState(prevState => ({
+        showComponent: prevState.bugzillaComponents[`${product}::${component}`],
+      }));
+    }
+
+    handleShowPersonDetails(event) {
+      event.preventDefault();
+      const ldapEmail = event.target.parentElement.getAttribute('value');
+      const { bugzillaComponents, partialOrg } = this.state;
+      const person = partialOrg[ldapEmail];
+      const components = Object.values(bugzillaComponents)
+        .filter(comp => comp.bugzillaEmail === person.bugzillaEmail);
       this.setState({
-        showComponent: {
-          product: event.target.getAttribute('product'),
-          component: event.target.getAttribute('component'),
+        showPerson: {
+          person,
+          components,
         },
       });
     }
 
     handleComponentBackToMenu(event) {
       event.preventDefault();
-      this.setState({ showComponent: undefined });
+      this.setState({
+        showComponent: undefined,
+        showPerson: undefined,
+      });
     }
 
     render() {
       const {
-        ldapEmail, showComponent, bugzillaComponents, partialOrg,
+        ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg,
       } = this.state;
 
       return (
         <div>
           {showComponent && (
             <BugzillaComponentDetails
-              {...bugzillaComponents[
-                `${showComponent.product}::${showComponent.component}`
-              ]}
+              {...showComponent}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}
-          {!showComponent && partialOrg && (
+          {showPerson && (
+            <PersonDetails
+              {...showPerson}
+              onGoBack={this.handleComponentBackToMenu}
+            />
+          )}
+          {!showComponent && !showPerson && partialOrg && (
             <MainView
               ldapEmail={ldapEmail}
               partialOrg={partialOrg}
               bugzillaComponents={bugzillaComponents}
-              onComponentDrilldown={this.handleShowComponentDetails}
+              onComponentDetails={this.handleShowComponentDetails}
+              onPersonDetails={this.handleShowPersonDetails}
             />
           )}
         </div>
