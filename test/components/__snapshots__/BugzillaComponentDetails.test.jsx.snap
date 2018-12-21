@@ -2,22 +2,58 @@
 
 exports[`renders the details for a Bugzilla component 1`] = `
 <div
-  className="BugzillaComponentDetails-root-1"
+  className="DetailView-root-5"
 >
-  <div
-    className="BugzillaComponentDetails-header-2"
-  >
-    <div>
-      <h2
-        className="BugzillaComponentDetails-title-3"
+  <div>
+    <a
+      href="/"
+      onClick={[Function]}
+      rel="noopener noreferrer"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-7"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
       >
-        Core::DOM: Core & HTML
-      </h2>
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div>
+    <h2
+      className="DetailView-title-6"
+    >
+      Core::DOM: Core & HTML
+    </h2>
+    <div>
       <h4
-        className="BugzillaComponentDetails-subtitle-4"
+        className="BugzillaComponentDetails-subtitle-1"
       >
         someone@mozilla.com
       </h4>
+      <div
+        className="BugzillaComponentDetails-metric-2"
+      >
+        <span
+          className="BugzillaComponentDetails-metricLabel-3"
+        >
+          untriaged
+        </span>
+        <a
+          className="BugzillaComponentDetails-metricLink-4"
+          href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+        >
+          944
+        </a>
+      </div>
     </div>
   </div>
 </div>

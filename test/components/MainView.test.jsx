@@ -11,6 +11,8 @@ it('renders Someone with no reportees', () => {
         ldapEmail="someone@mozilla.com"
         partialOrg={partialOrg}
         bugzillaComponents={bugzillaComponents}
+        onComponentDetails={() => null}
+        onPersonDetails={() => null}
       />
     ))
     .toJSON();
@@ -24,6 +26,8 @@ it('renders Manager who has reportees', () => {
         ldapEmail="manager@mozilla.com"
         partialOrg={partialOrg}
         bugzillaComponents={bugzillaComponents}
+        onComponentDetails={() => null}
+        onPersonDetails={() => null}
       />
     ))
     .toJSON();
