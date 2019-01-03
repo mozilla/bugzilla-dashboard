@@ -1,23 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DetailView from '../DetailView';
+import BugzillaComponents from '../BugzillaComponents';
 
-const PersonDetails = ({ person, components, onGoBack }) => (
-  <DetailView title={person.cn} onGoBack={onGoBack}>
-    <div>
-      <h3>Components owned</h3>
-      {components.map(({ product, component }) => (
-        <div key={`${product}::${component}`}>
-          <span>{`${product}::${component}`}</span>
-        </div>
-      ))}
-    </div>
-  </DetailView>
-);
+class PersonDetails extends React.Component {
+  render() {
+    const { person, bugzillaComponents, onGoBack } = this.props;
+
+    const components = Object.values(bugzillaComponents)
+      .reduce((result, bzComponent) => {
+        const { bugzillaEmail, product, component } = bzComponent;
+        if (bugzillaEmail === person.bugzillaEmail) {
+          // eslint-disable-next-line no-param-reassign
+          result[`${product}::${component}`] = bzComponent;
+        }
+        return result;
+      }, {});
+
+    return (
+      <DetailView title={person.cn} onGoBack={onGoBack}>
+        <BugzillaComponents
+          bugzillaComponents={components}
+        />
+      </DetailView>
+    );
+  }
+}
 
 PersonDetails.propTypes = {
   person: PropTypes.shape({}).isRequired,
-  components: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  bugzillaComponents: PropTypes.shape({}).isRequired,
   onGoBack: PropTypes.func.isRequired,
 };
 

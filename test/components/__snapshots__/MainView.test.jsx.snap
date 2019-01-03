@@ -95,9 +95,8 @@ exports[`renders Manager who has reportees 1`] = `
       <table>
         <thead>
           <tr>
-            <th
-              colSpan="2"
-            />
+            <th />
+            <th />
             <th
               className="BugzillaComponents-metricLabel-18"
             >
@@ -355,9 +354,8 @@ exports[`renders Someone with no reportees 1`] = `
       <table>
         <thead>
           <tr>
-            <th
-              colSpan="2"
-            />
+            <th />
+            <th />
             <th
               className="BugzillaComponents-metricLabel-18"
             >
