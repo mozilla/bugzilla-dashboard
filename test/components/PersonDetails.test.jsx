@@ -6,13 +6,11 @@ import bugzillaComponents from '../mocks/bugzillaComponents';
 
 it('renders the details for an individual contributor', () => {
   const person = partialOrg['someone@mozilla.com'];
-  const components = Object.values(bugzillaComponents).filter(comp => (
-    comp.bugzillaEmail === person.bugzillaEmail));
   const tree = renderer
     .create((
       <PersonDetails
         person={person}
-        components={components}
+        bugzillaComponents={bugzillaComponents}
         onGoBack={() => null}
       />
     ))
@@ -22,13 +20,11 @@ it('renders the details for an individual contributor', () => {
 
 it('renders the details for a manager', () => {
   const person = partialOrg['manager@mozilla.com'];
-  const components = Object.values(bugzillaComponents).filter(comp => (
-    comp.bugzillaEmail === person.bugzillaEmail));
   const tree = renderer
     .create((
       <PersonDetails
         person={person}
-        components={components}
+        bugzillaComponents={bugzillaComponents}
         onGoBack={() => null}
       />
     ))

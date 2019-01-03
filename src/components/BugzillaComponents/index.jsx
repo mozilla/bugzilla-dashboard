@@ -37,7 +37,8 @@ const BugzillaComponents = ({
       <table>
         <thead>
           <tr>
-            <th colSpan="2" />
+            <th />
+            {onComponentDetails && <th />}
             {Object.values(METRICS).map(({ label }) => (
               <th key={label} className={classes.metricLabel}>{label}</th>
             ))}
@@ -82,7 +83,11 @@ const BugzillaComponents = ({
 BugzillaComponents.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   bugzillaComponents: PropTypes.shape({}).isRequired,
-  onComponentDetails: PropTypes.func.isRequired,
+  onComponentDetails: PropTypes.func,
+};
+
+BugzillaComponents.defaultProps = {
+  onComponentDetails: undefined,
 };
 
 export default withStyles(styles)(BugzillaComponents);

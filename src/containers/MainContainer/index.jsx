@@ -114,21 +114,17 @@ class MainContainer extends Component {
       const component = event.target.parentElement.getAttribute('component');
       this.setState(prevState => ({
         showComponent: prevState.bugzillaComponents[`${product}::${component}`],
+        showPerson: undefined,
       }));
     }
 
     handleShowPersonDetails(event) {
       event.preventDefault();
       const ldapEmail = event.target.parentElement.getAttribute('value');
-      const { bugzillaComponents, partialOrg } = this.state;
-      const person = partialOrg[ldapEmail];
-      const components = Object.values(bugzillaComponents)
-        .filter(comp => comp.bugzillaEmail === person.bugzillaEmail);
+      const { partialOrg } = this.state;
       this.setState({
-        showPerson: {
-          person,
-          components,
-        },
+        showComponent: undefined,
+        showPerson: partialOrg[ldapEmail],
       });
     }
 
@@ -155,7 +151,8 @@ class MainContainer extends Component {
           )}
           {showPerson && (
             <PersonDetails
-              {...showPerson}
+              person={showPerson}
+              bugzillaComponents={bugzillaComponents}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}

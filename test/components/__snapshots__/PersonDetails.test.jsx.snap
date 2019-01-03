@@ -33,11 +33,6 @@ exports[`renders the details for a manager 1`] = `
     >
       Manager
     </h2>
-    <div>
-      <h3>
-        Components owned
-      </h3>
-    </div>
   </div>
 </div>
 `;
@@ -75,11 +70,6 @@ exports[`renders the details for an individual contributor 1`] = `
     >
       Someone
     </h2>
-    <div>
-      <h3>
-        Components owned
-      </h3>
-    </div>
   </div>
 </div>
 `;
