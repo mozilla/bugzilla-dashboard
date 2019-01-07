@@ -46,7 +46,7 @@ const BugzillaComponentDetails = ({
   <DetailView title={`${product}::${component}`} onGoBack={onGoBack}>
     <div>
       <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
-      {Object.keys(metrics).map(metric => (
+      {Object.keys(metrics).sort().map(metric => (
         metrics[metric] && (
           <div key={metric} className={classes.metric}>
             <span className={classes.metricLabel}>{metric}</span>
@@ -58,7 +58,7 @@ const BugzillaComponentDetails = ({
       ))}
       {/* Splitting the graphs out allows each metric to load without blocking on the rest */}
       <div className={classes.graphs}>
-        {Object.keys(metrics).map(metric => (
+        {Object.keys(metrics).sort().map(metric => (
           <BugzillaGraph
             key={metric}
             label={`${product}::${component}`}
