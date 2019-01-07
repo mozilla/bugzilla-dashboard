@@ -54,11 +54,7 @@ exports[`renders the details for a Bugzilla component 1`] = `
           944
         </a>
       </div>
-      <div
-        className="BugzillaComponentDetails-graphs-5"
-      >
-        <div />
-      </div>
+      <div />
     </div>
   </div>
 </div>

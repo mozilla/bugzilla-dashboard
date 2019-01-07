@@ -25,20 +25,20 @@ const styles = ({
   },
 });
 
-const constructQuery = (metric, product, component) => {
+const constructQuery = (metrics, product, component) => Object.values(metrics).map((metric) => {
   const { label, parameters } = metric;
   // We need all bugs regardless of their resolution in order to decrease/increase
   // the number of open bugs per date
   delete parameters.resolution;
-  return [{
+  return {
     label,
     parameters: {
       product,
       component,
       ...parameters,
     },
-  }];
-};
+  };
+});
 
 const BugzillaComponentDetails = ({
   classes, bugzillaEmail, product, component, metrics = {}, onGoBack,
@@ -56,17 +56,10 @@ const BugzillaComponentDetails = ({
           </div>
         )
       ))}
-      {/* Splitting the graphs out allows each metric to load without blocking on the rest */}
-      <div className={classes.graphs}>
-        {Object.keys(metrics).map(metric => (
-          <BugzillaGraph
-            key={metric}
-            label={`${product}::${component}`}
-            queries={constructQuery(METRICS[metric], product, component)}
-          />
-        ))}
-      </div>
-
+      <BugzillaGraph
+        label={`${product}::${component}`}
+        queries={constructQuery(METRICS, product, component)}
+      />
     </div>
   </DetailView>
 
