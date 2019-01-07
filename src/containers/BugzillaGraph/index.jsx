@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import ChartJsWrapper from '../../components/ChartJsWrapper';
 import generateChartJsData from '../../utils/bugzilla/generateChartJsData';
 
 class BugzillaGraph extends Component {
     state = {
       data: null,
+      error: '',
     };
 
     async componentDidMount() {
@@ -14,21 +16,27 @@ class BugzillaGraph extends Component {
 
     async fetchData() {
       const { queries, chartType, startDate } = this.props;
-      this.setState(await generateChartJsData(queries, chartType, startDate));
+      try {
+        this.setState(await generateChartJsData(queries, chartType, startDate));
+      } catch (error) {
+        this.setState({ error: error.message });
+      }
     }
 
     render() {
-      const { data } = this.state;
+      const { data, error } = this.state;
       const { chartType, title } = this.props;
 
-      return data ? (
-        <ChartJsWrapper
-          type={chartType}
-          data={data}
-          options={{ scaleLabel: '# of bugs' }}
-          title={title}
-        />
-      ) : <div />;
+      return (
+        error ? <ErrorPanel error={error} /> : (
+          <ChartJsWrapper
+            type={chartType}
+            data={data}
+            options={{ scaleLabel: '# of bugs' }}
+            title={title}
+          />
+        )
+      );
     }
 }
 

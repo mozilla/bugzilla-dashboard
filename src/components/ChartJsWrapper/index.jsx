@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Chart from 'react-chartjs-2';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles } from '@material-ui/core/styles';
 import generateOptions from '../../utils/chartJs/generateOptions';
 
@@ -13,16 +14,22 @@ const styles = {
 };
 
 const ChartJsWrapper = ({
-  classes, data, options, title, type,
+  classes, data, options, title, type, size,
 }) => (
-  <div className={classes.chartContainer}>
-    {title && <h2>{title}</h2>}
-    <Chart
-      type={type}
-      data={data}
-      options={generateOptions(options)}
-    />
-  </div>
+  data ? (
+    <div className={classes.chartContainer}>
+      {title && <h2>{title}</h2>}
+      <Chart
+        type={type}
+        data={data}
+        options={generateOptions(options)}
+      />
+    </div>
+  ) : (
+    <div style={{ lineHeight: size, textAlign: 'center', width: size }}>
+      <CircularProgress />
+    </div>
+  )
 );
 
 // The properties are to match ChartJs properties
@@ -55,14 +62,17 @@ ChartJsWrapper.propTypes = {
         label: PropTypes.string.isRequired,
       }),
     ).isRequired,
-  }).isRequired,
+  }),
   title: PropTypes.string,
   type: PropTypes.string,
+  size: PropTypes.string,
 };
 
 ChartJsWrapper.defaultProps = {
+  data: undefined,
   title: '',
-  type: 'scatter',
+  type: 'line',
+  size: '8rem',
 };
 
 export default withStyles(styles)(ChartJsWrapper);

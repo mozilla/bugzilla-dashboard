@@ -54,7 +54,41 @@ exports[`renders the details for a Bugzilla component 1`] = `
           944
         </a>
       </div>
-      <div />
+      <div
+        style={
+          Object {
+            "lineHeight": "8rem",
+            "textAlign": "center",
+            "width": "8rem",
+          }
+        }
+      >
+        <div
+          className="MuiCircularProgress-root-18 MuiCircularProgress-colorPrimary-21 MuiCircularProgress-indeterminate-20"
+          role="progressbar"
+          style={
+            Object {
+              "height": 40,
+              "width": 40,
+            }
+          }
+        >
+          <svg
+            className="MuiCircularProgress-svg-23"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              className="MuiCircularProgress-circle-24 MuiCircularProgress-circleIndeterminate-26"
+              cx={44}
+              cy={44}
+              fill="none"
+              r={20.2}
+              strokeWidth={3.6}
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
