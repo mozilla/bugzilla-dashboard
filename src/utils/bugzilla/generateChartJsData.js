@@ -41,16 +41,16 @@ const bugsByCreationDate = (bugs, startDate) => {
   const accumulatedCount = Object.keys(byCreationDate)
     .sort().reduce((result, date) => {
       count += byCreationDate[date];
-      lastDataPoint = { x: date, y: count };
+      // Read more here http://momentjs.com/guides/#/warnings/js-date/
+      lastDataPoint = { x: new Date(date), y: count };
       result.push(lastDataPoint);
       return result;
     }, []);
 
   // This guarantees that the line goes all the way to the end of the graph
   const today = new Date();
-  const todaysDate = `${today.getUTCFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
-  if (lastDataPoint.x !== todaysDate) {
-    accumulatedCount.push({ x: todaysDate, y: count });
+  if (lastDataPoint.x !== today) {
+    accumulatedCount.push({ x: today, y: count });
   }
 
   return accumulatedCount;
