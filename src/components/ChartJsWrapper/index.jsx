@@ -8,26 +8,18 @@ const styles = {
   // This div helps with canvas size changes
   // https://www.chartjs.org/docs/latest/general/responsive.html#important-note
   chartContainer: {
-    // display: 'flex',
-    // flex: '1',
-    width: '600px',
-    // // Do not let it squeeze too much and deform
-    // minWidth: '400px',
-  },
-  title: {
-    // margin: '0.1rem 0 0 0',
+    // width: '600px',
   },
 };
 
 const ChartJsWrapper = ({
-  classes, data, options, title, type = 'line',
+  classes, data, options, title, type,
 }) => (
   <div className={classes.chartContainer}>
-    {title && <h2 className={classes.title}>{title}</h2>}
+    {title && <h2>{title}</h2>}
     <Chart
       type={type}
       data={data}
-      // height={80}
       options={generateOptions(options)}
     />
   </div>
@@ -70,7 +62,7 @@ ChartJsWrapper.propTypes = {
 
 ChartJsWrapper.defaultProps = {
   title: '',
-  type: 'line',
+  type: 'scatter',
 };
 
 export default withStyles(styles)(ChartJsWrapper);

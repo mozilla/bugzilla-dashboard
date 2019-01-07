@@ -1,5 +1,5 @@
 import queryBugzilla from './queryBugzilla';
-import generateLineChartStyles from '../chartJs/generateLineChartStyles';
+import generateDatasetStyle from '../chartJs/generateDatasetStyle';
 import COLORS from '../chartJs/colors';
 
 const newDate = (datetime, startDate) => {
@@ -56,13 +56,13 @@ const bugsByCreationDate = (bugs, startDate) => {
   return accumulatedCount;
 };
 
-const dataFormatter = (bugSeries, startDate) => {
+const dataFormatter = (bugSeries, chartType, startDate) => {
   const newData = { data: { datasets: [] } };
 
   bugSeries.forEach(({ bugs, label }, index) => {
     const bugCountPerDay = bugsByCreationDate(bugs, startDate);
     newData.data.datasets.push({
-      ...generateLineChartStyles(COLORS[index]),
+      ...generateDatasetStyle(chartType, COLORS[index]),
       data: bugCountPerDay,
       label,
     });

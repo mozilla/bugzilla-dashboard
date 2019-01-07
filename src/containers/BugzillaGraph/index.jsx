@@ -13,18 +13,19 @@ class BugzillaGraph extends Component {
     }
 
     async fetchData() {
-      const { queries, startDate } = this.props;
-      this.setState(await generateChartJsData(queries, startDate));
+      const { queries, chartType, startDate } = this.props;
+      this.setState(await generateChartJsData(queries, chartType, startDate));
     }
 
     render() {
       const { data } = this.state;
-      const { title } = this.props;
+      const { chartType, title } = this.props;
 
       return data ? (
         <ChartJsWrapper
+          type={chartType}
           data={data}
-          options={{ scaleLabel: 'Number of bugs' }}
+          options={{ scaleLabel: '# of bugs' }}
           title={title}
         />
       ) : <div />;
@@ -41,11 +42,13 @@ BugzillaGraph.propTypes = {
       priority: PropTypes.string,
     }),
   })).isRequired,
+  chartType: PropTypes.oneOf(['scatter', 'line']),
   startDate: PropTypes.string,
   title: PropTypes.string,
 };
 
 BugzillaGraph.defaultProps = {
+  chartType: 'line',
   startDate: null,
   title: '',
 };
