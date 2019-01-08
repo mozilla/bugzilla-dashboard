@@ -1,4 +1,5 @@
 {
+    "ic@mozilla.com": [],
     "someone@mydomain.com": [
         {
             "product": "Core",
@@ -7,9 +8,7 @@
         {
             "product": "Core",
             "component": "DOM: Core & HTML"
-        }
-    ],
-    "manager@mozilla.com": [
+        },
         {
             "product": "Core",
             "component": "DOM: Events"
@@ -47,6 +46,7 @@
             "component": "Serializers"
         }
     ],
+    "manager@mozilla.com": [],
     "nobody@mozilla.org": [
         {
             "product": "NSS",

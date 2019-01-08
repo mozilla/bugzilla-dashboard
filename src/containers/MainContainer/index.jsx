@@ -7,12 +7,14 @@ import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import METRICS from '../../utils/bugzilla/metrics';
+import TEAMS_CONFIG from '../../teamsConfig';
 
 class MainContainer extends Component {
     state = {
       ldapEmail: '',
       bugzillaComponents: {},
       partialOrg: undefined,
+      teamComponents: {},
       showComponent: undefined,
       showPerson: undefined,
     };
@@ -62,6 +64,7 @@ class MainContainer extends Component {
                 result[`${product}::${component}`] = {};
               }
               result[`${product}::${component}`] = {
+                label: `${product}::${component}`,
                 bugzillaEmail: bugzillaEmail || mail,
                 product,
                 component,
@@ -92,7 +95,24 @@ class MainContainer extends Component {
         getBugzillaOwners(),
         this.getReportees(ldapEmail),
       ]);
+      this.teamsData();
       this.bugzillaComponents(bzOwners, partialOrg);
+    }
+
+    async teamsData() {
+      const teamComponents = Object.assign({}, TEAMS_CONFIG);
+      // This will cause the teams to be displayed before having any metrics
+      this.setState({ teamComponents });
+      Object.entries(teamComponents).map(async ([teamKey, teamInfo]) => {
+        const team = Object.assign({}, teamInfo);
+        team.metrics = {};
+        const { product, component } = teamInfo;
+        await Promise.all(Object.keys(METRICS).map(async (metric) => {
+          team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
+        }));
+        teamComponents[teamKey] = team;
+        this.setState({ teamComponents });
+      });
     }
 
     handleChange(event) {
@@ -139,7 +159,7 @@ class MainContainer extends Component {
 
     render() {
       const {
-        ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg,
+        ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg, teamComponents,
       } = this.state;
 
       return (
@@ -153,7 +173,7 @@ class MainContainer extends Component {
           {showPerson && (
             <PersonDetails
               person={showPerson}
-              bugzillaComponents={bugzillaComponents}
+              bugzillaComponents={Object.values(bugzillaComponents)}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}
@@ -161,7 +181,8 @@ class MainContainer extends Component {
             <MainView
               ldapEmail={ldapEmail}
               partialOrg={partialOrg}
-              bugzillaComponents={bugzillaComponents}
+              bugzillaComponents={Object.values(bugzillaComponents)}
+              teamComponents={Object.values(teamComponents)}
               onComponentDetails={this.handleShowComponentDetails}
               onPersonDetails={this.handleShowPersonDetails}
             />

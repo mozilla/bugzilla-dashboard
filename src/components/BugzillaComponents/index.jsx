@@ -20,20 +20,14 @@ const styles = ({
   },
 });
 
-const sortByComponentName = (a, b) => {
-  let result = (a.product <= b.product);
-  if (a.product === b.product) {
-    result = a.component <= b.component;
-  }
-  return result ? -1 : 1;
-};
+const sortByComponentName = (a, b) => a.label - b.label;
 
 const BugzillaComponents = ({
-  classes, bugzillaComponents, onComponentDetails,
+  classes, title, bugzillaComponents, onComponentDetails,
 }) => (
-  Object.values(bugzillaComponents).length > 0 && (
+  bugzillaComponents.length > 0 && (
     <div>
-      <h3 className={classes.header}>Components</h3>
+      <h3 className={classes.header}>{title}</h3>
       <table>
         <thead>
           <tr>
@@ -45,14 +39,16 @@ const BugzillaComponents = ({
           </tr>
         </thead>
         <tbody>
-          {Object.values(bugzillaComponents)
+          {bugzillaComponents
             .sort(sortByComponentName)
-            .map(({ component, product, metrics = {} }) => (
-              <tr key={`${product}::${component}`}>
+            .map(({
+              label, component, product, metrics = {},
+            }) => (
+              <tr key={label}>
                 {onComponentDetails && (
                   <td>
                     <div
-                      name={`${product}::${component}`}
+                      name={label}
                       onKeyPress={onComponentDetails}
                       onClick={onComponentDetails}
                       product={product}
@@ -64,8 +60,8 @@ const BugzillaComponents = ({
                     </div>
                   </td>
                 )}
-                <td>{`${product}::${component}`}</td>
-                {Object.keys(metrics).map(metric => (
+                <td>{label}</td>
+                {Object.keys(METRICS).map(metric => (
                   metrics[metric] && (
                   <td key={metric} className={classes.metric}>
                     <a href={metrics[metric].link}>{metrics[metric].count}</a>
@@ -82,7 +78,21 @@ const BugzillaComponents = ({
 
 BugzillaComponents.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  bugzillaComponents: PropTypes.shape({}).isRequired,
+  title: PropTypes.string.isRequired,
+  bugzillaComponents: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      product: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ]).isRequired,
+      component: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ]).isRequired,
+      metrics: PropTypes.shape({}),
+    }),
+  ).isRequired,
   onComponentDetails: PropTypes.func,
 };
 

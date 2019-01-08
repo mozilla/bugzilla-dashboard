@@ -1,5 +1,12 @@
 [
   {
+    "cn": "Incredi BleCoder",
+    "mail": "ic@mozilla.com",
+    "manager": {
+      "dn": "mail=someone@mozilla.com,o=com,dc=mozilla"
+    }
+  },
+  {
     "cn": "Mickey Husk",
     "bugzillaEmail": "someone@mydomain.com",
     "mail": "someone@mozilla.com",
