@@ -14,7 +14,7 @@ const styles = ({
 });
 
 const MainView = ({
-  classes, ldapEmail, partialOrg, bugzillaComponents,
+  classes, ldapEmail, partialOrg, bugzillaComponents, teamComponents,
   onComponentDetails, onPersonDetails,
 }) => (
   <div key={ldapEmail}>
@@ -25,10 +25,17 @@ const MainView = ({
         partialOrg={partialOrg}
         onPersonDetails={onPersonDetails}
       />
-      <BugzillaComponents
-        bugzillaComponents={bugzillaComponents}
-        onComponentDetails={onComponentDetails}
-      />
+      <div>
+        <BugzillaComponents
+          title="Teams"
+          bugzillaComponents={teamComponents}
+        />
+        <BugzillaComponents
+          title="Components"
+          bugzillaComponents={bugzillaComponents}
+          onComponentDetails={onComponentDetails}
+        />
+      </div>
     </div>
   </div>
 );
@@ -37,13 +44,15 @@ MainView.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
-  bugzillaComponents: PropTypes.shape({}),
+  bugzillaComponents: PropTypes.arrayOf(PropTypes.shape({})),
+  teamComponents: PropTypes.arrayOf(PropTypes.shape({})),
   onComponentDetails: PropTypes.func.isRequired,
   onPersonDetails: PropTypes.func.isRequired,
 };
 
 MainView.defaultProps = {
-  bugzillaComponents: {},
+  bugzillaComponents: [],
+  teamComponents: [],
 };
 
 export default withStyles(styles)(MainView);

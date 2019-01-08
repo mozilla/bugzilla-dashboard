@@ -31,7 +31,7 @@ exports[`renders the details for a Bugzilla component 1`] = `
     <h2
       className="DetailView-title-7"
     >
-      Core::DOM: Core & HTML
+      Core::DOM: IndexedDB
     </h2>
     <div>
       <h4
@@ -39,21 +39,6 @@ exports[`renders the details for a Bugzilla component 1`] = `
       >
         someone@mozilla.com
       </h4>
-      <div
-        className="BugzillaComponentDetails-metric-2"
-      >
-        <span
-          className="BugzillaComponentDetails-metricLabel-3"
-        >
-          untriaged
-        </span>
-        <a
-          className="BugzillaComponentDetails-metricLink-4"
-          href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-        >
-          944
-        </a>
-      </div>
       <div
         style={
           Object {

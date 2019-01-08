@@ -7,7 +7,7 @@ it('renders the details for a Bugzilla component', () => {
   const tree = renderer
     .create((
       <BugzillaComponentDetails
-        {...bugzillaComponents['Core::DOM: Core & HTML']}
+        {...bugzillaComponents[0]}
         onGoBack={() => null}
       />
     ))

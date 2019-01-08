@@ -1,15 +1,18 @@
-const bugzillaComponents = {
-  'Core::DOM: IndexedDB': {
+const bugzillaComponents = [
+  {
+    label: 'Core::DOM: IndexedDB',
     bugzillaEmail: 'someone@mozilla.com',
     component: 'DOM: IndexedDB',
     product: 'Core',
   },
-  'Core::JavaScript Engine': {
+  {
+    label: 'Core::JavaScript Engine',
     bugzillaEmail: 'someone@mozilla.com',
     component: 'JavaScript Engine',
     product: 'Core',
   },
-  'Core::DOM: Core & HTML': {
+  {
+    label: 'Core::DOM: Core & HTML',
     bugzillaEmail: 'someone@mozilla.com',
     component: 'DOM: Core & HTML',
     product: 'Core',
@@ -20,11 +23,12 @@ const bugzillaComponents = {
       },
     },
   },
-  'Toolkit::Async Tooling': {
+  {
+    label: 'Toolkit::Async Tooling',
     bugzillaEmail: 'manager@mozilla.com',
     component: 'Async Tooling',
     product: 'Toolkit',
   },
-};
+];
 
 export default bugzillaComponents;
