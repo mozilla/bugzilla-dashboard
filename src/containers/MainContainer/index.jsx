@@ -104,8 +104,11 @@ class MainContainer extends Component {
       // This will cause the teams to be displayed before having any metrics
       this.setState({ teamComponents });
       Object.entries(teamComponents).map(async ([teamKey, teamInfo]) => {
-        const team = Object.assign({}, teamInfo);
-        team.metrics = {};
+        const team = {
+          teamKey,
+          ...teamInfo,
+          metrics: {},
+        };
         const { product, component } = teamInfo;
         await Promise.all(Object.keys(METRICS).map(async (metric) => {
           team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
@@ -132,12 +135,26 @@ class MainContainer extends Component {
     handleShowComponentDetails(event) {
       event.preventDefault();
       const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const product = element.getAttribute('product');
-      const component = element.getAttribute('component');
-      this.setState(prevState => ({
-        showComponent: prevState.bugzillaComponents[`${product}::${component}`],
-        showPerson: undefined,
-      }));
+      // IDEA: In the future we could unify bugzilla components and teams into
+      // the same data structure and make this logic simpler. We could use a
+      // property 'team' to distinguish a component from a set of components
+      const bzComponentKey = element.getAttribute('bzcomponentkey');
+      const teamKey = element.getAttribute('teamkey');
+      if (teamKey) {
+        this.setState(prevState => ({
+          showComponent: {
+            title: prevState.teamComponents[teamKey].label,
+            ...prevState.teamComponents[teamKey],
+          },
+        }));
+      } else {
+        this.setState(prevState => ({
+          showComponent: {
+            title: bzComponentKey,
+            ...prevState.bugzillaComponents[bzComponentKey],
+          },
+        }));
+      }
     }
 
     handleShowPersonDetails(event) {
@@ -146,7 +163,6 @@ class MainContainer extends Component {
       const ldapEmail = element.getAttribute('value');
       const { partialOrg } = this.state;
       this.setState({
-        showComponent: undefined,
         showPerson: partialOrg[ldapEmail],
       });
     }
@@ -169,6 +185,7 @@ class MainContainer extends Component {
           {showComponent && (
             <BugzillaComponentDetails
               {...showComponent}
+              title={showComponent.title}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}

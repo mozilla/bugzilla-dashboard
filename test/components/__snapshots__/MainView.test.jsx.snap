@@ -119,19 +119,21 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
+                  bzcomponentkey="Core::DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: IndexedDB"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -151,19 +153,21 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
+                  bzcomponentkey="Core::JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::JavaScript Engine"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -183,19 +187,21 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
+                  bzcomponentkey="Core::DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: Core & HTML"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -224,19 +230,21 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
+                  bzcomponentkey="Toolkit::Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Toolkit::Async Tooling"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -380,19 +388,21 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
+                  bzcomponentkey="Core::DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: IndexedDB"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -412,19 +422,21 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
+                  bzcomponentkey="Core::JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::JavaScript Engine"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -444,19 +456,21 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
+                  bzcomponentkey="Core::DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: Core & HTML"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -485,19 +499,21 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
+                  bzcomponentkey="Toolkit::Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Toolkit::Async Tooling"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -641,19 +657,21 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
+                  bzcomponentkey="Core::DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: IndexedDB"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -673,19 +691,21 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
+                  bzcomponentkey="Core::JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::JavaScript Engine"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -705,19 +725,21 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
+                  bzcomponentkey="Core::DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Core::DOM: Core & HTML"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -746,19 +768,21 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
+                  bzcomponentkey="Toolkit::Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
+                  teamkey={null}
                 >
                   <svg
                     aria-hidden="true"
+                    bzcomponentkey="Toolkit::Async Tooling"
                     className="MuiSvgIcon-root-7 BugzillaComponents-icon-19"
                     focusable="false"
                     role="presentation"
+                    teamkey={null}
                     viewBox="0 0 24 24"
                   >
                     <path
