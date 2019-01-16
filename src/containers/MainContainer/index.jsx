@@ -129,24 +129,20 @@ class MainContainer extends Component {
       this.retrieveData(ldapEmail);
     }
 
-    handleShowComponentDetails(event) {
+    handleShowComponentDetails(event, componentKey) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const product = element.getAttribute('product');
-      const component = element.getAttribute('component');
       this.setState(prevState => ({
-        showComponent: prevState.bugzillaComponents[`${product}::${component}`],
-        showPerson: undefined,
+        showComponent: {
+          title: componentKey,
+          ...prevState.bugzillaComponents[componentKey],
+        },
       }));
     }
 
-    handleShowPersonDetails(event) {
+    handleShowPersonDetails(event, ldapEmail) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const ldapEmail = element.getAttribute('value');
       const { partialOrg } = this.state;
       this.setState({
-        showComponent: undefined,
         showPerson: partialOrg[ldapEmail],
       });
     }

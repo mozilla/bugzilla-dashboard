@@ -49,10 +49,8 @@ const BugzillaComponents = ({
                   <td>
                     <div
                       name={label}
-                      onKeyPress={onComponentDetails}
-                      onClick={onComponentDetails}
-                      product={product}
-                      component={component}
+                      onKeyPress={e => onComponentDetails(e, `${product}::${component}`)}
+                      onClick={e => onComponentDetails(e, `${product}::${component}`)}
                       role="button"
                       tabIndex="0"
                     >
