@@ -131,8 +131,9 @@ class MainContainer extends Component {
 
     handleShowComponentDetails(event) {
       event.preventDefault();
-      const product = event.target.parentElement.getAttribute('product');
-      const component = event.target.parentElement.getAttribute('component');
+      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
+      const product = element.getAttribute('product');
+      const component = element.getAttribute('component');
       this.setState(prevState => ({
         showComponent: prevState.bugzillaComponents[`${product}::${component}`],
         showPerson: undefined,
@@ -141,7 +142,8 @@ class MainContainer extends Component {
 
     handleShowPersonDetails(event) {
       event.preventDefault();
-      const ldapEmail = event.target.parentElement.getAttribute('value');
+      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
+      const ldapEmail = element.getAttribute('value');
       const { partialOrg } = this.state;
       this.setState({
         showComponent: undefined,
