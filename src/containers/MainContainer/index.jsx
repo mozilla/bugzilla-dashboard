@@ -155,11 +155,11 @@ class MainContainer extends Component {
       }
     }
 
-    handleShowPersonDetails(event, ldapEmail) {
+    handleShowPersonDetails(event, properties) {
       event.preventDefault();
       const { partialOrg } = this.state;
       this.setState({
-        showPerson: partialOrg[ldapEmail],
+        showPerson: partialOrg[properties.ldapEmail],
       });
     }
 
