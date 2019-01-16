@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import DrilldownIcon from '../DrilldownIcon';
 
 const styles = ({
   root: {
@@ -17,6 +17,7 @@ const styles = ({
   person: {
     // This makes it line up better with the table of components
     padding: '1px',
+    display: 'flex',
   },
 });
 
@@ -33,15 +34,13 @@ const Reportees = ({
       .sort(sortByPersonName)
       .map(({ cn, mail }) => (
         <div key={mail} className={classes.person}>
-          <span
+          <DrilldownIcon
             name={mail}
-            onKeyPress={e => onPersonDetails(e, mail)}
-            onClick={e => onPersonDetails(e, mail)}
-            role="button"
-            tabIndex="0"
-          >
-            <ExpandMore classes={{ root: classes.icon }} />
-          </span>
+            onChange={onPersonDetails}
+            properties={{
+              ldapEmail: mail,
+            }}
+          />
           <span>{`${cn} `}</span>
         </div>
       ))}

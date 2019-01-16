@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the details for a Bugzilla component 1`] = `
+<div
+  className="DrilldownIcon-svgWrapper-1"
+  name="x"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <svg
+    aria-hidden="true"
+    className="MuiSvgIcon-root-3 DrilldownIcon-icon-2"
+    focusable="false"
+    role="presentation"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</div>
+`;
