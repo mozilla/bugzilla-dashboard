@@ -132,14 +132,12 @@ class MainContainer extends Component {
       this.retrieveData(ldapEmail);
     }
 
-    handleShowComponentDetails(event) {
+    handleShowComponentDetails(event, properties) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
+      const { componentKey, teamKey } = properties;
       // IDEA: In the future we could unify bugzilla components and teams into
       // the same data structure and make this logic simpler. We could use a
       // property 'team' to distinguish a component from a set of components
-      const bzComponentKey = element.getAttribute('bzcomponentkey');
-      const teamKey = element.getAttribute('teamkey');
       if (teamKey) {
         this.setState(prevState => ({
           showComponent: {
@@ -150,17 +148,15 @@ class MainContainer extends Component {
       } else {
         this.setState(prevState => ({
           showComponent: {
-            title: bzComponentKey,
-            ...prevState.bugzillaComponents[bzComponentKey],
+            title: componentKey,
+            ...prevState.bugzillaComponents[componentKey],
           },
         }));
       }
     }
 
-    handleShowPersonDetails(event) {
+    handleShowPersonDetails(event, ldapEmail) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const ldapEmail = element.getAttribute('value');
       const { partialOrg } = this.state;
       this.setState({
         showPerson: partialOrg[ldapEmail],

@@ -49,18 +49,12 @@ const BugzillaComponents = ({
                   <td>
                     <div
                       name={label}
-                      onKeyPress={onComponentDetails}
-                      onClick={onComponentDetails}
-                      bzcomponentkey={teamKey || `${product}::${component}`}
-                      teamkey={teamKey}
+                      onKeyPress={e => onComponentDetails(e, { componentKey: `${product}::${component}`, teamKey })}
+                      onClick={e => onComponentDetails(e, { componentKey: `${product}::${component}`, teamKey })}
                       role="button"
                       tabIndex="0"
                     >
-                      <ExpandMore
-                        classes={{ root: classes.icon }}
-                        bzcomponentkey={teamKey || `${product}::${component}`}
-                        teamkey={teamKey}
-                      />
+                      <ExpandMore classes={{ root: classes.icon }} />
                     </div>
                   </td>
                 )}
