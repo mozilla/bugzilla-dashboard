@@ -35,9 +35,8 @@ const Reportees = ({
         <div key={mail} className={classes.person}>
           <span
             name={mail}
-            value={mail}
-            onKeyPress={onPersonDetails}
-            onClick={onPersonDetails}
+            onKeyPress={e => onPersonDetails(e, mail)}
+            onClick={e => onPersonDetails(e, mail)}
             role="button"
             tabIndex="0"
           >

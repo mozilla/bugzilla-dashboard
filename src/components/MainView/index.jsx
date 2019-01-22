@@ -29,6 +29,7 @@ const MainView = ({
         <BugzillaComponents
           title="Teams"
           bugzillaComponents={teamComponents}
+          onComponentDetails={onComponentDetails}
         />
         <BugzillaComponents
           title="Components"

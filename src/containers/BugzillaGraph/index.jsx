@@ -45,7 +45,10 @@ BugzillaGraph.propTypes = {
     label: PropTypes.string.isRequired,
     parameters: PropTypes.shape({
       include_fields: PropTypes.string,
-      component: PropTypes.string,
+      component: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.string),
+        PropTypes.string,
+      ]),
       resolution: PropTypes.string,
       priority: PropTypes.string,
     }),

@@ -104,8 +104,11 @@ class MainContainer extends Component {
       // This will cause the teams to be displayed before having any metrics
       this.setState({ teamComponents });
       Object.entries(teamComponents).map(async ([teamKey, teamInfo]) => {
-        const team = Object.assign({}, teamInfo);
-        team.metrics = {};
+        const team = {
+          teamKey,
+          ...teamInfo,
+          metrics: {},
+        };
         const { product, component } = teamInfo;
         await Promise.all(Object.keys(METRICS).map(async (metric) => {
           team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
@@ -129,24 +132,33 @@ class MainContainer extends Component {
       this.retrieveData(ldapEmail);
     }
 
-    handleShowComponentDetails(event) {
+    handleShowComponentDetails(event, properties) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const product = element.getAttribute('product');
-      const component = element.getAttribute('component');
-      this.setState(prevState => ({
-        showComponent: prevState.bugzillaComponents[`${product}::${component}`],
-        showPerson: undefined,
-      }));
+      const { componentKey, teamKey } = properties;
+      // IDEA: In the future we could unify bugzilla components and teams into
+      // the same data structure and make this logic simpler. We could use a
+      // property 'team' to distinguish a component from a set of components
+      if (teamKey) {
+        this.setState(prevState => ({
+          showComponent: {
+            title: prevState.teamComponents[teamKey].label,
+            ...prevState.teamComponents[teamKey],
+          },
+        }));
+      } else {
+        this.setState(prevState => ({
+          showComponent: {
+            title: componentKey,
+            ...prevState.bugzillaComponents[componentKey],
+          },
+        }));
+      }
     }
 
-    handleShowPersonDetails(event) {
+    handleShowPersonDetails(event, ldapEmail) {
       event.preventDefault();
-      const element = event.target.tagName === 'DIV' ? event.target : event.target.parentElement;
-      const ldapEmail = element.getAttribute('value');
       const { partialOrg } = this.state;
       this.setState({
-        showComponent: undefined,
         showPerson: partialOrg[ldapEmail],
       });
     }
@@ -169,6 +181,7 @@ class MainContainer extends Component {
           {showComponent && (
             <BugzillaComponentDetails
               {...showComponent}
+              title={showComponent.title}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}

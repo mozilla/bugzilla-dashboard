@@ -31,7 +31,7 @@ exports[`renders the details for a Bugzilla component 1`] = `
     <h2
       className="DetailView-title-7"
     >
-      Core::DOM: IndexedDB
+      Hello world!
     </h2>
     <div>
       <h4

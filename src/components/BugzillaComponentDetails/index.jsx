@@ -41,11 +41,11 @@ const constructQuery = (metrics, product, component) => Object.values(metrics).m
 });
 
 const BugzillaComponentDetails = ({
-  classes, bugzillaEmail, product, component, metrics = {}, onGoBack,
+  classes, bugzillaEmail, product, component, title, metrics = {}, onGoBack,
 }) => (
-  <DetailView title={`${product}::${component}`} onGoBack={onGoBack}>
+  <DetailView title={title} onGoBack={onGoBack}>
     <div>
-      <h4 className={classes.subtitle}>{bugzillaEmail}</h4>
+      {bugzillaEmail && <h4 className={classes.subtitle}>{bugzillaEmail}</h4>}
       {Object.keys(metrics).sort().map(metric => (
         metrics[metric] && (
           <div key={metric} className={classes.metric}>
@@ -57,7 +57,7 @@ const BugzillaComponentDetails = ({
         )
       ))}
       <BugzillaGraph
-        label={`${product}::${component}`}
+        label={title}
         queries={constructQuery(METRICS, product, component)}
       />
     </div>
@@ -67,14 +67,22 @@ const BugzillaComponentDetails = ({
 
 BugzillaComponentDetails.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  bugzillaEmail: PropTypes.string.isRequired,
-  product: PropTypes.string.isRequired,
-  component: PropTypes.string.isRequired,
+  bugzillaEmail: PropTypes.string,
+  product: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]).isRequired,
+  component: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]).isRequired,
   metrics: PropTypes.shape({}),
+  title: PropTypes.string.isRequired,
   onGoBack: PropTypes.func.isRequired,
 };
 
 BugzillaComponentDetails.defaultProps = {
+  bugzillaEmail: '',
   metrics: {},
 };
 

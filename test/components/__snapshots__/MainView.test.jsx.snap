@@ -32,7 +32,6 @@ exports[`renders Manager who has reportees 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="manager@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -63,7 +62,6 @@ exports[`renders Manager who has reportees 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="someone@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -119,11 +117,9 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -151,11 +147,9 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -183,11 +177,9 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -224,11 +216,9 @@ exports[`renders Manager who has reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
                 >
@@ -293,7 +283,6 @@ exports[`renders Manager who has reportees and teams 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="manager@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -324,7 +313,6 @@ exports[`renders Manager who has reportees and teams 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="someone@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -380,11 +368,9 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -412,11 +398,9 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -444,11 +428,9 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -485,11 +467,9 @@ exports[`renders Manager who has reportees and teams 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
                 >
@@ -554,7 +534,6 @@ exports[`renders Someone with no reportees 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="manager@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -585,7 +564,6 @@ exports[`renders Someone with no reportees 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex="0"
-          value="someone@mozilla.com"
         >
           <svg
             aria-hidden="true"
@@ -641,11 +619,9 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: IndexedDB"
                   name="Core::DOM: IndexedDB"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -673,11 +649,9 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="JavaScript Engine"
                   name="Core::JavaScript Engine"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -705,11 +679,9 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="DOM: Core & HTML"
                   name="Core::DOM: Core & HTML"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Core"
                   role="button"
                   tabIndex="0"
                 >
@@ -746,11 +718,9 @@ exports[`renders Someone with no reportees 1`] = `
             <tr>
               <td>
                 <div
-                  component="Async Tooling"
                   name="Toolkit::Async Tooling"
                   onClick={[Function]}
                   onKeyPress={[Function]}
-                  product="Toolkit"
                   role="button"
                   tabIndex="0"
                 >

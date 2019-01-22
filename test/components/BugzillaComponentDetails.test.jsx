@@ -8,6 +8,7 @@ it('renders the details for a Bugzilla component', () => {
     .create((
       <BugzillaComponentDetails
         {...bugzillaComponents[0]}
+        title="Hello world!"
         onGoBack={() => null}
       />
     ))
