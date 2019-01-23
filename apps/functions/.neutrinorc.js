@@ -9,6 +9,11 @@ module.exports = {
         'no-console': 'off',
       },
     }],
-    '@neutrinojs/node',
+    ['@neutrinojs/node', {
+      targets: {
+        // Uses Node.js 8.10 for Netlify's Lambda functions
+        node: '8.10',
+      },
+    }],
   ],
 };
