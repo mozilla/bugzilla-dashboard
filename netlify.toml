@@ -1,0 +1,10 @@
+[build]
+  functions = "apps/utils/functions/"
+
+[build.environment]
+  YARN_FLAGS = "--frozen-lockfile"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

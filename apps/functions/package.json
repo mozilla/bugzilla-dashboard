@@ -1,10 +1,8 @@
 {
-  "name": "server",
+  "name": "functions",
   "version": "0.0.0",
   "private": true,
-  "main": "build/index.js",
   "scripts": {
-    "start": "webpack --watch --mode development",
     "build": "webpack --mode production",
     "lint": "eslint --cache --format codeframe src webpack.config.js"
   }

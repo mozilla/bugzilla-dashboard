@@ -5,6 +5,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --cache --format codeframe --ext jsx,js src"
+    "lint": "eslint --cache --format codeframe --ext jsx,js src webpack.config.js"
   }
 }
