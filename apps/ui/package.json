@@ -1,0 +1,10 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "lint": "eslint --cache --format codeframe --ext jsx,js src"
+  }
+}
