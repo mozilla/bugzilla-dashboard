@@ -26,5 +26,5 @@ it('Current - To Friday of current week', () => {
   const myTempDate = moment().utc();
   const distance = 5 - myTempDate.day(); // 5 represents Friday
   myTempDate.date(myTempDate.date() + distance);
-  expect(newDate).toBe(myTempDate.toISOString().split('T')[0]);
+  expect(moment(myTempDate.format('YYYY-MM-DD')).isSame(newDate)).toBe(true);
 });
