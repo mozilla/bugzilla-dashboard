@@ -1,0 +1,515 @@
+"""Gets information about particular bugs in the database."""
+type Bug {
+  """
+  The total number of hours that this bug has taken so far.
+  If you are not in the time-tracking group, this field will not be included in the return value.
+  """
+  actualTime: Int
+
+  """
+  The unique aliases of this bug. An empty array will be returned if this bug has no aliases.
+  """
+  aliases: [String]!
+
+  """The login name of the user to whom the bug is assigned."""
+  assignedTo: UserInformation
+
+  """The IDs of bugs that are "blocked" by this bug."""
+  blocks: [Int]
+
+  """
+  Array of objects containing detailed user information for each of the cc list members.
+  """
+  cc: [UserInformation]
+
+  """The name of the current classification the bug is in."""
+  classification: String
+
+  """The name of the current component of this bug."""
+  component: String
+
+  """When the bug was created."""
+  created: DateTime
+
+  """An object containing detailed user information for the creator."""
+  creator: UserInformation
+
+  """The date that this bug is due to be completed."""
+  deadline: DateTime
+
+  """The IDs of bugs that this bug "depends on"."""
+  dependsOn: [Int]
+
+  """
+  The bug ID of the bug that this bug is a duplicate of.
+  If this bug isn't a duplicate of any bug, this will be null.
+  """
+  duplicateOf: Int
+
+  """
+  The number of hours that it was estimated that this bug would take.
+  If you are not in the time-tracking group, this field will not be included in the return value.
+  """
+  estimatedTime: Int
+
+  """
+  An array of objects containing the information about flags currently set for the bug.
+  """
+  flags: [Flag]
+
+  """The names of all the groups that this bug is in."""
+  groups: [String]
+
+  """The unique numeric ID of this bug."""
+  id: Int!
+
+  """
+  If `true`, this bug can be accessed by members of the CC list,
+  even if they are not in the groups the bug is restricted to.
+  """
+  isCcAccessible: Boolean
+
+  """
+  `true` if the bug has been confirmed. Usually this means that the bug has at
+  some point been moved out of the `UNCONFIRMED` status and into another open status.
+  """
+  isConfirmed: Boolean
+
+  """`true` if this bug is open, `false` if it is closed."""
+  isOpen: Boolean
+
+  """
+  If `true`, this bug can be accessed by the creator of the bug,
+  even if they are not a member of the groups the bug is restricted to.
+  """
+  isCreatorAccessible: Boolean
+
+  """Each keyword that is on this bug."""
+  keywords: [String]
+
+  """When the bug was last changed."""
+  lastChanged: DateTime
+
+  """The name of the operating system that the bug was filed against."""
+  operatingSystem: String
+
+  """The name of the platform (hardware) that the bug was filed against."""
+  platform: String
+
+  """The priority of the bug."""
+  priority: String
+
+  """The name of the product this bug is in."""
+  product: String
+
+  """An object containing detailed user information for the QA contact."""
+  qaContact: UserInformation
+
+  """
+  The number of hours of work remaining until work on this bug is complete.
+  If you are not in the time-tracking group, this field will not be included in the return value.
+  """
+  remainingTime: Int
+
+  """
+  The current resolution of the bug, or an empty string if the bug is open.
+  """
+  resolution: String
+
+  """The URLs in the See Also field on the bug."""
+  seeAlso: [String]
+
+  """The current severity of the bug."""
+  severity: String
+
+  """The current status of the bug."""
+  status: String
+
+  """The summary of this bug."""
+  summary: String
+
+  """
+  The milestone that this bug is supposed to be fixed by, or for closed bugs,
+  the milestone that it was fixed for.
+  """
+  targetMilestone: String
+
+  """
+  A URL that demonstrates the problem described in the bug, or is somehow related to the bug report.
+  """
+  url: String
+
+  """The version the bug was reported against."""
+  version: String
+
+  """The value of the "status whiteboard" field on the bug."""
+  whiteboard: String
+
+  """
+  Each array item is a tag name. Note that tags are personal to the currently
+  logged in user and are not the same as comment tags.
+  """
+  tags: [String]
+
+  """Each array item is a bug ID that is a duplicate of this bug."""
+  duplicates: [Int]
+}
+
+"""A set of bug results from a bug search."""
+type BugPager {
+  """
+  Get information about the current page in a Bug Search.
+  Contains information useful for continuing forward and backward
+  in the current bug search.
+  """
+  pageInfo: PageInfo
+
+  """
+  A list of nodes from the bug search. Each edge contains the current page
+  for the node, and a node reference which contains the specific bug information.
+  """
+  edges: [Edge]
+}
+
+"""
+Allows you to search for bugs based on particular criteria.
+Unless otherwise specified in the description of a parameter,
+bugs are returned if they match exactly the criteria you specify in these parameters;
+that is, we don't match against substrings. If a bug is in the "Widgets" product and
+you ask for bugs in the "Widg" product, you won't get anything.
+Criteria are joined in a logical `AND`. That is, you will be returned bugs that match
+all of the criteria, not bugs that match any of the criteria.
+Most parameters are a list of the types it says. When you pass an array, it means
+"Give me bugs with any of these values." For example, if you wanted bugs that were
+in either the "Foo" or "Bar" products, you'd pass:
+`"products": ["Foo", "Bar"]`
+"""
+input BugSearch {
+  """The unique aliases of this bug."""
+  aliases: [String]
+
+  """The login names of users that bugs are assigned to."""
+  assignedTos: [String]
+
+  """
+  The name of the component that the bugs are in. Note that if there are multiple
+  components with the same name, and you search for that name, bugs in all those
+  components will be returned. If you don't want this, be sure to also specify the
+  `products` argument.
+  """
+  components: [String]
+
+  """Searches for bugs that were created at this time or later."""
+  createdAtOrAfter: DateTime
+
+  """The login names of users who created the bugs."""
+  creators: [String]
+
+  """The numeric IDs of bugs."""
+  ids: [Int]
+
+  """Each keyword that is on this bug."""
+  keywords: [String]
+
+  """Searches for bugs that were modified at this time or later."""
+  modifiedAtOrAfter: DateTime
+
+  """
+  The number of comments bugs have. A bug's description is the first comment.
+  For example, to find bugs which someone has commented on after they have been filed,
+  search on `minimumCommentCounts` greater than 1.
+  """
+  minimumCommentCounts: [Int]
+
+  """The "Operating System" fields of bugs."""
+  operatingSystems: [String]
+
+  """
+  The ordering of the result in the format of <field>[,<field>...][" DESC"|" ASC"]
+  """
+  order: String
+
+  """The platforms (sometimes called "Hardware") fields of bugs."""
+  platforms: [String]
+
+  """The priority field on bugs."""
+  priorities: [String]
+
+  """The name of products that bugs are in."""
+  products: [String]
+
+  """
+  The current resolutions of bugs, only set if a bug is closed. You can find open
+  bugs by searching for bugs with an empty resolution.
+  """
+  resolutions: [String]
+
+  """The severity field on bugs."""
+  severities: [String]
+
+  """
+  The current status of a bug, not including its resolution, if it has one,
+  which is a separate field.
+  """
+  statuses: [String]
+
+  """
+  Searches for substrings in the single-line `summary` field on bugs.
+  by specifying an array, bugs whose summaries match any of the passed substrings
+  will be returned. Note that unlike searching in the Bugzilla UI, substrings
+  are not split on spaces. So searching for `["foo bar"]` will match
+  "This is a foo bar" but not "This foo is a bar".
+  `["foo", "bar"]`, would, however, match the second item.
+  """
+  summaries: [String]
+
+  """
+  Searches for bugs with the specified tags. By specifying an array, any bugs
+  that match any of the tags will be returned. Note that tags are personal to
+  the currently logged in user.
+  """
+  tags: [String]
+
+  """
+  The Target Milestones field of bugs. Note that even if this Bugzilla does not have
+  the Target Milestone field enabled, you can still search for bugs by Target Milestone.
+  However, it is likely that in that case, most bugs will not have a Target Milestone set
+  (it defaults to "---" when the field isn't enabled).
+  """
+  targetMilestones: [String]
+
+  """
+  The login names of the bugs' QA Contact. Note that even if this Bugzilla does not have the
+  QA Contact field enabled, you can still search for bugs by QA Contact
+  (though it is likely that no bug will have a QA Contact set, if the field is disabled).
+  """
+  qaContacts: [String]
+
+  """The "URL" field of bugs."""
+  urls: [String]
+
+  """The Version field of bugs."""
+  versions: [String]
+
+  """
+  Search the "Status Whiteboard" field on bugs for a substring. Works the same as the `summaries`
+  field, but searches the Status Whiteboard field.
+  """
+  whiteboards: [String]
+
+  """The name of the fields being searched as advanced query parameters"""
+  fields: [String]
+
+  """The comparison operators for `field` to be used as advanced query"""
+  operators: [Condition]
+
+  """The values to which the `field` is being compared"""
+  values: [String]
+}
+
+type Comment {
+  """The globally unique ID for the comment."""
+  id: Int!
+
+  """The ID of the bug that this comment is on."""
+  bugId: Int!
+
+  """
+  If the comment was made on an attachment, this will be the ID of that attachment. Otherwise it will be null.
+  """
+  attachmentId: ID
+
+  """
+  The number of the comment local to the bug. The Description is 0, comments start with 1.
+  """
+  count: Int!
+
+  """The actual text of the comment."""
+  text: String!
+
+  """The login name of the comment's author."""
+  creator: String!
+
+  """The time (in Bugzilla's timezone) that the comment was added."""
+  created: DateTime!
+
+  """
+  true if this comment is private (only visible to a certain group called the "insidergroup"), false otherwise.
+  """
+  isPrivate: Boolean!
+
+  """An array of comment tags currently set for the comment."""
+  tags: [String]!
+}
+
+"""Condition for the operators in `BugSearch`"""
+enum Condition {
+  IS_EQUAL_TO
+  IS_NOT_EQUAL_TO
+  IS_EQUAL_TO_ANY_OF_THE_STRING
+  CONTAINS_THE_STRING
+  CONTAINS_THE_STRING_WITH_EXACT_CASE
+  DOES_NOT_CONTAIN_IN_THE_STRING
+  CONTAINS_ANY_OF_THE_STRING
+  CONTAINS_ALL_OF_THE_STRING
+  CONTAINS_NONE_OF_THE_STRING
+  MATCHES_REGEX
+  DOES_NOT_MATCH_REGEX
+  IS_LESS_THAN
+  IS_LESS_THAN_OR_EQUAL_TO
+  IS_GREATER_THAN
+  IS_GREATER_THAN_OR_EQUAL_TO
+  CONTAINS_ANY_OF_THE_WORDS
+  CONTAINS_ALL_OF_THE_WORDS
+  CONTAINS_NONE_OF_THE_WORDS
+  CHANGED_BEFORE
+  CHANGED_AFTER
+  CHANGED_FROM
+  CHANGED_TO
+  CHANGED_BY
+  MATCHES
+  DOES_NOT_MATCH
+  IS_NOT_EMPTY
+  IS_EMPTY
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format
+outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for
+representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the
+`date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO
+8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+"""A single edge in a page of a page search."""
+type Edge {
+  """The page that this current edge belongs to."""
+  cursor: Int
+
+  """The bug that exists in this page's edge."""
+  node: Bug
+}
+
+"""Information about a flag currently set for a bug."""
+type Flag {
+  """The ID of the flag."""
+  id: Int
+
+  """The name of the flag."""
+  name: String
+
+  """The type ID of the flag."""
+  typeId: Int
+
+  """The timestamp when this flag was originally created."""
+  created: DateTime
+
+  """The timestamp when the flag was last modified."""
+  modified: DateTime
+
+  """The current status of the flag."""
+  status: String
+
+  """The login name of the user who created or last modified the flag."""
+  setter: String
+
+  """
+  The login name of the user this flag has been requested to be granted or denied.
+  Note, this field is only returned if a requestee is set.
+  """
+  requestee: String
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+"""Get information about the current page in a Bug Search."""
+type PageInfo {
+  """
+  `true` if a next page may have data. Does not guarantee
+  that the next page does have additional bugs.
+  """
+  hasNextPage: Boolean!
+
+  """`true` if the current page was preceeded by another list of bugs."""
+  hasPreviousPage: Boolean!
+
+  """
+  Will return the next numeric page number if `hasNextPage` is `true`, otherwise
+  will return `null`. Useful for performing a query for more bugs in the current
+  search.
+  """
+  nextPage: Int
+
+  """
+  Will return the previous numeric page number if `hasPreviouxPage` is `true`,
+  otherwise will return `null`. Useful for querying back to a previous page in the
+  current search.
+  """
+  previousPage: Int
+}
+
+"""Define custom pagination parameters to the Bug Search."""
+input Paging {
+  """
+  Used in conjunction with the `pageSize` argument, `page` defines the current offset of
+  page number to use in a bug search. For example, given a search that would return 100 bugs,
+  setting the `pageSize` to `10` and `page` to `1` would return bugs 11 through 20 from the
+  set of 100. Pages are 0-indexed, meaning the first page starts at `0`.
+  """
+  page: Int
+
+  """
+  Used in conjunction with the `page` argument, `pageSize` defines the maximum number of bugs
+  to include in a single page for a bug search.
+  For example, given a search that would return 100 bugs,
+  setting the `pageSize` to `10` and `page` to `1` would return bugs 11 through 20 from the
+  set of 100. If the `pageSize` is more than zero and higher than the maximum limit set by the
+  administrator, then the maximum limit will be used instead. If you set the limit equal to zero,
+  then all matching results will be returned instead.
+  """
+  pageSize: Int
+}
+
+type Query {
+  root: Boolean
+
+  """
+  Get information about a single bug using its numeric ID or string alias.
+  Use `bugs()` to search more than one bug at a time.
+  """
+  bug(id: Int!): Bug
+
+  """Search for multiple bugs based on particular criteria."""
+  bugs(search: BugSearch!, paging: Paging): BugPager
+
+  """Search for all comments for a particular bug using the bug ID"""
+  comments(id: Int!): [Comment]!
+}
+
+"""
+A time string at UTC, such as 10:15:30Z, compliant with the `full-time` format
+outlined in section 5.6 of the RFC 3339profile of the ISO 8601 standard for
+representation of dates and times using the Gregorian calendar.
+"""
+scalar Time
+
+type UserInformation {
+  """The user ID for this user."""
+  id: Int
+
+  """The 'real' name for this user, if any."""
+  name: String
+
+  """The user's Bugzilla login."""
+  username: String
+}
+

@@ -1,0 +1,7 @@
+query reports($user: String!) {
+  reports(user: $user) {
+    name
+    bugzillaEmail
+    mail
+  }
+}

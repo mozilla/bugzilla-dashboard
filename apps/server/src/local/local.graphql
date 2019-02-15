@@ -1,0 +1,21 @@
+# These scalars are defined in the schema so they can be used interally by
+# the schema. Their actual implementations are mapped to entities from
+# graphql-iso-date and graphql-type-json in the resolvers.
+scalar Date
+scalar Time
+scalar DateTime
+scalar JSON
+
+type User {
+  mail: String!
+  bugzillaEmail: String
+  name: String!
+}
+
+type Query {
+  reports(user: String): [User]!
+}
+
+schema {
+  query: Query
+}

@@ -1,3 +1,5 @@
 const neutrino = require('neutrino');
 
-module.exports = neutrino().webpack();
+const config = neutrino().webpack();
+
+module.exports = [config, { ...config, devtool: 'source-map' }];

@@ -6,5 +6,20 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint --cache --format codeframe --ext jsx,js src webpack.config.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.1",
+    "@material-ui/icons": "^3.0.2",
+    "apollo-boost": "^0.1.27",
+    "auth0-js": "^9.10.0",
+    "graphql": "^14.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.7.0",
+    "react-apollo": "^2.4.1",
+    "react-dom": "^16.7.0",
+    "react-fout-stager": "^3.0.0",
+    "react-hot-loader": "^4.6.3",
+    "react-router-dom": "^4.3.1",
+    "typeface-roboto": "^0.0.54"
   }
 }

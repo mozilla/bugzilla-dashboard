@@ -81,3 +81,6 @@ typings/
 
 # webpack build output
 build
+
+# Phonebook data
+phonebook.json

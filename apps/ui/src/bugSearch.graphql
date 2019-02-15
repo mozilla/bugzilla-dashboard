@@ -1,0 +1,9 @@
+query bugSearch($search: BugSearch!) {
+  bugs(search: $search) {
+    edges {
+      node {
+        summary
+      }
+    }
+  }
+}
