@@ -31,7 +31,6 @@ module.exports = {
         proxy: {
           '/graphql': {
             target: 'http://localhost:8000/graphql',
-            // pathRewrite: {'^/graphql' : ''}
           },
         },
       },
