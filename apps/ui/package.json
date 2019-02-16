@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.1",
     "@material-ui/icons": "^3.0.2",
+    "@nivo/line": "^0.52.1",
     "apollo-boost": "^0.1.27",
     "auth0-js": "^9.10.0",
     "graphql": "^14.1.1",
