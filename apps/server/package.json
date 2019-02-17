@@ -7,8 +7,7 @@
     "fetch-schema": "get-graphql-schema https://bugzilla-graphql-gateway.herokuapp.com > src/bugzilla/bugzilla.graphql",
     "start": "webpack --watch --mode development -r dotenv/config",
     "build": "webpack --mode production -r dotenv/config",
-    "lint": "eslint --cache --format codeframe src webpack.config.js",
-    "heroku-postbuild": "yarn build"
+    "lint": "eslint --cache --format codeframe src webpack.config.js"
   },
   "dependencies": {
     "apollo-link-context": "^1.0.12",
@@ -16,6 +15,7 @@
     "apollo-server-express": "^2.3.3",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
+    "graph.js": "^1.21.1",
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1",
     "graphql-tools": "^4.0.4",

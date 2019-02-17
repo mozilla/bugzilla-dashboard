@@ -5,7 +5,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --cache --format codeframe --ext jsx,js src webpack.config.js"
+    "lint": "eslint --cache --format codeframe --ext jsx,js src webpack.config.js",
+    "heroku-prebuild": "yarn install --frozen-lockfile",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.1",
@@ -22,5 +24,20 @@
     "react-hot-loader": "^4.6.3",
     "react-router-dom": "^4.3.1",
     "typeface-roboto": "^0.0.54"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@mozilla-frontend-infra/react-lint": "^1.2.1",
+    "@neutrinojs/react": "^9.0.0-rc.0",
+    "babel-merge": "^2.0.1",
+    "eslint": "^5.14.0",
+    "graphql-tag": "^2.10.1",
+    "neutrino": "^9.0.0-rc.0",
+    "prettier": "^1.16.4",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
   }
 }

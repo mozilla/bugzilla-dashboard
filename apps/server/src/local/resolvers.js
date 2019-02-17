@@ -1,6 +1,6 @@
 import { GraphQLDate, GraphQLDateTime, GraphQLTime } from 'graphql-iso-date';
 import GraphQLJSON from 'graphql-type-json';
-import buildGraph from 'utils/src/buildGraph';
+import buildGraph from '../buildGraph';
 import phonebook from '../../phonebook.json';
 
 const graph = buildGraph(phonebook, 'chris@mozilla.com');

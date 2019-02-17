@@ -17,6 +17,7 @@ module.exports = {
         title: 'Bugzilla Dashboard',
       },
       env: {
+        GRAPHQL_URI: '/graphql',
         AUTH_DOMAIN: 'auth.mozilla.auth0.com',
         AUTH_CLIENT_ID: '70h90psuJAkUh272vMMUGBzI6m6VisUw',
         AUTH_REDIRECT_URI: `http://localhost:${port}/login`,

@@ -16,7 +16,7 @@ export default
 @hot(module)
 class App extends Component {
   client = new ApolloClient({
-    uri: '/graphql',
+    uri: process.env.GRAPHQL_URI,
     request: operation => {
       const storedCredentials = localStorage.getItem('credentials');
       const credentials = storedCredentials && JSON.parse(storedCredentials);
