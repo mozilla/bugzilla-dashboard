@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BugzillaComponents from '../BugzillaComponents';
 import Reportees from '../Reportees';
+import ToggleButtons from '../ToggleButtons';
 
 const styles = ({
   content: {
@@ -36,6 +37,9 @@ const MainView = ({
           bugzillaComponents={bugzillaComponents}
           onComponentDetails={onComponentDetails}
         />
+      </div>
+      <div>
+        <ToggleButtons />
       </div>
     </div>
   </div>
