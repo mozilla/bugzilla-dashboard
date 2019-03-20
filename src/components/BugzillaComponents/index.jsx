@@ -71,7 +71,6 @@ const BugzillaComponents = ({
 
 BugzillaComponents.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  title: PropTypes.string.isRequired,
   bugzillaComponents: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,

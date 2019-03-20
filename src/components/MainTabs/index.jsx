@@ -8,14 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import BugzillaComponents from '../BugzillaComponents';
 import Reportees from '../Reportees';
 
-function TabContainer(props) {
+const TabContainer = (props) => {
   const { children } = props;
   return (
     <Typography component="div" style={{ padding: 8 * 3 }}>
       {children}
     </Typography>
   );
-}
+};
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
@@ -33,55 +33,62 @@ class MainTabs extends React.Component {
       value: 0,
     };
 
-    handleChange = (event, value) => {
-      this.setState({ value });
+    handleChange = (event, selectedTabIndex) => {
+      this.setState({ value: selectedTabIndex });
     };
 
-    render() {
+    renderTabContents(tabIndex) {
       const {
-        classes, ldapEmail, partialOrg, onPersonDetails, teamComponents,
+        ldapEmail, partialOrg, onPersonDetails, teamComponents,
         bugzillaComponents, onComponentDetails,
       } = this.props;
+      switch (tabIndex) {
+        case 0:
+          return (
+            <Reportees
+              ldapEmail={ldapEmail}
+              partialOrg={partialOrg}
+              onPersonDetails={onPersonDetails}
+            />
+          );
+        case 1:
+          return (
+            <BugzillaComponents
+              bugzillaComponents={teamComponents}
+              onComponentDetails={onComponentDetails}
+            />
+          );
+        case 2:
+          return (
+            <BugzillaComponents
+              bugzillaComponents={bugzillaComponents}
+              onComponentDetails={onComponentDetails}
+            />
+          );
+        default:
+          return null;
+      }
+    }
+
+    render() {
+      const { classes, partialOrg, ldapEmail } = this.props;
       const { value } = this.state;
 
       return (
         <div className={classes.root}>
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange}>
-              <Tab label="People" />
+              <Tab label="Reportees" />
               <Tab label="Teams" />
               <Tab label="Components" />
             </Tabs>
           </AppBar>
-          {value === 0 && (
-            <TabContainer>
-              <Reportees
-                ldapEmail={ldapEmail}
-                partialOrg={partialOrg}
-                onPersonDetails={onPersonDetails}
-              />
-            </TabContainer>
-          )}
+          <h2 className={classes.header}>{partialOrg[ldapEmail].cn}</h2>
+          <TabContainer>
+            {this.renderTabContents(value)}
+          </TabContainer>
 
-          {value === 1 && (
-            <TabContainer>
-              <BugzillaComponents
-                title="Teams"
-                bugzillaComponents={teamComponents}
-                onComponentDetails={onComponentDetails}
-              />
-            </TabContainer>
-          )}
 
-          {value === 2 && (
-            <TabContainer>
-              <BugzillaComponents
-                title="Components"
-                bugzillaComponents={bugzillaComponents}
-                onComponentDetails={onComponentDetails}
-              />
-            </TabContainer>
-          )}
         </div>
       );
     }

@@ -27,7 +27,6 @@ const Reportees = ({
   classes, ldapEmail, partialOrg, onPersonDetails,
 }) => (
   <div className={classes.root}>
-    <h3 className={classes.header}>Reportees</h3>
     <div height="1rem">&nbsp;</div>
     {Object.values(partialOrg)
       .filter(({ cn }) => cn !== ldapEmail)
