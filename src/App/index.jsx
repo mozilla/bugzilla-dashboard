@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import { Grid } from 'react-bootstrap';
 
-import Main from '../views/Main';
+// import Main from '../views/Main';
 import PropsRoute from '../components/PropsRoute';
 import AuthController from '../components/auth/AuthController';
 import Navigation from '../views/Navigation';
@@ -87,7 +87,7 @@ export default class App extends React.Component {
           <Grid fluid id="container">
             {authReady ? (
               <Switch>
-                <PropsRoute path="/" exact component={Main} />
+                <PropsRoute path="/" exact component={SecretsTest} />
                 <PropsRoute path="/test" exact component={SecretsTest} />
                 <PropsRoute
                   path="/login"
