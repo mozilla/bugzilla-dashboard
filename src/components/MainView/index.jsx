@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import BugzillaComponents from '../BugzillaComponents';
-import Reportees from '../Reportees';
-import ToggleButtons from '../ToggleButtons';
+import MainTabs from '../MainTabs';
 
 const styles = ({
   content: {
@@ -20,27 +18,15 @@ const MainView = ({
 }) => (
   <div key={ldapEmail}>
     <h2 className={classes.header}>{partialOrg[ldapEmail].cn}</h2>
-    <div className={classes.content}>
-      <Reportees
+    <div>
+      <MainTabs
         ldapEmail={ldapEmail}
         partialOrg={partialOrg}
         onPersonDetails={onPersonDetails}
+        teamComponents={teamComponents}
+        onComponentDetails={onComponentDetails}
+        bugzillaComponents={bugzillaComponents}
       />
-      <div>
-        <BugzillaComponents
-          title="Teams"
-          bugzillaComponents={teamComponents}
-          onComponentDetails={onComponentDetails}
-        />
-        <BugzillaComponents
-          title="Components"
-          bugzillaComponents={bugzillaComponents}
-          onComponentDetails={onComponentDetails}
-        />
-      </div>
-      <div>
-        <ToggleButtons />
-      </div>
     </div>
   </div>
 );
