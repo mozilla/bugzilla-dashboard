@@ -57,6 +57,13 @@ export default class App extends React.Component {
     this.setState({ authReady });
   };
 
+  /*
+  UNSAFE_componentWillMount() is invoked just before mounting occurs. It is called before render(),
+  therefore calling setState() synchronously in this method will not trigger an extra rendering.
+  Generally, we recommend using the constructor() instead for initializing state.
+  Avoid introducing any side-effects or subscriptions in this method. For those use cases,
+  use componentDidMount() instead.
+   */
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
     this.authController.on(

@@ -13,12 +13,14 @@ export const webAuth = new WebAuth({
   domain: AUTH0.domain,
   clientID: AUTH0.clientID,
   redirectUri: AUTH0.redirectUri,
-  // audience: `https://${AUTH0.domain}/api/v2/`,
+  // The default audience, used if requesting access to an API.
   audience: 'login.taskcluster.net',
+  // Response type for all authentication requests
   responseType: 'token id_token',
   scope: AUTH0.scope,
 });
 
+// https://auth0.com/docs/users/normalized/oidc
 export function userSessionFromAuthResult(authResult) {
   return UserSession.fromOIDC({
     oidcProvider: 'mozilla-auth0',
