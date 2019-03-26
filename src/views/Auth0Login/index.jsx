@@ -26,6 +26,7 @@ export default class Auth0Login extends React.PureComponent {
         return this.setState({ loginError });
       }
 
+      // TODO: I don't know why we use props when we should have access via the context
       // eslint-disable-next-line react/destructuring-assignment
       this.props.setUserSession(userSessionFromAuthResult(authResult));
 
