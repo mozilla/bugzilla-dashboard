@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
@@ -11,7 +12,7 @@ import Reportees from '../Reportees';
 const TabContainer = (props) => {
   const { children } = props;
   return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
+    <Typography component="div" style={{ padding: 4 }}>
       {children}
     </Typography>
   );
@@ -25,6 +26,12 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  styledToolbar: {
+    'min-height': 48,
   },
 });
 
@@ -77,18 +84,21 @@ class MainTabs extends React.Component {
       return (
         <div className={classes.root}>
           <AppBar position="static">
-            <Tabs value={value} onChange={this.handleChange}>
-              <Tab label="Reportees" />
-              <Tab label="Teams" />
-              <Tab label="Components" />
-            </Tabs>
+            <Toolbar className={classes.styledToolbar}>
+              <Tabs value={value} onChange={this.handleChange}>
+                <Tab label="Reportees" />
+                <Tab label="Teams" />
+                <Tab label="Components" />
+              </Tabs>
+              <div className={classes.grow} />
+              <Typography variant="subtitle1" color="inherit">
+                {partialOrg[ldapEmail].cn}
+              </Typography>
+            </Toolbar>
           </AppBar>
-          <h2 className={classes.header}>{partialOrg[ldapEmail].cn}</h2>
           <TabContainer>
             {this.renderTabContents(value)}
           </TabContainer>
-
-
         </div>
       );
     }

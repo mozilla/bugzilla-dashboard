@@ -6,165 +6,174 @@ exports[`renders Manager who has reportees 1`] = `
     className="MainTabs-root-3"
   >
     <header
-      className="MuiPaper-root-13 MuiPaper-elevation4-19 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorPrimary-11"
+      className="MuiPaper-root-15 MuiPaper-elevation4-21 MuiAppBar-root-6 MuiAppBar-positionStatic-10 MuiAppBar-colorPrimary-13"
     >
       <div
-        className="MuiTabs-root-40"
+        className="MuiToolbar-root-42 MuiToolbar-regular-44 MuiToolbar-gutters-43 MainTabs-styledToolbar-5"
       >
         <div
-          className="MuiTabs-flexContainer-41"
+          className="MuiTabs-root-46"
         >
           <div
-            className="MuiTabs-scroller-43 MuiTabs-fixed-44"
-            onScroll={[Function]}
-            role="tablist"
-            style={
-              Object {
-                "marginBottom": 0,
-              }
-            }
+            className="MuiTabs-flexContainer-47"
           >
             <div
-              className="MuiTabs-flexContainer-41"
-            >
-              <button
-                aria-selected={true}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51 MuiTab-selected-54"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Reportees
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Teams
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Components
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-            </div>
-            <span
-              className="MuiPrivateTabIndicator-root-64 MuiPrivateTabIndicator-colorSecondary-66 MuiTabs-indicator-48"
+              className="MuiTabs-scroller-49 MuiTabs-fixed-50"
+              onScroll={[Function]}
+              role="tablist"
               style={
                 Object {
-                  "left": 0,
-                  "width": 0,
+                  "marginBottom": 0,
                 }
               }
-            />
+            >
+              <div
+                className="MuiTabs-flexContainer-47"
+              >
+                <button
+                  aria-selected={true}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57 MuiTab-selected-60"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Reportees
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Teams
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Components
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+              </div>
+              <span
+                className="MuiPrivateTabIndicator-root-70 MuiPrivateTabIndicator-colorSecondary-72 MuiTabs-indicator-54"
+                style={
+                  Object {
+                    "left": 0,
+                    "width": 0,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
+        <div
+          className="MainTabs-grow-4"
+        />
+        <h6
+          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        >
+          Manager
+        </h6>
       </div>
     </header>
-    <h2>
-      Manager
-    </h2>
     <div
-      className="MuiTypography-root-67 MuiTypography-body1-76"
+      className="MuiTypography-root-73 MuiTypography-body1-82"
       style={
         Object {
-          "padding": 24,
+          "padding": 4,
         }
       }
     >
       <div
-        className="Reportees-root-103"
+        className="Reportees-root-109"
       >
         <div
           height="1rem"
@@ -172,10 +181,10 @@ exports[`renders Manager who has reportees 1`] = `
            
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="manager@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -184,7 +193,7 @@ exports[`renders Manager who has reportees 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -203,10 +212,10 @@ exports[`renders Manager who has reportees 1`] = `
           </span>
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="someone@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -215,7 +224,7 @@ exports[`renders Manager who has reportees 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -245,165 +254,174 @@ exports[`renders Manager who has reportees and teams 1`] = `
     className="MainTabs-root-3"
   >
     <header
-      className="MuiPaper-root-13 MuiPaper-elevation4-19 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorPrimary-11"
+      className="MuiPaper-root-15 MuiPaper-elevation4-21 MuiAppBar-root-6 MuiAppBar-positionStatic-10 MuiAppBar-colorPrimary-13"
     >
       <div
-        className="MuiTabs-root-40"
+        className="MuiToolbar-root-42 MuiToolbar-regular-44 MuiToolbar-gutters-43 MainTabs-styledToolbar-5"
       >
         <div
-          className="MuiTabs-flexContainer-41"
+          className="MuiTabs-root-46"
         >
           <div
-            className="MuiTabs-scroller-43 MuiTabs-fixed-44"
-            onScroll={[Function]}
-            role="tablist"
-            style={
-              Object {
-                "marginBottom": 0,
-              }
-            }
+            className="MuiTabs-flexContainer-47"
           >
             <div
-              className="MuiTabs-flexContainer-41"
-            >
-              <button
-                aria-selected={true}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51 MuiTab-selected-54"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Reportees
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Teams
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Components
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-            </div>
-            <span
-              className="MuiPrivateTabIndicator-root-64 MuiPrivateTabIndicator-colorSecondary-66 MuiTabs-indicator-48"
+              className="MuiTabs-scroller-49 MuiTabs-fixed-50"
+              onScroll={[Function]}
+              role="tablist"
               style={
                 Object {
-                  "left": 0,
-                  "width": 0,
+                  "marginBottom": 0,
                 }
               }
-            />
+            >
+              <div
+                className="MuiTabs-flexContainer-47"
+              >
+                <button
+                  aria-selected={true}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57 MuiTab-selected-60"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Reportees
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Teams
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Components
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+              </div>
+              <span
+                className="MuiPrivateTabIndicator-root-70 MuiPrivateTabIndicator-colorSecondary-72 MuiTabs-indicator-54"
+                style={
+                  Object {
+                    "left": 0,
+                    "width": 0,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
+        <div
+          className="MainTabs-grow-4"
+        />
+        <h6
+          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        >
+          Manager
+        </h6>
       </div>
     </header>
-    <h2>
-      Manager
-    </h2>
     <div
-      className="MuiTypography-root-67 MuiTypography-body1-76"
+      className="MuiTypography-root-73 MuiTypography-body1-82"
       style={
         Object {
-          "padding": 24,
+          "padding": 4,
         }
       }
     >
       <div
-        className="Reportees-root-103"
+        className="Reportees-root-109"
       >
         <div
           height="1rem"
@@ -411,10 +429,10 @@ exports[`renders Manager who has reportees and teams 1`] = `
            
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="manager@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -423,7 +441,7 @@ exports[`renders Manager who has reportees and teams 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -442,10 +460,10 @@ exports[`renders Manager who has reportees and teams 1`] = `
           </span>
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="someone@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -454,7 +472,7 @@ exports[`renders Manager who has reportees and teams 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -484,165 +502,174 @@ exports[`renders Someone with no reportees 1`] = `
     className="MainTabs-root-3"
   >
     <header
-      className="MuiPaper-root-13 MuiPaper-elevation4-19 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorPrimary-11"
+      className="MuiPaper-root-15 MuiPaper-elevation4-21 MuiAppBar-root-6 MuiAppBar-positionStatic-10 MuiAppBar-colorPrimary-13"
     >
       <div
-        className="MuiTabs-root-40"
+        className="MuiToolbar-root-42 MuiToolbar-regular-44 MuiToolbar-gutters-43 MainTabs-styledToolbar-5"
       >
         <div
-          className="MuiTabs-flexContainer-41"
+          className="MuiTabs-root-46"
         >
           <div
-            className="MuiTabs-scroller-43 MuiTabs-fixed-44"
-            onScroll={[Function]}
-            role="tablist"
-            style={
-              Object {
-                "marginBottom": 0,
-              }
-            }
+            className="MuiTabs-flexContainer-47"
           >
             <div
-              className="MuiTabs-flexContainer-41"
-            >
-              <button
-                aria-selected={true}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51 MuiTab-selected-54"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Reportees
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Teams
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-61 MuiTab-root-49 MuiTab-textColorInherit-51"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onContextMenu={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                tabIndex="0"
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-57"
-                >
-                  <span
-                    className="MuiTab-labelContainer-58"
-                  >
-                    <span
-                      className="MuiTab-label-59"
-                    >
-                      Components
-                    </span>
-                  </span>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-118"
-                />
-              </button>
-            </div>
-            <span
-              className="MuiPrivateTabIndicator-root-64 MuiPrivateTabIndicator-colorSecondary-66 MuiTabs-indicator-48"
+              className="MuiTabs-scroller-49 MuiTabs-fixed-50"
+              onScroll={[Function]}
+              role="tablist"
               style={
                 Object {
-                  "left": 0,
-                  "width": 0,
+                  "marginBottom": 0,
                 }
               }
-            />
+            >
+              <div
+                className="MuiTabs-flexContainer-47"
+              >
+                <button
+                  aria-selected={true}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57 MuiTab-selected-60"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Reportees
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Teams
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-67 MuiTab-root-55 MuiTab-textColorInherit-57"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-63"
+                  >
+                    <span
+                      className="MuiTab-labelContainer-64"
+                    >
+                      <span
+                        className="MuiTab-label-65"
+                      >
+                        Components
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-124"
+                  />
+                </button>
+              </div>
+              <span
+                className="MuiPrivateTabIndicator-root-70 MuiPrivateTabIndicator-colorSecondary-72 MuiTabs-indicator-54"
+                style={
+                  Object {
+                    "left": 0,
+                    "width": 0,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
+        <div
+          className="MainTabs-grow-4"
+        />
+        <h6
+          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        >
+          Someone
+        </h6>
       </div>
     </header>
-    <h2>
-      Someone
-    </h2>
     <div
-      className="MuiTypography-root-67 MuiTypography-body1-76"
+      className="MuiTypography-root-73 MuiTypography-body1-82"
       style={
         Object {
-          "padding": 24,
+          "padding": 4,
         }
       }
     >
       <div
-        className="Reportees-root-103"
+        className="Reportees-root-109"
       >
         <div
           height="1rem"
@@ -650,10 +677,10 @@ exports[`renders Someone with no reportees 1`] = `
            
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="manager@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -662,7 +689,7 @@ exports[`renders Someone with no reportees 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -681,10 +708,10 @@ exports[`renders Someone with no reportees 1`] = `
           </span>
         </div>
         <div
-          className="Reportees-person-106"
+          className="Reportees-person-112"
         >
           <div
-            className="DrilldownIcon-svgWrapper-107"
+            className="DrilldownIcon-svgWrapper-113"
             name="someone@mozilla.com"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -693,7 +720,7 @@ exports[`renders Someone with no reportees 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-109 DrilldownIcon-icon-108"
+              className="MuiSvgIcon-root-115 DrilldownIcon-icon-114"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
