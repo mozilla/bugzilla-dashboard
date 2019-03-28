@@ -8,7 +8,7 @@ import Main from '../views/Main';
 
 const styles = () => ({
   container: {
-    fontFamily: 'Roboto',
+    fontFamily: ['Roboto', 'Open Sans', 'sans-serif'],
   },
   '@global': {
     body: {
