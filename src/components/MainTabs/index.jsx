@@ -19,8 +19,12 @@ const TabContainer = (props) => {
 };
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
+
 
 const styles = theme => ({
   root: {
@@ -37,11 +41,11 @@ const styles = theme => ({
 
 class MainTabs extends React.Component {
     state = {
-      value: 0,
+      selectedTabIndex: 0,
     };
 
     handleChange = (event, selectedTabIndex) => {
-      this.setState({ value: selectedTabIndex });
+      this.setState({ selectedTabIndex });
     };
 
     renderTabContents(tabIndex) {
@@ -79,13 +83,13 @@ class MainTabs extends React.Component {
 
     render() {
       const { classes, partialOrg, ldapEmail } = this.props;
-      const { value } = this.state;
+      const { selectedTabIndex } = this.state;
 
       return (
         <div className={classes.root}>
           <AppBar position="static">
             <Toolbar className={classes.styledToolbar}>
-              <Tabs value={value} onChange={this.handleChange}>
+              <Tabs value={selectedTabIndex} onChange={this.handleChange}>
                 <Tab label="Reportees" />
                 <Tab label="Teams" />
                 <Tab label="Components" />
@@ -97,7 +101,7 @@ class MainTabs extends React.Component {
             </Toolbar>
           </AppBar>
           <TabContainer>
-            {this.renderTabContents(value)}
+            {this.renderTabContents(selectedTabIndex)}
           </TabContainer>
         </div>
       );

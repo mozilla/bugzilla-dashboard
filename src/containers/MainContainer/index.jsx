@@ -120,7 +120,7 @@ class MainContainer extends Component {
 
     handleChange(event) {
       this.setState({
-        ldapEmail: event.target.value,
+        ldapEmail: event.target.selectedTabIndex,
         bugzillaComponents: undefined,
         partialOrg: undefined,
       });
