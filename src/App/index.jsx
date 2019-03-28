@@ -10,8 +10,12 @@ const styles = () => ({
   container: {
     fontFamily: 'Roboto',
   },
+  '@global': {
+    body: {
+      margin: 0,
+    },
+  },
 });
-
 class App extends Component {
   static propTypes = {
     classes: PropTypes.shape({}).isRequired,
