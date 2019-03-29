@@ -1,11 +1,11 @@
 import React from 'react';
-import { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
 
 export default class CredentialsMenu extends React.PureComponent {
   static contextTypes = {
-    authController: object,
+    authController: PropTypes.shape({}),
   };
 
   static handleLoginRequest() {

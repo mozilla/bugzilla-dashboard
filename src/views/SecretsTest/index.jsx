@@ -1,23 +1,23 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-console */
 import React from 'react';
-import { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
 export default class SecretsTest extends React.Component {
   static contextTypes = {
-    authController: object.isRequired,
+    authController: PropTypes.shape({}).isRequired,
   };
 
   fetchTaskClusterSecret = async () => {
-    const { userSession } = this.context.authController;
-    if (!userSession) {
+    const { authController } = this.context;
+    if (!authController.userSession) {
+      // eslint-disable-next-line no-console
       console.log('login required');
-      return;
+    } else {
+      const secretsClient = authController.userSession.getTaskClusterSecretsClient();
+      const secret = await secretsClient.get('garbage/rail/test');
+      // eslint-disable-next-line no-console
+      console.log('secret', secret);
     }
-    const secretsClient = userSession.getTaskClusterSecretsClient();
-    const secret = await secretsClient.get('garbage/rail/test');
-    console.log('secret', secret);
   };
 
   render() {

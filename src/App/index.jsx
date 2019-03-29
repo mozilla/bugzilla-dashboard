@@ -30,7 +30,7 @@ class App extends React.Component {
 
   /* TODO: decouple auth from App */
   static childContextTypes = {
-    authController: PropTypes.object.isRequired,
+    authController: PropTypes.shape({}).isRequired,
   };
 
   state = {
@@ -62,13 +62,13 @@ class App extends React.Component {
     // Consider auth "ready" when we have no userSession, a userSession with no
     // renewAfter, or a renewAfter that is not in the past.  Once auth is
     // ready, it never becomes non-ready again.
-    // eslint-disable-next-line react/destructuring-assignment
-    const authReady = this.state.authReady
-      || !userSession
-      || !userSession.renewAfter
-      || new Date(userSession.renewAfter) > new Date();
-
-    this.setState({ authReady });
+    const { authReady } = this.state;
+    if (!authReady) {
+      const newState = !userSession
+        || !userSession.renewAfter
+        || new Date(userSession.renewAfter) > new Date();
+      this.setState({ authReady: newState });
+    }
   };
 
   // eslint-disable-next-line camelcase
