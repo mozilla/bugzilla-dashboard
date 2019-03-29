@@ -116,8 +116,6 @@ class App extends React.Component {
             ) : (
               <div style={{ textAlign: 'center' }}>
                 <Spinner />
-                <br />
-                Authenticating...
               </div>
             )}
           </Grid>
