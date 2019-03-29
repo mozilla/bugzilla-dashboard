@@ -5,7 +5,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
-import { Grid } from 'react-bootstrap';
 
 import Main from '../views/Main';
 import PropsRoute from '../components/PropsRoute';
@@ -101,24 +100,22 @@ class App extends React.Component {
         <div>
           {error && <ErrorPanel error={new Error(error)} />}
           <PropsRoute component={CredentialsMenu} />
-          <Grid fluid id="container">
-            {authReady ? (
-              <Switch>
-                <PropsRoute path="/" exact component={Main} />
-                <PropsRoute path="/test" exact component={SecretsTest} />
-                <PropsRoute
-                  path="/login"
-                  component={Auth0Login}
-                  setUserSession={authController.setUserSession}
-                />
-                <Route component={NotFound} />
-              </Switch>
-            ) : (
-              <div style={{ textAlign: 'center' }}>
-                <Spinner />
-              </div>
-            )}
-          </Grid>
+          {authReady ? (
+            <Switch>
+              <PropsRoute path="/" exact component={Main} />
+              <PropsRoute path="/test" exact component={SecretsTest} />
+              <PropsRoute
+                path="/login"
+                component={Auth0Login}
+                setUserSession={authController.setUserSession}
+              />
+              <Route component={NotFound} />
+            </Switch>
+          ) : (
+            <div style={{ textAlign: 'center' }}>
+              <Spinner />
+            </div>
+          )}
         </div>
       </BrowserRouter>
     );
