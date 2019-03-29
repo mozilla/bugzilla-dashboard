@@ -1,6 +1,6 @@
 import React from 'react';
 import { object } from 'prop-types';
-import { Glyphicon, NavDropdown, NavItem } from 'react-bootstrap';
+import { AccountCircleIcon, LogoutIcon } from '@icons/material';
 import Auth0LoginMenuItem from '../../components/auth/Auth0LoginMenuItem';
 
 export default class CredentialsMenu extends React.PureComponent {
@@ -39,7 +39,7 @@ export default class CredentialsMenu extends React.PureComponent {
         style={{ width: 18, height: 18, borderRadius: 9 }}
       />
     ) : (
-      <Glyphicon glyph="user" />
+      <AccountCircleIcon />
     );
     const title = (
       <span>
@@ -49,13 +49,10 @@ export default class CredentialsMenu extends React.PureComponent {
     );
 
     return (
-      <NavDropdown id="sign-in-menu" key="sign-in-menu" title={title}>
-        <NavItem onSelect={() => authController.setUserSession(null)}>
-          <Glyphicon glyph="log-out" />
-          {' '}
-Sign Out
-        </NavItem>
-      </NavDropdown>
+      <div>
+        {title}
+        <LogoutIcon onClick={() => authController.setUserSession(null)} style={{ cursor: 'pointer' }} />
+      </div>
     );
   }
 
