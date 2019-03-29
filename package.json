@@ -37,7 +37,6 @@
     "query-string": "^6.2.0",
     "ramda": "^0.26.1",
     "react": "^16",
-    "react-bootstrap": "^0.32.4",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16",
     "react-hot-loader": "^4",

@@ -2,19 +2,17 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { object } from 'prop-types';
-import { Button } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 
 export default class SecretsTest extends React.Component {
   static contextTypes = {
     authController: object.isRequired,
   };
 
-
-  doEet = async () => {
+  fetchTaskClusterSecret = async () => {
     const { userSession } = this.context.authController;
     if (!userSession) {
       console.log('login required');
-      // this.setState({ errorMsg: 'Login required!' });
       return;
     }
     const secretsClient = userSession.getTaskClusterSecretsClient();
@@ -25,7 +23,9 @@ export default class SecretsTest extends React.Component {
   render() {
     return (
       <div className="container">
-        <Button onClick={this.doEet}>do eet and watch the console</Button>
+        <Button onClick={this.fetchTaskClusterSecret}>
+          Click on the button and watch the console for a secret
+        </Button>
       </div>
     );
   }
