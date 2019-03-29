@@ -9,7 +9,6 @@ import Spinner from '@mozilla-frontend-infra/components/Spinner';
 import Main from '../views/Main';
 import PropsRoute from '../components/PropsRoute';
 import AuthController from '../components/auth/AuthController';
-import CredentialsMenu from '../views/CredentialsMenu';
 import NotFound from '../components/NotFound';
 import Auth0Login from '../views/Auth0Login';
 
@@ -98,7 +97,6 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           {error && <ErrorPanel error={new Error(error)} />}
-          <PropsRoute component={CredentialsMenu} />
           {authReady ? (
             <Switch>
               <PropsRoute path="/" exact component={Main} />

@@ -157,11 +157,22 @@ exports[`renders Manager who has reportees 1`] = `
         <div
           className="MainTabs-grow-4"
         />
-        <h6
-          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        <svg
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "fill": "currentColor",
+              "height": 24,
+              "width": 24,
+            }
+          }
+          viewBox="0 0 24 24"
         >
-          Manager
-        </h6>
+          <path
+            d="M10,17.25V14H3V10H10V6.75L15.25,12L10,17.25M8,2H17C18.1,2 19,2.9 19,4V20C19,21.1 18.1,22 17,22H8C6.9,22 6,21.1 6,20V16H8V20H17V4H8V8H6V4C6,2.9 6.9,2 8,2Z"
+          />
+        </svg>
       </div>
     </header>
     <div
@@ -405,11 +416,22 @@ exports[`renders Manager who has reportees and teams 1`] = `
         <div
           className="MainTabs-grow-4"
         />
-        <h6
-          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        <svg
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "fill": "currentColor",
+              "height": 24,
+              "width": 24,
+            }
+          }
+          viewBox="0 0 24 24"
         >
-          Manager
-        </h6>
+          <path
+            d="M10,17.25V14H3V10H10V6.75L15.25,12L10,17.25M8,2H17C18.1,2 19,2.9 19,4V20C19,21.1 18.1,22 17,22H8C6.9,22 6,21.1 6,20V16H8V20H17V4H8V8H6V4C6,2.9 6.9,2 8,2Z"
+          />
+        </svg>
       </div>
     </header>
     <div
@@ -653,11 +675,22 @@ exports[`renders Someone with no reportees 1`] = `
         <div
           className="MainTabs-grow-4"
         />
-        <h6
-          className="MuiTypography-root-73 MuiTypography-subtitle1-91 MuiTypography-colorInherit-102"
+        <svg
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "fill": "currentColor",
+              "height": 24,
+              "width": 24,
+            }
+          }
+          viewBox="0 0 24 24"
         >
-          Someone
-        </h6>
+          <path
+            d="M10,17.25V14H3V10H10V6.75L15.25,12L10,17.25M8,2H17C18.1,2 19,2.9 19,4V20C19,21.1 18.1,22 17,22H8C6.9,22 6,21.1 6,20V16H8V20H17V4H8V8H6V4C6,2.9 6.9,2 8,2Z"
+          />
+        </svg>
       </div>
     </header>
     <div

@@ -8,6 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import BugzillaComponents from '../BugzillaComponents';
 import Reportees from '../Reportees';
+import CredentialsMenu from '../../views/CredentialsMenu';
 
 const TabContainer = (props) => {
   const { children } = props;
@@ -82,7 +83,7 @@ class MainTabs extends React.Component {
     }
 
     render() {
-      const { classes, partialOrg, ldapEmail } = this.props;
+      const { classes } = this.props;
       const { selectedTabIndex } = this.state;
 
       return (
@@ -95,9 +96,7 @@ class MainTabs extends React.Component {
                 <Tab label="Components" />
               </Tabs>
               <div className={classes.grow} />
-              <Typography variant="subtitle1" color="inherit">
-                {partialOrg[ldapEmail].cn}
-              </Typography>
+              <CredentialsMenu />
             </Toolbar>
           </AppBar>
           <TabContainer>

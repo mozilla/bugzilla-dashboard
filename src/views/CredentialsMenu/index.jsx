@@ -1,35 +1,43 @@
 import React from 'react';
 import { object } from 'prop-types';
-import { AccountCircleIcon, LogoutIcon } from '@icons/material';
-import Auth0LoginMenuItem from '../../components/auth/Auth0LoginMenuItem';
-import SecretsTest from '../SecretsTest';
+import Typography from '@material-ui/core/Typography';
+import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
 
 export default class CredentialsMenu extends React.PureComponent {
   static contextTypes = {
-    authController: object.isRequired,
+    authController: object,
   };
 
+  static handleLoginRequest() {
+    const loginView = new URL('/login', window.location);
+    window.open(loginView, '_blank');
+  }
+
   componentDidMount() {
-    // eslint-disable-next-line react/destructuring-assignment
-    this.context.authController.on(
-      'user-session-changed',
-      this.handleUserSessionChanged,
-    );
+    const { authController } = this.context;
+    if (authController) {
+      authController.on(
+        'user-session-changed',
+        this.handleUserSessionChanged,
+      );
+    }
   }
 
   componentWillUnmount() {
-    // eslint-disable-next-line react/destructuring-assignment
-    this.context.authController.off(
-      'user-session-changed',
-      this.handleUserSessionChanged,
-    );
+    const { authController } = this.context;
+    if (authController) {
+      authController.off(
+        'user-session-changed',
+        this.handleUserSessionChanged,
+      );
+    }
   }
 
   handleUserSessionChanged = () => {
     this.forceUpdate();
   };
 
-  renderWithoutUser = () => <Auth0LoginMenuItem />;
+  renderWithoutUser = () => <LoginIcon onClick={CredentialsMenu.handleLoginRequest} style={{ cursor: 'pointer' }} />;
 
   renderWithUser(userSession) {
     const { authController } = this.context;
@@ -37,31 +45,28 @@ export default class CredentialsMenu extends React.PureComponent {
       <img
         alt={userSession.name}
         src={userSession.picture}
-        style={{ width: 18, height: 18, borderRadius: 9 }}
+        style={{ width: '2rem', borderRadius: '50%' }}
       />
     ) : (
       <AccountCircleIcon />
     );
-    const title = (
-      <span>
-        {icon}
-        {userSession.name}
-      </span>
-    );
 
+    // XXX: I'm not going with Material UI theming; please advise recommended approach
     return (
-      <div>
-        {title}
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {icon}
+        <Typography component="span" variant="subheading" style={{ padding: '0.5rem', color: 'white' }}>
+          {userSession.name}
+        </Typography>
         <LogoutIcon onClick={() => authController.setUserSession(null)} style={{ cursor: 'pointer' }} />
-        <SecretsTest />
       </div>
     );
   }
 
   render() {
     // note: an update to the userSession will cause a forceUpdate
-    // eslint-disable-next-line react/destructuring-assignment
-    const userSession = this.context.authController.getUserSession();
+    const { authController } = this.context;
+    const userSession = authController && authController.getUserSession();
 
     return userSession
       ? this.renderWithUser(userSession)

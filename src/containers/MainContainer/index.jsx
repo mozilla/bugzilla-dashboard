@@ -8,6 +8,7 @@ import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
+import SecretsTest from '../../views/SecretsTest';
 
 class MainContainer extends Component {
     state = {
@@ -17,6 +18,10 @@ class MainContainer extends Component {
       teamComponents: {},
       showComponent: undefined,
       showPerson: undefined,
+    };
+
+    static contextTypes = {
+      authController: PropTypes.shape({}).isRequired,
     };
 
     static propTypes = {
@@ -175,6 +180,8 @@ class MainContainer extends Component {
       const {
         ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg, teamComponents,
       } = this.state;
+      const { authController } = this.context;
+      const userSession = authController.getUserSession();
 
       return (
         <div>
@@ -202,6 +209,7 @@ class MainContainer extends Component {
               onPersonDetails={this.handleShowPersonDetails}
             />
           )}
+          {userSession && <SecretsTest />}
         </div>
       );
     }
