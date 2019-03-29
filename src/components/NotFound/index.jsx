@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorStatus from '../Error';
+import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 
 export default class NotFound extends React.PureComponent {
   render() {
@@ -12,6 +12,6 @@ export default class NotFound extends React.PureComponent {
       },
     );
 
-    return <ErrorStatus error={ex} />;
+    return <ErrorPanel error={ex} />;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from '../../components/Error';
+import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import { webAuth, userSessionFromAuthResult } from '../../components/auth/auth0';
 
 export default class Auth0Login extends React.PureComponent {
@@ -40,7 +40,7 @@ export default class Auth0Login extends React.PureComponent {
   render() {
     const { loginError } = this.state;
     if (loginError) {
-      return <Error error={loginError} />;
+      return <ErrorPanel error={loginError} />;
     }
 
     if (window.location.hash) {
