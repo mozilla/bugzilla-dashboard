@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "^3.5.1",
+    "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.1",
     "@mozilla-frontend-infra/components": "^2.0.0",
     "chart.js": "^2.7.3",

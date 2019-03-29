@@ -48,7 +48,7 @@ ChartJsWrapper.propTypes = {
   data: PropTypes.shape({
     datasets: PropTypes.arrayOf(
       PropTypes.shape({
-        // There can be more properties than data and value,
+        // There can be more properties than data and selectedTabIndex,
         // however, we mainly care about these as a minimum requirement
         data: PropTypes.arrayOf(
           PropTypes.shape({

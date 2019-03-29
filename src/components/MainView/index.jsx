@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import BugzillaComponents from '../BugzillaComponents';
-import Reportees from '../Reportees';
+import MainTabs from '../MainTabs';
 
 const styles = ({
   content: {
@@ -14,35 +13,22 @@ const styles = ({
 });
 
 const MainView = ({
-  classes, ldapEmail, partialOrg, bugzillaComponents, teamComponents,
+  ldapEmail, partialOrg, bugzillaComponents, teamComponents,
   onComponentDetails, onPersonDetails,
 }) => (
-  <div key={ldapEmail}>
-    <h2 className={classes.header}>{partialOrg[ldapEmail].cn}</h2>
-    <div className={classes.content}>
-      <Reportees
-        ldapEmail={ldapEmail}
-        partialOrg={partialOrg}
-        onPersonDetails={onPersonDetails}
-      />
-      <div>
-        <BugzillaComponents
-          title="Teams"
-          bugzillaComponents={teamComponents}
-          onComponentDetails={onComponentDetails}
-        />
-        <BugzillaComponents
-          title="Components"
-          bugzillaComponents={bugzillaComponents}
-          onComponentDetails={onComponentDetails}
-        />
-      </div>
-    </div>
+  <div>
+    <MainTabs
+      ldapEmail={ldapEmail}
+      partialOrg={partialOrg}
+      onPersonDetails={onPersonDetails}
+      teamComponents={teamComponents}
+      onComponentDetails={onComponentDetails}
+      bugzillaComponents={bugzillaComponents}
+    />
   </div>
 );
 
 MainView.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
   bugzillaComponents: PropTypes.arrayOf(PropTypes.shape({})),
