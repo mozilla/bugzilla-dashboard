@@ -10,7 +10,7 @@ import { Grid } from 'react-bootstrap';
 import Main from '../views/Main';
 import PropsRoute from '../components/PropsRoute';
 import AuthController from '../components/auth/AuthController';
-import Navigation from '../views/Navigation';
+import CredentialsMenu from '../views/CredentialsMenu';
 import NotFound from '../components/NotFound';
 import Auth0Login from '../views/Auth0Login';
 import SecretsTest from '../views/SecretsTest';
@@ -100,7 +100,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           {error && <ErrorPanel error={new Error(error)} />}
-          <PropsRoute component={Navigation} />
+          <PropsRoute component={CredentialsMenu} />
           <Grid fluid id="container">
             {authReady ? (
               <Switch>
