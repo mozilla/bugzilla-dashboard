@@ -12,7 +12,6 @@ import AuthController from '../components/auth/AuthController';
 import CredentialsMenu from '../views/CredentialsMenu';
 import NotFound from '../components/NotFound';
 import Auth0Login from '../views/Auth0Login';
-import SecretsTest from '../views/SecretsTest';
 
 const styles = () => ({
   container: {
@@ -103,7 +102,6 @@ class App extends React.Component {
           {authReady ? (
             <Switch>
               <PropsRoute path="/" exact component={Main} />
-              <PropsRoute path="/test" exact component={SecretsTest} />
               <PropsRoute
                 path="/login"
                 component={Auth0Login}

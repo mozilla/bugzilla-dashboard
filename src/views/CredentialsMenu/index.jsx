@@ -2,6 +2,7 @@ import React from 'react';
 import { object } from 'prop-types';
 import { AccountCircleIcon, LogoutIcon } from '@icons/material';
 import Auth0LoginMenuItem from '../../components/auth/Auth0LoginMenuItem';
+import SecretsTest from '../SecretsTest';
 
 export default class CredentialsMenu extends React.PureComponent {
   static contextTypes = {
@@ -52,6 +53,7 @@ export default class CredentialsMenu extends React.PureComponent {
       <div>
         {title}
         <LogoutIcon onClick={() => authController.setUserSession(null)} style={{ cursor: 'pointer' }} />
+        <SecretsTest />
       </div>
     );
   }
