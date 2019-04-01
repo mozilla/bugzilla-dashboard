@@ -11,6 +11,7 @@ import PropsRoute from '../components/PropsRoute';
 import AuthController from '../components/auth/AuthController';
 import NotFound from '../components/NotFound';
 import Auth0Login from '../views/Auth0Login';
+import config from '../config';
 
 const styles = () => ({
   container: {
@@ -80,7 +81,7 @@ class App extends React.Component {
 
     // we do not want to automatically load a user session on the login views; this is
     // a hack until they get an entry point of their own with no UI.
-    if (!window.location.pathname.startsWith('/login')) {
+    if (!window.location.pathname.startsWith(config.redirectRoute)) {
       this.authController.loadUserSession();
     } else {
       this.setState({ authReady: true });
@@ -101,7 +102,7 @@ class App extends React.Component {
             <Switch>
               <PropsRoute path="/" exact component={Main} />
               <PropsRoute
-                path="/login"
+                path={config.redirectRoute}
                 component={Auth0Login}
                 setUserSession={authController.setUserSession}
               />

@@ -1,23 +1,9 @@
 import { fromNow } from 'taskcluster-client-web';
 import { WebAuth } from 'auth0-js';
 import UserSession from './UserSession';
+import config from '../../config';
 
-const AUTH0 = {
-  domain: 'auth.mozilla.auth0.com',
-  clientID: 'FK1mJkHhwjulTYBGklxn8W4Fhd1pgT4t',
-  redirectUri: new URL('/login', window.location).href,
-  scope: 'taskcluster-credentials full-user-credentials openid profile email',
-};
-
-export const webAuth = new WebAuth({
-  domain: AUTH0.domain,
-  clientID: AUTH0.clientID,
-  redirectUri: AUTH0.redirectUri,
-  // audience: `https://${AUTH0.domain}/api/v2/`,
-  audience: 'login.taskcluster.net',
-  responseType: 'token id_token',
-  scope: AUTH0.scope,
-});
+export const webAuth = new WebAuth(config.auth0Options);
 
 export function userSessionFromAuthResult(authResult) {
   return UserSession.fromOIDC({

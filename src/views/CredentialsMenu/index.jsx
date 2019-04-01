@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
+import config from '../../config';
 
 export default class CredentialsMenu extends React.PureComponent {
   static contextTypes = {
@@ -9,7 +10,7 @@ export default class CredentialsMenu extends React.PureComponent {
   };
 
   static handleLoginRequest() {
-    const loginView = new URL('/login', window.location);
+    const loginView = new URL(config.redirectRoute, window.location);
     window.open(loginView, '_blank');
   }
 
