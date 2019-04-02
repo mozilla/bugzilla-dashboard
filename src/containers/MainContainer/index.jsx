@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Header from '../../components/Header';
 import MainView from '../../components/MainView';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
 import PersonDetails from '../../components/PersonDetails';
@@ -15,6 +16,7 @@ class MainContainer extends Component {
       bugzillaComponents: {},
       partialOrg: undefined,
       teamComponents: {},
+      selectedTabIndex: 0,
       showComponent: undefined,
       showPerson: undefined,
     };
@@ -35,11 +37,10 @@ class MainContainer extends Component {
       super(props);
       const { ldapEmail } = this.props;
       this.state.ldapEmail = ldapEmail;
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
       this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
       this.handleShowPersonDetails = this.handleShowPersonDetails.bind(this);
       this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
+      this.handleChangeSelectedTab = this.handleChangeSelectedTab.bind(this);
     }
 
     async componentDidMount() {
@@ -57,6 +58,10 @@ class MainContainer extends Component {
       this.setState({ partialOrg });
       return partialOrg;
     }
+
+    handleChangeSelectedTab = (event, selectedTabIndex) => {
+      this.setState({ selectedTabIndex });
+    };
 
     async bugzillaComponents(bzOwners, partialOrg) {
       // bzOwners uses the bugzilla email address as the key
@@ -125,20 +130,6 @@ class MainContainer extends Component {
       });
     }
 
-    handleChange(event) {
-      this.setState({
-        ldapEmail: event.target.selectedTabIndex,
-        bugzillaComponents: undefined,
-        partialOrg: undefined,
-      });
-    }
-
-    async handleSubmit(event) {
-      event.preventDefault();
-      const { ldapEmail } = this.state;
-      this.retrieveData(ldapEmail);
-    }
-
     handleShowComponentDetails(event, properties) {
       event.preventDefault();
       const { componentKey, teamKey } = properties;
@@ -180,11 +171,24 @@ class MainContainer extends Component {
 
     render() {
       const {
-        ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg, teamComponents,
+        ldapEmail,
+        showComponent,
+        showPerson,
+        bugzillaComponents,
+        partialOrg,
+        teamComponents,
+        selectedTabIndex,
       } = this.state;
+      const { authController } = this.context;
+      const userSession = authController.getUserSession();
 
       return (
         <div>
+          <Header
+            selectedTabIndex={selectedTabIndex}
+            handleTabChange={this.handleChangeSelectedTab}
+          />
+          {!userSession && <h3>Please sign in</h3>}
           {showComponent && (
             <BugzillaComponentDetails
               {...showComponent}
@@ -207,6 +211,7 @@ class MainContainer extends Component {
               teamComponents={Object.values(teamComponents)}
               onComponentDetails={this.handleShowComponentDetails}
               onPersonDetails={this.handleShowPersonDetails}
+              selectedTabIndex={selectedTabIndex}
             />
           )}
         </div>
