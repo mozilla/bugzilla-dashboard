@@ -1,5 +1,8 @@
 const config = {
   redirectRoute: '/login',
+  taskclusterSecrets: {
+    fakeOrg: 'garbage/armenzg/fakeOrg',
+  },
   auth0Options: {
     domain: 'auth.mozilla.auth0.com',
     clientID: 'FK1mJkHhwjulTYBGklxn8W4Fhd1pgT4t',

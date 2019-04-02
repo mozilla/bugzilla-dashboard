@@ -8,7 +8,6 @@ import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
-import SecretsTest from '../../views/SecretsTest';
 
 class MainContainer extends Component {
     state = {
@@ -44,14 +43,17 @@ class MainContainer extends Component {
     }
 
     async componentDidMount() {
+      const { authController } = this.context;
+      const userSession = authController.getUserSession();
       const { ldapEmail } = this.state;
-      if (ldapEmail !== '') {
-        this.retrieveData(ldapEmail);
+      if (ldapEmail !== '' && userSession) {
+        this.retrieveData(userSession, ldapEmail);
       }
     }
 
-    async getReportees(ldapEmail) {
-      const partialOrg = await getAllReportees(ldapEmail);
+    async getReportees(userSession, ldapEmail) {
+      const secretsClient = userSession.getTaskClusterSecretsClient();
+      const partialOrg = await getAllReportees(secretsClient, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -95,10 +97,10 @@ class MainContainer extends Component {
         });
     }
 
-    async retrieveData(ldapEmail) {
+    async retrieveData(userSession, ldapEmail) {
       const [bzOwners, partialOrg] = await Promise.all([
         getBugzillaOwners(),
-        this.getReportees(ldapEmail),
+        this.getReportees(userSession, ldapEmail),
       ]);
       this.teamsData();
       this.bugzillaComponents(bzOwners, partialOrg);
@@ -180,8 +182,6 @@ class MainContainer extends Component {
       const {
         ldapEmail, showComponent, showPerson, bugzillaComponents, partialOrg, teamComponents,
       } = this.state;
-      const { authController } = this.context;
-      const userSession = authController.getUserSession();
 
       return (
         <div>
@@ -209,7 +209,6 @@ class MainContainer extends Component {
               onPersonDetails={this.handleShowPersonDetails}
             />
           )}
-          {userSession && <SecretsTest />}
         </div>
       );
     }
