@@ -36,10 +36,12 @@ const getOrgChart = async (secretsClient) => {
   return buildOrgChartData(secret.employees);
 };
 
-const findReportees = (completeOrg, ldapEmail) => {
+const findReportees = (completeOrg, ldapEmail, fallBackemail = 'manager@mozilla.com') => {
   let allReportees = {};
-  allReportees[ldapEmail] = completeOrg[ldapEmail];
-  const { reportees } = completeOrg[ldapEmail];
+  // XXX: Until the whole org is stored in TC secrets
+  const email = (ldapEmail in completeOrg) ? ldapEmail : fallBackemail;
+  allReportees[email] = completeOrg[email];
+  const { reportees } = completeOrg[email];
   if (reportees.length !== 0) {
     reportees.forEach((reporteeEmail) => {
       const partialOrg = findReportees(completeOrg, reporteeEmail);
