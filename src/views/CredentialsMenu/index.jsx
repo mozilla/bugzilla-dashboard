@@ -1,5 +1,8 @@
 import React from 'react';
-import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
+import AccountCircleIcon from 'mdi-react/AccountCircleIcon';
+import LoginIcon from 'mdi-react/LoginIcon';
+import LogoutIcon from 'mdi-react/LogoutIcon';
+
 import AuthContext from '../../components/auth/AuthContext';
 import config from '../../config';
 
