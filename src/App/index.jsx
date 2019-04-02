@@ -59,6 +59,8 @@ class App extends React.Component {
         || new Date(userSession.renewAfter) > new Date();
       this.setState({ authReady: newState });
     }
+    // After a user session changes we need to refresh the UI
+    this.forceUpdate();
   };
 
   // eslint-disable-next-line camelcase
