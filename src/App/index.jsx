@@ -15,11 +15,9 @@ import Auth0Login from '../views/Auth0Login';
 import config from '../config';
 
 const styles = () => ({
-  container: {
-    fontFamily: 'Roboto',
-  },
   '@global': {
     body: {
+      fontFamily: 'Roboto, sans-serif',
       margin: 0,
     },
   },

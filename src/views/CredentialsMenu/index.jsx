@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
 import AuthContext from '../../components/auth/AuthContext';
 import config from '../../config';
@@ -54,9 +53,7 @@ export default class CredentialsMenu extends React.PureComponent {
     return (
       <div style={{ display: 'flex', alignItems: 'center' }}>
         {icon}
-        <Typography component="span" variant="subheading" style={{ padding: '0.5rem', color: 'white' }}>
-          {userSession.name}
-        </Typography>
+        {userSession.name}
         <LogoutIcon onClick={() => context.setUserSession(null)} style={{ cursor: 'pointer' }} />
       </div>
     );
