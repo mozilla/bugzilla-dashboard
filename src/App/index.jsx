@@ -8,6 +8,7 @@ import Spinner from '@mozilla-frontend-infra/components/Spinner';
 
 import Main from '../views/Main';
 import PropsRoute from '../components/PropsRoute';
+import AuthContext from '../components/auth/AuthContext';
 import AuthController from '../components/auth/AuthController';
 import NotFound from '../components/NotFound';
 import Auth0Login from '../views/Auth0Login';
@@ -29,31 +30,19 @@ class App extends React.Component {
     classes: PropTypes.shape({}).isRequired,
   };
 
-  /* TODO: decouple auth from App */
-  static childContextTypes = {
-    authController: PropTypes.shape({}).isRequired,
-  };
-
   state = {
+    authReady: false,
     error: undefined,
   };
 
   constructor(props) {
     super(props);
     this.authController = new AuthController();
-    this.state = {
-      authReady: false,
-    };
-  }
-
-  getChildContext() {
-    return {
-      authController: this.authController,
-    };
   }
 
   componentWillUnmount() {
-    this.authController.removeListener(
+    const { authController } = this;
+    authController.removeListener(
       'user-session-changed',
       this.handleUserSessionChanged,
     );
@@ -74,7 +63,8 @@ class App extends React.Component {
 
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
-    this.authController.on(
+    const { authController } = this;
+    authController.on(
       'user-session-changed',
       this.handleUserSessionChanged,
     );
@@ -82,7 +72,7 @@ class App extends React.Component {
     // we do not want to automatically load a user session on the login views; this is
     // a hack until they get an entry point of their own with no UI.
     if (!window.location.pathname.startsWith(config.redirectRoute)) {
-      this.authController.loadUserSession();
+      authController.loadUserSession();
     } else {
       this.setState({ authReady: true });
     }
@@ -99,15 +89,17 @@ class App extends React.Component {
         <div>
           {error && <ErrorPanel error={new Error(error)} />}
           {authReady ? (
-            <Switch>
-              <PropsRoute path="/" exact component={Main} />
-              <PropsRoute
-                path={config.redirectRoute}
-                component={Auth0Login}
-                setUserSession={authController.setUserSession}
-              />
-              <Route component={NotFound} />
-            </Switch>
+            <AuthContext.Provider value={authController}>
+              <Switch>
+                <PropsRoute path="/" exact component={Main} />
+                <PropsRoute
+                  path={config.redirectRoute}
+                  component={Auth0Login}
+                  setUserSession={authController.setUserSession}
+                />
+                <Route component={NotFound} />
+              </Switch>
+            </AuthContext.Provider>
           ) : (
             <div style={{ textAlign: 'center' }}>
               <Spinner />

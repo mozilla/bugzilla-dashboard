@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import MainView from '../../components/MainView';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
@@ -11,6 +11,8 @@ import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
 
 class MainContainer extends Component {
+    static contextType = AuthContext;
+
     state = {
       bugzillaComponents: {},
       partialOrg: undefined,
@@ -18,10 +20,6 @@ class MainContainer extends Component {
       selectedTabIndex: 0,
       showComponent: undefined,
       showPerson: undefined,
-    };
-
-    static contextTypes = {
-      authController: PropTypes.shape({}).isRequired,
     };
 
     constructor(props) {
@@ -33,8 +31,8 @@ class MainContainer extends Component {
     }
 
     async componentDidMount() {
-      const { authController } = this.context;
-      const userSession = authController.getUserSession();
+      const { context } = this;
+      const userSession = context.getUserSession();
       if (userSession) {
         this.retrieveData(userSession, userSession.email);
       }
@@ -166,8 +164,8 @@ class MainContainer extends Component {
         teamComponents,
         selectedTabIndex,
       } = this.state;
-      const { authController } = this.context;
-      const userSession = authController.getUserSession();
+      const { context } = this;
+      const userSession = context.getUserSession();
 
       return (
         <div>

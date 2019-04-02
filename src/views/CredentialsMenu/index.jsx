@@ -1,13 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { AccountCircleIcon, LoginIcon, LogoutIcon } from '@icons/material';
+import AuthContext from '../../components/auth/AuthContext';
 import config from '../../config';
 
 export default class CredentialsMenu extends React.PureComponent {
-  static contextTypes = {
-    authController: PropTypes.shape({}),
-  };
+  static contextType = AuthContext;
 
   static handleLoginRequest() {
     const loginView = new URL(config.redirectRoute, window.location);
@@ -15,9 +13,9 @@ export default class CredentialsMenu extends React.PureComponent {
   }
 
   componentDidMount() {
-    const { authController } = this.context;
-    if (authController) {
-      authController.on(
+    const { context } = this;
+    if (context) {
+      context.on(
         'user-session-changed',
         this.handleUserSessionChanged,
       );
@@ -25,9 +23,9 @@ export default class CredentialsMenu extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    const { authController } = this.context;
-    if (authController) {
-      authController.off(
+    const { context } = this.context;
+    if (context) {
+      context.off(
         'user-session-changed',
         this.handleUserSessionChanged,
       );
@@ -41,7 +39,7 @@ export default class CredentialsMenu extends React.PureComponent {
   renderWithoutUser = () => <LoginIcon onClick={CredentialsMenu.handleLoginRequest} style={{ cursor: 'pointer' }} />;
 
   renderWithUser(userSession) {
-    const { authController } = this.context;
+    const { context } = this;
     const icon = userSession.picture ? (
       <img
         alt={userSession.name}
@@ -59,15 +57,15 @@ export default class CredentialsMenu extends React.PureComponent {
         <Typography component="span" variant="subheading" style={{ padding: '0.5rem', color: 'white' }}>
           {userSession.name}
         </Typography>
-        <LogoutIcon onClick={() => authController.setUserSession(null)} style={{ cursor: 'pointer' }} />
+        <LogoutIcon onClick={() => context.setUserSession(null)} style={{ cursor: 'pointer' }} />
       </div>
     );
   }
 
   render() {
     // note: an update to the userSession will cause a forceUpdate
-    const { authController } = this.context;
-    const userSession = authController && authController.getUserSession();
+    const { context } = this;
+    const userSession = context && context.getUserSession();
 
     return userSession
       ? this.renderWithUser(userSession)
