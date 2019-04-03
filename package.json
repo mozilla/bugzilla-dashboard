@@ -7,7 +7,7 @@
   "license": "MPL-2.0",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --port 8010 --https",
+    "start": "webpack-dev-server --mode development",
     "test": "jest",
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },

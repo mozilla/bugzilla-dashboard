@@ -1,12 +1,14 @@
+const loginCallbackRoute = '/callback';
+
 const config = {
-  redirectRoute: '/login',
+  redirectRoute: loginCallbackRoute,
   taskclusterSecrets: {
     fakeOrg: 'garbage/armenzg/fakeOrg',
   },
   auth0Options: {
     domain: 'auth.mozilla.auth0.com',
-    clientID: 'FK1mJkHhwjulTYBGklxn8W4Fhd1pgT4t',
-    redirectUri: new URL('/login', window.location).href,
+    clientID: 'DGloMN2BXb0AC7lF5eRyOe1GXweqBAiI',
+    redirectUri: new URL(loginCallbackRoute, window.location).href,
     scope: 'taskcluster-credentials full-user-credentials openid profile email',
     audience: 'login.taskcluster.net',
     responseType: 'token id_token',
