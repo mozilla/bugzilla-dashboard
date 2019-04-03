@@ -83,6 +83,11 @@ class App extends React.Component {
     const { authReady } = this.state;
     const { authController } = this;
     const { error } = this.state;
+    // Passing the userSession as a prop causes the Main app to be re-rendered
+    // After we get notified that the user session has changed this is the simplest
+    // way to notify sub-components to re-render; This is because authController does
+    // not change as an object if the user is signed in or not
+    const userSession = authController.getUserSession();
 
     return (
       <BrowserRouter>
@@ -91,7 +96,7 @@ class App extends React.Component {
           {authReady ? (
             <AuthContext.Provider value={authController}>
               <Switch>
-                <PropsRoute path="/" exact component={Main} />
+                <PropsRoute path="/" exact component={Main} userSession={userSession} />
                 <PropsRoute
                   path={config.redirectRoute}
                   component={Auth0Login}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import MainView from '../../components/MainView';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
@@ -11,8 +10,6 @@ import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
 
 class MainContainer extends Component {
-    static contextType = AuthContext;
-
     state = {
       bugzillaComponents: {},
       partialOrg: undefined,
@@ -30,9 +27,8 @@ class MainContainer extends Component {
       this.handleChangeSelectedTab = this.handleChangeSelectedTab.bind(this);
     }
 
-    async componentDidMount() {
-      const { context } = this;
-      const userSession = context.getUserSession();
+    componentDidMount() {
+      const { userSession } = this.props;
       if (userSession) {
         this.retrieveData(userSession, userSession.email);
       }
@@ -164,8 +160,7 @@ class MainContainer extends Component {
         teamComponents,
         selectedTabIndex,
       } = this.state;
-      const { context } = this;
-      const userSession = context.getUserSession();
+      const { userSession } = this.props;
 
       return (
         <div>
