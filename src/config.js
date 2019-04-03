@@ -3,7 +3,7 @@ const loginCallbackRoute = '/callback';
 const config = {
   redirectRoute: loginCallbackRoute,
   taskclusterSecrets: {
-    fakeOrg: 'garbage/armenzg/fakeOrg',
+    fakeOrg: 'project/bugzilla-management-dashboard/fakeOrg',
   },
   auth0Options: {
     domain: 'auth.mozilla.auth0.com',
