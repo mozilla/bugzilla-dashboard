@@ -89,7 +89,8 @@ class App extends React.Component {
           {authReady ? (
             <AuthContext.Provider value={this.authController}>
               <Switch>
-                <PropsRoute path="/" exact component={Main} userSession={userSession} />
+                <PropsRoute path="/:id" component={Main} userSession={userSession} />
+                <PropsRoute path="/" component={Main} userSession={userSession} />
                 <PropsRoute
                   path={config.redirectRoute}
                   component={Auth0Login}

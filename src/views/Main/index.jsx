@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header';
-import MainView from '../../components/MainView';
+// import MainView from '../../components/MainView';
+import Reportees from '../../components/Reportees';
+import BugzillaComponents from '../../components/BugzillaComponents';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
 import PersonDetails from '../../components/PersonDetails';
 import getAllReportees from '../../utils/getAllReportees';
@@ -160,11 +162,14 @@ class MainContainer extends Component {
         teamComponents,
         selectedTabIndex,
       } = this.state;
+      const { match } = this.props;
+      const route = match.params.id || 'reportees';
       const { userSession } = this.props;
 
       return (
         <div>
           <Header
+            showTabs={!!userSession}
             selectedTabIndex={selectedTabIndex}
             handleTabChange={this.handleChangeSelectedTab}
           />
@@ -183,7 +188,26 @@ class MainContainer extends Component {
               onGoBack={this.handleComponentBackToMenu}
             />
           )}
-          {!showComponent && !showPerson && partialOrg && userSession && (
+          {route === 'reportees' && partialOrg && (
+            <Reportees
+              ldapEmail={userSession.email}
+              partialOrg={partialOrg}
+              onPersonDetails={this.handleShowPersonDetails}
+            />
+          )}
+          {route === 'teams' && (
+            <BugzillaComponents
+              bugzillaComponents={Object.values(teamComponents)}
+              onComponentDetails={this.handleShowComponentDetails}
+            />
+          )}
+          {route === 'components' && (
+            <BugzillaComponents
+              bugzillaComponents={Object.values(bugzillaComponents)}
+              onComponentDetails={this.handleShowComponentDetails}
+            />
+          )}
+          {/* {!showComponent && !showPerson && partialOrg && userSession && (
             <MainView
               ldapEmail={userSession.email}
               partialOrg={partialOrg}
@@ -193,7 +217,7 @@ class MainContainer extends Component {
               onPersonDetails={this.handleShowPersonDetails}
               selectedTabIndex={selectedTabIndex}
             />
-          )}
+          )} */}
         </div>
       );
     }
