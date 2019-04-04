@@ -33,14 +33,10 @@ class App extends React.Component {
     error: undefined,
   };
 
-  constructor(props) {
-    super(props);
-    this.authController = new AuthController();
-  }
+  authController = new AuthController();
 
   componentWillUnmount() {
-    const { authController } = this;
-    authController.removeListener(
+    this.authController.removeListener(
       'user-session-changed',
       this.handleUserSessionChanged,
     );
@@ -63,8 +59,7 @@ class App extends React.Component {
 
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
-    const { authController } = this;
-    authController.on(
+    this.authController.on(
       'user-session-changed',
       this.handleUserSessionChanged,
     );
@@ -72,7 +67,7 @@ class App extends React.Component {
     // we do not want to automatically load a user session on the login views; this is
     // a hack until they get an entry point of their own with no UI.
     if (!window.location.pathname.startsWith(config.redirectRoute)) {
-      authController.loadUserSession();
+      this.authController.loadUserSession();
     } else {
       this.setState({ authReady: true });
     }
@@ -80,35 +75,31 @@ class App extends React.Component {
 
 
   render() {
-    const { authReady } = this.state;
-    const { authController } = this;
-    const { error } = this.state;
+    const { authReady, error } = this.state;
     // Passing the userSession as a prop causes the Main app to be re-rendered
     // After we get notified that the user session has changed this is the simplest
     // way to notify sub-components to re-render; This is because authController does
     // not change as an object if the user is signed in or not
-    const userSession = authController.getUserSession();
+    const userSession = this.authController.getUserSession();
 
     return (
       <BrowserRouter>
         <div>
           {error && <ErrorPanel error={new Error(error)} />}
           {authReady ? (
-            <AuthContext.Provider value={authController}>
+            <AuthContext.Provider value={this.authController}>
               <Switch>
                 <PropsRoute path="/" exact component={Main} userSession={userSession} />
                 <PropsRoute
                   path={config.redirectRoute}
                   component={Auth0Login}
-                  setUserSession={authController.setUserSession}
+                  setUserSession={this.authController.setUserSession}
                 />
                 <Route component={NotFound} />
               </Switch>
             </AuthContext.Provider>
           ) : (
-            <div style={{ textAlign: 'center' }}>
-              <Spinner />
-            </div>
+            <Spinner loading />
           )}
         </div>
       </BrowserRouter>
