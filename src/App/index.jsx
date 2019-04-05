@@ -7,11 +7,9 @@ import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import Main from '../views/Main';
 
 const styles = () => ({
-  container: {
-    fontFamily: 'Roboto',
-  },
   '@global': {
     body: {
+      fontFamily: 'Roboto, sans-serif',
       margin: 0,
     },
   },
