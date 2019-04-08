@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
-import MainView from '../../components/MainView';
+import BugzillaComponents from '../../components/BugzillaComponents';
+import Reportees from '../../components/Reportees';
 import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
 import PersonDetails from '../../components/PersonDetails';
 import getAllReportees from '../../utils/getAllReportees';
@@ -14,9 +15,14 @@ const DEFAULT_STATE = {
   bugzillaComponents: {},
   partialOrg: undefined,
   teamComponents: {},
-  selectedTabIndex: 0,
-  showComponent: undefined,
-  showPerson: undefined,
+  componentDetails: undefined,
+  personDetails: undefined,
+};
+
+const VIEW_TO_TAB_INDEX = {
+  reportees: 0,
+  teams: 1,
+  components: 2,
 };
 
 class MainContainer extends Component {
@@ -59,12 +65,15 @@ class MainContainer extends Component {
       return partialOrg;
     }
 
-    handleChangeSelectedTab = (event, selectedTabIndex) => {
-      this.setState({ selectedTabIndex });
-    };
-
     handleUserSessionChanged = () => {
       this.fetchData();
+    };
+
+    handleNavigateAndClear = () => {
+      this.setState({
+        componentDetails: undefined,
+        personDetails: undefined,
+      });
     };
 
     fetchData() {
@@ -155,14 +164,14 @@ class MainContainer extends Component {
       // property 'team' to distinguish a component from a set of components
       if (teamKey) {
         this.setState(prevState => ({
-          showComponent: {
+          componentDetails: {
             title: prevState.teamComponents[teamKey].label,
             ...prevState.teamComponents[teamKey],
           },
         }));
       } else {
         this.setState(prevState => ({
-          showComponent: {
+          componentDetails: {
             title: componentKey,
             ...prevState.bugzillaComponents[componentKey],
           },
@@ -174,61 +183,69 @@ class MainContainer extends Component {
       event.preventDefault();
       const { partialOrg } = this.state;
       this.setState({
-        showPerson: partialOrg[properties.ldapEmail],
+        personDetails: partialOrg[properties.ldapEmail],
       });
     }
 
     handleComponentBackToMenu(event) {
       event.preventDefault();
       this.setState({
-        showComponent: undefined,
-        showPerson: undefined,
+        componentDetails: undefined,
+        personDetails: undefined,
       });
     }
 
     render() {
       const {
-        showComponent,
-        showPerson,
+        componentDetails,
+        personDetails,
         bugzillaComponents,
         ldapEmail,
         partialOrg,
         teamComponents,
-        selectedTabIndex,
       } = this.state;
       const { context } = this;
       const userSession = context.getUserSession();
+      const { match } = this.props;
+      const view = match.params.view || 'reportees';
 
       return (
         <div>
           <Header
-            selectedTabIndex={selectedTabIndex}
-            handleTabChange={this.handleChangeSelectedTab}
+            selectedTabIndex={VIEW_TO_TAB_INDEX[view]}
+            handleTabChange={this.handleNavigateAndClear}
           />
           {!userSession && <h3>Please sign in</h3>}
-          {showComponent && (
+          {componentDetails && (
             <BugzillaComponentDetails
-              {...showComponent}
-              title={showComponent.title}
+              {...componentDetails}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}
-          {showPerson && (
+          {personDetails && (
             <PersonDetails
-              person={showPerson}
+              person={personDetails}
               bugzillaComponents={Object.values(bugzillaComponents)}
               onGoBack={this.handleComponentBackToMenu}
             />
           )}
-          {!showComponent && !showPerson && partialOrg && userSession && (
-            <MainView
+          {view === 'reportees' && partialOrg && (
+            <Reportees
               ldapEmail={ldapEmail}
               partialOrg={partialOrg}
-              bugzillaComponents={Object.values(bugzillaComponents)}
-              teamComponents={Object.values(teamComponents)}
-              onComponentDetails={this.handleShowComponentDetails}
               onPersonDetails={this.handleShowPersonDetails}
-              selectedTabIndex={selectedTabIndex}
+            />
+          )}
+          {view === 'teams' && (
+            <BugzillaComponents
+              bugzillaComponents={Object.values(teamComponents)}
+              onComponentDetails={this.handleShowComponentDetails}
+            />
+          )}
+          {view === 'components' && partialOrg && (
+            <BugzillaComponents
+              bugzillaComponents={Object.values(bugzillaComponents)}
+              onComponentDetails={this.handleShowComponentDetails}
             />
           )}
         </div>

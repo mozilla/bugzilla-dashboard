@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the reportees tab 1`] = `
+<header
+  className="MuiPaper-root-11 MuiPaper-elevation4-17 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-9"
+>
+  <div
+    className="MuiToolbar-root-38 MuiToolbar-regular-40 MuiToolbar-gutters-39 Header-styledToolbar-1"
+  >
+    <div
+      className="MuiTabs-root-42"
+    >
+      <div
+        className="MuiTabs-flexContainer-43"
+      >
+        <div
+          className="MuiTabs-scroller-45 MuiTabs-fixed-46"
+          onScroll={[Function]}
+          role="tablist"
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            className="MuiTabs-flexContainer-43"
+          >
+            <a
+              aria-current={null}
+              aria-selected={true}
+              className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53 MuiTab-selected-56"
+              href="/reportees"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex="0"
+            >
+              <span
+                className="MuiTab-wrapper-59"
+              >
+                <span
+                  className="MuiTab-labelContainer-60"
+                >
+                  <span
+                    className="MuiTab-label-61"
+                  >
+                    Reportees
+                  </span>
+                </span>
+              </span>
+              <span
+                className="MuiTouchRipple-root-96"
+              />
+            </a>
+            <a
+              aria-current={null}
+              aria-selected={false}
+              className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53"
+              href="/teams"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex="0"
+            >
+              <span
+                className="MuiTab-wrapper-59"
+              >
+                <span
+                  className="MuiTab-labelContainer-60"
+                >
+                  <span
+                    className="MuiTab-label-61"
+                  >
+                    Teams
+                  </span>
+                </span>
+              </span>
+              <span
+                className="MuiTouchRipple-root-96"
+              />
+            </a>
+            <a
+              aria-current={null}
+              aria-selected={false}
+              className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53"
+              href="/components"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              tabIndex="0"
+            >
+              <span
+                className="MuiTab-wrapper-59"
+              >
+                <span
+                  className="MuiTab-labelContainer-60"
+                >
+                  <span
+                    className="MuiTab-label-61"
+                  >
+                    Components
+                  </span>
+                </span>
+              </span>
+              <span
+                className="MuiTouchRipple-root-96"
+              />
+            </a>
+          </div>
+          <span
+            className="MuiPrivateTabIndicator-root-66 MuiPrivateTabIndicator-colorSecondary-68 MuiTabs-indicator-50"
+            style={
+              Object {
+                "left": 0,
+                "width": 0,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      className="MuiButtonBase-root-63 MuiButton-root-70 MuiButton-contained-81 MuiButton-containedSecondary-83 MuiButton-raised-84 MuiButton-raisedSecondary-86 MuiButton-sizeSmall-93 CredentialsMenu-button-69"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiButton-label-71"
+      >
+        Sign in
+      </span>
+      <span
+        className="MuiTouchRipple-root-96"
+      />
+    </button>
+  </div>
+</header>
+`;

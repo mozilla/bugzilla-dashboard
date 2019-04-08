@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders components 1`] = `
+<div>
+  <h3
+    className="BugzillaComponents-header-1"
+  />
+  <table>
+    <thead>
+      <tr>
+        <th />
+        <th />
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Untriaged
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Needinfo
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          P1s
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="Core::DOM: IndexedDB"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          Core::DOM: IndexedDB
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="Core::JavaScript Engine"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          Core::JavaScript Engine
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="Core::DOM: Core & HTML"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          Core::DOM: Core & HTML
+        </td>
+        <td
+          className="BugzillaComponents-metric-2"
+        >
+          <a
+            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+          >
+            944
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="Toolkit::Async Tooling"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          Toolkit::Async Tooling
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders components bucketed as teams 1`] = `
+<div>
+  <h3
+    className="BugzillaComponents-header-1"
+  />
+  <table>
+    <thead>
+      <tr>
+        <th />
+        <th />
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Untriaged
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Needinfo
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          P1s
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="DOM Core"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          DOM Core
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="DOM Fission"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          DOM Fission
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="DrilldownIcon-svgWrapper-4"
+            name="Worker and Storage"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          Worker and Storage
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
