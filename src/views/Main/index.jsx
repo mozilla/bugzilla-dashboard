@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
-import BugzillaComponents from '../../components/BugzillaComponents';
-import Reportees from '../../components/Reportees';
-import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
-import PersonDetails from '../../components/PersonDetails';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
+
+const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
+const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
+const PersonDetails = React.lazy(() => import('../../components/PersonDetails'));
+const Reportees = React.lazy(() => import('../../components/Reportees'));
 
 const DEFAULT_STATE = {
   bugzillaComponents: {},
@@ -217,36 +218,46 @@ class MainContainer extends Component {
           />
           {!userSession && <h3>Please sign in</h3>}
           {componentDetails && (
-            <BugzillaComponentDetails
-              {...componentDetails}
-              onGoBack={this.handleComponentBackToMenu}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <BugzillaComponentDetails
+                {...componentDetails}
+                onGoBack={this.handleComponentBackToMenu}
+              />
+            </Suspense>
           )}
           {personDetails && (
-            <PersonDetails
-              person={personDetails}
-              bugzillaComponents={Object.values(bugzillaComponents)}
-              onGoBack={this.handleComponentBackToMenu}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <PersonDetails
+                person={personDetails}
+                bugzillaComponents={Object.values(bugzillaComponents)}
+                onGoBack={this.handleComponentBackToMenu}
+              />
+            </Suspense>
           )}
           {view === 'reportees' && partialOrg && (
-            <Reportees
-              ldapEmail={ldapEmail}
-              partialOrg={partialOrg}
-              onPersonDetails={this.handleShowPersonDetails}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Reportees
+                ldapEmail={ldapEmail}
+                partialOrg={partialOrg}
+                onPersonDetails={this.handleShowPersonDetails}
+              />
+            </Suspense>
           )}
           {view === 'teams' && (
-            <BugzillaComponents
-              bugzillaComponents={Object.values(teamComponents)}
-              onComponentDetails={this.handleShowComponentDetails}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <BugzillaComponents
+                bugzillaComponents={Object.values(teamComponents)}
+                onComponentDetails={this.handleShowComponentDetails}
+              />
+            </Suspense>
           )}
           {view === 'components' && partialOrg && (
-            <BugzillaComponents
-              bugzillaComponents={Object.values(bugzillaComponents)}
-              onComponentDetails={this.handleShowComponentDetails}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <BugzillaComponents
+                bugzillaComponents={Object.values(bugzillaComponents)}
+                onComponentDetails={this.handleShowComponentDetails}
+              />
+            </Suspense>
           )}
         </div>
       );
