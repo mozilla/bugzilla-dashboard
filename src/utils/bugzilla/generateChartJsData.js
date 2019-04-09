@@ -45,12 +45,6 @@ const bugsByCreationDate = (bugs, startDate) => {
       return result;
     }, []);
 
-  // This guarantees that the line goes all the way to the end of the graph
-  const today = toDayOfWeek();
-  if (lastDataPoint.x !== today) {
-    accumulatedCount.push({ x: new Date(today), y: count });
-  }
-
   return accumulatedCount;
 };
 
