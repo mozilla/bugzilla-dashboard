@@ -66,14 +66,14 @@ const dataFormatter = (bugSeries, chartType, startDate) => {
 
 // It formats the data and options to meet chartJs' data structures
 // startDate enables counting into a starting date all previous data points
-const generateChartJsData = async (queries = [], startDate) => {
+const generateChartJsData = async (queries = [], chartType, startDate) => {
   const data = await Promise.all(
     queries.map(async ({ label, parameters }) => ({
       label,
       ...(await queryBugzilla(parameters)),
     })),
   );
-  return dataFormatter(data, startDate);
+  return dataFormatter(data, chartType, startDate);
 };
 
 export default generateChartJsData;

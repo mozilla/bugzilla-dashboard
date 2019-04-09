@@ -59,7 +59,7 @@ BugzillaGraph.propTypes = {
 };
 
 BugzillaGraph.defaultProps = {
-  chartType: 'line',
+  chartType: 'scatter',
   startDate: null,
   title: '',
 };
