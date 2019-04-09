@@ -20,6 +20,8 @@ class BugzillaGraph extends Component {
         this.setState(await generateChartJsData(queries, chartType, startDate));
       } catch (error) {
         this.setState({ error: error.message });
+        // This allows seeing the stacktrace
+        throw error;
       }
     }
 
