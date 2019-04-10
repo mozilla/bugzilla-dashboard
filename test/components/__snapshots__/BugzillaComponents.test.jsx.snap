@@ -125,6 +125,8 @@ exports[`renders components 1`] = `
         >
           <a
             href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             944
           </a>

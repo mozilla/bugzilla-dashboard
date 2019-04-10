@@ -57,7 +57,7 @@ const BugzillaComponents = ({
                 {Object.keys(METRICS).map(metric => (
                   metrics[metric] && (
                   <td key={metric} className={classes.metric}>
-                    <a href={metrics[metric].link}>{metrics[metric].count}</a>
+                    <a href={metrics[metric].link} target="_blank" rel="noopener noreferrer">{metrics[metric].count}</a>
                   </td>
                   )
                 ))}
