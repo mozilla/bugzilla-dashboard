@@ -12,30 +12,6 @@ exports[`renders Manager who has reportees 1`] = `
   <div
     className="Reportees-person-4"
   >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="manager@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-        />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
     <span>
       Manager 
     </span>
@@ -43,30 +19,6 @@ exports[`renders Manager who has reportees 1`] = `
   <div
     className="Reportees-person-4"
   >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="someone@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-        />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
     <span>
       Someone 
     </span>
@@ -86,30 +38,6 @@ exports[`renders Someone with no reportees 1`] = `
   <div
     className="Reportees-person-4"
   >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="manager@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-        />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
     <span>
       Manager 
     </span>
@@ -117,30 +45,6 @@ exports[`renders Someone with no reportees 1`] = `
   <div
     className="Reportees-person-4"
   >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="someone@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
-    >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-        />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
     <span>
       Someone 
     </span>

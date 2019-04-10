@@ -9,7 +9,6 @@ it('renders Someone with no reportees', () => {
       <Reportees
         ldapEmail="someone@mozilla.com"
         partialOrg={partialOrg}
-        onPersonDetails={() => null}
       />
     ))
     .toJSON();
@@ -22,7 +21,6 @@ it('renders Manager who has reportees', () => {
       <Reportees
         ldapEmail="manager@mozilla.com"
         partialOrg={partialOrg}
-        onPersonDetails={() => null}
       />
     ))
     .toJSON();

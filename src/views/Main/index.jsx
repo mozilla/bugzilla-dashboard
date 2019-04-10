@@ -12,7 +12,6 @@ import { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
-const PersonDetails = React.lazy(() => import('../../components/PersonDetails'));
 const Reportees = React.lazy(() => import('../../components/Reportees'));
 const Teams = React.lazy(() => import('../Teams'));
 
@@ -23,7 +22,6 @@ const DEFAULT_STATE = {
   teamComponents: {},
   selectedTabIndex: 0,
   componentDetails: undefined,
-  personDetails: undefined,
 };
 
 const PATHNAME_TO_TAB_INDEX = {
@@ -49,7 +47,6 @@ class MainContainer extends Component {
       // This guarantees that we load the right tab based on the URL's pathname
       this.state.selectedTabIndex = PATHNAME_TO_TAB_INDEX[location.pathname] || 0;
       this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
-      this.handleShowPersonDetails = this.handleShowPersonDetails.bind(this);
       this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
     }
 
@@ -88,7 +85,6 @@ class MainContainer extends Component {
     handleNavigateAndClear = (_, selectedTabIndex) => {
       this.setState({
         componentDetails: undefined,
-        personDetails: undefined,
         selectedTabIndex,
       });
     };
@@ -197,19 +193,10 @@ class MainContainer extends Component {
       }
     }
 
-    handleShowPersonDetails(event, properties) {
-      event.preventDefault();
-      const { partialOrg } = this.state;
-      this.setState({
-        personDetails: partialOrg[properties.ldapEmail],
-      });
-    }
-
     handleComponentBackToMenu(event) {
       event.preventDefault();
       this.setState({
         componentDetails: undefined,
-        personDetails: undefined,
       });
     }
 
@@ -217,7 +204,6 @@ class MainContainer extends Component {
       const {
         doneLoading,
         componentDetails,
-        personDetails,
         bugzillaComponents,
         ldapEmail,
         partialOrg,
@@ -240,15 +226,6 @@ class MainContainer extends Component {
               <Suspense fallback={<div>Loading...</div>}>
                 <BugzillaComponentDetails
                   {...componentDetails}
-                  onGoBack={this.handleComponentBackToMenu}
-                />
-              </Suspense>
-            )}
-            {personDetails && (
-              <Suspense fallback={<div>Loading...</div>}>
-                <PersonDetails
-                  person={personDetails}
-                  bugzillaComponents={Object.values(bugzillaComponents)}
                   onGoBack={this.handleComponentBackToMenu}
                 />
               </Suspense>

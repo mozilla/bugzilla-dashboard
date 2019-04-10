@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import DrilldownIcon from '../DrilldownIcon';
 
 const styles = ({
   root: {
@@ -24,7 +23,7 @@ const styles = ({
 const sortByPersonName = (a, b) => a.cn.localeCompare(b.cn);
 
 const Reportees = ({
-  classes, ldapEmail, partialOrg, onPersonDetails,
+  classes, ldapEmail, partialOrg,
 }) => (
   <div className={classes.root}>
     <div height="1rem">&nbsp;</div>
@@ -33,13 +32,6 @@ const Reportees = ({
       .sort(sortByPersonName)
       .map(({ cn, mail }) => (
         <div key={mail} className={classes.person}>
-          <DrilldownIcon
-            name={mail}
-            onChange={onPersonDetails}
-            properties={{
-              ldapEmail: mail,
-            }}
-          />
           <span>{`${cn} `}</span>
         </div>
       ))}
@@ -50,7 +42,6 @@ Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
-  onPersonDetails: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Reportees);
