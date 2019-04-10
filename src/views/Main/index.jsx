@@ -8,7 +8,7 @@ import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -21,6 +21,7 @@ const DEFAULT_STATE = {
   partialOrg: undefined,
   teamComponents: {},
   selectedTabIndex: 0,
+  reporteesMetrics: {},
   componentDetails: undefined,
 };
 
@@ -33,6 +34,8 @@ const PATHNAME_TO_TAB_INDEX = {
 const styles = ({
   content: {
     padding: '1rem',
+    maxWidth: 1000,
+    margin: '0 auto',
   },
 });
 
@@ -134,10 +137,26 @@ class MainContainer extends Component {
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            metrics[metric] = await getBugsCountAndLink(product, component, metric);
+            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+            metrics[metric] = await getBugsCountAndLink(parameters);
             metrics[metric].label = BZ_QUERIES[metric].label;
           }));
           this.setState({ bugzillaComponents });
+        });
+    }
+
+    async reporteesMetrics(partialOrg) {
+      const reporteesMetrics = {};
+      // Let's fetch the metrics for each component
+      Object.values(partialOrg)
+        .map(async ({ bugzillaEmail }) => {
+          reporteesMetrics[bugzillaEmail] = {};
+          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
+            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
+            reporteesMetrics[bugzillaEmail][metric] = (
+              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
+          }));
+          this.setState({ reporteesMetrics });
         });
     }
 
@@ -146,6 +165,8 @@ class MainContainer extends Component {
         getBugzillaOwners(),
         this.getReportees(userSession, ldapEmail),
       ]);
+      // Fetch this data first since it's the landing tab
+      await this.reporteesMetrics(partialOrg);
       this.teamsData(partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });
@@ -162,7 +183,8 @@ class MainContainer extends Component {
           };
           const { product, component } = teamInfo;
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
+            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+            team.metrics[metric] = await getBugsCountAndLink(parameters);
           }));
           teamComponents[teamKey] = team;
           this.setState({ teamComponents });
@@ -209,6 +231,7 @@ class MainContainer extends Component {
         partialOrg,
         teamComponents,
         selectedTabIndex,
+        reporteesMetrics,
       } = this.state;
       const { classes } = this.props;
       const { context } = this;
@@ -238,7 +261,7 @@ class MainContainer extends Component {
                     component={Reportees}
                     ldapEmail={ldapEmail}
                     partialOrg={partialOrg}
-                    onPersonDetails={this.handleShowPersonDetails}
+                    metrics={reporteesMetrics}
                   />
                 )}
                 {partialOrg && (

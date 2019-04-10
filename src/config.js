@@ -13,6 +13,21 @@ const config = {
     audience: process.env.ALTERNATIVE_AUTH ? '' : 'login.taskcluster.net',
     responseType: 'token id_token',
   },
+  reporteesMetrics: {
+    assigned: {
+      label: 'Assigned',
+      parameterGenerator: mail => ({
+        email1: mail,
+        emailassigned_to1: '1',
+        emailtype1: 'exact',
+        resolution: '---',
+      }),
+    },
+    needinfo: {
+      label: 'Needinfo',
+      parameterGenerator: mail => ({ f1: 'requestees.login_name', o1: 'equals', v1: mail }),
+    },
+  },
 };
 
 export const TEAMS_CONFIG = {
