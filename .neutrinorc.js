@@ -9,7 +9,10 @@ module.exports = {
       {
         html: {
           title: 'bugzilla-dashboard'
-        }
+        },
+        env: {
+          ALTERNATIVE_AUTH: false,
+        },
       }
     ],
     '@neutrinojs/jest',
