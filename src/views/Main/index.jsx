@@ -1,4 +1,6 @@
 import React, { Component, Suspense } from 'react';
+import { Switch } from 'react-router-dom';
+import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
@@ -16,14 +18,15 @@ const DEFAULT_STATE = {
   bugzillaComponents: {},
   partialOrg: undefined,
   teamComponents: {},
+  selectedTabIndex: 0,
   componentDetails: undefined,
   personDetails: undefined,
 };
 
-const VIEW_TO_TAB_INDEX = {
-  reportees: 0,
-  teams: 1,
-  components: 2,
+const PATHNAME_TO_TAB_INDEX = {
+  '/reportees': 0,
+  '/teams': 1,
+  '/components': 2,
 };
 
 class MainContainer extends Component {
@@ -33,6 +36,9 @@ class MainContainer extends Component {
 
     constructor(props) {
       super(props);
+      const { location } = this.props;
+      // This guarantees that we load the right tab based on the URL's pathname
+      this.state.selectedTabIndex = PATHNAME_TO_TAB_INDEX[location.pathname] || 0;
       this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
       this.handleShowPersonDetails = this.handleShowPersonDetails.bind(this);
       this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
@@ -70,10 +76,11 @@ class MainContainer extends Component {
       this.fetchData();
     };
 
-    handleNavigateAndClear = () => {
+    handleNavigateAndClear = (_, selectedTabIndex) => {
       this.setState({
         componentDetails: undefined,
         personDetails: undefined,
+        selectedTabIndex,
       });
     };
 
@@ -204,16 +211,15 @@ class MainContainer extends Component {
         ldapEmail,
         partialOrg,
         teamComponents,
+        selectedTabIndex,
       } = this.state;
       const { context } = this;
       const userSession = context.getUserSession();
-      const { match } = this.props;
-      const view = match.params.view || 'reportees';
 
       return (
         <div>
           <Header
-            selectedTabIndex={VIEW_TO_TAB_INDEX[view]}
+            selectedTabIndex={selectedTabIndex}
             handleTabChange={this.handleNavigateAndClear}
           />
           {!userSession && <h3>Please sign in</h3>}
@@ -234,31 +240,33 @@ class MainContainer extends Component {
               />
             </Suspense>
           )}
-          {view === 'reportees' && partialOrg && (
-            <Suspense fallback={<div>Loading...</div>}>
-              <Reportees
-                ldapEmail={ldapEmail}
-                partialOrg={partialOrg}
-                onPersonDetails={this.handleShowPersonDetails}
-              />
-            </Suspense>
-          )}
-          {view === 'teams' && (
-            <Suspense fallback={<div>Loading...</div>}>
-              <BugzillaComponents
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              {partialOrg && (
+                <PropsRoute
+                  path="/reportees"
+                  component={Reportees}
+                  ldapEmail={ldapEmail}
+                  partialOrg={partialOrg}
+                  onPersonDetails={this.handleShowPersonDetails}
+                />
+              )}
+              {partialOrg && (
+                <PropsRoute
+                  path="/components"
+                  component={BugzillaComponents}
+                  bugzillaComponents={Object.values(bugzillaComponents)}
+                  onComponentDetails={this.handleShowComponentDetails}
+                />
+              )}
+              <PropsRoute
+                path="/teams"
+                component={BugzillaComponents}
                 bugzillaComponents={Object.values(teamComponents)}
                 onComponentDetails={this.handleShowComponentDetails}
               />
-            </Suspense>
-          )}
-          {view === 'components' && partialOrg && (
-            <Suspense fallback={<div>Loading...</div>}>
-              <BugzillaComponents
-                bugzillaComponents={Object.values(bugzillaComponents)}
-                onComponentDetails={this.handleShowComponentDetails}
-              />
-            </Suspense>
-          )}
+            </Switch>
+          </Suspense>
         </div>
       );
     }
