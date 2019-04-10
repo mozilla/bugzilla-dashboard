@@ -6,17 +6,17 @@ import COLORS from '../chartJs/colors';
 /* eslint-disable camelcase */
 // Count bugs created/closed each week
 // startDate allow us to group bugs older than such date
-const bugsGroupedByWeek = (bugs, startDate) => (
+const bugsGroupedByWeek = bugs => (
   bugs.reduce((result, { creation_time, cf_last_resolved }) => {
     const newResult = Object.assign({}, result);
-    const createdDate = toDayOfWeek(creation_time, startDate);
+    const createdDate = toDayOfWeek(creation_time);
     if (!newResult[createdDate]) {
       newResult[createdDate] = 0;
     }
     newResult[createdDate] += 1;
 
     if (cf_last_resolved) {
-      const resolvedDate = toDayOfWeek(cf_last_resolved, startDate);
+      const resolvedDate = toDayOfWeek(cf_last_resolved);
       if (!newResult[resolvedDate]) {
         newResult[resolvedDate] = 0;
       }
@@ -30,9 +30,9 @@ const bugsGroupedByWeek = (bugs, startDate) => (
 
 const sortDates = (a, b) => new Date(a) - new Date(b);
 
-const bugsByCreationDate = (bugs, startDate) => {
+const bugsByCreationDate = (bugs) => {
   // Count bugs created on each week
-  const byCreationDate = bugsGroupedByWeek(bugs, startDate);
+  const byCreationDate = bugsGroupedByWeek(bugs);
 
   let count = 0;
   let lastDataPoint;
@@ -66,14 +66,14 @@ const dataFormatter = (bugSeries, chartType, startDate) => {
 
 // It formats the data and options to meet chartJs' data structures
 // startDate enables counting into a starting date all previous data points
-const generateChartJsData = async (queries = [], startDate) => {
+const generateChartJsData = async (queries = [], chartType, startDate) => {
   const data = await Promise.all(
     queries.map(async ({ label, parameters }) => ({
       label,
       ...(await queryBugzilla(parameters)),
     })),
   );
-  return dataFormatter(data, startDate);
+  return dataFormatter(data, chartType, startDate);
 };
 
 export default generateChartJsData;
