@@ -1,5 +1,6 @@
 import React, { Component, Suspense } from 'react';
 import { Switch } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
@@ -28,6 +29,12 @@ const PATHNAME_TO_TAB_INDEX = {
   '/teams': 1,
   '/components': 2,
 };
+
+const styles = ({
+  content: {
+    padding: '1rem',
+  },
+});
 
 class MainContainer extends Component {
     static contextType = AuthContext;
@@ -213,6 +220,7 @@ class MainContainer extends Component {
         teamComponents,
         selectedTabIndex,
       } = this.state;
+      const { classes } = this.props;
       const { context } = this;
       const userSession = context.getUserSession();
 
@@ -222,54 +230,56 @@ class MainContainer extends Component {
             selectedTabIndex={selectedTabIndex}
             handleTabChange={this.handleNavigateAndClear}
           />
-          {!userSession && <h3>Please sign in</h3>}
-          {componentDetails && (
-            <Suspense fallback={<div>Loading...</div>}>
-              <BugzillaComponentDetails
-                {...componentDetails}
-                onGoBack={this.handleComponentBackToMenu}
-              />
-            </Suspense>
-          )}
-          {personDetails && (
-            <Suspense fallback={<div>Loading...</div>}>
-              <PersonDetails
-                person={personDetails}
-                bugzillaComponents={Object.values(bugzillaComponents)}
-                onGoBack={this.handleComponentBackToMenu}
-              />
-            </Suspense>
-          )}
-          <Suspense fallback={<div>Loading...</div>}>
-            <Switch>
-              {partialOrg && (
-                <PropsRoute
-                  path="/reportees"
-                  component={Reportees}
-                  ldapEmail={ldapEmail}
-                  partialOrg={partialOrg}
-                  onPersonDetails={this.handleShowPersonDetails}
+          <div className={classes.content}>
+            {!userSession && <h3>Please sign in</h3>}
+            {componentDetails && (
+              <Suspense fallback={<div>Loading...</div>}>
+                <BugzillaComponentDetails
+                  {...componentDetails}
+                  onGoBack={this.handleComponentBackToMenu}
                 />
-              )}
-              {partialOrg && (
-                <PropsRoute
-                  path="/components"
-                  component={BugzillaComponents}
+              </Suspense>
+            )}
+            {personDetails && (
+              <Suspense fallback={<div>Loading...</div>}>
+                <PersonDetails
+                  person={personDetails}
                   bugzillaComponents={Object.values(bugzillaComponents)}
+                  onGoBack={this.handleComponentBackToMenu}
+                />
+              </Suspense>
+            )}
+            <Suspense fallback={<div>Loading...</div>}>
+              <Switch>
+                {partialOrg && (
+                  <PropsRoute
+                    path="/reportees"
+                    component={Reportees}
+                    ldapEmail={ldapEmail}
+                    partialOrg={partialOrg}
+                    onPersonDetails={this.handleShowPersonDetails}
+                  />
+                )}
+                {partialOrg && (
+                  <PropsRoute
+                    path="/components"
+                    component={BugzillaComponents}
+                    bugzillaComponents={Object.values(bugzillaComponents)}
+                    onComponentDetails={this.handleShowComponentDetails}
+                  />
+                )}
+                <PropsRoute
+                  path="/teams"
+                  component={BugzillaComponents}
+                  bugzillaComponents={Object.values(teamComponents)}
                   onComponentDetails={this.handleShowComponentDetails}
                 />
-              )}
-              <PropsRoute
-                path="/teams"
-                component={BugzillaComponents}
-                bugzillaComponents={Object.values(teamComponents)}
-                onComponentDetails={this.handleShowComponentDetails}
-              />
-            </Switch>
-          </Suspense>
+              </Switch>
+            </Suspense>
+          </div>
         </div>
       );
     }
 }
 
-export default MainContainer;
+export default withStyles(styles)(MainContainer);
