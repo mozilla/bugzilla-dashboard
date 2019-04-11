@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import Typography from '@material-ui/core/Typography';
+import {
+  Avatar, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList, Typography,
+} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -19,9 +13,8 @@ const styles = theme => ({
     marginRight: theme.spacing.unit * 15,
   },
   avatar: {
-    width: 35,
-    height: 35,
-    borderRadius: 9,
+    width: 25,
+    height: 25,
     marginRight: theme.spacing.unit * 15,
   },
 });
@@ -43,6 +36,25 @@ class ProfileMenu extends React.Component {
       this.setState({ open: false });
     };
 
+    renderAvatar = () => {
+      const { classes, userSession } = this.props;
+      if (userSession.picture) {
+        return (
+          <Avatar
+            alt={userSession.name}
+            src={userSession.picture}
+            className={classes.avatar}
+          />
+        );
+      }
+      const firstLetter = userSession.name[0];
+      return (
+        <Avatar className={classes.avatar}>
+          {firstLetter}
+        </Avatar>
+      );
+    };
+
     render() {
       const { classes, context, userSession } = this.props;
       const { open } = this.state;
@@ -58,11 +70,7 @@ class ProfileMenu extends React.Component {
             aria-haspopup="true"
             onClick={this.handleToggle}
           >
-            <Avatar
-              alt={userSession.name}
-              src={userSession.picture}
-              className={classes.avatar}
-            />
+            {this.renderAvatar()}
           </Button>
           <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
             {({ TransitionProps, placement }) => (
