@@ -1,22 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
+import { Switch } from 'react-router-dom';
+import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
-import MainView from '../../components/MainView';
-import BugzillaComponentDetails from '../../components/BugzillaComponentDetails';
-import PersonDetails from '../../components/PersonDetails';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import METRICS from '../../utils/bugzilla/metrics';
 import TEAMS_CONFIG from '../../teamsConfig';
 
+const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
+const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
+const PersonDetails = React.lazy(() => import('../../components/PersonDetails'));
+const Reportees = React.lazy(() => import('../../components/Reportees'));
+
 const DEFAULT_STATE = {
   bugzillaComponents: {},
   partialOrg: undefined,
   teamComponents: {},
   selectedTabIndex: 0,
-  showComponent: undefined,
-  showPerson: undefined,
+  componentDetails: undefined,
+  personDetails: undefined,
+};
+
+const PATHNAME_TO_TAB_INDEX = {
+  '/reportees': 0,
+  '/teams': 1,
+  '/components': 2,
 };
 
 class MainContainer extends Component {
@@ -26,6 +36,9 @@ class MainContainer extends Component {
 
     constructor(props) {
       super(props);
+      const { location } = this.props;
+      // This guarantees that we load the right tab based on the URL's pathname
+      this.state.selectedTabIndex = PATHNAME_TO_TAB_INDEX[location.pathname] || 0;
       this.handleShowComponentDetails = this.handleShowComponentDetails.bind(this);
       this.handleShowPersonDetails = this.handleShowPersonDetails.bind(this);
       this.handleComponentBackToMenu = this.handleComponentBackToMenu.bind(this);
@@ -59,12 +72,16 @@ class MainContainer extends Component {
       return partialOrg;
     }
 
-    handleChangeSelectedTab = (event, selectedTabIndex) => {
-      this.setState({ selectedTabIndex });
-    };
-
     handleUserSessionChanged = () => {
       this.fetchData();
+    };
+
+    handleNavigateAndClear = (_, selectedTabIndex) => {
+      this.setState({
+        componentDetails: undefined,
+        personDetails: undefined,
+        selectedTabIndex,
+      });
     };
 
     fetchData() {
@@ -155,14 +172,14 @@ class MainContainer extends Component {
       // property 'team' to distinguish a component from a set of components
       if (teamKey) {
         this.setState(prevState => ({
-          showComponent: {
+          componentDetails: {
             title: prevState.teamComponents[teamKey].label,
             ...prevState.teamComponents[teamKey],
           },
         }));
       } else {
         this.setState(prevState => ({
-          showComponent: {
+          componentDetails: {
             title: componentKey,
             ...prevState.bugzillaComponents[componentKey],
           },
@@ -174,22 +191,22 @@ class MainContainer extends Component {
       event.preventDefault();
       const { partialOrg } = this.state;
       this.setState({
-        showPerson: partialOrg[properties.ldapEmail],
+        personDetails: partialOrg[properties.ldapEmail],
       });
     }
 
     handleComponentBackToMenu(event) {
       event.preventDefault();
       this.setState({
-        showComponent: undefined,
-        showPerson: undefined,
+        componentDetails: undefined,
+        personDetails: undefined,
       });
     }
 
     render() {
       const {
-        showComponent,
-        showPerson,
+        componentDetails,
+        personDetails,
         bugzillaComponents,
         ldapEmail,
         partialOrg,
@@ -203,34 +220,53 @@ class MainContainer extends Component {
         <div>
           <Header
             selectedTabIndex={selectedTabIndex}
-            handleTabChange={this.handleChangeSelectedTab}
+            handleTabChange={this.handleNavigateAndClear}
           />
           {!userSession && <h3>Please sign in</h3>}
-          {showComponent && (
-            <BugzillaComponentDetails
-              {...showComponent}
-              title={showComponent.title}
-              onGoBack={this.handleComponentBackToMenu}
-            />
+          {componentDetails && (
+            <Suspense fallback={<div>Loading...</div>}>
+              <BugzillaComponentDetails
+                {...componentDetails}
+                onGoBack={this.handleComponentBackToMenu}
+              />
+            </Suspense>
           )}
-          {showPerson && (
-            <PersonDetails
-              person={showPerson}
-              bugzillaComponents={Object.values(bugzillaComponents)}
-              onGoBack={this.handleComponentBackToMenu}
-            />
+          {personDetails && (
+            <Suspense fallback={<div>Loading...</div>}>
+              <PersonDetails
+                person={personDetails}
+                bugzillaComponents={Object.values(bugzillaComponents)}
+                onGoBack={this.handleComponentBackToMenu}
+              />
+            </Suspense>
           )}
-          {!showComponent && !showPerson && partialOrg && userSession && (
-            <MainView
-              ldapEmail={ldapEmail}
-              partialOrg={partialOrg}
-              bugzillaComponents={Object.values(bugzillaComponents)}
-              teamComponents={Object.values(teamComponents)}
-              onComponentDetails={this.handleShowComponentDetails}
-              onPersonDetails={this.handleShowPersonDetails}
-              selectedTabIndex={selectedTabIndex}
-            />
-          )}
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              {partialOrg && (
+                <PropsRoute
+                  path="/reportees"
+                  component={Reportees}
+                  ldapEmail={ldapEmail}
+                  partialOrg={partialOrg}
+                  onPersonDetails={this.handleShowPersonDetails}
+                />
+              )}
+              {partialOrg && (
+                <PropsRoute
+                  path="/components"
+                  component={BugzillaComponents}
+                  bugzillaComponents={Object.values(bugzillaComponents)}
+                  onComponentDetails={this.handleShowComponentDetails}
+                />
+              )}
+              <PropsRoute
+                path="/teams"
+                component={BugzillaComponents}
+                bugzillaComponents={Object.values(teamComponents)}
+                onComponentDetails={this.handleShowComponentDetails}
+              />
+            </Switch>
+          </Suspense>
         </div>
       );
     }

@@ -1,7 +1,12 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Switch,
+  Redirect,
+  Route,
+} from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import ErrorPanel from '@mozilla-frontend-infra/components/ErrorPanel';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
@@ -82,12 +87,15 @@ class App extends React.Component {
           {authReady ? (
             <AuthContext.Provider value={this.authController}>
               <Switch>
-                <PropsRoute path="/" exact component={Main} />
+                <Route path="/" exact>
+                  <Redirect to="/reportees" />
+                </Route>
                 <PropsRoute
                   path={config.redirectRoute}
                   component={Auth0Login}
                   setUserSession={this.authController.setUserSession}
                 />
+                <PropsRoute path="/" component={Main} />
                 <Route component={NotFound} />
               </Switch>
             </AuthContext.Provider>
