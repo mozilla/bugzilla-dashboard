@@ -29,3 +29,10 @@ To regenerate it run this and commit the updated file:
 ```bash
 node scripts/generateTriageOwners.js
 ```
+
+## Contribute
+
+If you don't have LDAP access you can start the app with `yarn start:alternativeAuth` and use Google or GitHub to authenticate. This will
+not give you access to a functioning app, however, it will allow you to make contributions to the authenticated interface.
+
+Issue #66 will add fake data into this alternative auth approach.

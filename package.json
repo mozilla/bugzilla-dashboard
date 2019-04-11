@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development",
+    "start:alternativeAuth": "ALTERNATIVE_AUTH=true webpack-dev-server --mode development",
     "test": "jest",
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },
