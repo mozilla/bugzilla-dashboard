@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 
 import AuthContext from '../../components/auth/AuthContext';
 import config from '../../config';
+import ProfileMenu from '../ProfileMenu';
 
 const styles = theme => ({
   button: {
@@ -56,15 +57,7 @@ class CredentialsMenu extends React.PureComponent {
 
     return (
       userSession ? (
-        <Button
-          size="small"
-          variant="contained"
-          color="secondary"
-          className={classes.button}
-          onClick={() => context.setUserSession(null)}
-        >
-          Sign out
-        </Button>
+        <ProfileMenu userSession={userSession} context={context} />
       ) : (
         <Button
           size="small"
