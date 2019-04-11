@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import BugzillaComponents from '../../src/components/BugzillaComponents';
 import bugzillaComponents from '../mocks/bugzillaComponents';
-import teamsConfig from '../../src/teamsConfig';
+import { TEAMS_CONFIG } from '../../src/config';
 
 it('renders components', () => {
   const tree = renderer
@@ -20,7 +20,7 @@ it('renders components bucketed as teams', () => {
   const tree = renderer
     .create((
       <BugzillaComponents
-        bugzillaComponents={Object.values(teamsConfig)}
+        bugzillaComponents={Object.values(TEAMS_CONFIG)}
         onComponentDetails={() => null}
       />
     ))

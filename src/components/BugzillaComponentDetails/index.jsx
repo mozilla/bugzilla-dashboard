@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import DetailView from '../DetailView';
 import BugzillaGraph from '../../containers/BugzillaGraph';
-import METRICS from '../../utils/bugzilla/metrics';
+import { BZ_QUERIES } from '../../config';
 
 const styles = ({
   subtitle: {
@@ -58,7 +58,7 @@ const BugzillaComponentDetails = ({
       ))}
       <BugzillaGraph
         label={title}
-        queries={constructQuery(METRICS, product, component)}
+        queries={constructQuery(BZ_QUERIES, product, component)}
       />
     </div>
   </DetailView>

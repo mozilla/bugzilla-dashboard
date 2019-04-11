@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import DrilldownIcon from '../DrilldownIcon';
-import METRICS from '../../utils/bugzilla/metrics';
+import { BZ_QUERIES } from '../../config';
 
 const styles = ({
   header: {
@@ -29,7 +29,7 @@ const BugzillaComponents = ({
           <tr>
             <th />
             {onComponentDetails && <th />}
-            {Object.values(METRICS).map(({ label }) => (
+            {Object.values(BZ_QUERIES).map(({ label }) => (
               <th key={label} className={classes.metricLabel}>{label}</th>
             ))}
           </tr>
@@ -54,7 +54,7 @@ const BugzillaComponents = ({
                   </td>
                 )}
                 <td>{label}</td>
-                {Object.keys(METRICS).map(metric => (
+                {Object.keys(BZ_QUERIES).map(metric => (
                   metrics[metric] && (
                   <td key={metric} className={classes.metric}>
                     <a href={metrics[metric].link} target="_blank" rel="noopener noreferrer">{metrics[metric].count}</a>

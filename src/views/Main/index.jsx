@@ -7,8 +7,7 @@ import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import METRICS from '../../utils/bugzilla/metrics';
-import TEAMS_CONFIG from '../../teamsConfig';
+import { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -135,9 +134,9 @@ class MainContainer extends Component {
       Object.values(bugzillaComponents)
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
-          await Promise.all(Object.keys(METRICS).map(async (metric) => {
+          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
             metrics[metric] = await getBugsCountAndLink(product, component, metric);
-            metrics[metric].label = METRICS[metric].label;
+            metrics[metric].label = BZ_QUERIES[metric].label;
           }));
           this.setState({ bugzillaComponents });
         });
@@ -163,7 +162,7 @@ class MainContainer extends Component {
           metrics: {},
         };
         const { product, component } = teamInfo;
-        await Promise.all(Object.keys(METRICS).map(async (metric) => {
+        await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
           team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
         }));
         teamComponents[teamKey] = team;
