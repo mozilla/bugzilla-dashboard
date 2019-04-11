@@ -21,10 +21,9 @@ export const TEAMS_CONFIG = {
     owner: 'someone@mozilla.com',
     product: ['Core'],
     component: [
-      'DOM', 'DOM: Core & HTML', 'DOM: Events', 'Drag and Drop',
-      'Editor', 'Event Handling', 'HTML: Form Submission',
-      'HTML: Parser', 'Keyboard: Navigation', 'Selection',
-      'Serializers',
+      'DOM: Core & HTML', 'DOM: Events',
+      'Editor', 'HTML: Parser', 'Selection', 'Serializers',
+      'User events and focus handling',
     ],
   },
   domFission: {
@@ -51,13 +50,14 @@ export const TEAMS_CONFIG = {
 /* eslint-disable object-property-newline */
 /* eslint-disable no-multi-spaces */
 export const BZ_QUERIES = {
-  untriaged: {
-      label: 'Untriaged',
+  newDefects: {
+      label: 'New defects',
       parameters: {
           chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
           priority: '--',
           resolution: '---',
           f1: 'flagtypes.name', o1: 'notsubstring', v1: 'needinfo',
+          bug_type: 'defect',
       },
   },
   needinfo: {

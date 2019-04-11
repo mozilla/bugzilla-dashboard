@@ -13,7 +13,7 @@ exports[`renders components 1`] = `
         <th
           className="BugzillaComponents-metricLabel-3"
         >
-          Untriaged
+          New defects
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
@@ -120,17 +120,6 @@ exports[`renders components 1`] = `
         <td>
           Core::DOM: Core & HTML
         </td>
-        <td
-          className="BugzillaComponents-metric-2"
-        >
-          <a
-            href="https://bugzilla.mozilla.org/buglist.cgi?component=DOM%3A%20Core%20%26%20HTML&f1=bug_severity&f2=keywords&f3=resolution&limit=0&o1=notequals&o2=notsubstring&o3=isempty&product=Core&v1=enhancement&v2=meta"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            944
-          </a>
-        </td>
       </tr>
       <tr>
         <td>
@@ -181,7 +170,7 @@ exports[`renders components bucketed as teams 1`] = `
         <th
           className="BugzillaComponents-metricLabel-3"
         >
-          Untriaged
+          New defects
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
