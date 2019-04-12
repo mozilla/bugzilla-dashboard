@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Avatar, Button, ClickAwayListener, Grow, Paper, Popper, MenuItem, MenuList, Typography,
-} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import {
+  Avatar, IconButton, Menu, MenuItem, Typography,
+} from '@material-ui/core';
 
 const styles = theme => ({
   root: {
     display: 'flex',
   },
-  paper: {
+  grow: {
     marginRight: theme.spacing.unit * 15,
   },
   avatar: {
@@ -21,19 +22,15 @@ const styles = theme => ({
 
 class ProfileMenu extends React.Component {
     state = {
-      open: false,
+      anchorEl: null,
     };
 
-    handleToggle = () => {
-      this.setState(state => ({ open: !state.open }));
+    handleMenu = (event) => {
+      this.setState({ anchorEl: event.currentTarget });
     };
 
-    handleClose = (event) => {
-      if (this.anchorEl.contains(event.target)) {
-        return;
-      }
-
-      this.setState({ open: false });
+    handleClose = () => {
+      this.setState({ anchorEl: null });
     };
 
     renderAvatar = () => {
@@ -47,54 +44,48 @@ class ProfileMenu extends React.Component {
           />
         );
       }
-      const firstLetter = userSession.name[0];
       return (
-        <Avatar className={classes.avatar}>
-          {firstLetter}
-        </Avatar>
+        <AccountCircle className={classes.avatar} />
       );
     };
 
     render() {
       const { classes, context, userSession } = this.props;
-      const { open } = this.state;
+      const { anchorEl } = this.state;
+      const open = Boolean(anchorEl);
 
       return (
         <div className={classes.root}>
 
-          <Button
-            buttonRef={(node) => {
-              this.anchorEl = node;
-            }}
-            aria-owns={open ? 'menu-list-grow' : undefined}
-            aria-haspopup="true"
-            onClick={this.handleToggle}
-          >
-            {this.renderAvatar()}
-          </Button>
-          <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
-            {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                id="menu-list-grow"
-                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={this.handleClose}>
-                    <MenuList>
-                      <Typography variant="subtitle1" gutterBottom>
-                        {userSession.name}
-                      </Typography>
-                      <MenuItem onClick={this.handleClose}>Profile - disable</MenuItem>
-                      <MenuItem onClick={this.handleClose}>My account - disable</MenuItem>
-                      <MenuItem onClick={() => context.setUserSession(null)}>Sign out</MenuItem>
-                    </MenuList>
-                  </ClickAwayListener>
-                </Paper>
-              </Grow>
-            )}
-          </Popper>
-
+          <div>
+            <IconButton
+              aria-owns={open ? 'menu-appbar' : undefined}
+              aria-haspopup="true"
+              onClick={this.handleMenu}
+              color="inherit"
+            >
+              {this.renderAvatar()}
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={open}
+              onClose={this.handleClose}
+            >
+              <Typography variant="subtitle1">
+                {userSession.name}
+              </Typography>
+              <MenuItem onClick={() => context.setUserSession(null)}>Sign out</MenuItem>
+            </Menu>
+          </div>
         </div>
       );
     }
@@ -102,6 +93,8 @@ class ProfileMenu extends React.Component {
 
 ProfileMenu.propTypes = {
   classes: PropTypes.shape({}).isRequired,
+  userSession: PropTypes.shape({}).isRequired,
+  context: PropTypes.shape({}).isRequired,
 };
 
 export default withStyles(styles)(ProfileMenu);
