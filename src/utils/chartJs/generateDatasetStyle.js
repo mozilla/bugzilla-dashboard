@@ -4,6 +4,7 @@ const generateLineChartStyle = color => ({
   fill: false,
   pointRadius: '0',
   pointHoverBackgroundColor: 'white',
+  lineTension: '0',
 });
 
 const generateScatterChartStyle = color => ({
