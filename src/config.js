@@ -18,7 +18,7 @@ const config = {
 export const TEAMS_CONFIG = {
   domCore: {
     label: 'DOM Core',
-    owner: 'someone@mozilla.com',
+    owner: 'htsai@mozilla.com',
     product: ['Core'],
     component: [
       'DOM: Core & HTML', 'DOM: Events',
@@ -28,7 +28,7 @@ export const TEAMS_CONFIG = {
   },
   domFission: {
     label: 'DOM Fission',
-    owner: 'manager@mozilla.com',
+    owner: 'nkochar@mozilla.com',
     product: ['Core', 'Toolkit'],
     component: [
       'Document Navigation', 'XBL', 'XML', 'XPConnect', 'XSLT',
@@ -36,7 +36,7 @@ export const TEAMS_CONFIG = {
   },
   workerStoreage: {
     label: 'Worker and Storage',
-    owner: 'manager@mozilla.com',
+    owner: 'aoverholt@mozilla.com',
     product: ['Core', 'Toolkit'],
     component: [
       'DOM: IndexedDB', 'DOM: Push Notifications', 'DOM: Quota Manager',

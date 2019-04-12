@@ -21,7 +21,7 @@ const styles = ({
   },
 });
 
-const sortByPersonName = (a, b) => (a.cn <= b.cn ? -1 : 1);
+const sortByPersonName = (a, b) => a.cn.localeCompare(b.cn);
 
 const Reportees = ({
   classes, ldapEmail, partialOrg, onPersonDetails,

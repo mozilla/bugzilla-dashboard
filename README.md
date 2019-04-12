@@ -2,9 +2,39 @@
 
 This is a Bugzilla dashboard that helps management determine Bugzilla components triaging status plus listing members of their reporting chain.
 
-Only LDAP users are allowed to use this app.
+Only LDAP users are allowed to use this app. You can do development locally without an LDAP account, however, the app will only
+have fake org data. See the [Contribute](#contribute) section.
 
 You can see the deployment in [here](http://bugzilla-management-dashboard.netlify.com/).
+
+## Adding more teams
+
+A team is a collection of components that can span various products and it is shown under the Teams tab.
+You can add new teams and make them show in the Teams tab by making changes to the [config](https://github.com/mozilla/bugzilla-dashboard/blob/master/src/config.js) file.
+
+To add a team you need to modify `TEAMS_CONFIG` and an entry similar to this:
+
+```javascript
+export const TEAMS_CONFIG = {
+  domCore: {
+    label: 'DOM Core',
+    owner: 'someone@mozilla.com',
+    product: ['Core'],
+    component: [
+      'DOM: Core & HTML', 'DOM: Events',
+      'Editor', 'HTML: Parser', 'Selection', 'Serializers',
+      'User events and focus handling',
+    ],
+},
+```
+
+Here's how to configure it:
+
+* `product` and `component` are parameters passed to the Bugzilla queries.
+* `owner` should match someone reporting to you.
+  * Use their Bugzilla email rather than their LDAP
+  * If the person does is not someone showing up on your Reportees tab it won't work
+* `label` is the name of the team
 
 ## Generate data
 

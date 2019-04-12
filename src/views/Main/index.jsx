@@ -1,6 +1,7 @@
 import React, { Component, Suspense } from 'react';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
+import Spinner from '@mozilla-frontend-infra/components/Spinner';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
@@ -13,8 +14,10 @@ const BugzillaComponents = React.lazy(() => import('../../components/BugzillaCom
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
 const PersonDetails = React.lazy(() => import('../../components/PersonDetails'));
 const Reportees = React.lazy(() => import('../../components/Reportees'));
+const Teams = React.lazy(() => import('../Teams'));
 
 const DEFAULT_STATE = {
+  doneLoading: false,
   bugzillaComponents: {},
   partialOrg: undefined,
   teamComponents: {},
@@ -147,26 +150,27 @@ class MainContainer extends Component {
         getBugzillaOwners(),
         this.getReportees(userSession, ldapEmail),
       ]);
-      this.teamsData();
+      this.teamsData(partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
+      this.setState({ doneLoading: true });
     }
 
-    async teamsData() {
-      const teamComponents = Object.assign({}, TEAMS_CONFIG);
-      // This will cause the teams to be displayed before having any metrics
-      this.setState({ teamComponents });
-      Object.entries(teamComponents).map(async ([teamKey, teamInfo]) => {
-        const team = {
-          teamKey,
-          ...teamInfo,
-          metrics: {},
-        };
-        const { product, component } = teamInfo;
-        await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-          team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
-        }));
-        teamComponents[teamKey] = team;
-        this.setState({ teamComponents });
+    async teamsData(partialOrg) {
+      const teamComponents = {};
+      Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
+        if (partialOrg[teamInfo.owner]) {
+          const team = {
+            teamKey,
+            ...teamInfo,
+            metrics: {},
+          };
+          const { product, component } = teamInfo;
+          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
+            team.metrics[metric] = await getBugsCountAndLink(product, component, metric);
+          }));
+          teamComponents[teamKey] = team;
+          this.setState({ teamComponents });
+        }
       });
     }
 
@@ -211,6 +215,7 @@ class MainContainer extends Component {
 
     render() {
       const {
+        doneLoading,
         componentDetails,
         personDetails,
         bugzillaComponents,
@@ -269,12 +274,13 @@ class MainContainer extends Component {
                 )}
                 <PropsRoute
                   path="/teams"
-                  component={BugzillaComponents}
+                  component={Teams}
                   bugzillaComponents={Object.values(teamComponents)}
                   onComponentDetails={this.handleShowComponentDetails}
                 />
               </Switch>
             </Suspense>
+            {!doneLoading && <Spinner loading /> }
           </div>
         </div>
       );
