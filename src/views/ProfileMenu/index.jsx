@@ -3,24 +3,20 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import {
-  Avatar, IconButton, Menu, MenuItem, Typography,
+  Avatar, IconButton, Menu, MenuItem,
 } from '@material-ui/core';
+import AuthContext from '../../components/auth/AuthContext';
 
-const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  grow: {
-    marginRight: theme.spacing.unit * 15,
-  },
+const styles = ({
   avatar: {
     width: 25,
     height: 25,
-    marginRight: theme.spacing.unit * 15,
   },
 });
 
 class ProfileMenu extends React.Component {
+    static contextType = AuthContext;
+
     state = {
       anchorEl: null,
     };
@@ -33,59 +29,53 @@ class ProfileMenu extends React.Component {
       this.setState({ anchorEl: null });
     };
 
-    renderAvatar = () => {
-      const { classes, userSession } = this.props;
-      if (userSession.picture) {
-        return (
-          <Avatar
-            alt={userSession.name}
-            src={userSession.picture}
-            className={classes.avatar}
-          />
-        );
-      }
-      return (
+    renderAvatar = (userSession) => {
+      const { classes } = this.props;
+      return userSession.picture ? (
+        <Avatar
+          alt={userSession.name}
+          src={userSession.picture}
+          className={classes.avatar}
+        />
+      ) : (
         <AccountCircle className={classes.avatar} />
       );
     };
 
     render() {
-      const { classes, context, userSession } = this.props;
+      const { context } = this;
+      const { classes } = this.props;
+      const userSession = context && context.getUserSession();
       const { anchorEl } = this.state;
       const open = Boolean(anchorEl);
 
       return (
-        <div className={classes.root}>
-
-          <div>
-            <IconButton
-              aria-owns={open ? 'menu-appbar' : undefined}
-              aria-haspopup="true"
-              onClick={this.handleMenu}
-              color="inherit"
-            >
-              {this.renderAvatar()}
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={open}
-              onClose={this.handleClose}
-            >
-              <Typography variant="subtitle1">
-                {userSession.name}
-              </Typography>
-              <MenuItem onClick={() => context.setUserSession(null)}>Sign out</MenuItem>
-            </Menu>
-          </div>
+        <div>
+          <IconButton
+            aria-owns={open ? 'menu-appbar' : undefined}
+            aria-haspopup="true"
+            onClick={this.handleMenu}
+            color="inherit"
+          >
+            {this.renderAvatar(userSession, classes)}
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={open}
+            onClose={this.handleClose}
+          >
+            <MenuItem>{userSession.name}</MenuItem>
+            <MenuItem onClick={() => context.setUserSession(null)}>Sign out</MenuItem>
+          </Menu>
         </div>
       );
     }
@@ -93,8 +83,6 @@ class ProfileMenu extends React.Component {
 
 ProfileMenu.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  userSession: PropTypes.shape({}).isRequired,
-  context: PropTypes.shape({}).isRequired,
 };
 
 export default withStyles(styles)(ProfileMenu);

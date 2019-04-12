@@ -57,7 +57,7 @@ class CredentialsMenu extends React.PureComponent {
 
     return (
       userSession ? (
-        <ProfileMenu userSession={userSession} context={context} />
+        <ProfileMenu />
       ) : (
         <Button
           size="small"
