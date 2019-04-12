@@ -16,7 +16,7 @@ const styles = ({
   },
 });
 
-const sortByComponentName = (a, b) => a.label - b.label;
+const sortByComponentName = (a, b) => a.label.localeCompare(b.label);
 
 const BugzillaComponents = ({
   classes, title, bugzillaComponents, onComponentDetails,
