@@ -1,11 +1,11 @@
 import getOrgChart from './getOrgChart';
 
-const findReportees = (completeOrg, ldapEmail) => {
+const findReportees = (completeOrg, email) => {
   let allReportees = {};
   const allEmails = Object.keys(completeOrg);
-  const fakeEmail = (ldapEmail in completeOrg) ? ldapEmail : allEmails[0];
+  const fakeEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
 
-  allReportees[ldapEmail] = completeOrg[fakeEmail];
+  allReportees[email] = completeOrg[fakeEmail];
   const { reportees } = completeOrg[fakeEmail];
 
 
@@ -15,12 +15,13 @@ const findReportees = (completeOrg, ldapEmail) => {
       allReportees = { ...allReportees, ...partialOrg };
     });
   }
+
   return allReportees;
 };
 
-const getAllFakeReportees = async (ldapEmail) => {
+const getAllFakeReportees = async (email) => {
   const completeOrg = await getOrgChart();
-  return findReportees(completeOrg, ldapEmail);
+  return findReportees(completeOrg, email);
 };
 
 export default getAllFakeReportees;
