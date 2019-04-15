@@ -7,6 +7,7 @@ import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
+import getAllFakeReportees from '../../utils/getAllFakeReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
@@ -77,7 +78,7 @@ class MainContainer extends Component {
 
     async getReportees(userSession, ldapEmail) {
       const secretsClient = userSession.getTaskClusterSecretsClient();
-      const partialOrg = await getAllReportees(secretsClient, ldapEmail);
+      const partialOrg = (userSession.oidcProvider === 'mozilla-auth0') ? await getAllFakeReportees(ldapEmail) : await getAllReportees(secretsClient, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }

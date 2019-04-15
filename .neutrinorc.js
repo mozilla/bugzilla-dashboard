@@ -20,6 +20,7 @@ module.exports = {
     jest(),
     copy({
         patterns: [
+          { from: 'src/static/fakeOrg.json', to: 'people.json' },
           { from: 'src/static/triageOwners.json', to: 'triageOwners.json' },
         ],
       })
