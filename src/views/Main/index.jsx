@@ -12,6 +12,7 @@ import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
+const BugzillaDetails = React.lazy(() => import('../BugzillaDetails'));
 const Reportees = React.lazy(() => import('../../components/Reportees'));
 const Teams = React.lazy(() => import('../Teams'));
 
@@ -234,8 +235,6 @@ class MainContainer extends Component {
         reporteesMetrics,
       } = this.state;
       const { classes } = this.props;
-      const { context } = this;
-      const userSession = context.getUserSession();
 
       return (
         <div>
@@ -244,7 +243,6 @@ class MainContainer extends Component {
             handleTabChange={this.handleNavigateAndClear}
           />
           <div className={classes.content}>
-            {!userSession && <h3>Please sign in</h3>}
             {componentDetails && (
               <Suspense fallback={<div>Loading...</div>}>
                 <BugzillaComponentDetails
@@ -272,6 +270,10 @@ class MainContainer extends Component {
                     onComponentDetails={this.handleShowComponentDetails}
                   />
                 )}
+                <PropsRoute
+                  path="/graph"
+                  component={BugzillaDetails}
+                />
                 <PropsRoute
                   path="/teams"
                   component={Teams}
