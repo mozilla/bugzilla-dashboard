@@ -48,32 +48,23 @@ const bugsByCreationDate = (bugs) => {
   return accumulatedCount;
 };
 
-const dataFormatter = (bugSeries, chartType, startDate) => {
-  const newData = { data: { datasets: [] } };
-
-  bugSeries.forEach(({ bugs, label }, index) => {
-    const bugCountPerDay = bugsByCreationDate(bugs, startDate);
-    newData.data.datasets.push({
-      ...generateDatasetStyle(chartType, COLORS[index]),
-      data: bugCountPerDay,
-      label,
-    });
-  });
-
-  return newData;
-};
-
-
 // It formats the data and options to meet chartJs' data structures
 // startDate enables counting into a starting date all previous data points
 const generateChartJsData = async (queries = [], chartType, startDate) => {
-  const data = await Promise.all(
-    queries.map(async ({ label, parameters }) => ({
-      label,
-      ...(await queryBugzilla(parameters)),
-    })),
+  const datasets = [];
+  await Promise.all(
+    queries.map(async ({ label, parameters }, index) => {
+      const { bugs } = await queryBugzilla(parameters);
+      if (bugs.length > 0) {
+        datasets.push({
+          ...generateDatasetStyle(chartType, COLORS[index]),
+          data: bugsByCreationDate(bugs, startDate),
+          label,
+        });
+      }
+    }),
   );
-  return dataFormatter(data, chartType, startDate);
+  return datasets;
 };
 
 export default generateChartJsData;

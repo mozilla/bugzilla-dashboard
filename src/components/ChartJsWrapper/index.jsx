@@ -21,7 +21,7 @@ const ChartJsWrapper = ({
       {title && <h2>{title}</h2>}
       <Chart
         type={type}
-        data={data}
+        data={{ datasets: data }}
         options={generateOptions(options)}
       />
     </div>
@@ -45,31 +45,28 @@ ChartJsWrapper.propTypes = {
     }),
     ticksCallback: PropTypes.func,
   }).isRequired,
-  data: PropTypes.shape({
-    datasets: PropTypes.arrayOf(
-      PropTypes.shape({
-        // There can be more properties than data and selectedTabIndex,
-        // however, we mainly care about these as a minimum requirement
-        data: PropTypes.arrayOf(
-          PropTypes.shape({
-            x: PropTypes.oneOfType([
-              PropTypes.string,
-              PropTypes.instanceOf(Date),
-            ]).isRequired,
-            y: PropTypes.number.isRequired,
-          }),
-        ),
-        label: PropTypes.string.isRequired,
-      }),
-    ).isRequired,
-  }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      // There can be more properties than data and selectedTabIndex,
+      // however, we mainly care about these as a minimum requirement
+      data: PropTypes.arrayOf(
+        PropTypes.shape({
+          x: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.instanceOf(Date),
+          ]).isRequired,
+          y: PropTypes.number.isRequired,
+        }),
+      ),
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   title: PropTypes.string,
   type: PropTypes.string,
   size: PropTypes.string,
 };
 
 ChartJsWrapper.defaultProps = {
-  data: undefined,
   title: '',
   type: 'line',
   size: '8rem',
