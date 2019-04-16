@@ -1,76 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders Manager who has reportees & metrics 1`] = `
+<div
+  className="Reportees-root-1"
+>
+  <table
+    className="MuiTable-root-2"
+  >
+    <thead
+      className="MuiTableHead-root-3"
+    >
+      <tr
+        className="MuiTableRow-root-4 MuiTableRow-head-7"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Needinfo
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-21"
+    >
+      <tr
+        className="MuiTableRow-root-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Manager 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        >
+          <a
+            href="https://mozilla.org/0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            0
+          </a>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        >
+          <a
+            href="https://mozilla.org/1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            1
+          </a>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Someone 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        >
+          <a
+            href="https://mozilla.org/0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            0
+          </a>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        >
+          <a
+            href="https://mozilla.org/1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            1
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`renders Manager who has reportees 1`] = `
 <div
   className="Reportees-root-1"
 >
-  <div
-    height="1rem"
+  <table
+    className="MuiTable-root-2"
   >
-     
-  </div>
-  <div
-    className="Reportees-person-4"
-  >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="manager@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
+    <thead
+      className="MuiTableHead-root-3"
     >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
+      <tr
+        className="MuiTableRow-root-4 MuiTableRow-head-7"
       >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10"
+          scope="col"
         />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
-    <span>
-      Manager 
-    </span>
-  </div>
-  <div
-    className="Reportees-person-4"
-  >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="someone@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Needinfo
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-21"
     >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
+      <tr
+        className="MuiTableRow-root-4"
       >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Manager 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
-      </svg>
-    </div>
-    <span>
-      Someone 
-    </span>
-  </div>
+      </tr>
+      <tr
+        className="MuiTableRow-root-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Someone 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
@@ -78,72 +192,76 @@ exports[`renders Someone with no reportees 1`] = `
 <div
   className="Reportees-root-1"
 >
-  <div
-    height="1rem"
+  <table
+    className="MuiTable-root-2"
   >
-     
-  </div>
-  <div
-    className="Reportees-person-4"
-  >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="manager@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
+    <thead
+      className="MuiTableHead-root-3"
     >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
+      <tr
+        className="MuiTableRow-root-4 MuiTableRow-head-7"
       >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10"
+          scope="col"
         />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-      </svg>
-    </div>
-    <span>
-      Manager 
-    </span>
-  </div>
-  <div
-    className="Reportees-person-4"
-  >
-    <div
-      className="DrilldownIcon-svgWrapper-5"
-      name="someone@mozilla.com"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="0"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Needinfo
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-21"
     >
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root-7 DrilldownIcon-icon-6"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
+      <tr
+        className="MuiTableRow-root-4"
       >
-        <path
-          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Manager 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
-      </svg>
-    </div>
-    <span>
-      Someone 
-    </span>
-  </div>
+      </tr>
+      <tr
+        className="MuiTableRow-root-4"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11"
+        >
+          Someone 
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
