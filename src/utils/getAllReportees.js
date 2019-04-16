@@ -31,11 +31,6 @@ const buildOrgChartData = (people) => {
   return org;
 };
 
-const getOrgChart = async (secretsClient) => {
-  const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
-  return buildOrgChartData(secret.employees);
-};
-
 const findReportees = (completeOrg, email) => {
   let allReportees = {};
 
@@ -57,15 +52,16 @@ const findReportees = (completeOrg, email) => {
 };
 
 const getAllReportees = async (userSession, ldapEmail) => {
-  let completeOrg;
+  let people;
   if (userSession.oidcProvider === 'mozilla-auth0') {
     // if non-LDAP user, get fake data
-    const people = await (await fetch('people.json')).json();
-    completeOrg = await buildOrgChartData(people);
+    people = await (await fetch('people.json')).json();
   } else {
     const secretsClient = userSession.getTaskClusterSecretsClient();
-    completeOrg = await getOrgChart(secretsClient);
+    const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
+    people = secret.employees;
   }
+  const completeOrg = await buildOrgChartData(people);
   return findReportees(completeOrg, ldapEmail);
 };
 
