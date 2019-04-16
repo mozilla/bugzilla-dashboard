@@ -57,7 +57,6 @@ const BugzillaComponentDetails = ({
         )
       ))}
       <BugzillaGraph
-        label={title}
         queries={constructQuery(BZ_QUERIES, product, component)}
       />
     </div>
