@@ -17,7 +17,7 @@ class BugzillaGraph extends Component {
     async fetchData() {
       const { queries, chartType, startDate } = this.props;
       try {
-        this.setState(await generateChartJsData(queries, chartType, startDate));
+        this.setState({ data: await generateChartJsData(queries, chartType, startDate) });
       } catch (error) {
         this.setState({ error: error.message });
         // This allows seeing the stacktrace
@@ -29,15 +29,19 @@ class BugzillaGraph extends Component {
       const { data, error } = this.state;
       const { chartType, title } = this.props;
 
+      if (error) {
+        return <ErrorPanel error={error} />;
+      }
+
       return (
-        error ? <ErrorPanel error={error} /> : (
+        data && data.length > 0 ? (
           <ChartJsWrapper
             type={chartType}
             data={data}
             options={{ scaleLabel: '# of bugs' }}
             title={title}
           />
-        )
+        ) : <div />
       );
     }
 }
