@@ -11,7 +11,7 @@ const styles = {
 const Teams = ({ classes, ...rest }) => (
   <React.Fragment>
     <div className={classes.message}>
-      <span>If you want to change what shows up in this page follow </span>
+      <span>The team view allows to group components to create a project view.<br />If you want to change what shows up in this page follow </span>
       <a href="https://github.com/mozilla/bugzilla-dashboard#generate-data">these instructions</a>
     </div>
     <BugzillaComponents {...rest} />
