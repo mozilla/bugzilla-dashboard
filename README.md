@@ -5,7 +5,7 @@ This is a Bugzilla dashboard that helps management determine Bugzilla components
 Only LDAP users are allowed to use this app. You can do development locally without an LDAP account, however, the app will only
 have fake org data. See the [Contribute](#contribute) section.
 
-You can see the deployment in [here](http://bugzilla-management-dashboard.netlify.com/).
+You can see the deployment in our [Netlify instance](http://bugzilla-management-dashboard.netlify.com/).
 
 ## Adding more teams
 
