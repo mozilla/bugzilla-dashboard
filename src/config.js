@@ -71,7 +71,6 @@ export const BZ_QUERIES = {
           chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
           priority: '--',
           resolution: '---',
-          f1: 'flagtypes.name', o1: 'notsubstring', v1: 'needinfo',
           bug_type: 'defect',
       },
   },
