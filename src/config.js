@@ -68,7 +68,7 @@ export const BZ_QUERIES = {
   newDefects: {
       label: 'New defects',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: '--',
           resolution: '---',
           bug_type: 'defect',
@@ -77,17 +77,17 @@ export const BZ_QUERIES = {
   needinfo: {
       label: 'Needinfo',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2016-06-01', chfieldto: 'Now',
           priority: '--',
           resolution: '---',
-          f1: 'flagtypes.name',   o1: 'substring', v1: 'needinfo',
-          f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
+          f1: 'flagtypes.name',   o1: 'substring',     v1: 'needinfo',
+          f2: 'assigned_to',      o2: 'equals',        v2: 'nobody@mozilla.org',
+          f3: 'creation_ts',      o3: 'greaterthaneq', v3: '-1y',
       },
   },
   P1: {
       label: 'P1s',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2016-06-01', chfieldto: 'Now',
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
           resolution: '---',
       },
