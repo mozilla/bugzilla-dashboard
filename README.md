@@ -79,3 +79,25 @@ The authentication configuration has the following characteristics:
   * Non-LDAP users will receive fake org data
 * After a user authenticates, the auth will also authenticate with Taskcluster (`login.taskcluster.net`)
   * This is in order to later fetch a Taskcluster secret (only available to LDAP users)
+
+## Running & tests
+
+* [Install Yarn](https://yarnpkg.com/lang/en/docs/install/)
+* To run the tests:
+
+```bash
+yarn test -u
+```
+
+* To run the linting tests
+
+```bash
+yarn lint
+```
+
+* To run the project
+
+```bash
+yarn install
+yarn start
+```
