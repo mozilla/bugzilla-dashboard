@@ -82,8 +82,7 @@ export const BZ_QUERIES = {
           priority: '--',
           resolution: '---',
           f1: 'flagtypes.name',   o1: 'substring', v1: 'needinfo',
-          f2: 'cf_tracking_e10s', o2: 'notequals', v2: ' ',
-          f3: 'assigned_to',      o3: 'equals',    v3: 'nobody@mozilla.org',
+          f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
       },
   },
   P1: {
