@@ -93,5 +93,5 @@ The authentication configuration has the following characteristics:
     ```
 1. To run the project
   * ```bash
-    yarn run
+    yarn run start
     ```
