@@ -84,12 +84,39 @@ export const BZ_QUERIES = {
           f3: 'creation_ts',      o3: 'greaterthaneq', v3: '-1y',
       },
   },
-  P1: {
-      label: 'P1s',
+  P1Defect: {
+      label: 'P1s defect',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
           resolution: '---',
+          bug_type: 'defect',
+      },
+  },
+  P1Task: {
+      label: 'P1s task',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'task',
+      },
+  },
+  P1Enhancement: {
+      label: 'P1s enhancement',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'enhancement',
+      },
+  },
+  sec: {
+      label: 'sec-{critical, high}',
+      parameters: {
+          resolution: '---',
+          keywords_type: 'anywords',
+          keywords: 'sec-critical, sec-high',
       },
   },
 };
