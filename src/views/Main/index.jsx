@@ -16,7 +16,7 @@ const Reportees = React.lazy(() => import('../../components/Reportees'));
 const Teams = React.lazy(() => import('../Teams'));
 
 const DEFAULT_STATE = {
-  doneLoading: false,
+  doneLoading: undefined,
   bugzillaComponents: {},
   partialOrg: undefined,
   teamComponents: {},
@@ -96,6 +96,8 @@ class MainContainer extends Component {
       const { context } = this;
       const userSession = context && context.getUserSession();
       if (userSession) {
+        // We show the spinner after having signed in
+        this.setState({ doneLoading: false });
         const { location } = this.props;
         const ldapEmail = new URLSearchParams(location.search).get('ldapEmail') || (userSession && userSession.email);
         this.setState({ ldapEmail });
@@ -280,7 +282,7 @@ class MainContainer extends Component {
                 />
               </Switch>
             </Suspense>
-            {!doneLoading && <Spinner loading /> }
+            {doneLoading === false && <Spinner loading /> }
           </div>
         </div>
       );

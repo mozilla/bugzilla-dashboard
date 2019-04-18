@@ -79,9 +79,8 @@ export const BZ_QUERIES = {
       parameters: {
           priority: '--',
           resolution: '---',
-          f1: 'flagtypes.name',   o1: 'substring',     v1: 'needinfo',
-          f2: 'assigned_to',      o2: 'equals',        v2: 'nobody@mozilla.org',
-          f3: 'creation_ts',      o3: 'greaterthaneq', v3: '-1y',
+          f1: 'flagtypes.name',   o1: 'substring', v1: 'needinfo',
+          f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
       },
   },
   P1Defect: {

@@ -5,7 +5,7 @@ This is a Bugzilla dashboard that helps management determine Bugzilla components
 Only LDAP users are allowed to use this app. You can do development locally without an LDAP account, however, the app will only
 have fake org data. See the [Contribute](#contribute) section.
 
-You can see the deployment in [here](http://bugzilla-management-dashboard.netlify.com/).
+You can see the deployment in our [Netlify instance](http://bugzilla-management-dashboard.netlify.com/).
 
 ## Adding more teams
 
@@ -79,3 +79,25 @@ The authentication configuration has the following characteristics:
   * Non-LDAP users will receive fake org data
 * After a user authenticates, the auth will also authenticate with Taskcluster (`login.taskcluster.net`)
   * This is in order to later fetch a Taskcluster secret (only available to LDAP users)
+
+## Running & tests
+
+* [Install Yarn](https://yarnpkg.com/lang/en/docs/install/)
+* To run the tests:
+
+```bash
+yarn test -u
+```
+
+* To run the linting tests
+
+```bash
+yarn lint
+```
+
+* To run the project
+
+```bash
+yarn install
+yarn start
+```
