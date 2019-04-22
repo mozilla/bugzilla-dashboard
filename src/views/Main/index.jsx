@@ -1,4 +1,5 @@
 import React, { Component, Suspense } from 'react';
+import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
@@ -288,5 +289,10 @@ class MainContainer extends Component {
       );
     }
 }
+
+MainContainer.propTypes = {
+  classes: PropTypes.shape().isRequired,
+  location: PropTypes.shape().isRequired,
+};
 
 export default withStyles(styles)(MainContainer);
