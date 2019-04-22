@@ -68,29 +68,54 @@ export const BZ_QUERIES = {
   newDefects: {
       label: 'New defects',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2018-06-01', chfieldto: 'Now',
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: '--',
           resolution: '---',
-          f1: 'flagtypes.name', o1: 'notsubstring', v1: 'needinfo',
           bug_type: 'defect',
       },
   },
   needinfo: {
       label: 'Needinfo',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2016-06-01', chfieldto: 'Now',
           priority: '--',
           resolution: '---',
           f1: 'flagtypes.name',   o1: 'substring', v1: 'needinfo',
           f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
       },
   },
-  P1: {
-      label: 'P1s',
+  P1Defect: {
+      label: 'P1s defect',
       parameters: {
-          chfield: '[Bug creation]', chfieldfrom: '2016-06-01', chfieldto: 'Now',
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
           resolution: '---',
+          bug_type: 'defect',
+      },
+  },
+  P1Task: {
+      label: 'P1s task',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'task',
+      },
+  },
+  P1Enhancement: {
+      label: 'P1s enhancement',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'enhancement',
+      },
+  },
+  sec: {
+      label: 'sec-{critical, high}',
+      parameters: {
+          resolution: '---',
+          keywords_type: 'anywords',
+          keywords: 'sec-critical, sec-high',
       },
   },
 };
