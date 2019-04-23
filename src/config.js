@@ -25,7 +25,9 @@ const config = {
     },
     needinfo: {
       label: 'Needinfo',
-      parameterGenerator: mail => ({ f1: 'requestees.login_name', o1: 'equals', v1: mail }),
+      parameterGenerator: mail => ({
+        f1: 'requestees.login_name', o1: 'equals', v1: mail, f2: 'flagtypes.name', o2: 'substring', v2: 'needinfo?',
+      }),
     },
   },
 };
