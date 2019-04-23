@@ -83,6 +83,13 @@ The authentication configuration has the following characteristics:
 ## Running & tests
 
 * [Install Yarn](https://yarnpkg.com/lang/en/docs/install/)
+
+* To install the dependencies:
+
+```bash
+yarn install
+```
+
 * To run the tests:
 
 ```bash
