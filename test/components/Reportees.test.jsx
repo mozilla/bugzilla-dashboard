@@ -9,6 +9,8 @@ it('renders Someone with no reportees', () => {
       <Reportees
         ldapEmail="someone@mozilla.com"
         partialOrg={partialOrg}
+        order="asc"
+        orderBy="ldapEmail"
       />
     ))
     .toJSON();
@@ -21,6 +23,8 @@ it('renders Manager who has reportees', () => {
       <Reportees
         ldapEmail="manager@mozilla.com"
         partialOrg={partialOrg}
+        order="asc"
+        orderBy="ldapEmail"
       />
     ))
     .toJSON();
@@ -32,6 +36,8 @@ it('renders Manager who has reportees & metrics', () => {
     .create((
       <Reportees
         ldapEmail="manager@mozilla.com"
+        order="asc"
+        orderBy="ldapEmail"
         partialOrg={partialOrg}
         metrics={{
           'someone@mozilla.com': {

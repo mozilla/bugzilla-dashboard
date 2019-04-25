@@ -86,6 +86,10 @@ class MainContainer extends Component {
       this.fetchData();
     };
 
+    createSortHandler = (property) => event => {
+      this.props.onRequestSort(event, property);
+    };
+
     handleNavigateAndClear = (_, selectedTabIndex) => {
       this.setState({
         componentDetails: undefined,
@@ -265,6 +269,8 @@ class MainContainer extends Component {
                     ldapEmail={ldapEmail}
                     partialOrg={partialOrg}
                     metrics={reporteesMetrics}
+                    sort="asc"
+                    sortBy="ldapEmail"
                   />
                 )}
                 {partialOrg && (
