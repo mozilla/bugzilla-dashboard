@@ -28,11 +28,6 @@ exports[`renders components 1`] = `
         <th
           className="BugzillaComponents-metricLabel-3"
         >
-          Tracked beta bugs
-        </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
           P1s task
         </th>
         <th
@@ -201,11 +196,6 @@ exports[`renders components bucketed as teams 1`] = `
           className="BugzillaComponents-metricLabel-3"
         >
           P1s defect
-        </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
-          Tracked beta bugs
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
