@@ -67,7 +67,16 @@ export const TEAMS_CONFIG = {
 /* eslint-disable object-property-newline */
 /* eslint-disable no-multi-spaces */
 export const BZ_QUERIES = {
-  newDefects: {
+  P1Defect: {
+      label: 'P1s defect',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'defect',
+      },
+  },
+    newDefects: {
       label: 'New defects',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
@@ -85,15 +94,7 @@ export const BZ_QUERIES = {
           f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
       },
   },
-  P1Defect: {
-      label: 'P1s defect',
-      parameters: {
-          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
-          priority: 'P1',
-          resolution: '---',
-          bug_type: 'defect',
-      },
-  },
+
   P1Task: {
       label: 'P1s task',
       parameters: {
