@@ -13,17 +13,22 @@ exports[`renders components 1`] = `
         <th
           className="BugzillaComponents-metricLabel-3"
         >
+          P1s defect
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Unassigned tracked beta bugs
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
           New defects
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
         >
           Needinfo
-        </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
-          P1s defect
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
@@ -185,17 +190,22 @@ exports[`renders components bucketed as teams 1`] = `
         <th
           className="BugzillaComponents-metricLabel-3"
         >
+          P1s defect
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
+          Unassigned tracked beta bugs
+        </th>
+        <th
+          className="BugzillaComponents-metricLabel-3"
+        >
           New defects
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
         >
           Needinfo
-        </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
-          P1s defect
         </th>
         <th
           className="BugzillaComponents-metricLabel-3"
