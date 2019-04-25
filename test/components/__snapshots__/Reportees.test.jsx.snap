@@ -32,6 +32,20 @@ exports[`renders Manager who has reportees & metrics 1`] = `
         >
           Needinfo
         </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for beta
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for nightly
+        </th>
       </tr>
     </thead>
     <tbody
@@ -70,6 +84,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             1
           </a>
         </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
       </tr>
       <tr
         className="MuiTableRow-root-4"
@@ -104,6 +126,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             1
           </a>
         </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
       </tr>
     </tbody>
   </table>
@@ -142,6 +172,20 @@ exports[`renders Manager who has reportees 1`] = `
         >
           Needinfo
         </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for beta
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for nightly
+        </th>
       </tr>
     </thead>
     <tbody
@@ -164,6 +208,14 @@ exports[`renders Manager who has reportees 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
       </tr>
       <tr
         className="MuiTableRow-root-4"
@@ -174,6 +226,14 @@ exports[`renders Manager who has reportees 1`] = `
         >
           Someone 
         </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
         <td
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
@@ -220,6 +280,20 @@ exports[`renders Someone with no reportees 1`] = `
         >
           Needinfo
         </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for beta
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          Assigned and tracked for nightly
+        </th>
       </tr>
     </thead>
     <tbody
@@ -242,6 +316,14 @@ exports[`renders Someone with no reportees 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
       </tr>
       <tr
         className="MuiTableRow-root-4"
@@ -252,6 +334,14 @@ exports[`renders Someone with no reportees 1`] = `
         >
           Someone 
         </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
         <td
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
