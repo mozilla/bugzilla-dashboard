@@ -77,6 +77,8 @@ export const BZ_QUERIES = {
   unassignedBetaBugs: {
       label: 'Unassigned tracked beta bugs',
       parameters: {
+          // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
+          // landed
           o1: 'anyexact',    v1: '+,blocking',  f1: 'cf_tracking_firefox67',
           o2: 'equals',      v2: 'affected',    f2: 'cf_status_firefox67',
           f3: 'assigned_to', o3: 'equals',      v3: 'nobody@mozilla.org',
