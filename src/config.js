@@ -29,6 +29,36 @@ const config = {
         f1: 'requestees.login_name', o1: 'equals', v1: mail, f2: 'flagtypes.name', o2: 'substring', v2: 'needinfo?',
       }),
     },
+    assignedTrackedBeta: {
+      label: 'Assigned and tracked for beta',
+      parameterGenerator: mail => ({
+        email1: mail,
+        emailassigned_to1: '1',
+        emailtype1: 'exact',
+        resolution: '---',
+        f1: 'cf_tracking_firefox67',
+        o1: 'anyexact',
+        v1: '+,blocking',
+        f2: 'cf_status_firefox67',
+        o2: 'equals',
+        v2: 'affected',
+      }),
+    },
+    assignedTrackedNightly: {
+      label: 'Assigned and tracked for nightly',
+      parameterGenerator: mail => ({
+        email1: mail,
+        emailassigned_to1: '1',
+        emailtype1: 'exact',
+        resolution: '---',
+        f1: 'cf_tracking_firefox68',
+        o1: 'anyexact',
+        v1: '+,blocking',
+        f2: 'cf_status_firefox68',
+        o2: 'equals',
+        v2: 'affected',
+      }),
+    },
   },
 };
 
