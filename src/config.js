@@ -97,7 +97,26 @@ export const TEAMS_CONFIG = {
 /* eslint-disable object-property-newline */
 /* eslint-disable no-multi-spaces */
 export const BZ_QUERIES = {
-  newDefects: {
+  P1Defect: {
+      label: 'P1s defect',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: 'P1',
+          resolution: '---',
+          bug_type: 'defect',
+      },
+  },
+  unassignedBetaBugs: {
+      label: 'Unassigned tracked beta bugs',
+      parameters: {
+          // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
+          // landed
+          f1: 'cf_tracking_firefox67', o1: 'anyexact',    v1: '+,blocking',
+          f2: 'cf_status_firefox67',   o2: 'equals',      v2: 'affected',
+          f3: 'assigned_to',           o3: 'equals',      v3: 'nobody@mozilla.org',
+      },
+  },
+    newDefects: {
       label: 'New defects',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
@@ -115,15 +134,7 @@ export const BZ_QUERIES = {
           f2: 'assigned_to',      o2: 'equals',    v2: 'nobody@mozilla.org',
       },
   },
-  P1Defect: {
-      label: 'P1s defect',
-      parameters: {
-          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
-          priority: 'P1',
-          resolution: '---',
-          bug_type: 'defect',
-      },
-  },
+
   P1Task: {
       label: 'P1s task',
       parameters: {
