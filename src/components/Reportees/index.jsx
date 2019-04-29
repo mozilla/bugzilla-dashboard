@@ -14,50 +14,54 @@ const styles = {
   root: {},
 };
 
-const Reportees = ({
-  classes, ldapEmail, partialOrg, metrics,
-}) => (
-  <div className={classes.root}>
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell />
-          {Object.values(CONFIG.reporteesMetrics).map(({ label }) => (
-            <TableCell key={label} align="right">{label}</TableCell>
-          ))}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {Object.values(partialOrg)
-          .filter(({ cn }) => cn !== ldapEmail)
-          .sort(sortByPersonName)
-          .map(({ cn, mail, bugzillaEmail }) => (
-            <TableRow key={mail}>
-              <TableCell key={mail}>{`${cn} `}</TableCell>
-              {Object.keys(CONFIG.reporteesMetrics).map((metricUid) => {
-                const countLink = ((metrics || {})[bugzillaEmail] || {})[metricUid];
-                return (
-                  <TableCell align="right" key={metricUid}>
-                    {countLink && (
-                      <a
-                        key={countLink.link}
-                        href={countLink.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {countLink.count}
-                      </a>
-                    )}
-                  </TableCell>
-                );
-              })}
+class Reportees extends React.Component {
+  render() {
+    const {
+      classes, ldapEmail, partialOrg, metrics,
+    } = this.props;
+    return (
+      <div className={classes.root}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              {Object.values(CONFIG.reporteesMetrics).map(({ label }) => (
+                <TableCell key={label} align="right">{label}</TableCell>
+              ))}
             </TableRow>
-          ))}
-      </TableBody>
-    </Table>
-  </div>
-);
-
+          </TableHead>
+          <TableBody>
+            {Object.values(partialOrg)
+              .filter(({ cn }) => cn !== ldapEmail)
+              .sort(sortByPersonName)
+              .map(({ cn, mail, bugzillaEmail }) => (
+                <TableRow key={mail}>
+                  <TableCell key={mail}>{`${cn} `}</TableCell>
+                  {Object.keys(CONFIG.reporteesMetrics).map((metricUid) => {
+                    const countLink = ((metrics || {})[bugzillaEmail] || {})[metricUid];
+                    return (
+                      <TableCell align="right" key={metricUid}>
+                        {countLink && (
+                        <a
+                          key={countLink.link}
+                          href={countLink.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {countLink.count}
+                        </a>
+                        )}
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </div>
+    );
+  }
+}
 Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string.isRequired,
