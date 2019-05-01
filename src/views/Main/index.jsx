@@ -265,6 +265,8 @@ class MainContainer extends Component {
                     ldapEmail={ldapEmail}
                     partialOrg={partialOrg}
                     metrics={reporteesMetrics}
+                    sort="asc"
+                    sortBy="ldapEmail"
                   />
                 )}
                 {partialOrg && (
