@@ -38,6 +38,8 @@ function stableSort(array, cmp) {
 }
 
 function getSorting(order, orderBy) {
+  console.log('getsorting');
+  console.log(orderBy);
   return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
 }
 
@@ -53,9 +55,9 @@ class Reportees extends React.Component {
   }
 
     handleRequestSort = (event, property) => {
-        console.log("dedans");
-        console.log(event);
-        console.log(property);
+      console.log('dedans');
+      console.log(event);
+      console.log(property);
       const orderBy = property;
       let order = 'desc';
 
@@ -72,7 +74,7 @@ class Reportees extends React.Component {
 
     render() {
       const {
-        classes, ldapEmail, partialOrg, metrics, orderBy = 'ldapEmail', order = 'asc',
+        classes, ldapEmail, partialOrg, metrics, orderBy, order,
       } = this.props;
       return (
         <div className={classes.root}>
@@ -94,7 +96,7 @@ class Reportees extends React.Component {
                         active={orderBy === label}
                         direction={order}
                         onClick={
-                          this.createSortHandler(label)
+                          evt => this.createSortHandler(evt, label)
                       }
                       >
                         {label}
@@ -104,10 +106,12 @@ class Reportees extends React.Component {
                 ))}
               </TableRow>
             </TableHead>
-            <TableBody>
-              {Object.values(partialOrg)
-               .filter(({ cn }) => cn !== ldapEmail)
-                .sort(sortByPersonName)
+              <TableBody>
+              {stableSort(
+                  Object.values(partialOrg)
+                      .filter(({ cn }) => cn !== ldapEmail),
+                  getSorting(order, orderBy),
+              )
                 .map(({ cn, mail, bugzillaEmail }) => (
                   <TableRow key={mail}>
                     <TableCell key={mail}>{`${cn} `}</TableCell>
@@ -116,14 +120,14 @@ class Reportees extends React.Component {
                       return (
                         <TableCell align="right" key={metricUid}>
                           {countLink && (
-                          <a
-                            key={countLink.link}
-                            href={countLink.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {countLink.count}
-                          </a>
+                            <a
+                              key={countLink.link}
+                              href={countLink.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {countLink.count}
+                            </a>
                           )}
                         </TableCell>
                       );
