@@ -106,11 +106,11 @@ class Reportees extends React.Component {
                 ))}
               </TableRow>
             </TableHead>
-              <TableBody>
+            <TableBody>
               {stableSort(
-                  Object.values(partialOrg)
-                      .filter(({ cn }) => cn !== ldapEmail),
-                  getSorting(order, orderBy),
+                Object.values(partialOrg)
+                  .filter(({ cn }) => cn !== ldapEmail),
+                getSorting(order, orderBy),
               )
                 .map(({ cn, mail, bugzillaEmail }) => (
                   <TableRow key={mail}>
