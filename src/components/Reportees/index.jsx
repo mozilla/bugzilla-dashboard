@@ -10,143 +10,146 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Tooltip from '@material-ui/core/Tooltip';
 import CONFIG from '../../config';
 
-const sortByPersonName = (a, b) => a.cn.localeCompare(b.cn);
-
 const styles = {
   root: {},
 };
 
 
 function desc(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) {
+  if (b[orderBy].count < a[orderBy].count) {
     return -1;
   }
-  if (b[orderBy] > a[orderBy]) {
+  if (b[orderBy].count > a[orderBy].count) {
     return 1;
   }
   return 0;
 }
 
 function stableSort(array, cmp) {
-    console.log(">>>> STABLE SORT", array);
-    const stabilizedThis = array.map((el, index) => [el, index]);
+  const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
     const order = cmp(a[0], b[0]);
     if (order !== 0) return order;
     return a[1] - b[1];
   });
-        console.log(">>>> AFTER STABLE SORT", stabilizedThis);
-  return stabilizedThis.map(el => el[0]);
+  const result = stabilizedThis.map(el => el[0]);
+  return result;
 }
 
 function getSorting(order, orderBy) {
-  console.log('getsorting');
-  console.log(orderBy);
   return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
 }
 
 
-class Reportees extends React.Component {
-  constructor() {
-    super();
-    this.createSortHandler = this.createSortHandler.bind(this);
-    this.state = {
-      orderBy: 'ldapEmail',
-      order: 'asc',
-    };
+class Reportees extends React.PureComponent {
+  state = {
+    orderBy: 'cn',
+    order: 'asc',
+  };
+
+  getMergedProps() {
+    const { metrics, partialOrg, ldapEmail } = this.props;
+
+    // filter out the manager
+    const reportees = Object.values(partialOrg)
+      .filter(({ mail }) => mail !== ldapEmail);
+
+    // add metrics
+    const reporteesWithMetrics = reportees.map(reportee => ({
+      ...reportee,
+      ...metrics[reportee.bugzillaEmail],
+    }));
+
+    return reporteesWithMetrics;
   }
 
-    handleRequestSort = (event, property) => {
-      console.log('dedans');
-      console.log(event);
-      console.log(property);
-      const orderBy = property;
-      let order = 'desc';
+  createSortHandler = property => (event) => {
+    this.handleRequestSort(event, property);
+  };
 
-      if (this.state.orderBy === property && this.state.order === 'desc') {
-        order = 'asc';
-      }
+  handleRequestSort = (event, property) => {
+    const { order, orderBy } = this.state;
 
-      this.setState({ order, orderBy });
-    };
-
-    createSortHandler = property => (event) => {
-      this.handleRequestSort(event, property);
-    };
-
-    render() {
-      const {
-          classes, ldapEmail, partialOrg, metrics, 
-      } = this.props;
-
-      const { order, orderBy} = this.state;
-        
-      return (
-        <div className={classes.root}>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell />
-                {Object.values(CONFIG.reporteesMetrics).map(({ label }) => {
-                    console.log(">>>>>> LABEL", label);
-                    return (
-                  <TableCell
-                    key={label}
-                    align="right"
-                    sortDirection={orderBy === label ? order : false}
-                  >
-                    <Tooltip
-                      title="Sort"
-                      placement="bottom-end"
-                    >
-                      <TableSortLabel
-                        active={orderBy === label}
-                        direction={order}
-                        onClick={
-                          this.createSortHandler(label)
-                        }
-                      >
-                        {label}
-                      </TableSortLabel>
-                    </Tooltip>
-                  </TableCell>
-                    );
-                })}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {stableSort(
-                Object.values(partialOrg)
-                  .filter(({ cn }) => cn !== ldapEmail),
-                getSorting(order, orderBy),
-              )
-                .map(({ cn, mail, bugzillaEmail }) => (
-                  <TableRow key={mail}>
-                    <TableCell key={mail}>{`${cn} `}</TableCell>
-                    {Object.keys(CONFIG.reporteesMetrics).map((metricUid) => {
-                      const countLink = ((metrics || {})[bugzillaEmail] || {})[metricUid];
-                      return (
-                        <TableCell align="right" key={metricUid}>
-                          {countLink && (
-                            <a
-                              key={countLink.link}
-                              href={countLink.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {countLink.count}
-                            </a>
-                          )}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                ))}
-            </TableBody>
-          </Table>
-        </div>
-      );
+    let newOrder = 'desc';
+    if (orderBy === property && order === 'desc') {
+      newOrder = 'asc';
     }
+
+    this.setState({
+      orderBy: property,
+      order: newOrder,
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+
+    const { order, orderBy } = this.state;
+
+    return (
+      <div className={classes.root}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              {Object.entries(CONFIG.reporteesMetrics).map(([metricUid, { label }]) => (
+                <TableCell
+                  key={metricUid}
+                  align="right"
+                  sortDirection={orderBy === metricUid ? order : false}
+                >
+                  <Tooltip
+                    title="Sort"
+                    placement="bottom-end"
+                  >
+                    <TableSortLabel
+                      active={orderBy === metricUid}
+                      direction={order}
+                      onClick={
+                          this.createSortHandler(metricUid)
+                        }
+                    >
+                      {label}
+                    </TableSortLabel>
+                  </Tooltip>
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {stableSort(
+              this.getMergedProps(),
+              getSorting(order, orderBy),
+            )
+              .map(({
+                cn, mail, bugzillaEmail, ...metrics
+              }) => (
+                <TableRow key={mail}>
+                  <TableCell key={mail}>{`${cn} `}</TableCell>
+                  {Object.keys(CONFIG.reporteesMetrics).map((metricUid) => {
+                    const countLink = metrics[metricUid];
+                    return (
+                      <TableCell align="right" key={metricUid}>
+                        {countLink && (
+                        <a
+                          key={countLink.link}
+                          href={countLink.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {countLink.count}
+                        </a>
+                        )}
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </div>
+    );
+  }
 }
 Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,

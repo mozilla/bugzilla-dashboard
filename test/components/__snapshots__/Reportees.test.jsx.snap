@@ -46,7 +46,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             Assigned
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -85,7 +85,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             Needinfo
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -124,7 +124,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             Assigned and tracked for beta
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             Assigned and tracked for nightly
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -187,48 +187,6 @@ exports[`renders Manager who has reportees & metrics 1`] = `
           className="MuiTableCell-root-9 MuiTableCell-body-11"
         >
           Someone 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        >
-          <a
-            href="https://mozilla.org/0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            0
-          </a>
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        >
-          <a
-            href="https://mozilla.org/1"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            1
-          </a>
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Manager 
         </td>
         <td
           aria-sort={null}
@@ -314,7 +272,7 @@ exports[`renders Manager who has reportees 1`] = `
             Assigned
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -353,7 +311,7 @@ exports[`renders Manager who has reportees 1`] = `
             Needinfo
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -392,7 +350,7 @@ exports[`renders Manager who has reportees 1`] = `
             Assigned and tracked for beta
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -431,7 +389,7 @@ exports[`renders Manager who has reportees 1`] = `
             Assigned and tracked for nightly
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -455,32 +413,6 @@ exports[`renders Manager who has reportees 1`] = `
           className="MuiTableCell-root-9 MuiTableCell-body-11"
         >
           Someone 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Manager 
         </td>
         <td
           aria-sort={null}
@@ -550,7 +482,7 @@ exports[`renders Someone with no reportees 1`] = `
             Assigned
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -589,7 +521,7 @@ exports[`renders Someone with no reportees 1`] = `
             Needinfo
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -628,7 +560,7 @@ exports[`renders Someone with no reportees 1`] = `
             Assigned and tracked for beta
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -667,7 +599,7 @@ exports[`renders Someone with no reportees 1`] = `
             Assigned and tracked for nightly
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionDesc-32"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -683,32 +615,6 @@ exports[`renders Someone with no reportees 1`] = `
     <tbody
       className="MuiTableBody-root-46"
     >
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Someone 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
       <tr
         className="MuiTableRow-root-4"
       >
