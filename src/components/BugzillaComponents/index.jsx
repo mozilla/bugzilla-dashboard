@@ -11,9 +11,6 @@ const styles = ({
   metric: {
     textAlign: 'center',
   },
-  metricLabel: {
-    textDecoration: 'underline',
-  },
 });
 
 const sortByComponentName = (a, b) => a.label.localeCompare(b.label);
