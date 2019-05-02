@@ -156,7 +156,6 @@ Reportees.propTypes = {
   ldapEmail: PropTypes.string.isRequired,
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),
-  //  onRequestSort: PropTypes.func.isRequired,
 };
 
 Reportees.defaultProps = {
