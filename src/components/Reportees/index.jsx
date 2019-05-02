@@ -28,12 +28,14 @@ function desc(a, b, orderBy) {
 }
 
 function stableSort(array, cmp) {
-  const stabilizedThis = array.map((el, index) => [el, index]);
+    console.log(">>>> STABLE SORT", array);
+    const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
     const order = cmp(a[0], b[0]);
     if (order !== 0) return order;
     return a[1] - b[1];
   });
+        console.log(">>>> AFTER STABLE SORT", stabilizedThis);
   return stabilizedThis.map(el => el[0]);
 }
 
@@ -49,8 +51,8 @@ class Reportees extends React.Component {
     super();
     this.createSortHandler = this.createSortHandler.bind(this);
     this.state = {
-      orderBy: {},
-      order: {},
+      orderBy: 'ldapEmail',
+      order: 'asc',
     };
   }
 
@@ -74,15 +76,20 @@ class Reportees extends React.Component {
 
     render() {
       const {
-        classes, ldapEmail, partialOrg, metrics, orderBy, order,
+          classes, ldapEmail, partialOrg, metrics, 
       } = this.props;
+
+      const { order, orderBy} = this.state;
+        
       return (
         <div className={classes.root}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell />
-                {Object.values(CONFIG.reporteesMetrics).map(({ label }) => (
+                {Object.values(CONFIG.reporteesMetrics).map(({ label }) => {
+                    console.log(">>>>>> LABEL", label);
+                    return (
                   <TableCell
                     key={label}
                     align="right"
@@ -96,14 +103,15 @@ class Reportees extends React.Component {
                         active={orderBy === label}
                         direction={order}
                         onClick={
-                          evt => this.createSortHandler(evt, label)
-                      }
+                          this.createSortHandler(label)
+                        }
                       >
                         {label}
                       </TableSortLabel>
                     </Tooltip>
                   </TableCell>
-                ))}
+                    );
+                })}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -146,8 +154,6 @@ Reportees.propTypes = {
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),
   //  onRequestSort: PropTypes.func.isRequired,
-  order: PropTypes.string.isRequired,
-  orderBy: PropTypes.string.isRequired,
 };
 
 Reportees.defaultProps = {
