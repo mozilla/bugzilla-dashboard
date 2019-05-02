@@ -10,39 +10,25 @@ exports[`renders components 1`] = `
       <tr>
         <th />
         <th />
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s defect
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           Unassigned tracked beta bugs
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           New defects
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           Needinfo
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s task
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s enhancement
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           sec-{critical, high}
         </th>
       </tr>
@@ -51,7 +37,7 @@ exports[`renders components 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="Core::DOM: Core & HTML"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -60,7 +46,7 @@ exports[`renders components 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -82,7 +68,7 @@ exports[`renders components 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="Core::DOM: IndexedDB"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -91,7 +77,7 @@ exports[`renders components 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -113,7 +99,7 @@ exports[`renders components 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="Core::JavaScript Engine"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -122,7 +108,7 @@ exports[`renders components 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -144,7 +130,7 @@ exports[`renders components 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="Toolkit::Async Tooling"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -153,7 +139,7 @@ exports[`renders components 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -187,39 +173,25 @@ exports[`renders components bucketed as teams 1`] = `
       <tr>
         <th />
         <th />
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s defect
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           Unassigned tracked beta bugs
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           New defects
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           Needinfo
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s task
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           P1s enhancement
         </th>
-        <th
-          className="BugzillaComponents-metricLabel-3"
-        >
+        <th>
           sec-{critical, high}
         </th>
       </tr>
@@ -228,7 +200,7 @@ exports[`renders components bucketed as teams 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="DOM Core"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -237,7 +209,7 @@ exports[`renders components bucketed as teams 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -259,7 +231,7 @@ exports[`renders components bucketed as teams 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="DOM Fission"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -268,7 +240,7 @@ exports[`renders components bucketed as teams 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -290,7 +262,7 @@ exports[`renders components bucketed as teams 1`] = `
       <tr>
         <td>
           <div
-            className="DrilldownIcon-svgWrapper-4"
+            className="DrilldownIcon-svgWrapper-3"
             name="Worker and Storage"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -299,7 +271,7 @@ exports[`renders components bucketed as teams 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-6 DrilldownIcon-icon-5"
+              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
