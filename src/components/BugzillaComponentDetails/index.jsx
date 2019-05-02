@@ -12,7 +12,7 @@ const styles = ({
   },
   metric: {
     display: 'grid',
-    gridTemplateColumns: '100px 20px',
+    gridTemplateColumns: '200px 20px',
   },
   metricLabel: {
     textTransform: 'capitalize',
