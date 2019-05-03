@@ -30,7 +30,7 @@ const config = {
       }),
     },
     assignedTrackedBeta: {
-      label: 'Assigned and tracked for beta',
+      label: 'Assigned & Tracked (Beta)',
       parameterGenerator: mail => ({
         email1: mail,
         emailassigned_to1: '1',
@@ -45,7 +45,7 @@ const config = {
       }),
     },
     assignedTrackedNightly: {
-      label: 'Assigned and tracked for nightly',
+      label: 'Assigned & Tracked (Nightly)',
       parameterGenerator: mail => ({
         email1: mail,
         emailassigned_to1: '1',

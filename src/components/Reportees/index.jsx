@@ -15,22 +15,21 @@ const styles = {
 };
 
 
-function desc(a, b, orderBy) {
+function propertyComparatorAscending(a, b, orderBy) {
   const valueA = a[orderBy];
   const valueB = b[orderBy];
 
+  // Values can either be strings or objects with a "count" property.
+  // Case 1: they're strings.
+  if (typeof valueA === 'string') {
+    return valueA.localeCompare(valueB);
+  }
+
+  // Case 2: they're objects with a count property.
   const countA = valueA ? valueA.count : 0;
   const countB = valueB ? valueB.count : 0;
 
-  if (countB < countA) {
-    return -1;
-  }
-
-  if (countB > countA) {
-    return 1;
-  }
-
-  return 0;
+  return countA - countB;
 }
 
 function stableSort(array, cmp) {
@@ -45,9 +44,42 @@ function stableSort(array, cmp) {
 }
 
 function getSorting(order, orderBy) {
-  return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
+  return order === 'asc'
+    ? (a, b) => propertyComparatorAscending(a, b, orderBy)
+    : (a, b) => -propertyComparatorAscending(a, b, orderBy);
 }
 
+function TableHeadCell({
+  metricUid, orderBy, order, label, onClick,
+}) {
+  return (
+    <TableCell
+      align="right"
+      sortDirection={orderBy === metricUid ? order : false}
+    >
+      <Tooltip
+        title="Click to sort the table by this column"
+        placement="bottom-end"
+      >
+        <TableSortLabel
+          active={orderBy === metricUid}
+          direction={order}
+          onClick={onClick}
+        >
+          {label}
+        </TableSortLabel>
+      </Tooltip>
+    </TableCell>
+  );
+}
+
+TableHeadCell.propTypes = {
+  metricUid: PropTypes.string.isRequired,
+  orderBy: PropTypes.string.isRequired,
+  order: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 class Reportees extends React.PureComponent {
   state = {
@@ -78,9 +110,18 @@ class Reportees extends React.PureComponent {
   handleRequestSort = (event, property) => {
     const { order, orderBy } = this.state;
 
-    let newOrder = 'desc';
-    if (orderBy === property && order === 'desc') {
+    let newOrder;
+
+    // If we click on the same column several times in a row, we simply switch
+    // the prevous value.
+    if (orderBy === property) {
+      newOrder = order === 'asc' ? 'desc' : 'asc';
+    } else if (property === 'cn') {
+      // For most properties we want to order in the descending order first.
+      // ... except when sorting by cn.
       newOrder = 'asc';
+    } else {
+      newOrder = 'desc';
     }
 
     this.setState({
@@ -93,34 +134,29 @@ class Reportees extends React.PureComponent {
     const { classes } = this.props;
 
     const { order, orderBy } = this.state;
+    const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);
 
     return (
       <div className={classes.root}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell />
-              {Object.entries(CONFIG.reporteesMetrics).map(([metricUid, { label }]) => (
-                <TableCell
+              <TableHeadCell
+                metricUid="cn"
+                orderBy={orderBy}
+                order={order}
+                label="Full Name"
+                onClick={this.createSortHandler('cn')}
+              />
+              {metricsAsArray.map(([metricUid, { label }]) => (
+                <TableHeadCell
                   key={metricUid}
-                  align="right"
-                  sortDirection={orderBy === metricUid ? order : false}
-                >
-                  <Tooltip
-                    title="Sort"
-                    placement="bottom-end"
-                  >
-                    <TableSortLabel
-                      active={orderBy === metricUid}
-                      direction={order}
-                      onClick={
-                          this.createSortHandler(metricUid)
-                        }
-                    >
-                      {label}
-                    </TableSortLabel>
-                  </Tooltip>
-                </TableCell>
+                  metricUid={metricUid}
+                  orderBy={orderBy}
+                  order={order}
+                  label={label}
+                  onClick={this.createSortHandler(metricUid)}
+                />
               ))}
             </TableRow>
           </TableHead>
@@ -130,12 +166,12 @@ class Reportees extends React.PureComponent {
               getSorting(order, orderBy),
             )
               .map(({
-                cn, mail, bugzillaEmail, ...metrics
+                cn, mail, bugzillaEmail, ...metricsValues
               }) => (
                 <TableRow key={mail}>
-                  <TableCell key={mail}>{`${cn} `}</TableCell>
-                  {Object.keys(CONFIG.reporteesMetrics).map((metricUid) => {
-                    const countLink = metrics[metricUid];
+                  <TableCell key={mail}>{cn}</TableCell>
+                  {metricsAsArray.map(([metricUid]) => {
+                    const countLink = metricsValues[metricUid];
                     return (
                       <TableCell align="right" key={metricUid}>
                         {countLink && (
