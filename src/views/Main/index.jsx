@@ -175,14 +175,12 @@ class MainContainer extends Component {
     }
 
     async teamsData(userSession, partialOrg) {
-      console.log('teams data', userSession, partialOrg);
       let teamComponents = {};
       if (userSession.oidcProvider === 'mozilla-auth0') {
         // if non-LDAP user, get fake data
         teamComponents = TEAMS_CONFIG;
       } else {
         Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
-          console.log('team config', teamKey, teamInfo);
           if (partialOrg[teamInfo.owner]) {
             const team = {
               teamKey,
