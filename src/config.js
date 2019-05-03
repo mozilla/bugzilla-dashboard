@@ -117,16 +117,6 @@ export const BZ_QUERIES = {
       },
   },
 
-    newDefects: {
-      label: 'New defects',
-      parameters: {
-          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
-          priority: '--',
-          resolution: '---',
-          bug_type: 'defect',
-      },
-  },
-
   nightlyNewBug: {
       label: 'Nightly New Regression',
       parameters: {
@@ -165,6 +155,16 @@ export const BZ_QUERIES = {
           f7: 'flagtypes.name',        o7: 'notsubstring', v7: 'needinfo',
           f8: 'cf_tracking_firefox68', o8: 'notequals',    v8: '-',
           f9: 'keywords',              o9: 'notsubstring', v9: 'stalled',
+      },
+  },
+
+    newDefects: {
+      label: 'New defects',
+      parameters: {
+          f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+          priority: '--',
+          resolution: '---',
+          bug_type: 'defect',
       },
   },
 

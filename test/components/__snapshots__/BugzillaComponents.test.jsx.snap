@@ -17,13 +17,13 @@ exports[`renders components 1`] = `
           Unassigned tracked beta bugs
         </th>
         <th>
-          New defects
-        </th>
-        <th>
           Nightly New Regression
         </th>
         <th>
           Nightly carry over
+        </th>
+        <th>
+          New defects
         </th>
         <th>
           Needinfo
@@ -186,13 +186,13 @@ exports[`renders components bucketed as teams 1`] = `
           Unassigned tracked beta bugs
         </th>
         <th>
-          New defects
-        </th>
-        <th>
           Nightly New Regression
         </th>
         <th>
           Nightly carry over
+        </th>
+        <th>
+          New defects
         </th>
         <th>
           Needinfo
