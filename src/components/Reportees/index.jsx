@@ -16,12 +16,20 @@ const styles = {
 
 
 function desc(a, b, orderBy) {
-  if (b[orderBy].count < a[orderBy].count) {
+  const valueA = a[orderBy];
+  const valueB = b[orderBy];
+
+  const countA = valueA ? valueA.count : 0;
+  const countB = valueB ? valueB.count : 0;
+
+  if (countB < countA) {
     return -1;
   }
-  if (b[orderBy].count > a[orderBy].count) {
+
+  if (countB > countA) {
     return 1;
   }
+
   return 0;
 }
 
