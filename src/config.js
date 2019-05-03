@@ -116,6 +116,7 @@ export const BZ_QUERIES = {
           f3: 'assigned_to',           o3: 'equals',      v3: 'nobody@mozilla.org',
       },
   },
+
     newDefects: {
       label: 'New defects',
       parameters: {
@@ -125,6 +126,48 @@ export const BZ_QUERIES = {
           bug_type: 'defect',
       },
   },
+
+  nightlyNewBug: {
+      label: 'Nightly New Regression',
+      parameters: {
+          // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
+          // landed
+          keywords: 'regression,',
+          keywords_type: 'allwords',
+          resolution: '---',
+
+          f1: 'cf_status_firefox68',   o1: 'equals',       v1: 'affected',
+          f2: 'OP',                    j2: 'OR',
+          f3: 'cf_status_firefox67',   o3: 'equals',       v3: 'unaffected',
+          f4: 'cf_status_firefox67',   o4: 'equals',       v4: '?',
+          f5: 'cf_status_firefox67',   o5: 'equals',       v5: '---',
+          f6: 'CP',
+          f7: 'flagtypes.name',        o7: 'notsubstring', v7: 'needinfo',
+          f8: 'cf_tracking_firefox68', o8: 'notequals',    v8: '-',
+          f9: 'keywords',              o9: 'notsubstring', v9: 'stalled',
+      },
+  },
+
+  nightlyCarryOver: {
+      label: 'Nightly carry over',
+      parameters: {
+          // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
+          // landed
+          keywords: 'regression,',
+          keywords_type: 'allwords',
+          resolution: '---',
+          f1: 'cf_status_firefox68',   o1: 'equals',       v1: 'affected',
+          f2: 'OP',                    j2: 'OR',           n2: '1',
+          f3: 'cf_status_firefox67',   o3: 'equals',       v3: 'unaffected',
+          f4: 'cf_status_firefox67',   o4: 'equals',       v4: '?',
+          f5: 'cf_status_firefox67',   o5: 'equals',       v5: '---',
+          f6: 'CP',
+          f7: 'flagtypes.name',        o7: 'notsubstring', v7: 'needinfo',
+          f8: 'cf_tracking_firefox68', o8: 'notequals',    v8: '-',
+          f9: 'keywords',              o9: 'notsubstring', v9: 'stalled',
+      },
+  },
+
   needinfo: {
       label: 'Needinfo',
       parameters: {

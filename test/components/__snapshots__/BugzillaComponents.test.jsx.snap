@@ -20,6 +20,12 @@ exports[`renders components 1`] = `
           New defects
         </th>
         <th>
+          Nightly New Regression
+        </th>
+        <th>
+          Nightly carry over
+        </th>
+        <th>
           Needinfo
         </th>
         <th>
@@ -181,6 +187,12 @@ exports[`renders components bucketed as teams 1`] = `
         </th>
         <th>
           New defects
+        </th>
+        <th>
+          Nightly New Regression
+        </th>
+        <th>
+          Nightly carry over
         </th>
         <th>
           Needinfo
