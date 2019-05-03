@@ -76,8 +76,7 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      const secretsClient = userSession.getTaskClusterSecretsClient();
-      const partialOrg = await getAllReportees(secretsClient, ldapEmail);
+      const partialOrg = await getAllReportees(userSession, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -170,29 +169,34 @@ class MainContainer extends Component {
       ]);
       // Fetch this data first since it's the landing tab
       await this.reporteesMetrics(partialOrg);
-      this.teamsData(partialOrg);
+      this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });
     }
 
-    async teamsData(partialOrg) {
-      const teamComponents = {};
-      Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
-        if (partialOrg[teamInfo.owner]) {
-          const team = {
-            teamKey,
-            ...teamInfo,
-            metrics: {},
-          };
-          const { product, component } = teamInfo;
-          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            team.metrics[metric] = await getBugsCountAndLink(parameters);
-          }));
-          teamComponents[teamKey] = team;
-          this.setState({ teamComponents });
-        }
-      });
+    async teamsData(userSession, partialOrg) {
+      let teamComponents = {};
+      if (userSession.oidcProvider === 'mozilla-auth0') {
+        // if non-LDAP user, get fake data
+        teamComponents = TEAMS_CONFIG;
+      } else {
+        Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
+          if (partialOrg[teamInfo.owner]) {
+            const team = {
+              teamKey,
+              ...teamInfo,
+              metrics: {},
+            };
+            const { product, component } = teamInfo;
+            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
+              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+              team.metrics[metric] = await getBugsCountAndLink(parameters);
+            }));
+            teamComponents[teamKey] = team;
+          }
+        });
+      }
+      this.setState({ teamComponents });
     }
 
     handleShowComponentDetails(event, properties) {
