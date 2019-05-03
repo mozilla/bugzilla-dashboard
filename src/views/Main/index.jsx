@@ -148,17 +148,27 @@ class MainContainer extends Component {
     }
 
     async reporteesMetrics(partialOrg) {
-      const reporteesMetrics = {};
       // Let's fetch the metrics for each component
       Object.values(partialOrg)
         .map(async ({ bugzillaEmail }) => {
-          reporteesMetrics[bugzillaEmail] = {};
-          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
-            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
-            reporteesMetrics[bugzillaEmail][metric] = (
-              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
+          const oneMetrics = {};
+          await Promise.all(
+            Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
+              const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
+              oneMetrics[metric] = (
+                await getBugsCountAndLink(parameterGenerator(bugzillaEmail))
+              );
+            }),
+          );
+
+          // We take care to generate a new object in the state for each new
+          // report.
+          this.setState(({ reporteesMetrics }) => ({
+            reporteesMetrics: {
+              ...reporteesMetrics,
+              [bugzillaEmail]: oneMetrics,
+            },
           }));
-          this.setState({ reporteesMetrics });
         });
     }
 
