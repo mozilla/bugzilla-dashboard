@@ -197,13 +197,14 @@ class Reportees extends React.PureComponent {
 }
 Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  ldapEmail: PropTypes.string.isRequired,
+  ldapEmail: PropTypes.string,
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),
 };
 
 Reportees.defaultProps = {
   metrics: {},
+  ldapEmail: '',
 };
 
 export default withStyles(styles)(Reportees);

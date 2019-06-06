@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
@@ -78,8 +76,7 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      const secretsClient = userSession.getTaskClusterSecretsClient();
-      const partialOrg = await getAllReportees(secretsClient, ldapEmail);
+      const partialOrg = await getAllReportees(userSession, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -151,27 +148,17 @@ class MainContainer extends Component {
     }
 
     async reporteesMetrics(partialOrg) {
+      const reporteesMetrics = {};
       // Let's fetch the metrics for each component
       Object.values(partialOrg)
         .map(async ({ bugzillaEmail }) => {
-          const oneMetrics = {};
-          await Promise.all(
-            Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
-              const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
-              oneMetrics[metric] = (
-                await getBugsCountAndLink(parameterGenerator(bugzillaEmail))
-              );
-            }),
-          );
-
-          // We take care to generate a new object in the state for each new
-          // report.
-          this.setState(({ reporteesMetrics }) => ({
-            reporteesMetrics: {
-              ...reporteesMetrics,
-              [bugzillaEmail]: oneMetrics,
-            },
+          reporteesMetrics[bugzillaEmail] = {};
+          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
+            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
+            reporteesMetrics[bugzillaEmail][metric] = (
+              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
           }));
+          this.setState({ reporteesMetrics });
         });
     }
 
@@ -182,29 +169,34 @@ class MainContainer extends Component {
       ]);
       // Fetch this data first since it's the landing tab
       await this.reporteesMetrics(partialOrg);
-      this.teamsData(partialOrg);
+      this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });
     }
 
-    async teamsData(partialOrg) {
-      const teamComponents = {};
-      Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
-        if (partialOrg[teamInfo.owner]) {
-          const team = {
-            teamKey,
-            ...teamInfo,
-            metrics: {},
-          };
-          const { product, component } = teamInfo;
-          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            team.metrics[metric] = await getBugsCountAndLink(parameters);
-          }));
-          teamComponents[teamKey] = team;
-          this.setState({ teamComponents });
-        }
-      });
+    async teamsData(userSession, partialOrg) {
+      let teamComponents = {};
+      if (userSession.oidcProvider === 'mozilla-auth0') {
+        // if non-LDAP user, get fake data
+        teamComponents = TEAMS_CONFIG;
+      } else {
+        Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
+          if (partialOrg[teamInfo.owner]) {
+            const team = {
+              teamKey,
+              ...teamInfo,
+              metrics: {},
+            };
+            const { product, component } = teamInfo;
+            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
+              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+              team.metrics[metric] = await getBugsCountAndLink(parameters);
+            }));
+            teamComponents[teamKey] = team;
+          }
+        });
+      }
+      this.setState({ teamComponents });
     }
 
     handleShowComponentDetails(event, properties) {
@@ -297,12 +289,6 @@ class MainContainer extends Component {
             </Suspense>
             {doneLoading === false && <Spinner loading /> }
           </div>
-          <BottomNavigation
-            showLabels
-          >
-            <BottomNavigationAction label="Sources" href="https://github.com/mozilla/bugzilla-dashboard/" />
-            <BottomNavigationAction label="New issue?" href="https://github.com/mozilla/bugzilla-dashboard/issues/new" />
-          </BottomNavigation>
         </div>
       );
     }
