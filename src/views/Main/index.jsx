@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
@@ -289,6 +291,12 @@ class MainContainer extends Component {
             </Suspense>
             {doneLoading === false && <Spinner loading /> }
           </div>
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Sources" href="https://github.com/mozilla/bugzilla-dashboard/" />
+            <BottomNavigationAction label="New issue?" href="https://github.com/mozilla/bugzilla-dashboard/issues/new" />
+          </BottomNavigation>
         </div>
       );
     }
