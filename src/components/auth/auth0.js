@@ -9,7 +9,7 @@ export function userSessionFromAuthResult(authResult) {
   return UserSession.fromOIDC({
     oidcProvider: 'mozilla-auth0',
     accessToken: authResult.accessToken,
-    fullName: authResult.idTokenPayload.name,
+    fullName: authResult.idTokenPayload.name === '' ? authResult.idTokenPayload.nickname : authResult.idTokenPayload.name,
     email: authResult.idTokenPayload.email,
     picture: authResult.idTokenPayload.picture,
     oidcSubject: authResult.idTokenPayload.sub,
