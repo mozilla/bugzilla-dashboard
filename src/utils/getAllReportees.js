@@ -36,7 +36,7 @@ const findReportees = (completeOrg, email) => {
   // if non-LDAP user, replace user email by the last email in list. Last email
   /* in the fakeOrg.json file is the email Id of the manager. For a non LDAP
    * login we replace top level manager's email ID with logged in user's email Id.
-   * And the reportees will be listed only if the manager's email Id is matching
+   * And the reportees will be listed only if the manager's email Id is matching.
    */
   const allEmails = Object.keys(completeOrg);
   const checkedEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
