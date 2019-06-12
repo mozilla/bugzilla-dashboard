@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
-import getAllFakeReportees from '../../utils/getAllFakeReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
@@ -77,8 +78,7 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      const secretsClient = userSession.getTaskClusterSecretsClient();
-      const partialOrg = (userSession.oidcProvider === 'mozilla-auth0') ? await getAllFakeReportees(ldapEmail) : await getAllReportees(secretsClient, ldapEmail);
+      const partialOrg = await getAllReportees(userSession, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -171,29 +171,34 @@ class MainContainer extends Component {
       ]);
       // Fetch this data first since it's the landing tab
       await this.reporteesMetrics(partialOrg);
-      this.teamsData(partialOrg);
+      this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });
     }
 
-    async teamsData(partialOrg) {
-      const teamComponents = {};
-      Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
-        if (partialOrg[teamInfo.owner]) {
-          const team = {
-            teamKey,
-            ...teamInfo,
-            metrics: {},
-          };
-          const { product, component } = teamInfo;
-          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            team.metrics[metric] = await getBugsCountAndLink(parameters);
-          }));
-          teamComponents[teamKey] = team;
-          this.setState({ teamComponents });
-        }
-      });
+    async teamsData(userSession, partialOrg) {
+      let teamComponents = {};
+      if (userSession.oidcProvider === 'mozilla-auth0') {
+        // if non-LDAP user, get fake data
+        teamComponents = TEAMS_CONFIG;
+      } else {
+        Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
+          if (partialOrg[teamInfo.owner]) {
+            const team = {
+              teamKey,
+              ...teamInfo,
+              metrics: {},
+            };
+            const { product, component } = teamInfo;
+            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
+              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+              team.metrics[metric] = await getBugsCountAndLink(parameters);
+            }));
+            teamComponents[teamKey] = team;
+          }
+        });
+      }
+      this.setState({ teamComponents });
     }
 
     handleShowComponentDetails(event, properties) {
@@ -286,6 +291,12 @@ class MainContainer extends Component {
             </Suspense>
             {doneLoading === false && <Spinner loading /> }
           </div>
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Sources" href="https://github.com/mozilla/bugzilla-dashboard/" />
+            <BottomNavigationAction label="New issue?" href="https://github.com/mozilla/bugzilla-dashboard/issues/new" />
+          </BottomNavigation>
         </div>
       );
     }

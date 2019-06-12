@@ -31,15 +31,16 @@ const buildOrgChartData = (people) => {
   return org;
 };
 
-const getOrgChart = async (secretsClient) => {
-  const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
-  return buildOrgChartData(secret.employees);
-};
-
 const findReportees = (completeOrg, email) => {
   let allReportees = {};
-  allReportees[email] = completeOrg[email];
-  const { reportees } = completeOrg[email];
+  // if non-LDAP user, replace user email by the last email in list. Last email
+  const allEmails = Object.keys(completeOrg);
+  const checkedEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
+
+  allReportees[email] = completeOrg[checkedEmail];
+  const { reportees } = completeOrg[checkedEmail];
+
+
   if (reportees.length !== 0) {
     reportees.forEach((reporteeEmail) => {
       const partialOrg = findReportees(completeOrg, reporteeEmail);
@@ -49,8 +50,17 @@ const findReportees = (completeOrg, email) => {
   return allReportees;
 };
 
-const getAllReportees = async (secretsClient, ldapEmail) => {
-  const completeOrg = await getOrgChart(secretsClient);
+const getAllReportees = async (userSession, ldapEmail) => {
+  let people;
+  if (userSession.oidcProvider === 'mozilla-auth0') {
+    // if non-LDAP user, get fake data
+    people = await (await fetch('people.json')).json();
+  } else {
+    const secretsClient = userSession.getTaskClusterSecretsClient();
+    const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
+    people = secret.employees;
+  }
+  const completeOrg = await buildOrgChartData(people);
   return findReportees(completeOrg, ldapEmail);
 };
 
