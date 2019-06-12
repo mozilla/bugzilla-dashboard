@@ -1,0 +1,11 @@
+.highlight {
+    color: #e53935;
+    font-weight: bold;
+}
+.reportees-table a {
+    text-decoration: none;
+    /* color: #000000de; */
+}
+.reportees-table th {
+    text-align: center;
+}

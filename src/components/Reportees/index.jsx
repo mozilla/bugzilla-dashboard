@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import MUIDataTable from 'mui-datatables';
 import CONFIG from '../../config';
+import './index.css';
 
 const styles = {
   root: {},
@@ -76,6 +77,9 @@ class Reportees extends React.PureComponent {
               href={value !== undefined ? value.link : '#'}
               target="_blank"
               rel="noopener noreferrer"
+              className={
+                (value !== undefined && ((metricUid === 'assigned' && value.count > 20) || (metricUid === 'needinfo' && value.count > 10)) ? 'highlight' : '')
+              }
             >
               { value !== undefined ? value.count : '' }
             </a>
@@ -93,6 +97,7 @@ class Reportees extends React.PureComponent {
             data={this.getMergedProps()}
             columns={tableHeader}
             options={options}
+            className="reportees-table"
           />
         </MuiThemeProvider>
       </div>
