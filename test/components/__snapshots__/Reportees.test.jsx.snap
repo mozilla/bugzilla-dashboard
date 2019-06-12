@@ -14,42 +14,204 @@ exports[`renders Manager who has reportees & metrics 1`] = `
         className="MuiTableRow-root-4 MuiTableRow-head-7"
       >
         <th
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-head-10"
-          scope="col"
-        />
-        <th
-          aria-sort={null}
+          aria-sort="ascending"
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29 MuiTableSortLabel-active-30"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Full Name
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Needinfo
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for beta
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Needinfo
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for nightly
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for beta
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for nightly
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
       </tr>
     </thead>
     <tbody
-      className="MuiTableBody-root-21"
+      className="MuiTableBody-root-46"
     >
       <tr
         className="MuiTableRow-root-4"
@@ -58,49 +220,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11"
         >
-          Manager 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        >
-          <a
-            href="https://mozilla.org/0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            0
-          </a>
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        >
-          <a
-            href="https://mozilla.org/1"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            1
-          </a>
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Someone 
+          Someone
         </td>
         <td
           aria-sort={null}
@@ -154,42 +274,204 @@ exports[`renders Manager who has reportees 1`] = `
         className="MuiTableRow-root-4 MuiTableRow-head-7"
       >
         <th
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-head-10"
-          scope="col"
-        />
-        <th
-          aria-sort={null}
+          aria-sort="ascending"
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29 MuiTableSortLabel-active-30"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Full Name
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Needinfo
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for beta
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Needinfo
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for nightly
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for beta
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for nightly
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
       </tr>
     </thead>
     <tbody
-      className="MuiTableBody-root-21"
+      className="MuiTableBody-root-46"
     >
       <tr
         className="MuiTableRow-root-4"
@@ -198,33 +480,7 @@ exports[`renders Manager who has reportees 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11"
         >
-          Manager 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Someone 
+          Someone
         </td>
         <td
           aria-sort={null}
@@ -262,42 +518,204 @@ exports[`renders Someone with no reportees 1`] = `
         className="MuiTableRow-root-4 MuiTableRow-head-7"
       >
         <th
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-head-10"
-          scope="col"
-        />
-        <th
-          aria-sort={null}
+          aria-sort="ascending"
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29 MuiTableSortLabel-active-30"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Full Name
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Needinfo
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for beta
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Needinfo
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
           scope="col"
         >
-          Assigned and tracked for nightly
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for beta
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned and tracked for nightly
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
         </th>
       </tr>
     </thead>
     <tbody
-      className="MuiTableBody-root-21"
+      className="MuiTableBody-root-46"
     >
       <tr
         className="MuiTableRow-root-4"
@@ -306,33 +724,7 @@ exports[`renders Someone with no reportees 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11"
         >
-          Manager 
-        </td>
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        />
-      </tr>
-      <tr
-        className="MuiTableRow-root-4"
-      >
-        <td
-          aria-sort={null}
-          className="MuiTableCell-root-9 MuiTableCell-body-11"
-        >
-          Someone 
+          Manager
         </td>
         <td
           aria-sort={null}
