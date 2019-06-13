@@ -1,5 +1,3 @@
-import config from '../config';
-
 const buildOrgChartData = (people) => {
   const org = {};
   people.forEach((person) => {
@@ -31,27 +29,30 @@ const buildOrgChartData = (people) => {
   return org;
 };
 
-const getOrgChart = async (secretsClient) => {
-  const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
-  return buildOrgChartData(secret.employees);
-};
-
-const findReportees = (completeOrg, email) => {
+const findFakeReportees = (completeOrg, email) => {
   let allReportees = {};
-  allReportees[email] = completeOrg[email];
-  const { reportees } = completeOrg[email];
+
+  // if non-LDAP user, replace user email by the last email in list
+  const allEmails = Object.keys(completeOrg);
+  const checkedEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
+
+  allReportees[email] = completeOrg[checkedEmail];
+  const { reportees } = completeOrg[checkedEmail];
+
+
   if (reportees.length !== 0) {
     reportees.forEach((reporteeEmail) => {
-      const partialOrg = findReportees(completeOrg, reporteeEmail);
+      const partialOrg = findFakeReportees(completeOrg, reporteeEmail);
       allReportees = { ...allReportees, ...partialOrg };
     });
   }
   return allReportees;
 };
 
-const getAllReportees = async (secretsClient, ldapEmail) => {
-  const completeOrg = await getOrgChart(secretsClient);
-  return findReportees(completeOrg, ldapEmail);
+const getFakeReportees = async (ldapEmail) => {
+  const people = await (await fetch('people.json')).json();
+  const completeOrg = await buildOrgChartData(people);
+  return findFakeReportees(completeOrg, ldapEmail);
 };
 
-export default getAllReportees;
+export default getFakeReportees;

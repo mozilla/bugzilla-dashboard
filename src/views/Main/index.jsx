@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Spinner from '@mozilla-frontend-infra/components/Spinner';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
+import getFakeReportees from '../../utils/getFakeReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
@@ -76,7 +79,13 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      const partialOrg = await getAllReportees(userSession, ldapEmail);
+      let partialOrg;
+      if (userSession.oidcProvider !== 'mozilla-auth0') {
+        const secretsClient = userSession.getTaskClusterSecretsClient();
+        partialOrg = await getAllReportees(secretsClient, ldapEmail);
+      } else {
+        partialOrg = await getFakeReportees(userSession, ldapEmail);
+      }
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -289,6 +298,12 @@ class MainContainer extends Component {
             </Suspense>
             {doneLoading === false && <Spinner loading /> }
           </div>
+          <BottomNavigation
+            showLabels
+          >
+            <BottomNavigationAction label="Sources" href="https://github.com/mozilla/bugzilla-dashboard/" />
+            <BottomNavigationAction label="New issue?" href="https://github.com/mozilla/bugzilla-dashboard/issues/new" />
+          </BottomNavigation>
         </div>
       );
     }
