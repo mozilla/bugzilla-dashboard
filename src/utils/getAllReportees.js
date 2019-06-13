@@ -56,6 +56,7 @@ const getAllReportees = async (userSession, ldapEmail) => {
     // if non-LDAP user, get fake data
     people = await (await fetch('people.json')).json();
   } else {
+    // LDAP user, retrieve data from the taskcluster secret
     const secretsClient = userSession.getTaskClusterSecretsClient();
     const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
     people = secret.employees;

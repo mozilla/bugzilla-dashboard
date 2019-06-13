@@ -9,7 +9,6 @@ import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
-// import getFakeReportees from '../../utils/getFakeReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
@@ -183,6 +182,7 @@ class MainContainer extends Component {
         // if non-LDAP user, get fake data
         teamComponents = TEAMS_CONFIG;
       } else {
+        // LDAP user, get the actual data
         Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
           if (partialOrg[teamInfo.owner]) {
             const team = {
