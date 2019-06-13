@@ -44,8 +44,32 @@ Until we have a backend, we need to regenerate certain files to bring the app up
 
 The data is stored in Taskcluster Secrets and it's only accessible to moco_team. See [bug 1540823](https://bugzilla.mozilla.org/show_bug.cgi?id=1540823)
 
+To update the data you will need to take a Phonebook dump, get it reduced and converted to Yaml and upload it to Taskcluster Secrets.
+
+Requirements:
+
+* Python
+* pip (which comes with Python) or [poetry](https://poetry.eustace.io/docs/#installation)
+
+Set up the virtualenv with `poetry`:
+
 ```bash
-python scripts/processPeopleFile.py --path /path/to/phonebook.json > /path/to/smaller_file.json
+poetry install
+poetry shell
+```
+
+or:
+
+```bash
+python3 -m venv venv
+source ./venv/bin/activate
+pip install PyYaml
+```
+
+Execute the command:
+
+```bash
+python scripts/processPeopleFile.py --path /path/to/phonebook.json
 ```
 
 You can read in [here](https://github.com/mozilla-iam/cis/issues/402) what changes are needed to get data from CIS.

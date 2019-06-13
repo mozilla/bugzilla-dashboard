@@ -1,6 +1,8 @@
 import json
 import argparse
 
+import yaml
+
 parser = argparse.ArgumentParser(
   description='Process Phonebook file and prepares it for TaskCluster Secret.'
 )
@@ -11,10 +13,13 @@ args = parser.parse_args()
 with open(args.phonebook_file) as jsonfile:
     parsed = json.load(jsonfile)
 
-newJson = {
+reducedOrgData = {
   'employees': []
 }
 for entry in parsed:
-  newJson['employees'].append({ key: entry.get(key) for key in ['cn', 'mail', 'bugzillaEmail', 'manager'] })
+  reducedOrgData['employees'].append({ key: entry.get(key) for key in ['cn', 'mail', 'bugzillaEmail', 'manager'] })
 
-print json.dumps(newJson, indent=2, sort_keys=True)
+with open('orgData.yml', 'w') as fh:
+  yaml.safe_dump(reducedOrgData, fh)
+
+print('The file orgData.yml has been generated. You can now upload it to Taskcluster Secrets if you wish to')
