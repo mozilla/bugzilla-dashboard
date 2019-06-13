@@ -81,6 +81,7 @@ class MainContainer extends Component {
     async getReportees(userSession, ldapEmail) {
       let partialOrg;
       // For LDAP users
+      console.log('login type', userSession.loginType);
       if (userSession.loginType === 'auth.mozilla.auth0.com') {
         const secretsClient = userSession.getTaskClusterSecretsClient();
         partialOrg = await getAllReportees(secretsClient, ldapEmail);
