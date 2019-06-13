@@ -9,7 +9,7 @@ import PropsRoute from '../../components/PropsRoute';
 import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
-import getFakeReportees from '../../utils/getFakeReportees';
+// import getFakeReportees from '../../utils/getFakeReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
@@ -79,15 +79,8 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      let partialOrg;
-      // For LDAP users
-      console.log('login type', userSession.loginType);
-      if (userSession.loginType === 'auth.mozilla.auth0.com') {
-        const secretsClient = userSession.getTaskClusterSecretsClient();
-        partialOrg = await getAllReportees(secretsClient, ldapEmail);
-      } else {
-        partialOrg = await getFakeReportees(userSession, ldapEmail);
-      }
+      console.log('login type', process.env.ALTERNATIVE_AUTH ? 'Alternative login' : 'LDAP login');
+      const partialOrg = await getAllReportees(userSession, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
     }

@@ -10,7 +10,7 @@ export function userSessionFromAuthResult(authResult) {
     oidcProvider: 'mozilla-auth0',
     accessToken: authResult.accessToken,
     fullName: authResult.idTokenPayload.name === '' ? authResult.idTokenPayload.nickname : authResult.idTokenPayload.name,
-    loginType: authResult.idTokenPayload.iss,
+    // loginType: authResult.idTokenPayload.iss,
     email: authResult.idTokenPayload.email,
     picture: authResult.idTokenPayload.picture,
     oidcSubject: authResult.idTokenPayload.sub,
