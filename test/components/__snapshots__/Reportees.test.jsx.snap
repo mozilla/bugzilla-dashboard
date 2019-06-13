@@ -77,7 +77,46 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             tabIndex="0"
             title="Click to sort the table by this column"
           >
-            Assigned
+            Assigned (defect)
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned (total)
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
@@ -225,15 +264,11 @@ exports[`renders Manager who has reportees & metrics 1`] = `
         <td
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
-        >
-          <a
-            href="https://mozilla.org/0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            0
-          </a>
-        </td>
+        />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
         <td
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
@@ -337,7 +372,46 @@ exports[`renders Manager who has reportees 1`] = `
             tabIndex="0"
             title="Click to sort the table by this column"
           >
-            Assigned
+            Assigned (defect)
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned (total)
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
@@ -498,6 +572,10 @@ exports[`renders Manager who has reportees 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
         />
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
       </tr>
     </tbody>
   </table>
@@ -581,7 +659,46 @@ exports[`renders Someone with no reportees 1`] = `
             tabIndex="0"
             title="Click to sort the table by this column"
           >
-            Assigned
+            Assigned (defect)
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-head-10 MuiTableCell-alignRight-19"
+          scope="col"
+        >
+          <span
+            aria-describedby={null}
+            className="MuiButtonBase-root-34 MuiTableSortLabel-root-29"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+            title="Click to sort the table by this column"
+          >
+            Assigned (total)
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-37 MuiTableSortLabel-icon-31 MuiTableSortLabel-iconDirectionAsc-33"
@@ -726,6 +843,10 @@ exports[`renders Someone with no reportees 1`] = `
         >
           Manager
         </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
+        />
         <td
           aria-sort={null}
           className="MuiTableCell-root-9 MuiTableCell-body-11 MuiTableCell-alignRight-19"
