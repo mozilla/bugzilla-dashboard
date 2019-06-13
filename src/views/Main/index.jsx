@@ -79,7 +79,6 @@ class MainContainer extends Component {
     }
 
     async getReportees(userSession, ldapEmail) {
-      console.log('login type', process.env.ALTERNATIVE_AUTH ? 'Alternative login' : 'LDAP login');
       const partialOrg = await getAllReportees(userSession, ldapEmail);
       this.setState({ partialOrg });
       return partialOrg;
