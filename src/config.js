@@ -14,8 +14,18 @@ const config = {
     responseType: 'token id_token',
   },
   reporteesMetrics: {
-    assigned: {
-      label: 'Assigned',
+    assigned_defect: {
+      label: 'Assigned (defect)',
+      parameterGenerator: mail => ({
+        email1: mail,
+        emailassigned_to1: '1',
+        emailtype1: 'exact',
+        resolution: '---',
+        bug_type: 'defect',
+      }),
+    },
+    assigned_total: {
+      label: 'Assigned (total)',
       parameterGenerator: mail => ({
         email1: mail,
         emailassigned_to1: '1',
