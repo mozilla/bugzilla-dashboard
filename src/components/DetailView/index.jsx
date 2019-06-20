@@ -8,7 +8,11 @@ const styles = ({
     display: 'flex',
   },
   title: {
-    margin: '0',
+    color: '#565656',
+    margin: '0.6rem',
+  },
+  mainContentContainer: {
+    width: '100%',
   },
 });
 
@@ -21,7 +25,7 @@ const DetailView = ({
         <ArrowBack />
       </a>
     </div>
-    <div>
+    <div className={classes.mainContentContainer}>
       <h2 className={classes.title}>{title}</h2>
       {children}
     </div>

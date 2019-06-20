@@ -2,7 +2,7 @@
 
 exports[`renders the details for a Bugzilla component 1`] = `
 <div
-  className="DetailView-root-6"
+  className="DetailView-root-13"
 >
   <div>
     <a
@@ -12,7 +12,7 @@ exports[`renders the details for a Bugzilla component 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-8"
+        className="MuiSvgIcon-root-16"
         focusable="false"
         role="presentation"
         viewBox="0 0 24 24"
@@ -27,18 +27,17 @@ exports[`renders the details for a Bugzilla component 1`] = `
       </svg>
     </a>
   </div>
-  <div>
+  <div
+    className="DetailView-mainContentContainer-15"
+  >
     <h2
-      className="DetailView-title-7"
+      className="DetailView-title-14"
     >
       Hello world!
     </h2>
-    <div>
-      <h4
-        className="BugzillaComponentDetails-subtitle-1"
-      >
-        someone@mozilla.com
-      </h4>
+    <div
+      className="BugzillaComponentDetails-metricCardGraphContainer-3"
+    >
       <div />
     </div>
   </div>
