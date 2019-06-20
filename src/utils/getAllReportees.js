@@ -33,8 +33,7 @@ const buildOrgChartData = (people) => {
 
 const findReportees = (completeOrg, email) => {
   let allReportees = {};
-
-  // if non-LDAP user, replace user email by the last email in list
+  // if non-LDAP user, replace user email by the last email in list. Last email
   const allEmails = Object.keys(completeOrg);
   const checkedEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
 
@@ -53,10 +52,11 @@ const findReportees = (completeOrg, email) => {
 
 const getAllReportees = async (userSession, ldapEmail) => {
   let people;
-  if (userSession.oidcProvider === 'mozilla-auth0') {
+  if (process.env.ALTERNATIVE_AUTH) {
     // if non-LDAP user, get fake data
     people = await (await fetch('people.json')).json();
   } else {
+    // LDAP user, retrieve data from the taskcluster secret
     const secretsClient = userSession.getTaskClusterSecretsClient();
     const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
     people = secret.employees;
