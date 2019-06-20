@@ -5,7 +5,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-438 MuiPaper-elevation4-444 MuiPaper-rounded-439 MUIDataTable-paper-433"
+    className="MuiPaper-root-438 MuiPaper-elevation4-444 MuiPaper-rounded-439 MUIDataTable-paper-433 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
@@ -417,6 +417,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="https://mozilla.org/0"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -436,6 +437,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="https://mozilla.org/1"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -455,6 +457,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -474,6 +477,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -648,7 +652,7 @@ exports[`renders Manager who has reportees 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-223 MuiPaper-elevation4-229 MuiPaper-rounded-224 MUIDataTable-paper-218"
+    className="MuiPaper-root-223 MuiPaper-elevation4-229 MuiPaper-rounded-224 MUIDataTable-paper-218 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
@@ -1060,6 +1064,7 @@ exports[`renders Manager who has reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1079,6 +1084,7 @@ exports[`renders Manager who has reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1098,6 +1104,7 @@ exports[`renders Manager who has reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1117,6 +1124,7 @@ exports[`renders Manager who has reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1291,7 +1299,7 @@ exports[`renders Someone with no reportees 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-8 MuiPaper-elevation4-14 MuiPaper-rounded-9 MUIDataTable-paper-3"
+    className="MuiPaper-root-8 MuiPaper-elevation4-14 MuiPaper-rounded-9 MUIDataTable-paper-3 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
@@ -1703,6 +1711,7 @@ exports[`renders Someone with no reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1722,6 +1731,7 @@ exports[`renders Someone with no reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1741,6 +1751,7 @@ exports[`renders Someone with no reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1760,6 +1771,7 @@ exports[`renders Someone with no reportees 1`] = `
               onClick={[Function]}
             >
               <a
+                className=""
                 href="#"
                 rel="noopener noreferrer"
                 target="_blank"
