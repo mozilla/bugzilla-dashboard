@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import DrilldownIcon from '../DrilldownIcon';
+import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import LinkIcon from '@material-ui/icons/Link';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import MUIDataTable from 'mui-datatables';
 import { BZ_QUERIES } from '../../config';
 
 const styles = ({
@@ -15,54 +18,158 @@ const styles = ({
 
 const sortByComponentName = (a, b) => a.label.localeCompare(b.label);
 
+// Custom styles to override default MUI theme
+const getMuiTheme = () => createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+  overrides: {
+    MuiPaper: {
+      root: {
+        margin: '1.4rem 0',
+      },
+    },
+    MUIDataTableBodyCell: {
+      root: {
+        textAlign: 'center',
+      },
+    },
+    MuiLink: {
+      root: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        fontSize: 12,
+        textAlign: 'center',
+      },
+    },
+    MuiTypography: {
+      body2: {
+        whiteSpace: 'pre',
+        display: 'flex',
+        justifyContent: 'flex-start',
+      },
+    },
+    MuiTableCell: {
+      head: {
+        padding: 0,
+      },
+      body: {
+        cursor: 'pointer',
+      },
+    },
+    MUIDataTableHeadCell: {
+      data: {
+        whiteSpace: 'pre',
+        padding: '0px 10px',
+      },
+      toolButton: {
+        width: '100%',
+        height: '100%',
+      },
+    },
+  },
+});
+
+const getTableHeaders = (data, onComponentDetails) => {
+  const firstHeader = {
+    name: '',
+    label: '',
+    options: {
+      filter: false,
+      customBodyRender: value => (
+        value
+          ? (
+            <Link
+              href="/#"
+              onClick={e => onComponentDetails(e, {
+                componentKey: `${value.product}::${value.component}`,
+                teamKey: value.teamKey,
+              })}
+              onKeyPress={e => onComponentDetails(e, {
+                componentKey: `${value.product}::${value.component}`,
+                teamKey: value.teamKey,
+              })}
+            >
+              <LinkIcon />
+              <Typography style={{ paddingLeft: 6, color: '#3f51b5' }} component="div">
+                {value.label}
+              </Typography>
+            </Link>
+          )
+          : null
+      ),
+    },
+  };
+
+  const getColor = (value, label) => (label === 'P1s defect' && value.count > 0 ? 'red' : 'blue');
+
+  const Headers = Object.values(data).map(({ label }) => ({
+    name: `${label}`,
+    label,
+    options: {
+      filter: false,
+      customBodyRender: value => (
+        <Link
+          href={value ? value.link : '#'}
+          target="_blank"
+          style={{ color: value ? getColor(value, label) : 'blue' }}
+          rel="noopener noreferrer"
+        >
+          { value ? value.count : '' }
+        </Link>
+      ),
+    },
+  }));
+  if (onComponentDetails) {
+    return [firstHeader].concat(Headers);
+  }
+  return Headers;
+};
+
+const options = {
+  filter: false,
+  selectableRows: false,
+  sort: true,
+  responsive: 'scroll',
+  rowsPerPage: 10,
+  download: false,
+  print: false,
+  viewColumns: false,
+};
+
+const BZqueryToDataCount = (query, metrics) => (
+  Object.keys(query).map(metric => (metrics[metric] ? metrics[metric] : null))
+);
+
+const getBugzillaComponentsData = bugzillaComponents => bugzillaComponents
+  .sort(sortByComponentName)
+  .map(({
+    label, component, product, metrics = {}, teamKey = null,
+  }) => (
+    [
+      {
+        label,
+        component,
+        product,
+        metrics,
+        teamKey,
+      },
+    ].concat(BZqueryToDataCount(BZ_QUERIES, metrics))
+  ));
+
 const BugzillaComponents = ({
-  classes, title, bugzillaComponents, onComponentDetails,
+  title, bugzillaComponents, onComponentDetails,
 }) => (
   bugzillaComponents.length > 0 && (
-    <div>
-      <h3 className={classes.header}>{title}</h3>
-      <table>
-        <thead>
-          <tr>
-            <th />
-            {onComponentDetails && <th />}
-            {Object.values(BZ_QUERIES).map(({ label }) => (
-              <th key={label} className={classes.metricLabel}>{label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {bugzillaComponents
-            .sort(sortByComponentName)
-            .map(({
-              label, component, product, metrics = {}, teamKey = null,
-            }) => (
-              <tr key={label}>
-                {onComponentDetails && (
-                  <td>
-                    <DrilldownIcon
-                      name={label}
-                      onChange={onComponentDetails}
-                      properties={{
-                        componentKey: `${product}::${component}`,
-                        teamKey,
-                      }}
-                    />
-                  </td>
-                )}
-                <td>{label}</td>
-                {Object.keys(BZ_QUERIES).map(metric => (
-                  metrics[metric] && (
-                  <td key={metric} className={classes.metric}>
-                    <a href={metrics[metric].link} target="_blank" rel="noopener noreferrer">{metrics[metric].count}</a>
-                  </td>
-                  )
-                ))}
-              </tr>
-            ))}
-        </tbody>
-      </table>
-    </div>
+    <MuiThemeProvider theme={getMuiTheme()}>
+      <MUIDataTable
+        title={title}
+        data={getBugzillaComponentsData(bugzillaComponents)}
+        columns={getTableHeaders(BZ_QUERIES, onComponentDetails)}
+        options={options}
+      />
+    </MuiThemeProvider>
   )
 );
 

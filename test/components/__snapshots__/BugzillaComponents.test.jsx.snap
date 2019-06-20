@@ -1,308 +1,3383 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders components 1`] = `
-<div>
-  <h3
-    className="BugzillaComponents-header-1"
+<div
+  className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiPaper-rounded-10 MUIDataTable-paper-4"
+>
+  <div
+    aria-label="Table Toolbar"
+    className="MuiToolbar-root-46 MuiToolbar-regular-48 MuiToolbar-gutters-47 MUIDataTableToolbar-root-36"
+    role="toolbar"
+  >
+    <div
+      className="MUIDataTableToolbar-left-37"
+    >
+      <div
+        aria-hidden="true"
+        className="MUIDataTableToolbar-titleRoot-39"
+      >
+        <h6
+          className="MuiTypography-root-50 MuiTypography-h6-67 MUIDataTableToolbar-titleText-40"
+        >
+          
+        </h6>
+      </div>
+    </div>
+    <div
+      className="MUIDataTableToolbar-actions-38"
+    >
+      <button
+        aria-describedby={null}
+        aria-label="Search"
+        className="MuiButtonBase-root-100 MuiIconButton-root-94 MUIDataTableToolbar-icon-41"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        title="Search"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-99"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-103"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-216"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="MUIDataTableFilterList-root-112"
   />
-  <table>
-    <thead>
-      <tr>
-        <th />
-        <th />
-        <th>
-          P1s defect
-        </th>
-        <th>
-          Unassigned tracked beta bugs
-        </th>
-        <th>
-          Nightly New Regression
-        </th>
-        <th>
-          Nightly carry over
-        </th>
-        <th>
-          New defects
-        </th>
-        <th>
-          Needinfo
-        </th>
-        <th>
-          P1s task
-        </th>
-        <th>
-          P1s enhancement
-        </th>
-        <th>
-          sec-{critical, high}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="Core::DOM: Core & HTML"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
+  <div
+    className="MUIDataTable-responsiveScroll-6"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <table
+      className="MuiTable-root-114 MUIDataTable-tableRoot-5"
+      role="grid"
+      tabIndex="0"
+    >
+      <caption
+        className="MUIDataTable-caption-7"
+      >
+        
+      </caption>
+      <thead
+        className="MuiTableHead-root-117 MUIDataTableHead-main-115"
+      >
+        <tr
+          className="MuiTableRow-root-119 MuiTableRow-head-122 MUIDataTableHeadRow-root-118"
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
           >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
             >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                P1s defect
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                Unassigned tracked beta bugs
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                Nightly New Regression
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                Nightly carry over
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                New defects
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                Needinfo
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                P1s task
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                P1s enhancement
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-head-142 MUIDataTableHeadCell-root-133 MUIDataTableHeadCell-fixedHeader-134"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-140"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-137"
+              >
+                sec-{critical, high}
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-138"
+              >
+                <span
+                  className="MuiButtonBase-root-100 MuiTableSortLabel-root-153"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root-160"
+      >
+        <tr
+          className="MuiTableRow-root-119 MuiTableRow-hover-121 MUIDataTableBodyRow-root-161 MUIDataTableBodyRow-hover-162"
+          id="MUIDataTableBodyRow-0"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-103"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-50 MuiTypography-body2-58"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                Core::DOM: Core & HTML
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-119 MuiTableRow-hover-121 MUIDataTableBodyRow-root-161 MUIDataTableBodyRow-hover-162"
+          id="MUIDataTableBodyRow-1"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-103"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-50 MuiTypography-body2-58"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                Core::DOM: IndexedDB
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-119 MuiTableRow-hover-121 MUIDataTableBodyRow-root-161 MUIDataTableBodyRow-hover-162"
+          id="MUIDataTableBodyRow-2"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-103"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-50 MuiTypography-body2-58"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                Core::JavaScript Engine
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-119 MuiTableRow-hover-121 MUIDataTableBodyRow-root-161 MUIDataTableBodyRow-hover-162"
+          id="MUIDataTableBodyRow-3"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-103"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-50 MuiTypography-body2-58"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                Toolkit::Async Tooling
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165 MUIDataTableBodyCell-cellHide-166"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-141 MuiTableCell-body-143 MUIDataTableBodyCell-root-165"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <table
+    className="MuiTable-root-114"
+  >
+    <tfoot
+      className="MuiTableFooter-root-177"
+    >
+      <tr
+        className="MuiTableRow-root-119 MuiTableRow-footer-123"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-141 MuiTableCell-footer-144 MUIDataTablePagination-root-174"
+          colSpan={1000}
+        >
+          <div
+            className="MuiToolbar-root-46 MuiToolbar-regular-48 MuiToolbar-gutters-47 MuiTablePagination-toolbar-179 MUIDataTablePagination-toolbar-175"
+          >
+            <div
+              className="MuiTablePagination-spacer-180"
+            />
+            <span
+              className="MuiTypography-root-50 MuiTypography-caption-60 MuiTypography-colorInherit-79 MuiTablePagination-caption-181"
+            >
+              Rows per page:
+            </span>
+            <div
+              className="MuiInputBase-root-195 MuiTablePagination-input-185"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-188 MuiTablePagination-selectRoot-182 MUIDataTablePagination-selectRoot-176"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-189 MuiTablePagination-select-183 MuiSelect-selectMenu-192 MuiInputBase-input-205"
+                  id="pagination-rows"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  10
+                </div>
+                <input
+                  id="pagination-input"
+                  type="hidden"
+                  value={10}
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-103 MuiSelect-icon-194 MuiTablePagination-selectIcon-184"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              className="MuiTypography-root-50 MuiTypography-caption-60 MuiTypography-colorInherit-79 MuiTablePagination-caption-181"
+            >
+              1-4 of 4
+            </span>
+            <div
+              className="MuiTablePagination-actions-187"
+            >
+              <button
+                aria-label="Previous Page"
+                className="MuiButtonBase-root-100 MuiButtonBase-disabled-101 MuiIconButton-root-94 MuiIconButton-colorInherit-95 MuiIconButton-disabled-98"
+                disabled={true}
+                id="pagination-back"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label-99"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-103"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="Next Page"
+                className="MuiButtonBase-root-100 MuiButtonBase-disabled-101 MuiIconButton-root-94 MuiIconButton-colorInherit-95 MuiIconButton-disabled-98"
+                disabled={true}
+                id="pagination-next"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label-99"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-103"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
           </div>
         </td>
-        <td>
-          Core::DOM: Core & HTML
-        </td>
       </tr>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="Core::DOM: IndexedDB"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          Core::DOM: IndexedDB
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="Core::JavaScript Engine"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          Core::JavaScript Engine
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="Toolkit::Async Tooling"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          Toolkit::Async Tooling
-        </td>
-      </tr>
-    </tbody>
+    </tfoot>
   </table>
+  <div
+    aria-live="polite"
+    className="MUIDataTable-liveAnnounce-8"
+  />
 </div>
 `;
 
 exports[`renders components bucketed as teams 1`] = `
-<div>
-  <h3
-    className="BugzillaComponents-header-1"
+<div
+  className="MuiPaper-root-229 MuiPaper-elevation4-235 MuiPaper-rounded-230 MUIDataTable-paper-224"
+>
+  <div
+    aria-label="Table Toolbar"
+    className="MuiToolbar-root-266 MuiToolbar-regular-268 MuiToolbar-gutters-267 MUIDataTableToolbar-root-256"
+    role="toolbar"
+  >
+    <div
+      className="MUIDataTableToolbar-left-257"
+    >
+      <div
+        aria-hidden="true"
+        className="MUIDataTableToolbar-titleRoot-259"
+      >
+        <h6
+          className="MuiTypography-root-270 MuiTypography-h6-287 MUIDataTableToolbar-titleText-260"
+        >
+          
+        </h6>
+      </div>
+    </div>
+    <div
+      className="MUIDataTableToolbar-actions-258"
+    >
+      <button
+        aria-describedby={null}
+        aria-label="Search"
+        className="MuiButtonBase-root-320 MuiIconButton-root-314 MUIDataTableToolbar-icon-261"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        title="Search"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-319"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-323"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root-436"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="MUIDataTableFilterList-root-332"
   />
-  <table>
-    <thead>
-      <tr>
-        <th />
-        <th />
-        <th>
-          P1s defect
-        </th>
-        <th>
-          Unassigned tracked beta bugs
-        </th>
-        <th>
-          Nightly New Regression
-        </th>
-        <th>
-          Nightly carry over
-        </th>
-        <th>
-          New defects
-        </th>
-        <th>
-          Needinfo
-        </th>
-        <th>
-          P1s task
-        </th>
-        <th>
-          P1s enhancement
-        </th>
-        <th>
-          sec-{critical, high}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="DOM Core"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
+  <div
+    className="MUIDataTable-responsiveScroll-226"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <table
+      className="MuiTable-root-334 MUIDataTable-tableRoot-225"
+      role="grid"
+      tabIndex="0"
+    >
+      <caption
+        className="MUIDataTable-caption-227"
+      >
+        
+      </caption>
+      <thead
+        className="MuiTableHead-root-337 MUIDataTableHead-main-335"
+      >
+        <tr
+          className="MuiTableRow-root-339 MuiTableRow-head-342 MUIDataTableHeadRow-root-338"
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
           >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
             >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                P1s defect
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                Unassigned tracked beta bugs
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                Nightly New Regression
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                Nightly carry over
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                New defects
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                Needinfo
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                P1s task
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                P1s enhancement
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-head-362 MUIDataTableHeadCell-root-353 MUIDataTableHeadCell-fixedHeader-354"
+            scope="col"
+          >
+            <span
+              aria-describedby={null}
+              className="MUIDataTableHeadCell-toolButton-360"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+              title="Sort"
+            >
+              <div
+                className="MUIDataTableHeadCell-data-357"
+              >
+                sec-{critical, high}
+              </div>
+              <div
+                className="MUIDataTableHeadCell-sortAction-358"
+              >
+                <span
+                  className="MuiButtonBase-root-320 MuiTableSortLabel-root-373"
+                  onBlur={[Function]}
+                  onContextMenu={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex="0"
+                />
+              </div>
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root-380"
+      >
+        <tr
+          className="MuiTableRow-root-339 MuiTableRow-hover-341 MUIDataTableBodyRow-root-381 MUIDataTableBodyRow-hover-382"
+          id="MUIDataTableBodyRow-0"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-323"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-270 MuiTypography-body2-278"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                DOM Core
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-339 MuiTableRow-hover-341 MUIDataTableBodyRow-root-381 MUIDataTableBodyRow-hover-382"
+          id="MUIDataTableBodyRow-1"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-323"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-270 MuiTypography-body2-278"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                DOM Fission
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root-339 MuiTableRow-hover-341 MUIDataTableBodyRow-root-381 MUIDataTableBodyRow-hover-382"
+          id="MUIDataTableBodyRow-2"
+          onClick={[Function]}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="/#"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-323"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                />
+              </svg>
+              <div
+                className="MuiTypography-root-270 MuiTypography-body2-278"
+                style={
+                  Object {
+                    "color": "#3f51b5",
+                    "paddingLeft": 6,
+                  }
+                }
+              >
+                Worker and Storage
+              </div>
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s defect
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Unassigned tracked beta bugs
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly New Regression
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Nightly carry over
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            New defects
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            Needinfo
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s task
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            P1s enhancement
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385 MUIDataTableBodyCell-cellHide-386"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-361 MuiTableCell-body-363 MUIDataTableBodyCell-root-385"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <table
+    className="MuiTable-root-334"
+  >
+    <tfoot
+      className="MuiTableFooter-root-397"
+    >
+      <tr
+        className="MuiTableRow-root-339 MuiTableRow-footer-343"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-361 MuiTableCell-footer-364 MUIDataTablePagination-root-394"
+          colSpan={1000}
+        >
+          <div
+            className="MuiToolbar-root-266 MuiToolbar-regular-268 MuiToolbar-gutters-267 MuiTablePagination-toolbar-399 MUIDataTablePagination-toolbar-395"
+          >
+            <div
+              className="MuiTablePagination-spacer-400"
+            />
+            <span
+              className="MuiTypography-root-270 MuiTypography-caption-280 MuiTypography-colorInherit-299 MuiTablePagination-caption-401"
+            >
+              Rows per page:
+            </span>
+            <div
+              className="MuiInputBase-root-415 MuiTablePagination-input-405"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiSelect-root-408 MuiTablePagination-selectRoot-402 MUIDataTablePagination-selectRoot-396"
+              >
+                <div
+                  aria-haspopup="true"
+                  aria-pressed="false"
+                  className="MuiSelect-select-409 MuiTablePagination-select-403 MuiSelect-selectMenu-412 MuiInputBase-input-425"
+                  id="pagination-rows"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  10
+                </div>
+                <input
+                  id="pagination-input"
+                  type="hidden"
+                  value={10}
+                />
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-323 MuiSelect-icon-414 MuiTablePagination-selectIcon-404"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              className="MuiTypography-root-270 MuiTypography-caption-280 MuiTypography-colorInherit-299 MuiTablePagination-caption-401"
+            >
+              1-3 of 3
+            </span>
+            <div
+              className="MuiTablePagination-actions-407"
+            >
+              <button
+                aria-label="Previous Page"
+                className="MuiButtonBase-root-320 MuiButtonBase-disabled-321 MuiIconButton-root-314 MuiIconButton-colorInherit-315 MuiIconButton-disabled-318"
+                disabled={true}
+                id="pagination-back"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label-319"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-323"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="Next Page"
+                className="MuiButtonBase-root-320 MuiButtonBase-disabled-321 MuiIconButton-root-314 MuiIconButton-colorInherit-315 MuiIconButton-disabled-318"
+                disabled={true}
+                id="pagination-next"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label-319"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-323"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
           </div>
         </td>
-        <td>
-          DOM Core
-        </td>
       </tr>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="DOM Fission"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          DOM Fission
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            className="DrilldownIcon-svgWrapper-3"
-            name="Worker and Storage"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="0"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-5 DrilldownIcon-icon-4"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          Worker and Storage
-        </td>
-      </tr>
-    </tbody>
+    </tfoot>
   </table>
+  <div
+    aria-live="polite"
+    className="MUIDataTable-liveAnnounce-228"
+  />
 </div>
 `;

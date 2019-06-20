@@ -220,7 +220,53 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 <div
                   className="MUIDataTableHeadCell-data-569"
                 >
-                  Assigned
+                  Assigned (defect)
+                </div>
+                <div
+                  className="MUIDataTableHeadCell-sortAction-570"
+                >
+                  <span
+                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    onBlur={[Function]}
+                    onContextMenu={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  />
+                </div>
+              </span>
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              scope="col"
+            >
+              <span
+                aria-describedby={null}
+                className="MUIDataTableHeadCell-toolButton-572"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+                title="Sort"
+              >
+                <div
+                  className="MUIDataTableHeadCell-data-569"
+                >
+                  Assigned (total)
                 </div>
                 <div
                   className="MUIDataTableHeadCell-sortAction-570"
@@ -409,7 +455,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               aria-sort={null}
               className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
             >
-              Assigned
+              Assigned (defect)
             </td>
             <td
               aria-sort={null}
@@ -418,11 +464,31 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             >
               <a
                 className=""
-                href="https://mozilla.org/0"
+                href="#"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                0
+                
+              </a>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+            >
+              Assigned (total)
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              onClick={[Function]}
+            >
+              <a
+                className=""
+                href="#"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                
               </a>
             </td>
             <td
@@ -867,7 +933,53 @@ exports[`renders Manager who has reportees 1`] = `
                 <div
                   className="MUIDataTableHeadCell-data-354"
                 >
-                  Assigned
+                  Assigned (defect)
+                </div>
+                <div
+                  className="MUIDataTableHeadCell-sortAction-355"
+                >
+                  <span
+                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    onBlur={[Function]}
+                    onContextMenu={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  />
+                </div>
+              </span>
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              scope="col"
+            >
+              <span
+                aria-describedby={null}
+                className="MUIDataTableHeadCell-toolButton-357"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+                title="Sort"
+              >
+                <div
+                  className="MUIDataTableHeadCell-data-354"
+                >
+                  Assigned (total)
                 </div>
                 <div
                   className="MUIDataTableHeadCell-sortAction-355"
@@ -1056,7 +1168,27 @@ exports[`renders Manager who has reportees 1`] = `
               aria-sort={null}
               className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
             >
-              Assigned
+              Assigned (defect)
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              onClick={[Function]}
+            >
+              <a
+                className=""
+                href="#"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                
+              </a>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+            >
+              Assigned (total)
             </td>
             <td
               aria-sort={null}
@@ -1514,7 +1646,53 @@ exports[`renders Someone with no reportees 1`] = `
                 <div
                   className="MUIDataTableHeadCell-data-139"
                 >
-                  Assigned
+                  Assigned (defect)
+                </div>
+                <div
+                  className="MUIDataTableHeadCell-sortAction-140"
+                >
+                  <span
+                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    onBlur={[Function]}
+                    onContextMenu={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  />
+                </div>
+              </span>
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              scope="col"
+            >
+              <span
+                aria-describedby={null}
+                className="MUIDataTableHeadCell-toolButton-142"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+                title="Sort"
+              >
+                <div
+                  className="MUIDataTableHeadCell-data-139"
+                >
+                  Assigned (total)
                 </div>
                 <div
                   className="MUIDataTableHeadCell-sortAction-140"
@@ -1703,7 +1881,27 @@ exports[`renders Someone with no reportees 1`] = `
               aria-sort={null}
               className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
             >
-              Assigned
+              Assigned (defect)
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              onClick={[Function]}
+            >
+              <a
+                className=""
+                href="#"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                
+              </a>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+            >
+              Assigned (total)
             </td>
             <td
               aria-sort={null}
