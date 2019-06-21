@@ -36,8 +36,7 @@ const PATHNAME_TO_TAB_INDEX = {
 
 const styles = ({
   content: {
-    padding: '1rem',
-    maxWidth: 1000,
+    padding: '1rem 2rem',
     margin: '0 auto',
   },
 });
