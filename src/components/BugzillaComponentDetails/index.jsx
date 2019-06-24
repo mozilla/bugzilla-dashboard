@@ -98,7 +98,7 @@ const BugzillaComponentDetails = ({
               <List aria-label="Main mailbox folders">
                 {Object.keys(metrics).sort().map(metric => (
                   metrics[metric] && (
-                  <ListItem className={classes.metricContainer}>
+                  <ListItem className={classes.metricContainer} key={metric}>
                     <p className={classes.metricLabel}>{metric}</p>
                     <ListItemText
                       className={classes.metricCounter}

@@ -53,6 +53,9 @@ const getMuiTheme = () => createMuiTheme({
     MuiTableCell: {
       head: {
         padding: 0,
+        '&:nth-child(3)': {
+          maxWidth: '8rem',
+        },
       },
       body: {
         cursor: 'pointer',
@@ -60,7 +63,6 @@ const getMuiTheme = () => createMuiTheme({
     },
     MUIDataTableHeadCell: {
       data: {
-        whiteSpace: 'pre',
         padding: '0px 10px',
       },
       toolButton: {
@@ -136,12 +138,31 @@ const options = {
   download: false,
   print: false,
   viewColumns: false,
+  customSort: (data, colIndex, order) => data.sort((a, b) => {
+    if (a.data[colIndex] && b.data[colIndex]) {
+      return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
+    }
+    return (-1 * (order === 'desc' ? 1 : -1));
+  }),
 };
 
+
+/**
+   * @description Add data according to the mui data-table
+   * @param {BZ_QUERIES} query The Static object to map
+   * @param {Array} metrics Object sent by the server for each row
+   * sent from {Function} getBugzillaComponentsData
+   * @returns Array<metric | null>
+   */
 const BZqueryToDataCount = (query, metrics) => (
-  Object.keys(query).map(metric => (metrics[metric] ? metrics[metric] : null))
+  Object.keys(query).map(eachQuery => (metrics[eachQuery] ? metrics[eachQuery] : null))
 );
 
+/**
+   * @description Add data according to the mui data-table
+   * @param {Array} bugzillaComponents
+   * @returns {Array}
+   */
 const getBugzillaComponentsData = bugzillaComponents => bugzillaComponents
   .sort(sortByComponentName)
   .map(({
