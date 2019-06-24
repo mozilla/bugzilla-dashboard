@@ -23,6 +23,7 @@ const ChartJsWrapper = ({
         type={type}
         data={{ datasets: data }}
         options={generateOptions(options)}
+        height={75}
       />
     </div>
   ) : (

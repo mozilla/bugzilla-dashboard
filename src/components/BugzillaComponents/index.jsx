@@ -6,7 +6,6 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
 import { BZ_QUERIES } from '../../config';
-import './index.css';
 
 const styles = ({
   header: {
@@ -54,6 +53,9 @@ const getMuiTheme = () => createMuiTheme({
     MuiTableCell: {
       head: {
         padding: 0,
+        '&:nth-child(3)': {
+          maxWidth: '8rem',
+        },
       },
       body: {
         cursor: 'pointer',
