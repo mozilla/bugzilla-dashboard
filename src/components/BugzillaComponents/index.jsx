@@ -54,7 +54,7 @@ const getMuiTheme = () => createMuiTheme({
       head: {
         padding: 0,
         '&:nth-child(3)': {
-          maxWidth: '8rem',
+          maxWidth: '5rem',
         },
       },
       body: {
@@ -79,6 +79,7 @@ const getTableHeaders = (data, onComponentDetails) => {
     label: '',
     options: {
       filter: false,
+      viewColumns: false,
       customBodyRender: value => (
         value
           ? (
@@ -105,12 +106,27 @@ const getTableHeaders = (data, onComponentDetails) => {
   };
 
   const getColor = (value, label) => (label === 'P1s defect' && value.count > 0 ? 'red' : 'blue');
+  const getColumnBool = (dataObject, string, key) => {
+    let returningBool = false;
+    const dataObjArray = Object.keys(dataObject);
+    dataObjArray.forEach((postKey) => {
+      if (dataObject[postKey][key] === string) {
+        if (postKey === 'P1Defect' || postKey === 'unassignedBetaBugs' || postKey === 'P1Task' || postKey === 'P1Enhancement' || postKey === 'sec') {
+          returningBool = true;
+        }
+      }
+    });
+
+    return returningBool;
+  };
 
   const Headers = Object.values(data).map(({ label }) => ({
     name: `${label}`,
     label,
     options: {
       filter: false,
+      viewColumns: !getColumnBool(data, label, 'label'),
+      display: getColumnBool(data, label, 'label'),
       customBodyRender: value => (
         <Link
           href={value ? value.link : '#'}
@@ -137,7 +153,6 @@ const options = {
   rowsPerPage: 10,
   download: false,
   print: false,
-  viewColumns: false,
   customSort: (data, colIndex, order) => data.sort((a, b) => {
     if (a.data[colIndex] && b.data[colIndex]) {
       return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
