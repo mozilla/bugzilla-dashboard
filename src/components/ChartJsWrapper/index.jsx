@@ -9,7 +9,7 @@ const styles = {
   // This div helps with canvas size changes
   // https://www.chartjs.org/docs/latest/general/responsive.html#important-note
   chartContainer: {
-    width: '800px',
+    width: '100%',
   },
 };
 
@@ -23,6 +23,7 @@ const ChartJsWrapper = ({
         type={type}
         data={{ datasets: data }}
         options={generateOptions(options)}
+        height={75}
       />
     </div>
   ) : (
