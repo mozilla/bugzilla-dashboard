@@ -78,7 +78,7 @@ class Reportees extends React.PureComponent {
               target="_blank"
               rel="noopener noreferrer"
               className={
-                (value !== undefined && ((metricUid === 'assigned' && value.count > 20) || (metricUid === 'needinfo' && value.count > 10)) ? 'highlight' : '')
+                (value !== undefined && ((metricUid === 'assigned_defect' && value.count > 20) || (metricUid === 'needinfo' && value.count > 10)) ? 'highlight' : '')
               }
             >
               { value !== undefined ? value.count : '' }
