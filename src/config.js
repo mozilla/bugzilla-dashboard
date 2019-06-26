@@ -16,6 +16,8 @@ const config = {
   reporteesMetrics: {
     assigned_defect: {
       label: 'Assigned (defect)',
+      // Higher threshold of assigned defects - to highlight defects on Reportees dashboard
+      assignedDefectsHt: 20,
       parameterGenerator: mail => ({
         email1: mail,
         emailassigned_to1: '1',
@@ -35,6 +37,7 @@ const config = {
     },
     needinfo: {
       label: 'Needinfo',
+      assignedDefectsHt: 10,
       parameterGenerator: mail => ({
         f1: 'requestees.login_name', o1: 'equals', v1: mail, f2: 'flagtypes.name', o2: 'substring', v2: 'needinfo?',
       }),
