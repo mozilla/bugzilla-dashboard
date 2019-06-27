@@ -630,6 +630,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -650,6 +655,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -670,6 +680,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -690,6 +705,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -710,6 +730,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -730,6 +755,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -750,6 +780,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -770,6 +805,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -790,6 +830,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -861,6 +906,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -881,6 +931,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -901,6 +956,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -921,6 +981,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -941,6 +1006,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -961,6 +1031,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -981,6 +1056,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1001,6 +1081,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1021,6 +1106,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1092,6 +1182,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1112,6 +1207,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1132,6 +1232,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1152,6 +1257,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1172,6 +1282,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1192,6 +1307,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1212,6 +1332,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1232,6 +1357,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1252,6 +1382,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1323,6 +1458,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1343,6 +1483,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1363,6 +1508,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1383,6 +1533,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1403,6 +1558,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1423,6 +1583,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1443,6 +1608,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1463,6 +1633,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -1483,6 +1658,11 @@ exports[`renders components 1`] = `
               className="MuiTypography-root-50 MuiTypography-colorPrimary-80 MuiTypography-inline-85 MuiLink-root-169 MuiLink-underlineHover-171"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2279,6 +2459,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2299,6 +2484,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2319,6 +2509,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2339,6 +2534,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2359,6 +2559,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2379,6 +2584,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2399,6 +2609,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2419,6 +2634,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2439,6 +2659,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2510,6 +2735,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2530,6 +2760,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2550,6 +2785,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2570,6 +2810,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2590,6 +2835,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2610,6 +2860,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2630,6 +2885,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2650,6 +2910,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2670,6 +2935,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2741,6 +3011,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2761,6 +3036,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2781,6 +3061,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2801,6 +3086,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2821,6 +3111,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2841,6 +3136,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2861,6 +3161,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2881,6 +3186,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               
@@ -2901,6 +3211,11 @@ exports[`renders components bucketed as teams 1`] = `
               className="MuiTypography-root-270 MuiTypography-colorPrimary-300 MuiTypography-inline-305 MuiLink-root-389 MuiLink-underlineHover-391"
               href="#"
               rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
               target="_blank"
             >
               

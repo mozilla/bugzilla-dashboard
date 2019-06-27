@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import MUIDataTable from 'mui-datatables';
 import CONFIG from '../../config';
+import './index.css';
 
 const styles = {
   root: {},
@@ -27,6 +28,9 @@ class Reportees extends React.PureComponent {
 
   // Custom styles to override default MUI theme
   getMuiTheme = () => createMuiTheme({
+    typography: {
+      useNextVariants: true,
+    },
     overrides: {
       MUIDataTableBodyCell: {
         root: {
@@ -65,7 +69,7 @@ class Reportees extends React.PureComponent {
     tableHeader.push(firstColumn);
 
     // push other columns from metricsAsArray in the config.js file to tableHeader array
-    metricsAsArray.forEach(([metricUid, { label }]) => {
+    metricsAsArray.forEach(([metricUid, { label, maxCount }]) => {
       const column = {
         name: `${metricUid}`,
         label,
@@ -76,6 +80,9 @@ class Reportees extends React.PureComponent {
               href={value !== undefined ? value.link : '#'}
               target="_blank"
               rel="noopener noreferrer"
+              className={
+                (value !== undefined && ((metricUid === 'assigned_defect' && value.count > maxCount) || (metricUid === 'needinfo' && value.count > maxCount)) ? 'highlight' : '')
+              }
             >
               { value !== undefined ? value.count : '' }
             </a>
@@ -93,6 +100,7 @@ class Reportees extends React.PureComponent {
             data={this.getMergedProps()}
             columns={tableHeader}
             options={options}
+            className="reportees-table"
           />
         </MuiThemeProvider>
       </div>

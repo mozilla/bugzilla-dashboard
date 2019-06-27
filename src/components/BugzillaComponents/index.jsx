@@ -104,7 +104,9 @@ const getTableHeaders = (data, onComponentDetails) => {
     },
   };
 
-  const Headers = Object.values(data).map(({ label }) => ({
+  const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
+
+  const Headers = Object.entries(data).map(([key, { label }]) => ({
     name: `${label}`,
     label,
     options: {
@@ -113,7 +115,9 @@ const getTableHeaders = (data, onComponentDetails) => {
         <Link
           href={value ? value.link : '#'}
           target="_blank"
+          style={{ color: getColor(value, key) }}
           rel="noopener noreferrer"
+
         >
           { value ? value.count : '' }
         </Link>
