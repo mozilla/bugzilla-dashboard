@@ -69,7 +69,7 @@ class Reportees extends React.PureComponent {
     tableHeader.push(firstColumn);
 
     // push other columns from metricsAsArray in the config.js file to tableHeader array
-    metricsAsArray.forEach(([metricUid, { label, assignedDefectsHt }]) => {
+    metricsAsArray.forEach(([metricUid, { label, maxCount }]) => {
       const column = {
         name: `${metricUid}`,
         label,
@@ -81,7 +81,7 @@ class Reportees extends React.PureComponent {
               target="_blank"
               rel="noopener noreferrer"
               className={
-                (value !== undefined && ((metricUid === 'assigned_defect' && value.count > assignedDefectsHt) || (metricUid === 'needinfo' && value.count > assignedDefectsHt)) ? 'highlight' : '')
+                (value !== undefined && ((metricUid === 'assigned_defect' && value.count > maxCount) || (metricUid === 'needinfo' && value.count > maxCount)) ? 'highlight' : '')
               }
             >
               { value !== undefined ? value.count : '' }
