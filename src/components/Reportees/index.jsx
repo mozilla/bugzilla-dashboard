@@ -45,14 +45,22 @@ class Reportees extends React.PureComponent {
 
     // MUI table options
     const options = {
-      filter: true,
+      filter: false,
       selectableRows: false,
       sort: true,
-      responsive: 'stacked',
+      responsive: 'scroll',
       rowsPerPage: 10,
       download: false,
       print: false,
       viewColumns: false,
+      customSort: (data, colIndex, order) => data.sort((a, b) => {
+        if (a.data[colIndex] && b.data[colIndex]) {
+          if (a.data[colIndex].length !== undefined && b.data[colIndex].length !== undefined) {
+            return ((a.data[colIndex].length < b.data[colIndex].length ? -1 : 1) * (order === 'desc' ? 1 : -1));
+          }
+        }
+        return (-1 * (order === 'desc' ? 1 : -1));
+      }),
     };
 
     const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);
