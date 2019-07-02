@@ -141,7 +141,9 @@ const options = {
   viewColumns: false,
   customSort: (data, colIndex, order) => data.sort((a, b) => {
     if (a.data[colIndex] && b.data[colIndex]) {
-      return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
+      if (a.data[colIndex].count !== undefined && b.data[colIndex].count !== undefined) {
+        return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
+      }
     }
     return (-1 * (order === 'desc' ? 1 : -1));
   }),

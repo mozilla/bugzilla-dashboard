@@ -53,6 +53,14 @@ class Reportees extends React.PureComponent {
       download: false,
       print: false,
       viewColumns: false,
+      customSort: (data, colIndex, order) => data.sort((a, b) => {
+        if (a.data[colIndex] && b.data[colIndex]) {
+          if (a.data[colIndex].length !== undefined && b.data[colIndex].length !== undefined) {
+            return ((a.data[colIndex].length < b.data[colIndex].length ? -1 : 1) * (order === 'desc' ? 1 : -1));
+          }
+        }
+        return (-1 * (order === 'desc' ? 1 : -1));
+      }),
     };
 
     const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);
