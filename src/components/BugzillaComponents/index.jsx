@@ -79,6 +79,7 @@ const getTableHeaders = (data, onComponentDetails) => {
     label: '',
     options: {
       filter: false,
+      viewColumns: false,
       customBodyRender: value => (
         value
           ? (
@@ -105,12 +106,28 @@ const getTableHeaders = (data, onComponentDetails) => {
   };
 
   const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
+  // returns columns to be displayed for selection when clicked on view columns
+  const getColumnBool = (dataObject, label, labelString) => {
+    let returningBool = false;
+    const keys = Object.keys(dataObject);
+    keys.forEach((key) => {
+      if (dataObject[key][labelString] === label) {
+        if (key === 'P1Defect' || key === 'unassignedBetaBugs' || key === 'P1Task' || key === 'P1Enhancement' || key === 'sec') {
+          returningBool = true;
+        }
+      }
+    });
+
+    return returningBool;
+  };
 
   const Headers = Object.entries(data).map(([key, { label }]) => ({
     name: `${label}`,
     label,
     options: {
       filter: false,
+      viewColumns: !getColumnBool(data, label, 'label'),
+      display: getColumnBool(data, label, 'label'),
       customBodyRender: value => (
         <Link
           href={value ? value.link : '#'}
@@ -138,7 +155,6 @@ const options = {
   rowsPerPage: 10,
   download: false,
   print: false,
-  viewColumns: false,
   customSort: (data, colIndex, order) => data.sort((a, b) => {
     if (a.data[colIndex] && b.data[colIndex]) {
       return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
