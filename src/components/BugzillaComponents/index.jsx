@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
 import { BZ_QUERIES } from '../../config';
+import sortFunc from '../../utils/bugzilla/sort';
 
 const styles = ({
   header: {
@@ -130,6 +131,13 @@ const getTableHeaders = (data, onComponentDetails) => {
   return Headers;
 };
 
+/**
+ * @description Reversing the order according to first parameter.
+ * @param {String} order asc or dsc
+ * @returns {Number} 1 || -1
+ */
+const ascDescSortFunc = order => (order === 'desc' ? 1 : -1);
+
 const options = {
   filter: false,
   selectableRows: false,
@@ -140,15 +148,14 @@ const options = {
   print: false,
   viewColumns: false,
   customSort: (data, colIndex, order) => data.sort((a, b) => {
-    if (a.data[colIndex] && b.data[colIndex]) {
-      if (a.data[colIndex].count !== undefined && b.data[colIndex].count !== undefined) {
-        return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
-      }
-    }
-    return (-1 * (order === 'desc' ? 1 : -1));
+    // Get Sort Value
+    const sortValue = sortFunc(a.data, b.data, colIndex);
+    // Get Asc or Desc
+    const ascDescValue = ascDescSortFunc(order);
+    // multiply Sort and AscDesc Value
+    return sortValue * ascDescValue;
   }),
 };
-
 
 /**
    * @description Add data according to the mui data-table
