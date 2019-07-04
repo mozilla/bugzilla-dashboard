@@ -80,6 +80,7 @@ const getTableHeaders = (data, onComponentDetails) => {
     label: '',
     options: {
       filter: false,
+      viewColumns: false,
       customBodyRender: value => (
         value
           ? (
@@ -107,11 +108,15 @@ const getTableHeaders = (data, onComponentDetails) => {
 
   const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
 
-  const Headers = Object.entries(data).map(([key, { label }]) => ({
+  const Headers = Object.entries(data).map(([key, { label, hidden: showColumn = false }]) => ({
     name: `${label}`,
     label,
     options: {
       filter: false,
+      // If hidden is true for the column, show it in view column list
+      viewColumns: showColumn,
+      // If hidden is true, hide is it in the table by default
+      display: !showColumn,
       customBodyRender: value => (
         <Link
           href={value ? value.link : '#'}

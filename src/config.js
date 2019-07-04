@@ -133,6 +133,7 @@ export const BZ_QUERIES = {
 
   nightlyNewBug: {
       label: 'Nightly New Regression',
+      hidden: true,
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
           // landed
@@ -154,6 +155,7 @@ export const BZ_QUERIES = {
 
   nightlyCarryOver: {
       label: 'Nightly carry over',
+      hidden: true,
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
           // landed
@@ -174,6 +176,7 @@ export const BZ_QUERIES = {
 
     newDefects: {
       label: 'New defects',
+      hidden: true,
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: '--',
@@ -184,6 +187,7 @@ export const BZ_QUERIES = {
 
   needinfo: {
       label: 'Needinfo',
+      hidden: true,
       parameters: {
           priority: '--',
           resolution: '---',
