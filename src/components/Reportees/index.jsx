@@ -49,7 +49,7 @@ class Reportees extends React.PureComponent {
       selectableRows: false,
       sort: true,
       responsive: 'stacked',
-      rowsPerPage: 10,
+      rowsPerPage: 25,
       download: false,
       print: false,
       viewColumns: false,

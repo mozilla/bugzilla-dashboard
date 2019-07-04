@@ -599,12 +599,18 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                     role="button"
                     tabIndex={0}
                   >
-                    10
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203;",
+                        }
+                      }
+                    />
                   </div>
                   <input
                     id="pagination-input"
                     type="hidden"
-                    value={10}
+                    value={25}
                   />
                   <svg
                     aria-hidden="true"
@@ -1312,12 +1318,18 @@ exports[`renders Manager who has reportees 1`] = `
                     role="button"
                     tabIndex={0}
                   >
-                    10
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203;",
+                        }
+                      }
+                    />
                   </div>
                   <input
                     id="pagination-input"
                     type="hidden"
-                    value={10}
+                    value={25}
                   />
                   <svg
                     aria-hidden="true"
@@ -2025,12 +2037,18 @@ exports[`renders Someone with no reportees 1`] = `
                     role="button"
                     tabIndex={0}
                   >
-                    10
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203;",
+                        }
+                      }
+                    />
                   </div>
                   <input
                     id="pagination-input"
                     type="hidden"
-                    value={10}
+                    value={25}
                   />
                   <svg
                     aria-hidden="true"
