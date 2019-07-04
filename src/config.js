@@ -113,7 +113,6 @@ export const TEAMS_CONFIG = {
 export const BZ_QUERIES = {
   P1Defect: {
       label: 'P1s defect',
-      hidden: 'false',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
@@ -123,7 +122,6 @@ export const BZ_QUERIES = {
   },
   unassignedBetaBugs: {
       label: 'Unassigned tracked beta bugs',
-      hidden: 'false',
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
           // landed
@@ -135,7 +133,7 @@ export const BZ_QUERIES = {
 
   nightlyNewBug: {
       label: 'Nightly New Regression',
-      hidden: 'true',
+      hidden: true,
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
           // landed
@@ -157,7 +155,7 @@ export const BZ_QUERIES = {
 
   nightlyCarryOver: {
       label: 'Nightly carry over',
-      hidden: 'true',
+      hidden: true,
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
           // landed
@@ -178,7 +176,7 @@ export const BZ_QUERIES = {
 
     newDefects: {
       label: 'New defects',
-      hidden: 'true',
+      hidden: true,
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: '--',
@@ -189,7 +187,7 @@ export const BZ_QUERIES = {
 
   needinfo: {
       label: 'Needinfo',
-      hidden: 'true',
+      hidden: true,
       parameters: {
           priority: '--',
           resolution: '---',
@@ -200,7 +198,6 @@ export const BZ_QUERIES = {
 
   P1Task: {
       label: 'P1s task',
-      hidden: 'false',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
@@ -210,7 +207,6 @@ export const BZ_QUERIES = {
   },
   P1Enhancement: {
       label: 'P1s enhancement',
-      hidden: 'false',
       parameters: {
           f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
           priority: 'P1',
@@ -220,7 +216,6 @@ export const BZ_QUERIES = {
   },
   sec: {
       label: 'sec-{critical, high}',
-      hidden: 'false',
       parameters: {
           resolution: '---',
           keywords_type: 'anywords',

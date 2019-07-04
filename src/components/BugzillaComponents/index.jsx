@@ -107,15 +107,15 @@ const getTableHeaders = (data, onComponentDetails) => {
 
   const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
 
-  const Headers = Object.entries(data).map(([key, { label, hidden: showColumn }]) => ({
+  const Headers = Object.entries(data).map(([key, { label, hidden: showColumn = false }]) => ({
     name: `${label}`,
     label,
     options: {
       filter: false,
       // If hidden is true for the column, showit in view column list
-      viewColumns: JSON.parse(showColumn),
+      viewColumns: showColumn,
       // If hidden is true, hide is it in the table by default
-      display: !JSON.parse(showColumn),
+      display: !showColumn,
       customBodyRender: value => (
         <Link
           href={value ? value.link : '#'}
