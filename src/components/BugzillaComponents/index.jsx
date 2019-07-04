@@ -106,28 +106,16 @@ const getTableHeaders = (data, onComponentDetails) => {
   };
 
   const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
-  // returns columns to be displayed for selection when clicked on view columns
-  const getColumnBool = (dataObject, label, labelString) => {
-    let returningBool = false;
-    const keys = Object.keys(dataObject);
-    keys.forEach((key) => {
-      if (dataObject[key][labelString] === label) {
-        if (key === 'P1Defect' || key === 'unassignedBetaBugs' || key === 'P1Task' || key === 'P1Enhancement' || key === 'sec') {
-          returningBool = true;
-        }
-      }
-    });
 
-    return returningBool;
-  };
-
-  const Headers = Object.entries(data).map(([key, { label }]) => ({
+  const Headers = Object.entries(data).map(([key, { label, hidden: showColumn }]) => ({
     name: `${label}`,
     label,
     options: {
       filter: false,
-      viewColumns: !getColumnBool(data, label, 'label'),
-      display: getColumnBool(data, label, 'label'),
+      // If hidden is true for the column, showit in view column list
+      viewColumns: JSON.parse(showColumn),
+      // If hidden is true, hide is it in the table by default
+      display: !JSON.parse(showColumn),
       customBodyRender: value => (
         <Link
           href={value ? value.link : '#'}
