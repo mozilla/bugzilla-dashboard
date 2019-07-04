@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
 import { BZ_QUERIES } from '../../config';
+import sort from '../../utils/bugzilla/sort';
 
 const styles = ({
   header: {
@@ -143,14 +144,9 @@ const options = {
   rowsPerPage: 10,
   download: false,
   print: false,
-  customSort: (data, colIndex, order) => data.sort((a, b) => {
-    if (a.data[colIndex] && b.data[colIndex]) {
-      return ((a.data[colIndex].count < b.data[colIndex].count ? -1 : 1) * (order === 'desc' ? 1 : -1));
-    }
-    return (-1 * (order === 'desc' ? 1 : -1));
-  }),
+  viewColumns: false,
+  customSort: (data, index, order) => data.sort((a, b) => sort(a.data, b.data, index, order)),
 };
-
 
 /**
    * @description Add data according to the mui data-table

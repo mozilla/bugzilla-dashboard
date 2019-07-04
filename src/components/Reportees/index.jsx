@@ -4,6 +4,7 @@ import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/
 import MUIDataTable from 'mui-datatables';
 import CONFIG from '../../config';
 import './index.css';
+import sort from '../../utils/bugzilla/sort';
 
 const styles = {
   root: {},
@@ -42,7 +43,6 @@ class Reportees extends React.PureComponent {
 
   render() {
     const { classes } = this.props;
-
     // MUI table options
     const options = {
       filter: true,
@@ -53,6 +53,7 @@ class Reportees extends React.PureComponent {
       download: false,
       print: false,
       viewColumns: false,
+      customSort: (data, index, order) => (data.sort((a, b) => sort(a.data, b.data, index, order))),
     };
 
     const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);
