@@ -1132,12 +1132,18 @@ exports[`renders components 1`] = `
                   role="button"
                   tabIndex={0}
                 >
-                  10
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
                 </div>
                 <input
                   id="pagination-input"
                   type="hidden"
-                  value={10}
+                  value={25}
                 />
                 <svg
                   aria-hidden="true"
@@ -2201,12 +2207,18 @@ exports[`renders components bucketed as teams 1`] = `
                   role="button"
                   tabIndex={0}
                 >
-                  10
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
                 </div>
                 <input
                   id="pagination-input"
                   type="hidden"
-                  value={10}
+                  value={25}
                 />
                 <svg
                   aria-hidden="true"
