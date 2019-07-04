@@ -112,7 +112,7 @@ const getTableHeaders = (data, onComponentDetails) => {
     label,
     options: {
       filter: false,
-      // If hidden is true for the column, showit in view column list
+      // If hidden is true for the column, show it in view column list
       viewColumns: showColumn,
       // If hidden is true, hide is it in the table by default
       display: !showColumn,
