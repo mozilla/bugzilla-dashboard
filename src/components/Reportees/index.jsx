@@ -4,7 +4,7 @@ import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/
 import MUIDataTable from 'mui-datatables';
 import CONFIG from '../../config';
 import './index.css';
-import sortFunc from '../../utils/bugzilla/sort';
+import sort from '../../utils/bugzilla/sort';
 
 const styles = {
   root: {},
@@ -43,14 +43,6 @@ class Reportees extends React.PureComponent {
 
   render() {
     const { classes } = this.props;
-
-    /**
-     * @description Reversing the order according to first parameter.
-     * @param {String} order asc or dsc
-     * @returns {Number} 1 || -1
-     */
-    const ascDescSortFunc = order => (order === 'desc' ? 1 : -1);
-
     // MUI table options
     const options = {
       filter: true,
@@ -61,14 +53,7 @@ class Reportees extends React.PureComponent {
       download: false,
       print: false,
       viewColumns: false,
-      customSort: (data, colIndex, order) => data.sort((a, b) => {
-        // Get Sort Value
-        const sortValue = sortFunc(a.data, b.data, colIndex);
-        // Get Asc or Desc
-        const ascDescValue = ascDescSortFunc(order);
-        // multiply Sort and AscDesc Value
-        return sortValue * ascDescValue;
-      }),
+      customSort: (data, index, order) => (data.sort((a, b) => sort(a.data, b.data, index, order))),
     };
 
     const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);

@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
 import { BZ_QUERIES } from '../../config';
-import sortFunc from '../../utils/bugzilla/sort';
+import sort from '../../utils/bugzilla/sort';
 
 const styles = ({
   header: {
@@ -131,13 +131,6 @@ const getTableHeaders = (data, onComponentDetails) => {
   return Headers;
 };
 
-/**
- * @description Reversing the order according to first parameter.
- * @param {String} order asc or dsc
- * @returns {Number} 1 || -1
- */
-const ascDescSortFunc = order => (order === 'desc' ? 1 : -1);
-
 const options = {
   filter: false,
   selectableRows: false,
@@ -147,14 +140,7 @@ const options = {
   download: false,
   print: false,
   viewColumns: false,
-  customSort: (data, colIndex, order) => data.sort((a, b) => {
-    // Get Sort Value
-    const sortValue = sortFunc(a.data, b.data, colIndex);
-    // Get Asc or Desc
-    const ascDescValue = ascDescSortFunc(order);
-    // multiply Sort and AscDesc Value
-    return sortValue * ascDescValue;
-  }),
+  customSort: (data, index, order) => data.sort((a, b) => sort(a.data, b.data, index, order)),
 };
 
 /**
