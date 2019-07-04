@@ -141,7 +141,7 @@ const options = {
   selectableRows: false,
   sort: true,
   responsive: 'scroll',
-  rowsPerPage: 10,
+  rowsPerPage: 25,
   download: false,
   print: false,
   viewColumns: false,
