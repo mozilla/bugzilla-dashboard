@@ -115,7 +115,7 @@ const getTableHeaders = (data, onComponentDetails) => {
       filter: false,
       // If hidden is true for the column, show it in view column list
       viewColumns: showColumn,
-      // If hidden is true, hide is it in the table by default
+      // If hidden is true, hide the column in the table by default
       display: !showColumn,
       customBodyRender: value => (
         <Link
@@ -144,7 +144,7 @@ const options = {
   rowsPerPage: 25,
   download: false,
   print: false,
-  viewColumns: false,
+  viewColumns: true,
   customSort: (data, index, order) => data.sort((a, b) => sort(a.data, b.data, index, order)),
 };
 
