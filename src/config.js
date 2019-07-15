@@ -223,6 +223,7 @@ export const BZ_QUERIES = {
       },
   },
 };
+export const bugzillaAPILink = 'http://localhost:2000/api/';
 /* eslint-enable indent */
 /* eslint-enable object-property-newline */
 /* eslint-enable no-multi-spaces */

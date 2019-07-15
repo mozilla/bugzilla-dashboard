@@ -12,6 +12,9 @@ import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import getComponentsData from '../../utils/bugzilla/getComponentsData';
+import getComponentCountAndLink from '../../utils/bugzilla/getComponentCountAndLink';
+import getTeamsComponent from '../../utils/bugzilla/getTeamsComponent';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -112,11 +115,13 @@ class MainContainer extends Component {
       // bzOwners uses the bugzilla email address as the key
       // while partialOrg uses the LDAP email address
       /* eslint-disable no-param-reassign */
+      const userComponents = [];
       const bugzillaComponents = Object.values(partialOrg)
         .reduce((result, { bugzillaEmail, mail }) => {
           const componentsOwned = bzOwners[bugzillaEmail] || bzOwners[mail];
           if (componentsOwned) {
             componentsOwned.forEach(({ product, component }) => {
+              userComponents.push(`${product}::${component}`);
               if (!result[`${product}::${component}`]) {
                 result[`${product}::${component}`] = {};
               }
@@ -135,13 +140,19 @@ class MainContainer extends Component {
       // This will list the components but will not show metrics
       this.setState({ bugzillaComponents });
 
+      const components = await getComponentsData(bugzillaComponents);
       // Let's fetch the metrics for each component
       Object.values(bugzillaComponents)
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            metrics[metric] = await getBugsCountAndLink(parameters);
+          // // If the components in triageOwners is not updated, we will not get matching records
+          // from backend. In such cases, show default values
+            const defaultCountAndLink = {
+              link: '#',
+              count: 0,
+            };
+            metrics[metric] = components[`${product}::${component}`] === undefined ? defaultCountAndLink : await getComponentCountAndLink(components[`${product}::${component}`][metric]);
             metrics[metric].label = BZ_QUERIES[metric].label;
           }));
           this.setState({ bugzillaComponents });
@@ -190,10 +201,14 @@ class MainContainer extends Component {
               metrics: {},
             };
             const { product, component } = teamInfo;
-            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-              team.metrics[metric] = await getBugsCountAndLink(parameters);
-            }));
+            const obj = {
+              product,
+              component,
+              team: teamKey,
+            };
+            const inf = await getTeamsComponent(obj);
+            team.metrics = inf[teamKey];
+
             teamComponents[teamKey] = team;
           }
         });
