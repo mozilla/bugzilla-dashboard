@@ -1,17 +1,17 @@
 import fetchJson from '../fetchJson';
-import { bugzillaAPILink } from '../../config';
+import { bugsAPIUrl } from '../../config';
 
 const getComponentsData = async () => {
-  const response = fetchJson(`${bugzillaAPILink}components`);
+  const response = fetchJson(`${bugsAPIUrl}components`);
   return response;
 };
 
+// Calculate bug count by adding bugs for each component in teams array
 const teamBugsCount = (components) => {
   const result = {};
-
+  // Get all keys
   const keys = Object.keys(components[0]);
 
-  // _.each(components, (component) => {
   components.forEach((component) => {
     if (!result[component.team]) {
       result[component.team] = component;
@@ -26,6 +26,7 @@ const teamBugsCount = (components) => {
   return result;
 };
 
+// returns total bugs for each metrics of a team
 const getTeamsComponent = async (teamComponents) => {
   const data = await getComponentsData();
   const components = [];
@@ -39,8 +40,7 @@ const getTeamsComponent = async (teamComponents) => {
       }
     });
   });
-  const rr = teamBugsCount(components);
-  return rr;
+  return teamBugsCount(components);
 };
 
 export default getTeamsComponent;

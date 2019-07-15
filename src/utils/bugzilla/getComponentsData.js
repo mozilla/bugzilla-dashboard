@@ -1,8 +1,8 @@
 import fetchJson from '../fetchJson';
-import { bugzillaAPILink } from '../../config';
+import { bugsAPIUrl } from '../../config';
 
 const getComponentsData = async () => {
-  const response = fetchJson(`${bugzillaAPILink}components`);
+  const response = fetchJson(`${bugsAPIUrl}components`);
   return response;
 };
 
