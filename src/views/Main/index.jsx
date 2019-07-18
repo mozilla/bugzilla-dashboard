@@ -10,9 +10,9 @@ import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
-import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
-import getComponentsData from '../../utils/bugzilla/getComponentsData';
+// import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
+import { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import { getComponentsData, getReporteesData } from '../../utils/bugzilla/getComponentsData';
 import getComponentCountAndLink from '../../utils/bugzilla/getComponentCountAndLink';
 import getTeamsComponent from '../../utils/bugzilla/getTeamsComponent';
 
@@ -146,32 +146,18 @@ class MainContainer extends Component {
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-          // // If the components in triageOwners is not updated, we will not get matching records
-          // from backend. In such cases, show default values
-            const defaultCountAndLink = {
-              link: '#',
-              count: 0,
-            };
-            metrics[metric] = components[`${product}::${component}`] === undefined ? defaultCountAndLink : await getComponentCountAndLink(components[`${product}::${component}`][metric]);
+            const data = components[`${product}::${component}`] === undefined ? components[`${product}::${component}`] : components[`${product}::${component}`][metric];
+            metrics[metric] = await getComponentCountAndLink(data);
             metrics[metric].label = BZ_QUERIES[metric].label;
           }));
           this.setState({ bugzillaComponents });
         });
     }
 
-    async reporteesMetrics(partialOrg) {
-      const reporteesMetrics = {};
-      // Let's fetch the metrics for each component
-      Object.values(partialOrg)
-        .map(async ({ bugzillaEmail }) => {
-          reporteesMetrics[bugzillaEmail] = {};
-          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
-            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
-            reporteesMetrics[bugzillaEmail][metric] = (
-              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
-          }));
-          this.setState({ reporteesMetrics });
-        });
+    async reporteesMetrics(partialOrg, ldapEmail) {
+      // Let's fetch the metrics for reportees
+      const reporteesMetrics = await getReporteesData(partialOrg, ldapEmail);
+      this.setState({ reporteesMetrics });
     }
 
     async retrieveData(userSession, ldapEmail) {
@@ -180,7 +166,7 @@ class MainContainer extends Component {
         this.getReportees(userSession, ldapEmail),
       ]);
       // Fetch this data first since it's the landing tab
-      await this.reporteesMetrics(partialOrg);
+      await this.reporteesMetrics(partialOrg, ldapEmail);
       this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });

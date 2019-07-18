@@ -6,4 +6,21 @@ const getComponentsData = async () => {
   return response;
 };
 
-export default getComponentsData;
+const getReporteesData = async (partialOrg, ldapEmail) => {
+  const data = fetch(`${bugsAPIUrl}reportees/`,
+    {
+      method: 'post',
+      body: JSON.stringify({
+        data: partialOrg,
+        email: ldapEmail,
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    })
+    .then(
+      response => response.json(),
+    )
+    .then(res => (res));
+  return data;
+};
+
+export { getComponentsData, getReporteesData };
