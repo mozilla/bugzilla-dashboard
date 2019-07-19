@@ -1,4 +1,4 @@
-import { OIDCCredentialAgent, Secrets } from 'taskcluster-client-web';
+import { OIDCCredentialAgent, Secrets, Index } from 'taskcluster-client-web';
 import { withRootUrl } from 'taskcluster-lib-urls';
 
 const urls = withRootUrl('https://taskcluster.net');
@@ -99,4 +99,6 @@ export default class UserSession {
   }
 
   getTaskClusterSecretsClient = () => new Secrets({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
+
+  getTaskClusterIndexClient = () => new Index({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
 }
