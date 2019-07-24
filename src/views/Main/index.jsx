@@ -172,7 +172,20 @@ class MainContainer extends Component {
       await this.reporteesMetrics(partialOrg);
       this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
-      this.setState({ doneLoading: true });
+      // If on page refresh, if search term is present get component
+      // name from search term and trigger handleShowComponentDetails
+      // by passing event = ''
+      this.setState({ doneLoading: true }, () => {
+        const { history } = this.props;
+        if (history.location.search !== '') {
+          const componentKeyData = {
+            componentKey: history.location.search
+              .split('=')[1]
+              .replace(/%20/g, ' '),
+          };
+          this.handleShowComponentDetails('', componentKeyData);
+        }
+      });
     }
 
     async teamsData(userSession, partialOrg) {
@@ -202,8 +215,14 @@ class MainContainer extends Component {
     }
 
     handleShowComponentDetails(event, properties) {
-      event.preventDefault();
-      const { componentKey, teamKey } = properties;
+      // condition to handle page refresh.
+      // For manual triggering of handleShowComponentDetails function
+      // we are not passing event object. This won't be executed for
+      // page refresh functionality
+      if (event !== '') {
+        event.preventDefault();
+      }
+      const { teamKey } = properties;
       // IDEA: In the future we could unify bugzilla components and teams into
       // the same data structure and make this logic simpler. We could use a
       // property 'team' to distinguish a component from a set of components
@@ -215,6 +234,12 @@ class MainContainer extends Component {
           },
         }));
       } else {
+        // on Components click, push component key to react router object
+        const { componentKey } = properties;
+        const { history, location } = this.props;
+        history.push(
+          `${location.pathname}?id=${componentKey}`,
+        );
         this.setState(prevState => ({
           componentDetails: {
             title: componentKey,
@@ -304,7 +329,16 @@ class MainContainer extends Component {
 
 MainContainer.propTypes = {
   classes: PropTypes.shape().isRequired,
-  location: PropTypes.shape().isRequired,
+  history: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
+};
+MainContainer.defaultProps = {
+  location: {
+    pathname: '',
+  },
+  history: '',
 };
 
 export default withStyles(styles)(MainContainer);
