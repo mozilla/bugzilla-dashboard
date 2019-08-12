@@ -5,8 +5,12 @@ import LinkIcon from '@material-ui/icons/Link';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+import _ from 'lodash';
 import { BZ_QUERIES } from '../../config';
 import sort from '../../utils/bugzilla/sort';
+import generateComponentsTable from '../../utils/bugzilla/generateComponentsTableData';
 
 const styles = ({
   header: {
@@ -30,18 +34,12 @@ const getMuiTheme = () => createMuiTheme({
         margin: '1.4rem 0',
       },
     },
-    MUIDataTableBodyCell: {
-      root: {
-        textAlign: 'center',
-      },
-    },
     MuiLink: {
       root: {
         width: '100%',
         display: 'flex',
         justifyContent: 'flex-start',
         fontSize: 12,
-        textAlign: 'center',
       },
     },
     MuiTypography: {
@@ -84,22 +82,9 @@ const getTableHeaders = (data, onComponentDetails) => {
       customBodyRender: value => (
         value
           ? (
-            <Link
-              href="/#"
-              onClick={e => onComponentDetails(e, {
-                componentKey: `${value.product}::${value.component}`,
-                teamKey: value.teamKey,
-              })}
-              onKeyPress={e => onComponentDetails(e, {
-                componentKey: `${value.product}::${value.component}`,
-                teamKey: value.teamKey,
-              })}
-            >
-              <LinkIcon />
-              <Typography style={{ paddingLeft: 6, color: '#3f51b5' }} component="div">
-                {value.label}
-              </Typography>
-            </Link>
+            <p>
+              {value.label}
+            </p>
           )
           : null
       ),
@@ -108,7 +93,7 @@ const getTableHeaders = (data, onComponentDetails) => {
 
   const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
 
-  const Headers = Object.entries(data).map(([key, { label, hidden: showColumn = false }]) => ({
+  const Headers = Object.entries((data)).map(([key, { label, hidden: showColumn = false }]) => ({
     name: `${label}`,
     label,
     options: {
@@ -118,15 +103,11 @@ const getTableHeaders = (data, onComponentDetails) => {
       // If hidden is true, hide the column in the table by default
       display: !showColumn,
       customBodyRender: value => (
-        <Link
-          href={value ? value.link : '#'}
-          target="_blank"
+        <p
           style={{ color: getColor(value, key) }}
-          rel="noopener noreferrer"
-
         >
           { value ? value.count : '' }
-        </Link>
+        </p>
       ),
     },
   }));
@@ -138,7 +119,7 @@ const getTableHeaders = (data, onComponentDetails) => {
 
 const options = {
   filter: false,
-  selectableRows: false,
+  selectableRows: 'none',
   sort: true,
   responsive: 'scroll',
   rowsPerPage: 25,
@@ -148,7 +129,93 @@ const options = {
   customSort: (data, index, order) => data.sort((a, b) => sort(a.data, b.data, index, order)),
 };
 
-/**
+// mui-datatable options for components
+const getOptions = (bugzillaComponents, onComponentDetails) => {
+  let columnViewArray = [];
+  return {
+    filter: false,
+    selectableRows: 'none',
+    sort: true,
+    responsive: 'scroll',
+    rowsPerPage: 25,
+    download: false,
+    print: false,
+    viewColumns: true,
+    customSort: (data, index, order) => data.sort((a, b) => sort(a.data, b.data, index, order)),
+    expandableRows: true,
+    onColumnViewChange: (changedColumn, action) => {
+      _.mapKeys(BZ_QUERIES, (value, key) => {
+        if (value.label === changedColumn) {
+          if (columnViewArray.length === 0 && action === 'add') {
+            columnViewArray.push(key);
+          } else if (action === 'add') {
+            columnViewArray.push(key);
+          } else {
+            columnViewArray = columnViewArray.filter(val => val !== key);
+          }
+        }
+      });
+    },
+    expandableRowsOnClick: false,
+    renderExpandableRow: (rowData, rowMeta) => {
+      const componentData = bugzillaComponents[rowMeta.rowIndex].components;
+      return (
+        <React.Fragment>
+          {componentData.map(
+            component => (
+              <TableRow key={component.label}>
+                <TableCell colSpan={1} />
+                <TableCell
+                  onClick={(e) => {
+                    onComponentDetails(e, {
+                      componentKey: `${component.label}`,
+                      teamKey: null,
+                    });
+                  }}
+                  colSpan={1}
+                >
+                  <Typography style={{ color: '#3f51b5' }}>
+                    <LinkIcon />
+                      &nbsp;
+                    {component.label}
+                  </Typography>
+                </TableCell>
+
+                {Object.entries((BZ_QUERIES)).map(
+                  ([key, value]) => (
+                    (!value.hidden || columnViewArray.includes(key)) && (
+                      <TableCell colSpan={1} component="th" scope="row" key={key}>
+                        {
+                          Object.values(component.metrics)
+                            .filter(metric => metric.label === value.label)
+                            .map(metric => (
+                              <Link
+                                key={metric.label}
+                                href={metric.link}
+                                target="_blank"
+                                style={{
+                                  color: metric.count > 0 ? 'red' : 'blue',
+                                }}
+                                rel="noopener noreferrer"
+                              >
+                                {metric.count}
+                              </Link>
+                            ))
+                        }
+                      </TableCell>
+                    )
+                  ),
+                )}
+              </TableRow>
+            ),
+          )}
+        </React.Fragment>
+      );
+    },
+  };
+};
+
+/** ,
    * @description Add data according to the mui data-table
    * @param {BZ_QUERIES} query The Static object to map
    * @param {Array} metrics Object sent by the server for each row
@@ -181,15 +248,15 @@ const getBugzillaComponentsData = bugzillaComponents => bugzillaComponents
   ));
 
 const BugzillaComponents = ({
-  title, bugzillaComponents, onComponentDetails,
+  title, bugzillaComponents, onComponentDetails, path,
 }) => (
   bugzillaComponents.length > 0 && (
     <MuiThemeProvider theme={getMuiTheme()}>
       <MUIDataTable
         title={title}
-        data={getBugzillaComponentsData(bugzillaComponents)}
+        data={path === '/components' ? getBugzillaComponentsData(generateComponentsTable(bugzillaComponents)) : getBugzillaComponentsData(bugzillaComponents)}
         columns={getTableHeaders(BZ_QUERIES, onComponentDetails)}
-        options={options}
+        options={path === '/components' ? getOptions(generateComponentsTable(bugzillaComponents), onComponentDetails) : options}
       />
     </MuiThemeProvider>
   )

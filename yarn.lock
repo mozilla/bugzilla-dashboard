@@ -5696,7 +5696,7 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -6072,10 +6072,10 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
-mui-datatables@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/mui-datatables/-/mui-datatables-2.4.0.tgz#7bc967e5daac8e359bf217fc06c7635badd6533b"
-  integrity sha512-JmQjmuatUpOZPDUOOGvu4qZUSTXNwf+dQvyTX0yLosdmWJcXL9EYgrDQy2Fca3iqWDEfcLa7zdW/24zdjnltHA==
+mui-datatables@^2.7.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/mui-datatables/-/mui-datatables-2.8.0.tgz#4c55f131fb837790d99a1e6f1e8fd423ed347e9f"
+  integrity sha512-VcRQ3tAVxpoJTVfGYSEKQjTirTOqMTIR0HEgHCWHzCTfEuaZfv7MEuPYNh+E2dbHF20V2FN4LcU9k+r6yjQIVA==
   dependencies:
     classnames "^2.2.5"
     lodash.clonedeep "^4.5.0"
