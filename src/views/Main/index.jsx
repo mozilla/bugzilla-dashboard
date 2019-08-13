@@ -12,6 +12,7 @@ import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import { getComponentsAndBugs, getBugzillaComponentLink } from '../../utils/bugzilla/getComponentsAndBugs';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -112,6 +113,7 @@ class MainContainer extends Component {
       // bzOwners uses the bugzilla email address as the key
       // while partialOrg uses the LDAP email address
       /* eslint-disable no-param-reassign */
+      const components = await getComponentsAndBugs();
       const bugzillaComponents = Object.values(partialOrg)
         .reduce((result, { bugzillaEmail, mail }) => {
           const componentsOwned = bzOwners[bugzillaEmail] || bzOwners[mail];
@@ -140,9 +142,14 @@ class MainContainer extends Component {
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            metrics[metric] = await getBugsCountAndLink(parameters);
-            metrics[metric].label = BZ_QUERIES[metric].label;
+            if (components[`${product}::${component}`] && components[`${product}::${component}`][metric]) {
+              metrics[metric] = components[`${product}::${component}`][metric];
+            } else {
+              metrics[metric] = {
+                count: 0,
+                link: '#',
+              };
+            }
           }));
           this.setState({ bugzillaComponents });
         });
@@ -182,6 +189,8 @@ class MainContainer extends Component {
         teamComponents = TEAMS_CONFIG;
       } else {
         // LDAP user, get the actual data
+        // Fetch all component details
+        const components = await getComponentsAndBugs();
         Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
           if (partialOrg[teamInfo.owner]) {
             const team = {
@@ -190,10 +199,32 @@ class MainContainer extends Component {
               metrics: {},
             };
             const { product, component } = teamInfo;
-            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-              team.metrics[metric] = await getBugsCountAndLink(parameters);
-            }));
+            product.forEach((productName) => {
+              component.forEach((componentName) => {
+                const label = `${productName}::${componentName}`;
+                // If component present in the list of component details
+                if (components[label]) {
+                  if (Object.values(team.metrics).length === 0) {
+                    // if metrics object is empty, push the data
+                    team.metrics = components[label];
+                  } else {
+                    Object.keys(BZ_QUERIES).map(async (metric) => {
+                      const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+                      // If metric object is not empty and metric is undefined, push default object
+                      if (!team.metrics[metric]) {
+                        team.metrics[metric] = {
+                          count: 0,
+                          link: getBugzillaComponentLink(parameters),
+                        };
+                      } else {
+                        // else add bug count to existing bug count
+                        team.metrics[metric].count += components[label][metric].count;
+                      }
+                    });
+                  }
+                }
+              });
+            });
             teamComponents[teamKey] = team;
           }
         });
