@@ -5,34 +5,35 @@ exports[`renders Manager who has reportees & metrics 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-438 MuiPaper-elevation4-444 MuiPaper-rounded-439 MUIDataTable-paper-433 reportees-table"
+    className="MuiPaper-root-447 MuiPaper-elevation4-453 MuiPaper-rounded-448 MUIDataTable-paper-441 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
-      className="MuiToolbar-root-475 MuiToolbar-regular-477 MuiToolbar-gutters-476 MUIDataTableToolbar-root-465"
+      className="MuiToolbar-root-484 MuiToolbar-regular-486 MuiToolbar-gutters-485 MUIDataTableToolbar-root-474"
       role="toolbar"
     >
       <div
-        className="MUIDataTableToolbar-left-466"
+        className="MUIDataTableToolbar-left-475"
       >
         <div
           aria-hidden="true"
-          className="MUIDataTableToolbar-titleRoot-468"
+          className="MUIDataTableToolbar-titleRoot-477"
         >
           <h6
-            className="MuiTypography-root-479 MuiTypography-h6-496 MUIDataTableToolbar-titleText-469"
+            className="MuiTypography-root-488 MuiTypography-h6-505 MUIDataTableToolbar-titleText-478"
           >
             Reportees
           </h6>
         </div>
       </div>
       <div
-        className="MUIDataTableToolbar-actions-467"
+        className="MUIDataTableToolbar-actions-476"
       >
         <button
           aria-describedby={null}
           aria-label="Search"
-          className="MuiButtonBase-root-529 MuiIconButton-root-523 MUIDataTableToolbar-icon-470"
+          className="MuiButtonBase-root-538 MuiIconButton-root-532 MUIDataTableToolbar-icon-479"
+          data-testid="Search-iconButton"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -52,11 +53,11 @@ exports[`renders Manager who has reportees & metrics 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-528"
+            className="MuiIconButton-label-537"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-532"
+              className="MuiSvgIcon-root-541"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -71,7 +72,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-640"
+            className="MuiTouchRipple-root-652"
           />
         </button>
         <span
@@ -80,7 +81,8 @@ exports[`renders Manager who has reportees & metrics 1`] = `
           <button
             aria-describedby={null}
             aria-label="Filter Table"
-            className="MuiButtonBase-root-529 MuiIconButton-root-523 MUIDataTableToolbar-icon-470"
+            className="MuiButtonBase-root-538 MuiIconButton-root-532 MUIDataTableToolbar-icon-479"
+            data-testid="Filter Table-iconButton"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -100,11 +102,11 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-528"
+              className="MuiIconButton-label-537"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-532"
+                className="MuiSvgIcon-root-541"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -119,17 +121,17 @@ exports[`renders Manager who has reportees & metrics 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-640"
+              className="MuiTouchRipple-root-652"
             />
           </button>
         </span>
       </div>
     </div>
     <div
-      className="MUIDataTableFilterList-root-544"
+      className="MUIDataTableFilterList-root-553"
     />
     <div
-      className={null}
+      className="MUIDataTable-responsiveStacked-444"
       style={
         Object {
           "position": "relative",
@@ -137,29 +139,29 @@ exports[`renders Manager who has reportees & metrics 1`] = `
       }
     >
       <table
-        className="MuiTable-root-546 MUIDataTable-tableRoot-434"
+        className="MuiTable-root-555 MUIDataTable-tableRoot-442"
         role="grid"
         tabIndex="0"
       >
         <caption
-          className="MUIDataTable-caption-436"
+          className="MUIDataTable-caption-445"
         >
           Reportees
         </caption>
         <thead
-          className="MuiTableHead-root-549 MUIDataTableHead-responsiveStacked-548 MUIDataTableHead-main-547"
+          className="MuiTableHead-root-558 MUIDataTableHead-responsiveStacked-557 MUIDataTableHead-main-556"
         >
           <tr
-            className="MuiTableRow-root-551 MuiTableRow-head-554 MUIDataTableHeadRow-root-550"
+            className="MuiTableRow-root-560 MuiTableRow-head-563 MUIDataTableHeadRow-root-559"
           >
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -172,15 +174,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Full Name
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -200,12 +202,12 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -218,15 +220,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Assigned (defect)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -246,12 +248,12 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -264,15 +266,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Assigned (total)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -292,12 +294,12 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -310,15 +312,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Needinfo
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -338,12 +340,12 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -356,15 +358,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Assigned & Tracked (Beta)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -384,12 +386,12 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-head-574 MUIDataTableHeadCell-root-565 MUIDataTableHeadCell-fixedHeader-566"
+              className="MuiTableCell-root-585 MuiTableCell-head-586 MUIDataTableHeadCell-root-574 MUIDataTableHeadCell-fixedHeader-575"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-572"
+                className="MUIDataTableHeadCell-toolButton-582"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -402,15 +404,15 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-569"
+                  className="MUIDataTableHeadCell-data-578"
                 >
                   Assigned & Tracked (Nightly)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-570"
+                  className="MUIDataTableHeadCell-sortAction-579"
                 >
                   <span
-                    className="MuiButtonBase-root-529 MuiTableSortLabel-root-585"
+                    className="MuiButtonBase-root-538 MuiTableSortLabel-root-597 MUIDataTableHeadCell-sortLabelRoot-580"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -431,35 +433,38 @@ exports[`renders Manager who has reportees & metrics 1`] = `
           </tr>
         </thead>
         <tbody
-          className="MuiTableBody-root-592"
+          className="MuiTableBody-root-604"
         >
           <tr
-            className="MuiTableRow-root-551 MuiTableRow-hover-553 MUIDataTableBodyRow-root-593 MUIDataTableBodyRow-hover-594 MUIDataTableBodyRow-responsiveStacked-596"
+            className="MuiTableRow-root-560 MuiTableRow-hover-562 MUIDataTableBodyRow-root-605 MUIDataTableBodyRow-hover-606 MUIDataTableBodyRow-responsiveStacked-608"
+            data-testid="MUIDataTableBodyRow-0"
             id="MUIDataTableBodyRow-0"
             onClick={[Function]}
           >
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Full Name
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-0-0"
               onClick={[Function]}
             >
               Someone
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Assigned (defect)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-1-0"
               onClick={[Function]}
             >
               <a
@@ -473,13 +478,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Assigned (total)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-2-0"
               onClick={[Function]}
             >
               <a
@@ -493,13 +499,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Needinfo
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-3-0"
               onClick={[Function]}
             >
               <a
@@ -513,13 +520,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Assigned & Tracked (Beta)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-4-0"
               onClick={[Function]}
             >
               <a
@@ -533,13 +541,14 @@ exports[`renders Manager who has reportees & metrics 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-cellHide-598 MUIDataTableBodyCell-cellStacked-599"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-cellHide-610 MUIDataTableBodyCell-cellStacked-611"
             >
               Assigned & Tracked (Nightly)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-573 MuiTableCell-body-575 MUIDataTableBodyCell-root-597 MUIDataTableBodyCell-responsiveStacked-600"
+              className="MuiTableCell-root-585 MuiTableCell-body-587 MUIDataTableBodyCell-root-609 MUIDataTableBodyCell-responsiveStacked-612"
+              data-testid="MuiDataTableBodyCell-5-0"
               onClick={[Function]}
             >
               <a
@@ -556,41 +565,42 @@ exports[`renders Manager who has reportees & metrics 1`] = `
       </table>
     </div>
     <table
-      className="MuiTable-root-546"
+      className="MuiTable-root-555"
     >
       <tfoot
-        className="MuiTableFooter-root-604"
+        className="MuiTableFooter-root-616"
       >
         <tr
-          className="MuiTableRow-root-551 MuiTableRow-footer-555"
+          className="MuiTableRow-root-560 MuiTableRow-footer-564"
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-573 MuiTableCell-footer-576 MUIDataTablePagination-root-601"
+            className="MuiTableCell-root-585 MuiTableCell-footer-588 MUIDataTablePagination-root-613"
             colSpan={1000}
           >
             <div
-              className="MuiToolbar-root-475 MuiToolbar-regular-477 MuiToolbar-gutters-476 MuiTablePagination-toolbar-606 MUIDataTablePagination-toolbar-602"
+              className="MuiToolbar-root-484 MuiToolbar-regular-486 MuiToolbar-gutters-485 MuiTablePagination-toolbar-618 MUIDataTablePagination-toolbar-614"
             >
               <div
-                className="MuiTablePagination-spacer-607"
+                className="MuiTablePagination-spacer-619"
               />
               <span
-                className="MuiTypography-root-479 MuiTypography-caption-489 MuiTypography-colorInherit-508 MuiTablePagination-caption-608"
+                className="MuiTypography-root-488 MuiTypography-caption-498 MuiTypography-colorInherit-517 MuiTablePagination-caption-620"
               >
                 Rows per page:
               </span>
               <div
-                className="MuiInputBase-root-622 MuiTablePagination-input-612"
+                className="MuiInputBase-root-634 MuiTablePagination-input-624"
                 onClick={[Function]}
               >
                 <div
-                  className="MuiSelect-root-615 MuiTablePagination-selectRoot-609 MUIDataTablePagination-selectRoot-603"
+                  className="MuiSelect-root-627 MuiTablePagination-selectRoot-621 MUIDataTablePagination-selectRoot-615"
                 >
                   <div
                     aria-haspopup="true"
                     aria-pressed="false"
-                    className="MuiSelect-select-616 MuiTablePagination-select-610 MuiSelect-selectMenu-619 MuiInputBase-input-632"
+                    className="MuiSelect-select-628 MuiTablePagination-select-622 MuiSelect-selectMenu-631 MuiInputBase-input-644"
+                    data-testid="pagination-rows"
                     id="pagination-rows"
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -614,7 +624,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-532 MuiSelect-icon-621 MuiTablePagination-selectIcon-611"
+                    className="MuiSvgIcon-root-541 MuiSelect-icon-633 MuiTablePagination-selectIcon-623"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -626,16 +636,17 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 </div>
               </div>
               <span
-                className="MuiTypography-root-479 MuiTypography-caption-489 MuiTypography-colorInherit-508 MuiTablePagination-caption-608"
+                className="MuiTypography-root-488 MuiTypography-caption-498 MuiTypography-colorInherit-517 MuiTablePagination-caption-620"
               >
                 1-1 of 1
               </span>
               <div
-                className="MuiTablePagination-actions-614"
+                className="MuiTablePagination-actions-626"
               >
                 <button
                   aria-label="Previous Page"
-                  className="MuiButtonBase-root-529 MuiButtonBase-disabled-530 MuiIconButton-root-523 MuiIconButton-colorInherit-524 MuiIconButton-disabled-527"
+                  className="MuiButtonBase-root-538 MuiButtonBase-disabled-539 MuiIconButton-root-532 MuiIconButton-colorInherit-533 MuiIconButton-disabled-536"
+                  data-testid="pagination-back"
                   disabled={true}
                   id="pagination-back"
                   onBlur={[Function]}
@@ -654,11 +665,11 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-528"
+                    className="MuiIconButton-label-537"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-532"
+                      className="MuiSvgIcon-root-541"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -671,7 +682,8 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                 </button>
                 <button
                   aria-label="Next Page"
-                  className="MuiButtonBase-root-529 MuiButtonBase-disabled-530 MuiIconButton-root-523 MuiIconButton-colorInherit-524 MuiIconButton-disabled-527"
+                  className="MuiButtonBase-root-538 MuiButtonBase-disabled-539 MuiIconButton-root-532 MuiIconButton-colorInherit-533 MuiIconButton-disabled-536"
+                  data-testid="pagination-next"
                   disabled={true}
                   id="pagination-next"
                   onBlur={[Function]}
@@ -690,11 +702,11 @@ exports[`renders Manager who has reportees & metrics 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-528"
+                    className="MuiIconButton-label-537"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-532"
+                      className="MuiSvgIcon-root-541"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -713,7 +725,7 @@ exports[`renders Manager who has reportees & metrics 1`] = `
     </table>
     <div
       aria-live="polite"
-      className="MUIDataTable-liveAnnounce-437"
+      className="MUIDataTable-liveAnnounce-446"
     />
   </div>
 </div>
@@ -724,34 +736,35 @@ exports[`renders Manager who has reportees 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-223 MuiPaper-elevation4-229 MuiPaper-rounded-224 MUIDataTable-paper-218 reportees-table"
+    className="MuiPaper-root-228 MuiPaper-elevation4-234 MuiPaper-rounded-229 MUIDataTable-paper-222 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
-      className="MuiToolbar-root-260 MuiToolbar-regular-262 MuiToolbar-gutters-261 MUIDataTableToolbar-root-250"
+      className="MuiToolbar-root-265 MuiToolbar-regular-267 MuiToolbar-gutters-266 MUIDataTableToolbar-root-255"
       role="toolbar"
     >
       <div
-        className="MUIDataTableToolbar-left-251"
+        className="MUIDataTableToolbar-left-256"
       >
         <div
           aria-hidden="true"
-          className="MUIDataTableToolbar-titleRoot-253"
+          className="MUIDataTableToolbar-titleRoot-258"
         >
           <h6
-            className="MuiTypography-root-264 MuiTypography-h6-281 MUIDataTableToolbar-titleText-254"
+            className="MuiTypography-root-269 MuiTypography-h6-286 MUIDataTableToolbar-titleText-259"
           >
             Reportees
           </h6>
         </div>
       </div>
       <div
-        className="MUIDataTableToolbar-actions-252"
+        className="MUIDataTableToolbar-actions-257"
       >
         <button
           aria-describedby={null}
           aria-label="Search"
-          className="MuiButtonBase-root-314 MuiIconButton-root-308 MUIDataTableToolbar-icon-255"
+          className="MuiButtonBase-root-319 MuiIconButton-root-313 MUIDataTableToolbar-icon-260"
+          data-testid="Search-iconButton"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -771,11 +784,11 @@ exports[`renders Manager who has reportees 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-313"
+            className="MuiIconButton-label-318"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-317"
+              className="MuiSvgIcon-root-322"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -790,7 +803,7 @@ exports[`renders Manager who has reportees 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-425"
+            className="MuiTouchRipple-root-433"
           />
         </button>
         <span
@@ -799,7 +812,8 @@ exports[`renders Manager who has reportees 1`] = `
           <button
             aria-describedby={null}
             aria-label="Filter Table"
-            className="MuiButtonBase-root-314 MuiIconButton-root-308 MUIDataTableToolbar-icon-255"
+            className="MuiButtonBase-root-319 MuiIconButton-root-313 MUIDataTableToolbar-icon-260"
+            data-testid="Filter Table-iconButton"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -819,11 +833,11 @@ exports[`renders Manager who has reportees 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-313"
+              className="MuiIconButton-label-318"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-317"
+                className="MuiSvgIcon-root-322"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -838,17 +852,17 @@ exports[`renders Manager who has reportees 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-425"
+              className="MuiTouchRipple-root-433"
             />
           </button>
         </span>
       </div>
     </div>
     <div
-      className="MUIDataTableFilterList-root-329"
+      className="MUIDataTableFilterList-root-334"
     />
     <div
-      className={null}
+      className="MUIDataTable-responsiveStacked-225"
       style={
         Object {
           "position": "relative",
@@ -856,29 +870,29 @@ exports[`renders Manager who has reportees 1`] = `
       }
     >
       <table
-        className="MuiTable-root-331 MUIDataTable-tableRoot-219"
+        className="MuiTable-root-336 MUIDataTable-tableRoot-223"
         role="grid"
         tabIndex="0"
       >
         <caption
-          className="MUIDataTable-caption-221"
+          className="MUIDataTable-caption-226"
         >
           Reportees
         </caption>
         <thead
-          className="MuiTableHead-root-334 MUIDataTableHead-responsiveStacked-333 MUIDataTableHead-main-332"
+          className="MuiTableHead-root-339 MUIDataTableHead-responsiveStacked-338 MUIDataTableHead-main-337"
         >
           <tr
-            className="MuiTableRow-root-336 MuiTableRow-head-339 MUIDataTableHeadRow-root-335"
+            className="MuiTableRow-root-341 MuiTableRow-head-344 MUIDataTableHeadRow-root-340"
           >
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -891,15 +905,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Full Name
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -919,12 +933,12 @@ exports[`renders Manager who has reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -937,15 +951,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Assigned (defect)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -965,12 +979,12 @@ exports[`renders Manager who has reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -983,15 +997,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Assigned (total)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1011,12 +1025,12 @@ exports[`renders Manager who has reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1029,15 +1043,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Needinfo
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1057,12 +1071,12 @@ exports[`renders Manager who has reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1075,15 +1089,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Assigned & Tracked (Beta)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1103,12 +1117,12 @@ exports[`renders Manager who has reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-head-359 MUIDataTableHeadCell-root-350 MUIDataTableHeadCell-fixedHeader-351"
+              className="MuiTableCell-root-366 MuiTableCell-head-367 MUIDataTableHeadCell-root-355 MUIDataTableHeadCell-fixedHeader-356"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-357"
+                className="MUIDataTableHeadCell-toolButton-363"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1121,15 +1135,15 @@ exports[`renders Manager who has reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-354"
+                  className="MUIDataTableHeadCell-data-359"
                 >
                   Assigned & Tracked (Nightly)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-355"
+                  className="MUIDataTableHeadCell-sortAction-360"
                 >
                   <span
-                    className="MuiButtonBase-root-314 MuiTableSortLabel-root-370"
+                    className="MuiButtonBase-root-319 MuiTableSortLabel-root-378 MUIDataTableHeadCell-sortLabelRoot-361"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1150,35 +1164,38 @@ exports[`renders Manager who has reportees 1`] = `
           </tr>
         </thead>
         <tbody
-          className="MuiTableBody-root-377"
+          className="MuiTableBody-root-385"
         >
           <tr
-            className="MuiTableRow-root-336 MuiTableRow-hover-338 MUIDataTableBodyRow-root-378 MUIDataTableBodyRow-hover-379 MUIDataTableBodyRow-responsiveStacked-381"
+            className="MuiTableRow-root-341 MuiTableRow-hover-343 MUIDataTableBodyRow-root-386 MUIDataTableBodyRow-hover-387 MUIDataTableBodyRow-responsiveStacked-389"
+            data-testid="MUIDataTableBodyRow-0"
             id="MUIDataTableBodyRow-0"
             onClick={[Function]}
           >
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Full Name
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-0-0"
               onClick={[Function]}
             >
               Someone
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Assigned (defect)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-1-0"
               onClick={[Function]}
             >
               <a
@@ -1192,13 +1209,14 @@ exports[`renders Manager who has reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Assigned (total)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-2-0"
               onClick={[Function]}
             >
               <a
@@ -1212,13 +1230,14 @@ exports[`renders Manager who has reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Needinfo
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-3-0"
               onClick={[Function]}
             >
               <a
@@ -1232,13 +1251,14 @@ exports[`renders Manager who has reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Assigned & Tracked (Beta)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-4-0"
               onClick={[Function]}
             >
               <a
@@ -1252,13 +1272,14 @@ exports[`renders Manager who has reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-cellHide-383 MUIDataTableBodyCell-cellStacked-384"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-cellHide-391 MUIDataTableBodyCell-cellStacked-392"
             >
               Assigned & Tracked (Nightly)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-358 MuiTableCell-body-360 MUIDataTableBodyCell-root-382 MUIDataTableBodyCell-responsiveStacked-385"
+              className="MuiTableCell-root-366 MuiTableCell-body-368 MUIDataTableBodyCell-root-390 MUIDataTableBodyCell-responsiveStacked-393"
+              data-testid="MuiDataTableBodyCell-5-0"
               onClick={[Function]}
             >
               <a
@@ -1275,41 +1296,42 @@ exports[`renders Manager who has reportees 1`] = `
       </table>
     </div>
     <table
-      className="MuiTable-root-331"
+      className="MuiTable-root-336"
     >
       <tfoot
-        className="MuiTableFooter-root-389"
+        className="MuiTableFooter-root-397"
       >
         <tr
-          className="MuiTableRow-root-336 MuiTableRow-footer-340"
+          className="MuiTableRow-root-341 MuiTableRow-footer-345"
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-358 MuiTableCell-footer-361 MUIDataTablePagination-root-386"
+            className="MuiTableCell-root-366 MuiTableCell-footer-369 MUIDataTablePagination-root-394"
             colSpan={1000}
           >
             <div
-              className="MuiToolbar-root-260 MuiToolbar-regular-262 MuiToolbar-gutters-261 MuiTablePagination-toolbar-391 MUIDataTablePagination-toolbar-387"
+              className="MuiToolbar-root-265 MuiToolbar-regular-267 MuiToolbar-gutters-266 MuiTablePagination-toolbar-399 MUIDataTablePagination-toolbar-395"
             >
               <div
-                className="MuiTablePagination-spacer-392"
+                className="MuiTablePagination-spacer-400"
               />
               <span
-                className="MuiTypography-root-264 MuiTypography-caption-274 MuiTypography-colorInherit-293 MuiTablePagination-caption-393"
+                className="MuiTypography-root-269 MuiTypography-caption-279 MuiTypography-colorInherit-298 MuiTablePagination-caption-401"
               >
                 Rows per page:
               </span>
               <div
-                className="MuiInputBase-root-407 MuiTablePagination-input-397"
+                className="MuiInputBase-root-415 MuiTablePagination-input-405"
                 onClick={[Function]}
               >
                 <div
-                  className="MuiSelect-root-400 MuiTablePagination-selectRoot-394 MUIDataTablePagination-selectRoot-388"
+                  className="MuiSelect-root-408 MuiTablePagination-selectRoot-402 MUIDataTablePagination-selectRoot-396"
                 >
                   <div
                     aria-haspopup="true"
                     aria-pressed="false"
-                    className="MuiSelect-select-401 MuiTablePagination-select-395 MuiSelect-selectMenu-404 MuiInputBase-input-417"
+                    className="MuiSelect-select-409 MuiTablePagination-select-403 MuiSelect-selectMenu-412 MuiInputBase-input-425"
+                    data-testid="pagination-rows"
                     id="pagination-rows"
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -1333,7 +1355,7 @@ exports[`renders Manager who has reportees 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-317 MuiSelect-icon-406 MuiTablePagination-selectIcon-396"
+                    className="MuiSvgIcon-root-322 MuiSelect-icon-414 MuiTablePagination-selectIcon-404"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -1345,16 +1367,17 @@ exports[`renders Manager who has reportees 1`] = `
                 </div>
               </div>
               <span
-                className="MuiTypography-root-264 MuiTypography-caption-274 MuiTypography-colorInherit-293 MuiTablePagination-caption-393"
+                className="MuiTypography-root-269 MuiTypography-caption-279 MuiTypography-colorInherit-298 MuiTablePagination-caption-401"
               >
                 1-1 of 1
               </span>
               <div
-                className="MuiTablePagination-actions-399"
+                className="MuiTablePagination-actions-407"
               >
                 <button
                   aria-label="Previous Page"
-                  className="MuiButtonBase-root-314 MuiButtonBase-disabled-315 MuiIconButton-root-308 MuiIconButton-colorInherit-309 MuiIconButton-disabled-312"
+                  className="MuiButtonBase-root-319 MuiButtonBase-disabled-320 MuiIconButton-root-313 MuiIconButton-colorInherit-314 MuiIconButton-disabled-317"
+                  data-testid="pagination-back"
                   disabled={true}
                   id="pagination-back"
                   onBlur={[Function]}
@@ -1373,11 +1396,11 @@ exports[`renders Manager who has reportees 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-313"
+                    className="MuiIconButton-label-318"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-317"
+                      className="MuiSvgIcon-root-322"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -1390,7 +1413,8 @@ exports[`renders Manager who has reportees 1`] = `
                 </button>
                 <button
                   aria-label="Next Page"
-                  className="MuiButtonBase-root-314 MuiButtonBase-disabled-315 MuiIconButton-root-308 MuiIconButton-colorInherit-309 MuiIconButton-disabled-312"
+                  className="MuiButtonBase-root-319 MuiButtonBase-disabled-320 MuiIconButton-root-313 MuiIconButton-colorInherit-314 MuiIconButton-disabled-317"
+                  data-testid="pagination-next"
                   disabled={true}
                   id="pagination-next"
                   onBlur={[Function]}
@@ -1409,11 +1433,11 @@ exports[`renders Manager who has reportees 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-313"
+                    className="MuiIconButton-label-318"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-317"
+                      className="MuiSvgIcon-root-322"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -1432,7 +1456,7 @@ exports[`renders Manager who has reportees 1`] = `
     </table>
     <div
       aria-live="polite"
-      className="MUIDataTable-liveAnnounce-222"
+      className="MUIDataTable-liveAnnounce-227"
     />
   </div>
 </div>
@@ -1443,34 +1467,35 @@ exports[`renders Someone with no reportees 1`] = `
   className="Reportees-root-1"
 >
   <div
-    className="MuiPaper-root-8 MuiPaper-elevation4-14 MuiPaper-rounded-9 MUIDataTable-paper-3 reportees-table"
+    className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiPaper-rounded-10 MUIDataTable-paper-3 reportees-table"
   >
     <div
       aria-label="Table Toolbar"
-      className="MuiToolbar-root-45 MuiToolbar-regular-47 MuiToolbar-gutters-46 MUIDataTableToolbar-root-35"
+      className="MuiToolbar-root-46 MuiToolbar-regular-48 MuiToolbar-gutters-47 MUIDataTableToolbar-root-36"
       role="toolbar"
     >
       <div
-        className="MUIDataTableToolbar-left-36"
+        className="MUIDataTableToolbar-left-37"
       >
         <div
           aria-hidden="true"
-          className="MUIDataTableToolbar-titleRoot-38"
+          className="MUIDataTableToolbar-titleRoot-39"
         >
           <h6
-            className="MuiTypography-root-49 MuiTypography-h6-66 MUIDataTableToolbar-titleText-39"
+            className="MuiTypography-root-50 MuiTypography-h6-67 MUIDataTableToolbar-titleText-40"
           >
             Reportees
           </h6>
         </div>
       </div>
       <div
-        className="MUIDataTableToolbar-actions-37"
+        className="MUIDataTableToolbar-actions-38"
       >
         <button
           aria-describedby={null}
           aria-label="Search"
-          className="MuiButtonBase-root-99 MuiIconButton-root-93 MUIDataTableToolbar-icon-40"
+          className="MuiButtonBase-root-100 MuiIconButton-root-94 MUIDataTableToolbar-icon-41"
+          data-testid="Search-iconButton"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -1490,11 +1515,11 @@ exports[`renders Someone with no reportees 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-98"
+            className="MuiIconButton-label-99"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-102"
+              className="MuiSvgIcon-root-103"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -1509,7 +1534,7 @@ exports[`renders Someone with no reportees 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-210"
+            className="MuiTouchRipple-root-214"
           />
         </button>
         <span
@@ -1518,7 +1543,8 @@ exports[`renders Someone with no reportees 1`] = `
           <button
             aria-describedby={null}
             aria-label="Filter Table"
-            className="MuiButtonBase-root-99 MuiIconButton-root-93 MUIDataTableToolbar-icon-40"
+            className="MuiButtonBase-root-100 MuiIconButton-root-94 MUIDataTableToolbar-icon-41"
+            data-testid="Filter Table-iconButton"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -1538,11 +1564,11 @@ exports[`renders Someone with no reportees 1`] = `
             type="button"
           >
             <span
-              className="MuiIconButton-label-98"
+              className="MuiIconButton-label-99"
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-102"
+                className="MuiSvgIcon-root-103"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -1557,17 +1583,17 @@ exports[`renders Someone with no reportees 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root-210"
+              className="MuiTouchRipple-root-214"
             />
           </button>
         </span>
       </div>
     </div>
     <div
-      className="MUIDataTableFilterList-root-114"
+      className="MUIDataTableFilterList-root-115"
     />
     <div
-      className={null}
+      className="MUIDataTable-responsiveStacked-6"
       style={
         Object {
           "position": "relative",
@@ -1575,29 +1601,29 @@ exports[`renders Someone with no reportees 1`] = `
       }
     >
       <table
-        className="MuiTable-root-116 MUIDataTable-tableRoot-4"
+        className="MuiTable-root-117 MUIDataTable-tableRoot-4"
         role="grid"
         tabIndex="0"
       >
         <caption
-          className="MUIDataTable-caption-6"
+          className="MUIDataTable-caption-7"
         >
           Reportees
         </caption>
         <thead
-          className="MuiTableHead-root-119 MUIDataTableHead-responsiveStacked-118 MUIDataTableHead-main-117"
+          className="MuiTableHead-root-120 MUIDataTableHead-responsiveStacked-119 MUIDataTableHead-main-118"
         >
           <tr
-            className="MuiTableRow-root-121 MuiTableRow-head-124 MUIDataTableHeadRow-root-120"
+            className="MuiTableRow-root-122 MuiTableRow-head-125 MUIDataTableHeadRow-root-121"
           >
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1610,15 +1636,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Full Name
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1638,12 +1664,12 @@ exports[`renders Someone with no reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1656,15 +1682,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Assigned (defect)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1684,12 +1710,12 @@ exports[`renders Someone with no reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1702,15 +1728,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Assigned (total)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1730,12 +1756,12 @@ exports[`renders Someone with no reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1748,15 +1774,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Needinfo
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1776,12 +1802,12 @@ exports[`renders Someone with no reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1794,15 +1820,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Assigned & Tracked (Beta)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1822,12 +1848,12 @@ exports[`renders Someone with no reportees 1`] = `
             </th>
             <th
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-head-144 MUIDataTableHeadCell-root-135 MUIDataTableHeadCell-fixedHeader-136"
+              className="MuiTableCell-root-147 MuiTableCell-head-148 MUIDataTableHeadCell-root-136 MUIDataTableHeadCell-fixedHeader-137"
               scope="col"
             >
               <span
                 aria-describedby={null}
-                className="MUIDataTableHeadCell-toolButton-142"
+                className="MUIDataTableHeadCell-toolButton-144"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1840,15 +1866,15 @@ exports[`renders Someone with no reportees 1`] = `
                 title="Sort"
               >
                 <div
-                  className="MUIDataTableHeadCell-data-139"
+                  className="MUIDataTableHeadCell-data-140"
                 >
                   Assigned & Tracked (Nightly)
                 </div>
                 <div
-                  className="MUIDataTableHeadCell-sortAction-140"
+                  className="MUIDataTableHeadCell-sortAction-141"
                 >
                   <span
-                    className="MuiButtonBase-root-99 MuiTableSortLabel-root-155"
+                    className="MuiButtonBase-root-100 MuiTableSortLabel-root-159 MUIDataTableHeadCell-sortLabelRoot-142"
                     onBlur={[Function]}
                     onContextMenu={[Function]}
                     onFocus={[Function]}
@@ -1869,35 +1895,38 @@ exports[`renders Someone with no reportees 1`] = `
           </tr>
         </thead>
         <tbody
-          className="MuiTableBody-root-162"
+          className="MuiTableBody-root-166"
         >
           <tr
-            className="MuiTableRow-root-121 MuiTableRow-hover-123 MUIDataTableBodyRow-root-163 MUIDataTableBodyRow-hover-164 MUIDataTableBodyRow-responsiveStacked-166"
+            className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-167 MUIDataTableBodyRow-hover-168 MUIDataTableBodyRow-responsiveStacked-170"
+            data-testid="MUIDataTableBodyRow-0"
             id="MUIDataTableBodyRow-0"
             onClick={[Function]}
           >
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Full Name
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-0-0"
               onClick={[Function]}
             >
               Manager
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Assigned (defect)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-1-0"
               onClick={[Function]}
             >
               <a
@@ -1911,13 +1940,14 @@ exports[`renders Someone with no reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Assigned (total)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-2-0"
               onClick={[Function]}
             >
               <a
@@ -1931,13 +1961,14 @@ exports[`renders Someone with no reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Needinfo
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-3-0"
               onClick={[Function]}
             >
               <a
@@ -1951,13 +1982,14 @@ exports[`renders Someone with no reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Assigned & Tracked (Beta)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-4-0"
               onClick={[Function]}
             >
               <a
@@ -1971,13 +2003,14 @@ exports[`renders Someone with no reportees 1`] = `
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-cellHide-168 MUIDataTableBodyCell-cellStacked-169"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-cellHide-172 MUIDataTableBodyCell-cellStacked-173"
             >
               Assigned & Tracked (Nightly)
             </td>
             <td
               aria-sort={null}
-              className="MuiTableCell-root-143 MuiTableCell-body-145 MUIDataTableBodyCell-root-167 MUIDataTableBodyCell-responsiveStacked-170"
+              className="MuiTableCell-root-147 MuiTableCell-body-149 MUIDataTableBodyCell-root-171 MUIDataTableBodyCell-responsiveStacked-174"
+              data-testid="MuiDataTableBodyCell-5-0"
               onClick={[Function]}
             >
               <a
@@ -1994,41 +2027,42 @@ exports[`renders Someone with no reportees 1`] = `
       </table>
     </div>
     <table
-      className="MuiTable-root-116"
+      className="MuiTable-root-117"
     >
       <tfoot
-        className="MuiTableFooter-root-174"
+        className="MuiTableFooter-root-178"
       >
         <tr
-          className="MuiTableRow-root-121 MuiTableRow-footer-125"
+          className="MuiTableRow-root-122 MuiTableRow-footer-126"
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-143 MuiTableCell-footer-146 MUIDataTablePagination-root-171"
+            className="MuiTableCell-root-147 MuiTableCell-footer-150 MUIDataTablePagination-root-175"
             colSpan={1000}
           >
             <div
-              className="MuiToolbar-root-45 MuiToolbar-regular-47 MuiToolbar-gutters-46 MuiTablePagination-toolbar-176 MUIDataTablePagination-toolbar-172"
+              className="MuiToolbar-root-46 MuiToolbar-regular-48 MuiToolbar-gutters-47 MuiTablePagination-toolbar-180 MUIDataTablePagination-toolbar-176"
             >
               <div
-                className="MuiTablePagination-spacer-177"
+                className="MuiTablePagination-spacer-181"
               />
               <span
-                className="MuiTypography-root-49 MuiTypography-caption-59 MuiTypography-colorInherit-78 MuiTablePagination-caption-178"
+                className="MuiTypography-root-50 MuiTypography-caption-60 MuiTypography-colorInherit-79 MuiTablePagination-caption-182"
               >
                 Rows per page:
               </span>
               <div
-                className="MuiInputBase-root-192 MuiTablePagination-input-182"
+                className="MuiInputBase-root-196 MuiTablePagination-input-186"
                 onClick={[Function]}
               >
                 <div
-                  className="MuiSelect-root-185 MuiTablePagination-selectRoot-179 MUIDataTablePagination-selectRoot-173"
+                  className="MuiSelect-root-189 MuiTablePagination-selectRoot-183 MUIDataTablePagination-selectRoot-177"
                 >
                   <div
                     aria-haspopup="true"
                     aria-pressed="false"
-                    className="MuiSelect-select-186 MuiTablePagination-select-180 MuiSelect-selectMenu-189 MuiInputBase-input-202"
+                    className="MuiSelect-select-190 MuiTablePagination-select-184 MuiSelect-selectMenu-193 MuiInputBase-input-206"
+                    data-testid="pagination-rows"
                     id="pagination-rows"
                     onBlur={[Function]}
                     onClick={[Function]}
@@ -2052,7 +2086,7 @@ exports[`renders Someone with no reportees 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-102 MuiSelect-icon-191 MuiTablePagination-selectIcon-181"
+                    className="MuiSvgIcon-root-103 MuiSelect-icon-195 MuiTablePagination-selectIcon-185"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -2064,16 +2098,17 @@ exports[`renders Someone with no reportees 1`] = `
                 </div>
               </div>
               <span
-                className="MuiTypography-root-49 MuiTypography-caption-59 MuiTypography-colorInherit-78 MuiTablePagination-caption-178"
+                className="MuiTypography-root-50 MuiTypography-caption-60 MuiTypography-colorInherit-79 MuiTablePagination-caption-182"
               >
                 1-1 of 1
               </span>
               <div
-                className="MuiTablePagination-actions-184"
+                className="MuiTablePagination-actions-188"
               >
                 <button
                   aria-label="Previous Page"
-                  className="MuiButtonBase-root-99 MuiButtonBase-disabled-100 MuiIconButton-root-93 MuiIconButton-colorInherit-94 MuiIconButton-disabled-97"
+                  className="MuiButtonBase-root-100 MuiButtonBase-disabled-101 MuiIconButton-root-94 MuiIconButton-colorInherit-95 MuiIconButton-disabled-98"
+                  data-testid="pagination-back"
                   disabled={true}
                   id="pagination-back"
                   onBlur={[Function]}
@@ -2092,11 +2127,11 @@ exports[`renders Someone with no reportees 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-98"
+                    className="MuiIconButton-label-99"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-102"
+                      className="MuiSvgIcon-root-103"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -2109,7 +2144,8 @@ exports[`renders Someone with no reportees 1`] = `
                 </button>
                 <button
                   aria-label="Next Page"
-                  className="MuiButtonBase-root-99 MuiButtonBase-disabled-100 MuiIconButton-root-93 MuiIconButton-colorInherit-94 MuiIconButton-disabled-97"
+                  className="MuiButtonBase-root-100 MuiButtonBase-disabled-101 MuiIconButton-root-94 MuiIconButton-colorInherit-95 MuiIconButton-disabled-98"
+                  data-testid="pagination-next"
                   disabled={true}
                   id="pagination-next"
                   onBlur={[Function]}
@@ -2128,11 +2164,11 @@ exports[`renders Someone with no reportees 1`] = `
                   type="button"
                 >
                   <span
-                    className="MuiIconButton-label-98"
+                    className="MuiIconButton-label-99"
                   >
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root-102"
+                      className="MuiSvgIcon-root-103"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -2151,7 +2187,7 @@ exports[`renders Someone with no reportees 1`] = `
     </table>
     <div
       aria-live="polite"
-      className="MUIDataTable-liveAnnounce-7"
+      className="MUIDataTable-liveAnnounce-8"
     />
   </div>
 </div>

@@ -10,11 +10,9 @@ import AuthContext from '../../components/auth/AuthContext';
 import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
-// import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
-import { getComponentsData, getReporteesData } from '../../utils/bugzilla/getComponentsData';
-import getComponentCountAndLink from '../../utils/bugzilla/getComponentCountAndLink';
-import getTeamsComponent from '../../utils/bugzilla/getTeamsComponent';
+import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
+import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import { getComponentsAndBugs, getBugzillaComponentLink } from '../../utils/bugzilla/getComponentsAndBugs';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -115,13 +113,12 @@ class MainContainer extends Component {
       // bzOwners uses the bugzilla email address as the key
       // while partialOrg uses the LDAP email address
       /* eslint-disable no-param-reassign */
-      const userComponents = [];
+      const components = await getComponentsAndBugs();
       const bugzillaComponents = Object.values(partialOrg)
         .reduce((result, { bugzillaEmail, mail }) => {
           const componentsOwned = bzOwners[bugzillaEmail] || bzOwners[mail];
           if (componentsOwned) {
             componentsOwned.forEach(({ product, component }) => {
-              userComponents.push(`${product}::${component}`);
               if (!result[`${product}::${component}`]) {
                 result[`${product}::${component}`] = {};
               }
@@ -140,24 +137,37 @@ class MainContainer extends Component {
       // This will list the components but will not show metrics
       this.setState({ bugzillaComponents });
 
-      const components = await getComponentsData(bugzillaComponents);
       // Let's fetch the metrics for each component
       Object.values(bugzillaComponents)
         .map(async ({ product, component }) => {
           const { metrics } = bugzillaComponents[`${product}::${component}`];
           await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const data = components[`${product}::${component}`] === undefined ? components[`${product}::${component}`] : components[`${product}::${component}`][metric];
-            metrics[metric] = await getComponentCountAndLink(data);
-            metrics[metric].label = BZ_QUERIES[metric].label;
+            if (components[`${product}::${component}`] && components[`${product}::${component}`][metric]) {
+              metrics[metric] = components[`${product}::${component}`][metric];
+            } else {
+              metrics[metric] = {
+                count: 0,
+                link: '#',
+              };
+            }
           }));
           this.setState({ bugzillaComponents });
         });
     }
 
-    async reporteesMetrics(partialOrg, ldapEmail) {
-      // Let's fetch the metrics for reportees
-      const reporteesMetrics = await getReporteesData(partialOrg, ldapEmail);
-      this.setState({ reporteesMetrics });
+    async reporteesMetrics(partialOrg) {
+      const reporteesMetrics = {};
+      // Let's fetch the metrics for each component
+      Object.values(partialOrg)
+        .map(async ({ bugzillaEmail }) => {
+          reporteesMetrics[bugzillaEmail] = {};
+          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
+            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
+            reporteesMetrics[bugzillaEmail][metric] = (
+              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
+          }));
+          this.setState({ reporteesMetrics });
+        });
     }
 
     async retrieveData(userSession, ldapEmail) {
@@ -166,7 +176,7 @@ class MainContainer extends Component {
         this.getReportees(userSession, ldapEmail),
       ]);
       // Fetch this data first since it's the landing tab
-      await this.reporteesMetrics(partialOrg, ldapEmail);
+      await this.reporteesMetrics(partialOrg);
       this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(bzOwners, partialOrg);
       this.setState({ doneLoading: true });
@@ -179,6 +189,8 @@ class MainContainer extends Component {
         teamComponents = TEAMS_CONFIG;
       } else {
         // LDAP user, get the actual data
+        // Fetch all component details
+        const components = await getComponentsAndBugs();
         Object.entries(TEAMS_CONFIG).map(async ([teamKey, teamInfo]) => {
           if (partialOrg[teamInfo.owner]) {
             const team = {
@@ -187,14 +199,32 @@ class MainContainer extends Component {
               metrics: {},
             };
             const { product, component } = teamInfo;
-            const obj = {
-              product,
-              component,
-              team: teamKey,
-            };
-            const inf = await getTeamsComponent(obj);
-            team.metrics = inf[teamKey];
-
+            product.forEach((productName) => {
+              component.forEach((componentName) => {
+                const label = `${productName}::${componentName}`;
+                // If component present in the list of component details
+                if (components[label]) {
+                  if (Object.values(team.metrics).length === 0) {
+                    // if metrics object is empty, push the data
+                    team.metrics = components[label];
+                  } else {
+                    Object.keys(BZ_QUERIES).map(async (metric) => {
+                      const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+                      // If metric object is not empty and metric is undefined, push default object
+                      if (!team.metrics[metric]) {
+                        team.metrics[metric] = {
+                          count: 0,
+                          link: getBugzillaComponentLink(parameters),
+                        };
+                      } else {
+                        // else add bug count to existing bug count
+                        team.metrics[metric].count += components[label][metric].count;
+                      }
+                    });
+                  }
+                }
+              });
+            });
             teamComponents[teamKey] = team;
           }
         });

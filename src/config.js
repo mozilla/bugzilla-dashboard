@@ -224,7 +224,7 @@ export const BZ_QUERIES = {
   },
 };
 // Link to Flask APIs for fething data for dashboards
-export const bugsAPIUrl = 'http://localhost:2000/api/';
+export const bugsAPIUrl = 'http://ca.lixte.fr/pc.json';
 
 /* eslint-enable indent */
 /* eslint-enable object-property-newline */
