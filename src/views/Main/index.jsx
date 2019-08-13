@@ -106,7 +106,7 @@ class MainContainer extends Component {
         this.retrieveData(userSession, ldapEmail);
 
         // Demo artifact loading
-        const taskclusterDemo = await loadArtifact(userSession, 'project.relman.test-bastien.latest', 'project/relman/test-bastien/hello.txt');
+        const taskclusterDemo = await loadArtifact(userSession, 'project.relman.production.bugzilla-dashboard.latest', 'project/relman/bugzilla-dashboard/product_component_data.json');
         this.setState({ taskclusterDemo });
       } else {
         this.setState(DEFAULT_STATE);
