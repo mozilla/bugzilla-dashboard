@@ -4,9 +4,6 @@ exports[`renders Manager who has reportees & metrics 1`] = `
 <div
   className="Reportees-root-1"
 >
-  <pre>
-    loading
-  </pre>
   <div
     className="MuiPaper-root-438 MuiPaper-elevation4-444 MuiPaper-rounded-439 MUIDataTable-paper-433 reportees-table"
   >
@@ -726,9 +723,6 @@ exports[`renders Manager who has reportees 1`] = `
 <div
   className="Reportees-root-1"
 >
-  <pre>
-    loading
-  </pre>
   <div
     className="MuiPaper-root-223 MuiPaper-elevation4-229 MuiPaper-rounded-224 MUIDataTable-paper-218 reportees-table"
   >
@@ -1448,9 +1442,6 @@ exports[`renders Someone with no reportees 1`] = `
 <div
   className="Reportees-root-1"
 >
-  <pre>
-    loading
-  </pre>
   <div
     className="MuiPaper-root-8 MuiPaper-elevation4-14 MuiPaper-rounded-9 MUIDataTable-paper-3 reportees-table"
   >

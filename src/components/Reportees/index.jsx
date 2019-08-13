@@ -11,11 +11,6 @@ const styles = {
 };
 
 class Reportees extends React.PureComponent {
-  getTaskclusterDemo() {
-    const { taskclusterDemo } = this.props;
-    return taskclusterDemo;
-  }
-
   getMergedProps() {
     const { metrics, partialOrg, ldapEmail } = this.props;
 
@@ -100,7 +95,6 @@ class Reportees extends React.PureComponent {
 
     return (
       <div className={classes.root}>
-        <pre>{this.getTaskclusterDemo()}</pre>
         <MuiThemeProvider theme={this.getMuiTheme()}>
           <MUIDataTable
             title="Reportees"
@@ -117,7 +111,6 @@ class Reportees extends React.PureComponent {
 Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   ldapEmail: PropTypes.string,
-  taskclusterDemo: PropTypes.string,
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),
 };
@@ -125,7 +118,6 @@ Reportees.propTypes = {
 Reportees.defaultProps = {
   metrics: {},
   ldapEmail: '',
-  taskclusterDemo: 'loading',
 };
 
 export default withStyles(styles)(Reportees);

@@ -11,7 +11,6 @@ import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import loadArtifact from '../../utils/artifacts';
 import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
@@ -94,7 +93,7 @@ class MainContainer extends Component {
       });
     };
 
-    async fetchData() {
+    fetchData() {
       const { context } = this;
       const userSession = context && context.getUserSession();
       if (userSession) {
@@ -104,10 +103,6 @@ class MainContainer extends Component {
         const ldapEmail = new URLSearchParams(location.search).get('ldapEmail') || (userSession && userSession.email);
         this.setState({ ldapEmail });
         this.retrieveData(userSession, ldapEmail);
-
-        // Demo artifact loading
-        const taskclusterDemo = await loadArtifact(userSession, 'project.relman.production.bugzilla-dashboard.latest', 'project/relman/bugzilla-dashboard/product_component_data.json');
-        this.setState({ taskclusterDemo });
       } else {
         this.setState(DEFAULT_STATE);
       }
@@ -242,7 +237,6 @@ class MainContainer extends Component {
         componentDetails,
         bugzillaComponents,
         ldapEmail,
-        taskclusterDemo,
         partialOrg,
         teamComponents,
         selectedTabIndex,
@@ -275,7 +269,6 @@ class MainContainer extends Component {
                     path="/reportees"
                     component={Reportees}
                     ldapEmail={ldapEmail}
-                    taskclusterDemo={taskclusterDemo}
                     partialOrg={partialOrg}
                     metrics={reporteesMetrics}
                   />
