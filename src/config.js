@@ -2,6 +2,7 @@ const loginCallbackRoute = '/callback';
 
 const config = {
   redirectRoute: loginCallbackRoute,
+  artifactRoute: 'project.relman.testing.bugzilla-dashboard.latest',
   taskclusterSecrets: {
     orgData: 'project/bugzilla-management-dashboard/realOrg',
   },
@@ -13,6 +14,7 @@ const config = {
     audience: process.env.ALTERNATIVE_AUTH ? '' : 'login.taskcluster.net',
     responseType: 'token id_token',
   },
+  productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
   reporteesMetrics: {
     assigned_defect: {
       label: 'Assigned (defect)',
@@ -110,7 +112,7 @@ export const TEAMS_CONFIG = {
 /* eslint-disable indent */
 /* eslint-disable object-property-newline */
 /* eslint-disable no-multi-spaces */
-export const BZ_QUERIES = {
+export const PRODUCT_COMPONENT = {
   P1Defect: {
       label: 'P1s defect',
       parameters: {

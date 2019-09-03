@@ -11,7 +11,7 @@ import LinkIcon from '@material-ui/icons/Link';
 
 import DetailView from '../DetailView';
 import BugzillaGraph from '../../containers/BugzillaGraph';
-import { BZ_QUERIES } from '../../config';
+import { PRODUCT_COMPONENT } from '../../config';
 
 const styles = ({
   subtitle: {
@@ -120,7 +120,7 @@ const BugzillaComponentDetails = ({
       }
 
       <BugzillaGraph
-        queries={constructQuery(BZ_QUERIES, product, component)}
+        queries={constructQuery(PRODUCT_COMPONENT, product, component)}
       />
     </div>
   </DetailView>

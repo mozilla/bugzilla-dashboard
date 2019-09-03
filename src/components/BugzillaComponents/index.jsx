@@ -5,7 +5,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
-import { BZ_QUERIES } from '../../config';
+import { PRODUCT_COMPONENT } from '../../config';
 import sort from '../../utils/bugzilla/sort';
 
 const styles = ({
@@ -150,7 +150,7 @@ const options = {
 
 /**
    * @description Add data according to the mui data-table
-   * @param {BZ_QUERIES} query The Static object to map
+   * @param {PRODUCT_COMPONENT} query The Static object to map
    * @param {Array} metrics Object sent by the server for each row
    * sent from {Function} getBugzillaComponentsData
    * @returns Array<metric | null>
@@ -177,7 +177,7 @@ const getBugzillaComponentsData = bugzillaComponents => bugzillaComponents
         metrics,
         teamKey,
       },
-    ].concat(BZqueryToDataCount(BZ_QUERIES, metrics))
+    ].concat(BZqueryToDataCount(PRODUCT_COMPONENT, metrics))
   ));
 
 const BugzillaComponents = ({
@@ -188,7 +188,7 @@ const BugzillaComponents = ({
       <MUIDataTable
         title={title}
         data={getBugzillaComponentsData(bugzillaComponents)}
-        columns={getTableHeaders(BZ_QUERIES, onComponentDetails)}
+        columns={getTableHeaders(PRODUCT_COMPONENT, onComponentDetails)}
         options={options}
       />
     </MuiThemeProvider>
