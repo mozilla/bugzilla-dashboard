@@ -11,7 +11,8 @@ import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import CONFIG, { TEAMS_CONFIG, BZ_QUERIES } from '../../config';
+import CONFIG, { TEAMS_CONFIG, PRODUCT_COMPONENT } from '../../config';
+import loadArtifact from '../../utils/artifacts';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
 const BugzillaComponentDetails = React.lazy(() => import('../../components/BugzillaComponentDetails'));
@@ -108,7 +109,7 @@ class MainContainer extends Component {
       }
     }
 
-    async bugzillaComponents(bzOwners, partialOrg) {
+    async bugzillaComponents(userSession, bzOwners, partialOrg) {
       // bzOwners uses the bugzilla email address as the key
       // while partialOrg uses the LDAP email address
       /* eslint-disable no-param-reassign */
@@ -117,12 +118,11 @@ class MainContainer extends Component {
           const componentsOwned = bzOwners[bugzillaEmail] || bzOwners[mail];
           if (componentsOwned) {
             componentsOwned.forEach(({ product, component }) => {
-              if (!result[`${product}::${component}`]) {
-                result[`${product}::${component}`] = {};
-              }
-              result[`${product}::${component}`] = {
-                label: `${product}::${component}`,
+              const prodComp = `${product}::${component}`;
+              result[prodComp] = {
+                label: prodComp,
                 bugzillaEmail: bugzillaEmail || mail,
+                // product/component are still used in BugzillaComponentDetails
                 product,
                 component,
                 metrics: {},
@@ -135,17 +135,25 @@ class MainContainer extends Component {
       // This will list the components but will not show metrics
       this.setState({ bugzillaComponents });
 
-      // Let's fetch the metrics for each component
-      Object.values(bugzillaComponents)
-        .map(async ({ product, component }) => {
-          const { metrics } = bugzillaComponents[`${product}::${component}`];
-          await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-            const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
-            metrics[metric] = await getBugsCountAndLink(parameters);
-            metrics[metric].label = BZ_QUERIES[metric].label;
-          }));
+      loadArtifact(
+        userSession,
+        CONFIG.artifactRoute,
+        CONFIG.productComponentMetrics,
+      ).then(
+        json => JSON.parse(json),
+      ).then(
+        (data) => {
+          Object.entries(bugzillaComponents)
+            .forEach(([prodComp, { metrics }]) => {
+              const stats = data[prodComp] || { prodComp: {} };
+              const metricz = metrics;
+              Object.keys(PRODUCT_COMPONENT).forEach((metric) => {
+                metricz[metric] = stats[metric] || { count: 0, link: '' };
+              });
+            });
           this.setState({ bugzillaComponents });
-        });
+        },
+      );
     }
 
     async reporteesMetrics(partialOrg) {
@@ -171,7 +179,7 @@ class MainContainer extends Component {
       // Fetch this data first since it's the landing tab
       await this.reporteesMetrics(partialOrg);
       this.teamsData(userSession, partialOrg);
-      this.bugzillaComponents(bzOwners, partialOrg);
+      this.bugzillaComponents(userSession, bzOwners, partialOrg);
       this.setState({ doneLoading: true });
     }
 
@@ -190,8 +198,8 @@ class MainContainer extends Component {
               metrics: {},
             };
             const { product, component } = teamInfo;
-            await Promise.all(Object.keys(BZ_QUERIES).map(async (metric) => {
-              const parameters = { product, component, ...BZ_QUERIES[metric].parameters };
+            await Promise.all(Object.keys(PRODUCT_COMPONENT).map(async (metric) => {
+              const parameters = { product, component, ...PRODUCT_COMPONENT[metric].parameters };
               team.metrics[metric] = await getBugsCountAndLink(parameters);
             }));
             teamComponents[teamKey] = team;
