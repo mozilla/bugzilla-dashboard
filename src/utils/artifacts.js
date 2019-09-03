@@ -20,7 +20,7 @@ async function loadArtifact(userSession, route, artifactName) {
   );
   const resp = await fetch(url);
 
-  return resp.text();
+  return resp.arrayBuffer();
 }
 
 export default loadArtifact;

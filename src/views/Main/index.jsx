@@ -1,3 +1,4 @@
+import pako from 'pako';
 import React, { Component, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
@@ -140,7 +141,10 @@ class MainContainer extends Component {
         CONFIG.artifactRoute,
         CONFIG.productComponentMetrics,
       ).then(
-        json => JSON.parse(json),
+        (jsonGz) => {
+          const json = pako.inflate(jsonGz, { to: 'string' });
+          return JSON.parse(json);
+        },
       ).then(
         (data) => {
           Object.entries(bugzillaComponents)

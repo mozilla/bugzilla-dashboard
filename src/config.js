@@ -14,7 +14,7 @@ const config = {
     audience: process.env.ALTERNATIVE_AUTH ? '' : 'login.taskcluster.net',
     responseType: 'token id_token',
   },
-  productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json',
+  productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
   reporteesMetrics: {
     assigned_defect: {
       label: 'Assigned (defect)',
