@@ -12,7 +12,7 @@ import Header from '../../components/Header';
 import getAllReportees from '../../utils/getAllReportees';
 import getBugzillaOwners from '../../utils/getBugzillaOwners';
 import getBugsCountAndLink from '../../utils/bugzilla/getBugsCountAndLink';
-import CONFIG, { TEAMS_CONFIG, PRODUCT_COMPONENT } from '../../config';
+import CONFIG, { REPORTEES_CONFIG, TEAMS_CONFIG, PRODUCT_COMPONENT } from '../../config';
 import loadArtifact from '../../utils/artifacts';
 
 const BugzillaComponents = React.lazy(() => import('../../components/BugzillaComponents'));
@@ -160,19 +160,32 @@ class MainContainer extends Component {
       );
     }
 
-    async reporteesMetrics(partialOrg) {
-      const reporteesMetrics = {};
-      // Let's fetch the metrics for each component
-      Object.values(partialOrg)
-        .map(async ({ bugzillaEmail }) => {
-          reporteesMetrics[bugzillaEmail] = {};
-          await Promise.all(Object.keys(CONFIG.reporteesMetrics).map(async (metric) => {
-            const { parameterGenerator } = CONFIG.reporteesMetrics[metric];
-            reporteesMetrics[bugzillaEmail][metric] = (
-              await getBugsCountAndLink(parameterGenerator(bugzillaEmail)));
-          }));
+    async reporteesMetrics(userSession, partialOrg) {
+      loadArtifact(
+        userSession,
+        CONFIG.artifactRoute,
+        CONFIG.reporteesMetrics,
+      ).then(
+        (jsonGz) => {
+          const json = pako.inflate(jsonGz, { to: 'string' });
+          return JSON.parse(json);
+        },
+      ).then(
+        (data) => {
+          const reporteesMetrics = {};
+          Object.values(partialOrg)
+            .forEach(({ bugzillaEmail }) => {
+              const stats = data[bugzillaEmail] || {};
+              Object.keys(REPORTEES_CONFIG).forEach((name) => {
+                if (!Object.prototype.hasOwnProperty.call(stats, name)) {
+                  stats[name] = { count: 0, link: '' };
+                }
+              });
+              reporteesMetrics[bugzillaEmail] = stats;
+            });
           this.setState({ reporteesMetrics });
-        });
+        },
+      );
     }
 
     async retrieveData(userSession, ldapEmail) {
@@ -181,7 +194,7 @@ class MainContainer extends Component {
         this.getReportees(userSession, ldapEmail),
       ]);
       // Fetch this data first since it's the landing tab
-      await this.reporteesMetrics(partialOrg);
+      await this.reporteesMetrics(userSession, partialOrg);
       this.teamsData(userSession, partialOrg);
       this.bugzillaComponents(userSession, bzOwners, partialOrg);
       this.setState({ doneLoading: true });
