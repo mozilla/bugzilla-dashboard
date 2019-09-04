@@ -6,7 +6,7 @@ import loadArtifact from '../../utils/artifacts';
 const data = await loadArtifact(
   userSession,
   'project.relman.production.bugzilla-dashboard.latest',
-  'project/relman/bugzilla-dashboard/XXXX.json'
+  'private/bugzilla-dashboard/XXXX.json'
 );
 */
 
