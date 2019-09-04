@@ -15,66 +15,28 @@ const config = {
     responseType: 'token id_token',
   },
   productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
-  reporteesMetrics: {
-    assigned_defect: {
-      label: 'Assigned (defect)',
-      // Max count of assigned defects - to highlight defects on Reportees dashboard
-      maxCount: 20,
-      parameterGenerator: mail => ({
-        email1: mail,
-        emailassigned_to1: '1',
-        emailtype1: 'exact',
-        resolution: '---',
-        bug_type: 'defect',
-      }),
-    },
-    assigned_total: {
-      label: 'Assigned (total)',
-      parameterGenerator: mail => ({
-        email1: mail,
-        emailassigned_to1: '1',
-        emailtype1: 'exact',
-        resolution: '---',
-      }),
-    },
-    needinfo: {
-      label: 'Needinfo',
-      // Max count of needinfo issues - to highlight defects on Reportees dashboard
-      maxCount: 10,
-      parameterGenerator: mail => ({
-        f1: 'requestees.login_name', o1: 'equals', v1: mail, f2: 'flagtypes.name', o2: 'substring', v2: 'needinfo?',
-      }),
-    },
-    assignedTrackedBeta: {
-      label: 'Assigned & Tracked (Beta)',
-      parameterGenerator: mail => ({
-        email1: mail,
-        emailassigned_to1: '1',
-        emailtype1: 'exact',
-        resolution: '---',
-        f1: 'cf_tracking_firefox_beta',
-        o1: 'anyexact',
-        v1: '+,blocking',
-        f2: 'cf_status_firefox_beta',
-        o2: 'equals',
-        v2: 'affected',
-      }),
-    },
-    assignedTrackedNightly: {
-      label: 'Assigned & Tracked (Nightly)',
-      parameterGenerator: mail => ({
-        email1: mail,
-        emailassigned_to1: '1',
-        emailtype1: 'exact',
-        resolution: '---',
-        f1: 'cf_tracking_firefox_nightly',
-        o1: 'anyexact',
-        v1: '+,blocking',
-        f2: 'cf_status_firefox_nightly',
-        o2: 'equals',
-        v2: 'affected',
-      }),
-    },
+  reporteesMetrics: 'project/relman/bugzilla-dashboard/reportee_data.json.gz',
+};
+
+export const REPORTEES_CONFIG = {
+  assigned_defect: {
+    label: 'Assigned (defect)',
+    // Max count of assigned defects - to highlight defects on Reportees dashboard
+    maxCount: 20,
+  },
+  assigned_total: {
+    label: 'Assigned (total)',
+  },
+  needinfo: {
+    label: 'Needinfo',
+    // Max count of needinfo issues - to highlight defects on Reportees dashboard
+    maxCount: 10,
+  },
+  assignedTrackedBeta: {
+    label: 'Assigned & Tracked (Beta)',
+  },
+  assignedTrackedNightly: {
+    label: 'Assigned & Tracked (Nightly)',
   },
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import MUIDataTable from 'mui-datatables';
-import CONFIG from '../../config';
+import { REPORTEES_CONFIG } from '../../config';
 import './index.css';
 import sort from '../../utils/bugzilla/sort';
 
@@ -56,7 +56,7 @@ class Reportees extends React.PureComponent {
       customSort: (data, index, order) => (data.sort((a, b) => sort(a.data, b.data, index, order))),
     };
 
-    const metricsAsArray = Object.entries(CONFIG.reporteesMetrics);
+    const metricsAsArray = Object.entries(REPORTEES_CONFIG);
 
     const tableHeader = [];
 
