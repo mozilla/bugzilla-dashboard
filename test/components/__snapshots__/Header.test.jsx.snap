@@ -30,7 +30,7 @@ exports[`renders the reportees tab 1`] = `
               aria-current={null}
               aria-selected={true}
               className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53 MuiTab-selected-56"
-              href="/reportees"
+              href="/reportees?ldapEmail=fbar@mozilla.com"
               onBlur={[Function]}
               onClick={[Function]}
               onContextMenu={[Function]}
@@ -104,7 +104,7 @@ exports[`renders the reportees tab 1`] = `
               aria-current={null}
               aria-selected={false}
               className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53"
-              href="/components"
+              href="/components?ldapEmail=fbar@mozilla.com"
               onBlur={[Function]}
               onClick={[Function]}
               onContextMenu={[Function]}

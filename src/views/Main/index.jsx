@@ -28,6 +28,7 @@ const DEFAULT_STATE = {
   selectedTabIndex: 0,
   reporteesMetrics: {},
   componentDetails: undefined,
+  ldapEmail: '',
 };
 
 const PATHNAME_TO_TAB_INDEX = {
@@ -263,6 +264,7 @@ class MainContainer extends Component {
           <Header
             selectedTabIndex={selectedTabIndex}
             handleTabChange={this.handleNavigateAndClear}
+            ldapEmail={ldapEmail}
           />
           <div className={classes.content}>
             {!userSession && <h3>Please sign in</h3>}

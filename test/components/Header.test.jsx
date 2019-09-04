@@ -10,6 +10,7 @@ it('renders the reportees tab', () => {
         <Header
           selectedTabIndex={0}
           handleTabChange={() => null}
+          ldapEmail="fbar@mozilla.com"
         />
       </Router>
     ))
