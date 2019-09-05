@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import MUIDataTable from 'mui-datatables';
 import { PRODUCT_COMPONENT } from '../../config';
+import './index.css';
 import sort from '../../utils/bugzilla/sort';
 
 const styles = ({
@@ -140,7 +141,7 @@ const options = {
   filter: false,
   selectableRows: false,
   sort: true,
-  responsive: 'scroll',
+  responsive: 'stacked',
   rowsPerPage: 25,
   download: false,
   print: false,
@@ -190,6 +191,7 @@ const BugzillaComponents = ({
         data={getBugzillaComponentsData(bugzillaComponents)}
         columns={getTableHeaders(PRODUCT_COMPONENT, onComponentDetails)}
         options={options}
+        className="components-table"
       />
     </MuiThemeProvider>
   )
