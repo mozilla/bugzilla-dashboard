@@ -23,7 +23,6 @@ const Header = ({
     <Toolbar className={classes.styledToolbar}>
       <Tabs value={selectedTabIndex} onChange={handleTabChange}>
         <Tab label="Reportees" component={NavLink} to={`reportees?ldapEmail=${ldapEmail}`} />
-        <Tab label="Teams" component={NavLink} to="teams" />
         <Tab label="Components" component={NavLink} to={`components?ldapEmail=${ldapEmail}`} />
       </Tabs>
       <CredentialsMenu />
