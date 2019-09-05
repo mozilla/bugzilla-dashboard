@@ -67,43 +67,6 @@ exports[`renders the reportees tab 1`] = `
               aria-current={null}
               aria-selected={false}
               className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53"
-              href="/teams"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="tab"
-              tabIndex="0"
-            >
-              <span
-                className="MuiTab-wrapper-59"
-              >
-                <span
-                  className="MuiTab-labelContainer-60"
-                >
-                  <span
-                    className="MuiTab-label-61"
-                  >
-                    Teams
-                  </span>
-                </span>
-              </span>
-              <span
-                className="MuiTouchRipple-root-96"
-              />
-            </a>
-            <a
-              aria-current={null}
-              aria-selected={false}
-              className="MuiButtonBase-root-63 MuiTab-root-51 MuiTab-textColorInherit-53"
               href="/components?ldapEmail=fbar@mozilla.com"
               onBlur={[Function]}
               onClick={[Function]}
