@@ -34,10 +34,6 @@ const styles = ({
     borderBottom: '1.3px solid #eee',
     padding: '4px 0',
   },
-  metricContentContainer: {
-    maxHeight: 190,
-    overflow: 'scroll',
-  },
   metricContainer: {
     padding: 0,
   },
@@ -94,7 +90,7 @@ const BugzillaComponentDetails = ({
         ? (
           <Card className={classes.card}>
             {bugzillaEmail && <h4 className={classes.metricHeader}>{bugzillaEmail}</h4>}
-            <CardContent className={classes.metricContentContainer}>
+            <CardContent>
               <List aria-label="Main mailbox folders">
                 {Object.keys(metrics).sort().map(metric => (
                   metrics[metric] && (

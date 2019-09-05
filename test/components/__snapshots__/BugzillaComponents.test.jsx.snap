@@ -2,7 +2,7 @@
 
 exports[`renders components 1`] = `
 <div
-  className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiPaper-rounded-10 MUIDataTable-paper-4"
+  className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiPaper-rounded-10 MUIDataTable-paper-4 components-table"
 >
   <div
     aria-label="Table Toolbar"
@@ -126,7 +126,7 @@ exports[`renders components 1`] = `
     className="MUIDataTableFilterList-root-115"
   />
   <div
-    className="MUIDataTable-responsiveScroll-6"
+    className={null}
     style={
       Object {
         "position": "relative",
@@ -144,7 +144,7 @@ exports[`renders components 1`] = `
         
       </caption>
       <thead
-        className="MuiTableHead-root-120 MUIDataTableHead-main-118"
+        className="MuiTableHead-root-120 MUIDataTableHead-responsiveStacked-119 MUIDataTableHead-main-118"
       >
         <tr
           className="MuiTableRow-root-122 MuiTableRow-head-125 MUIDataTableHeadRow-root-121"
@@ -431,19 +431,19 @@ exports[`renders components 1`] = `
         className="MuiTableBody-root-163"
       >
         <tr
-          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165"
+          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165 MUIDataTableBodyRow-responsiveStacked-167"
           id="MUIDataTableBodyRow-0"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -482,13 +482,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -507,13 +507,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -532,13 +532,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -557,13 +557,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -582,13 +582,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -607,19 +607,19 @@ exports[`renders components 1`] = `
           </td>
         </tr>
         <tr
-          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165"
+          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165 MUIDataTableBodyRow-responsiveStacked-167"
           id="MUIDataTableBodyRow-1"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -658,13 +658,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -683,13 +683,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -708,13 +708,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -733,13 +733,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -758,13 +758,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -783,19 +783,19 @@ exports[`renders components 1`] = `
           </td>
         </tr>
         <tr
-          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165"
+          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165 MUIDataTableBodyRow-responsiveStacked-167"
           id="MUIDataTableBodyRow-2"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -834,13 +834,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -859,13 +859,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -884,13 +884,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -909,13 +909,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -934,13 +934,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -959,19 +959,19 @@ exports[`renders components 1`] = `
           </td>
         </tr>
         <tr
-          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165"
+          className="MuiTableRow-root-122 MuiTableRow-hover-124 MUIDataTableBodyRow-root-164 MUIDataTableBodyRow-hover-165 MUIDataTableBodyRow-responsiveStacked-167"
           id="MUIDataTableBodyRow-3"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1010,13 +1010,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1035,13 +1035,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1060,13 +1060,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1085,13 +1085,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1110,13 +1110,13 @@ exports[`renders components 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-cellHide-169 MUIDataTableBodyCell-cellStacked-170"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168"
+            className="MuiTableCell-root-144 MuiTableCell-body-146 MUIDataTableBodyCell-root-168 MUIDataTableBodyCell-responsiveStacked-171"
             onClick={[Function]}
           >
             <a
@@ -1302,7 +1302,7 @@ exports[`renders components 1`] = `
 
 exports[`renders components bucketed as teams 1`] = `
 <div
-  className="MuiPaper-root-229 MuiPaper-elevation4-235 MuiPaper-rounded-230 MUIDataTable-paper-224"
+  className="MuiPaper-root-229 MuiPaper-elevation4-235 MuiPaper-rounded-230 MUIDataTable-paper-224 components-table"
 >
   <div
     aria-label="Table Toolbar"
@@ -1426,7 +1426,7 @@ exports[`renders components bucketed as teams 1`] = `
     className="MUIDataTableFilterList-root-335"
   />
   <div
-    className="MUIDataTable-responsiveScroll-226"
+    className={null}
     style={
       Object {
         "position": "relative",
@@ -1444,7 +1444,7 @@ exports[`renders components bucketed as teams 1`] = `
         
       </caption>
       <thead
-        className="MuiTableHead-root-340 MUIDataTableHead-main-338"
+        className="MuiTableHead-root-340 MUIDataTableHead-responsiveStacked-339 MUIDataTableHead-main-338"
       >
         <tr
           className="MuiTableRow-root-342 MuiTableRow-head-345 MUIDataTableHeadRow-root-341"
@@ -1731,19 +1731,19 @@ exports[`renders components bucketed as teams 1`] = `
         className="MuiTableBody-root-383"
       >
         <tr
-          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385"
+          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385 MUIDataTableBodyRow-responsiveStacked-387"
           id="MUIDataTableBodyRow-0"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1782,13 +1782,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1807,13 +1807,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1832,13 +1832,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1857,13 +1857,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1882,13 +1882,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1907,19 +1907,19 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
         </tr>
         <tr
-          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385"
+          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385 MUIDataTableBodyRow-responsiveStacked-387"
           id="MUIDataTableBodyRow-1"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1958,13 +1958,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -1983,13 +1983,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2008,13 +2008,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2033,13 +2033,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2058,13 +2058,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2083,19 +2083,19 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
         </tr>
         <tr
-          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385"
+          className="MuiTableRow-root-342 MuiTableRow-hover-344 MUIDataTableBodyRow-root-384 MUIDataTableBodyRow-hover-385 MUIDataTableBodyRow-responsiveStacked-387"
           id="MUIDataTableBodyRow-2"
           onClick={[Function]}
         >
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2134,13 +2134,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s defect
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2159,13 +2159,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2184,13 +2184,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s task
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2209,13 +2209,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             P1s enhancement
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a
@@ -2234,13 +2234,13 @@ exports[`renders components bucketed as teams 1`] = `
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-cellHide-389 MUIDataTableBodyCell-cellStacked-390"
           >
             sec-{critical, high}
           </td>
           <td
             aria-sort={null}
-            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388"
+            className="MuiTableCell-root-364 MuiTableCell-body-366 MUIDataTableBodyCell-root-388 MUIDataTableBodyCell-responsiveStacked-391"
             onClick={[Function]}
           >
             <a

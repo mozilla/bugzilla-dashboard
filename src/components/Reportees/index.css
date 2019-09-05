@@ -8,3 +8,7 @@
 .reportees-table th {
     text-align: center;
 }
+
+.reportees-table tr {
+    height: auto;
+}
