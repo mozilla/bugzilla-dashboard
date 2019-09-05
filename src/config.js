@@ -4,7 +4,7 @@ const config = {
   redirectRoute: loginCallbackRoute,
   artifactRoute: 'project.relman.testing.bugzilla-dashboard.latest',
   taskclusterSecrets: {
-    orgData: 'project/bugzilla-management-dashboard/realOrg',
+    orgData: 'project/relman/bugzilla-dashboard/realOrg',
   },
   auth0Options: {
     domain: process.env.ALTERNATIVE_AUTH ? 'mozilla-frontend-infra.auth0.com' : 'auth.mozilla.auth0.com',
