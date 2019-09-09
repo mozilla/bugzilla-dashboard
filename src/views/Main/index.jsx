@@ -33,8 +33,8 @@ const DEFAULT_STATE = {
 
 const PATHNAME_TO_TAB_INDEX = {
   '/reportees': 0,
-  '/teams': 1,
-  '/components': 2,
+  '/components': 1,
+  '/teams': 2,
 };
 
 const styles = ({

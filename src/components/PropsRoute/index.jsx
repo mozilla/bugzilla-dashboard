@@ -10,7 +10,10 @@ const PropsRoute = ({ component, ...props }) => (
 );
 
 PropsRoute.propTypes = {
-  component: PropTypes.string.isRequired,
+  component: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+  ]).isRequired,
 };
 
 export default PropsRoute;
