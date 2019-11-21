@@ -1,7 +1,7 @@
 import { OIDCCredentialAgent, Secrets, Index } from 'taskcluster-client-web';
 import { withRootUrl } from 'taskcluster-lib-urls';
 
-const urls = withRootUrl('https://taskcluster.net');
+const urls = withRootUrl('https://firefox-ci-tc.services.mozilla.com');
 /**
  * An object representing a user session.  Tools supports a variety of login methods,
  * so this combines them all in a single representation.
@@ -98,7 +98,7 @@ export default class UserSession {
     return JSON.stringify({ ...this, credentialAgent: undefined });
   }
 
-  getTaskClusterSecretsClient = () => new Secrets({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
+  getTaskClusterSecretsClient = () => new Secrets({ ...this.clientArgs, rootUrl: 'https://firefox-ci-tc.services.mozilla.com' });
 
-  getTaskClusterIndexClient = () => new Index({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
+  getTaskClusterIndexClient = () => new Index({ ...this.clientArgs, rootUrl: 'https://firefox-ci-tc.services.mozilla.com' });
 }

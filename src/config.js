@@ -11,7 +11,7 @@ const config = {
     clientID: process.env.ALTERNATIVE_AUTH ? 'nWIQUJ5lOiyYHgK4Jm5nPs5hM6JUizwt' : 'DGloMN2BXb0AC7lF5eRyOe1GXweqBAiI',
     redirectUri: new URL(loginCallbackRoute, window.location).href,
     scope: 'taskcluster-credentials full-user-credentials openid profile email',
-    audience: process.env.ALTERNATIVE_AUTH ? '' : 'login.taskcluster.net',
+    audience: process.env.ALTERNATIVE_AUTH ? '' : 'firefox-ci-tc.services.mozilla.com',
     responseType: 'token id_token',
   },
   productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
