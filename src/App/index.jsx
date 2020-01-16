@@ -16,8 +16,7 @@ import PropsRoute from '../components/PropsRoute';
 import AuthContext from '../components/auth/AuthContext';
 import AuthController from '../components/auth/AuthController';
 import NotFound from '../components/NotFound';
-import Auth0Login from '../views/Auth0Login';
-import config from '../config';
+import OAuth2Login from '../views/OAuth2Login';
 
 const styles = () => ({
   '@global': {
@@ -67,9 +66,15 @@ class App extends React.Component {
       this.handleUserSessionChanged,
     );
 
+    // Start the Oauth code exchange when it hass received as /?code=XXX
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('code') !== null) {
+      this.authController.exchangeCode(window.location.href);
+    }
+
     // we do not want to automatically load a user session on the login views; this is
     // a hack until they get an entry point of their own with no UI.
-    if (!window.location.pathname.startsWith(config.redirectRoute)) {
+    if (!window.location.pathname.startsWith('/login')) {
       this.authController.loadUserSession();
     } else {
       this.setState({ authReady: true });
@@ -91,8 +96,8 @@ class App extends React.Component {
                   <Redirect to="/reportees" />
                 </Route>
                 <PropsRoute
-                  path={config.redirectRoute}
-                  component={Auth0Login}
+                  path="/login"
+                  component={OAuth2Login}
                   setUserSession={this.authController.setUserSession}
                 />
                 <PropsRoute path="/" component={Main} />

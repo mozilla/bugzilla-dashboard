@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 import AuthContext from '../../components/auth/AuthContext';
-import config from '../../config';
 import ProfileMenu from '../ProfileMenu';
 
 const styles = theme => ({
@@ -21,7 +20,7 @@ class CredentialsMenu extends React.PureComponent {
   };
 
   static handleLoginRequest() {
-    const loginView = new URL(config.redirectRoute, window.location);
+    const loginView = new URL('/login', window.location);
     window.open(loginView, '_blank');
   }
 
