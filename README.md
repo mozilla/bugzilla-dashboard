@@ -101,7 +101,7 @@ The authentication configuration has the following characteristics:
 * There are two different Auth0 clients
   * An official one (SSO + LDAP) and the other for non-LDAP contributors
   * Non-LDAP users will receive fake org data
-* After a user authenticates, the auth will also authenticate with Taskcluster (`login.taskcluster.net`)
+* After a user authenticates, the auth will also authenticate with Firefox CI Taskcluster (`firefox-ci-tc.services.mozilla.com`)
   * This is in order to later fetch a Taskcluster secret (only available to LDAP users)
 
 ## Running & tests

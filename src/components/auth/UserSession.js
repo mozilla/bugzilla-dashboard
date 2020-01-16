@@ -1,7 +1,6 @@
-import { OIDCCredentialAgent, Secrets, Index } from 'taskcluster-client-web';
-import { withRootUrl } from 'taskcluster-lib-urls';
+import { Secrets, Index } from 'taskcluster-client-web';
+import { TASKCLUSTER_ROOT_URL } from '../../config';
 
-const urls = withRootUrl('https://taskcluster.net');
 /**
  * An object representing a user session.  Tools supports a variety of login methods,
  * so this combines them all in a single representation.
@@ -18,14 +17,6 @@ const urls = withRootUrl('https://taskcluster.net');
  * - renewAfter - date (Date or string) after which this session should be renewed,
  *                if applicable
  *
- * When type is 'oidc':
- *
- * - oidcProvider -- the provider (see taskcluster-login)
- * - accessToken -- the accessToken to pass to taskcluster-login
- * - fullName -- user's full name
- * - picture -- URL of an image of the user
- * - oidcSubject -- the 'sub' field of the id_token (useful for debugging user issues)
- *
  * When the type is 'credentials':
  *
  * - credentials -- the Taskcluster credentials (with or without a certificate)
@@ -36,21 +27,10 @@ const urls = withRootUrl('https://taskcluster.net');
 export default class UserSession {
   constructor(options) {
     Object.assign(this, options);
-
-    if (this.accessToken) {
-      this.credentialAgent = new OIDCCredentialAgent({
-        accessToken: this.accessToken,
-        url: urls.api('login', 'v1', `/oidc-credentials/${this.oidcProvider}`),
-      });
-    }
   }
 
   static fromCredentials(credentials) {
-    return new UserSession({ type: 'credentials', credentials });
-  }
-
-  static fromOIDC(options) {
-    return new UserSession({ type: 'oidc', ...options });
+    return new UserSession({ type: 'credentials', email: 'nobody@mozilla.org', credentials });
   }
 
   // determine whether the user changed from old to new; this is used by other components
@@ -78,9 +58,7 @@ export default class UserSession {
 
   // get the args used to create a new client object
   get clientArgs() {
-    return this.credentialAgent
-      ? { credentialAgent: this.credentialAgent }
-      : { credentials: this.credentials };
+    return { credentials: this.credentials };
   }
 
   // load Taskcluster credentials for this user
@@ -98,7 +76,13 @@ export default class UserSession {
     return JSON.stringify({ ...this, credentialAgent: undefined });
   }
 
-  getTaskClusterSecretsClient = () => new Secrets({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
+  getTaskClusterSecretsClient = () => new Secrets({
+    ...this.clientArgs,
+    rootUrl: TASKCLUSTER_ROOT_URL,
+  });
 
-  getTaskClusterIndexClient = () => new Index({ ...this.clientArgs, rootUrl: 'https://taskcluster.net' });
+  getTaskClusterIndexClient = () => new Index({
+    ...this.clientArgs,
+    rootUrl: TASKCLUSTER_ROOT_URL,
+  });
 }

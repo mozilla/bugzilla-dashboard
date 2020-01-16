@@ -1,7 +1,7 @@
 import mitt from 'mitt';
 import UserSession from './UserSession';
 
-import { renew as auth0Renew } from './auth0';
+import { userSessionFromCode, renew as auth0Renew } from './oauth2';
 
 /**
  * Controller for authentication-related pieces of the site.
@@ -51,6 +51,14 @@ export default class AuthController {
         this.renew({ userSession });
       }, timeout);
     }
+  }
+
+  /**
+   * Exchange Oauth Code received in URL callback
+   * and build a User Session from Taskcluster credentials
+   */
+  async exchangeCode(url) {
+    this.setUserSession(await userSessionFromCode(url));
   }
 
   /**

@@ -1,21 +1,24 @@
-const loginCallbackRoute = '/callback';
+const PRODUCTION = !(process.env.NODE_ENV === 'production');
+export const TASKCLUSTER_ROOT_URL = PRODUCTION ? 'https://firefox-ci-tc.services.mozilla.com' : 'https://stage.taskcluster.nonprod.cloudops.mozgcp.net';
 
 const config = {
-  redirectRoute: loginCallbackRoute,
-  artifactRoute: 'project.relman.testing.bugzilla-dashboard.latest',
+  artifactRoute: 'project.relman.production.bugzilla-dashboard.latest',
   taskclusterSecrets: {
     orgData: 'project/bugzilla-management-dashboard/realOrg',
   },
-  auth0Options: {
-    domain: process.env.ALTERNATIVE_AUTH ? 'mozilla-frontend-infra.auth0.com' : 'auth.mozilla.auth0.com',
-    clientID: process.env.ALTERNATIVE_AUTH ? 'nWIQUJ5lOiyYHgK4Jm5nPs5hM6JUizwt' : 'DGloMN2BXb0AC7lF5eRyOe1GXweqBAiI',
-    redirectUri: new URL(loginCallbackRoute, window.location).href,
-    scope: 'taskcluster-credentials full-user-credentials openid profile email',
-    audience: process.env.ALTERNATIVE_AUTH ? '' : 'login.taskcluster.net',
-    responseType: 'token id_token',
+  OAuth2Options: {
+    clientId: PRODUCTION ? 'bugzilla-dashboard-production' : 'bugzilla-dashboard-localdev',
+    scopes: ['queue:get-artifact:project/relman/bugzilla-dashboard/*'],
+    authorizationUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/authorize`,
+    accessTokenUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/token`,
+    credentialsUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/credentials`,
+    redirectUri: PRODUCTION ? 'https://bugzilla-management-dashboard.netlify.com' : 'http://localhost:5000',
+    whitelisted: true,
+    responseType: 'code',
+    maxExpires: '15 minutes',
   },
-  productComponentMetrics: 'private/bugzilla-dashboard/product_component_data.json.gz',
-  reporteesMetrics: 'private/bugzilla-dashboard/reportee_data.json.gz',
+  productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
+  reporteesMetrics: 'project/relman/bugzilla-dashboard/reportee_data.json.gz',
 };
 
 export const REPORTEES_CONFIG = {
