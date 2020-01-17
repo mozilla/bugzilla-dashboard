@@ -1,10 +1,10 @@
-const PRODUCTION = !(process.env.NODE_ENV === 'production');
+const PRODUCTION = process.env.NODE_ENV === 'production';
 export const TASKCLUSTER_ROOT_URL = PRODUCTION ? 'https://firefox-ci-tc.services.mozilla.com' : 'https://stage.taskcluster.nonprod.cloudops.mozgcp.net';
 
 const config = {
   artifactRoute: 'project.relman.production.bugzilla-dashboard.latest',
   taskclusterSecrets: {
-    orgData: 'project/bugzilla-management-dashboard/realOrg',
+    orgData: 'project/relman/bugzilla-dashboard/org',
   },
   OAuth2Options: {
     clientId: PRODUCTION ? 'bugzilla-dashboard-production' : 'bugzilla-dashboard-localdev',
