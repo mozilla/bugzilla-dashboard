@@ -1,4 +1,4 @@
-const PRODUCTION = !(process.env.NODE_ENV === 'production');
+const PRODUCTION = process.env.NODE_ENV === 'production';
 export const TASKCLUSTER_ROOT_URL = PRODUCTION ? 'https://firefox-ci-tc.services.mozilla.com' : 'https://stage.taskcluster.nonprod.cloudops.mozgcp.net';
 
 const config = {
