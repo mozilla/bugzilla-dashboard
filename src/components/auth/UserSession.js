@@ -1,4 +1,4 @@
-import { Secrets, Index } from 'taskcluster-client-web';
+import { Index } from 'taskcluster-client-web';
 import { TASKCLUSTER_ROOT_URL } from '../../config';
 
 /**
@@ -75,11 +75,6 @@ export default class UserSession {
   serialize() {
     return JSON.stringify({ ...this, credentialAgent: undefined });
   }
-
-  getTaskClusterSecretsClient = () => new Secrets({
-    ...this.clientArgs,
-    rootUrl: TASKCLUSTER_ROOT_URL,
-  });
 
   getTaskClusterIndexClient = () => new Index({
     ...this.clientArgs,

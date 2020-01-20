@@ -1,4 +1,6 @@
+import pako from 'pako';
 import config from '../config';
+import loadArtifact from './artifacts';
 
 const buildOrgChartData = (people) => {
   const org = {};
@@ -51,16 +53,11 @@ const findReportees = (completeOrg, email) => {
 };
 
 const getAllReportees = async (userSession, ldapEmail) => {
-  let people;
-  if (process.env.ALTERNATIVE_AUTH) {
-    // if non-LDAP user, get fake data
-    people = await (await fetch('people.json')).json();
-  } else {
-    // LDAP user, retrieve data from the taskcluster secret
-    const secretsClient = userSession.getTaskClusterSecretsClient();
-    const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
-    people = secret.employees;
-  }
+  const peopleGZ = await loadArtifact(userSession, config.artifactRoute, config.peopleTree);
+  const people = JSON.parse(pako.inflate(peopleGZ, { to: 'string' }));
+
+  console.log(people);
+
   const completeOrg = await buildOrgChartData(people);
   return findReportees(completeOrg, ldapEmail);
 };

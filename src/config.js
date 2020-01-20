@@ -1,11 +1,10 @@
 const PRODUCTION = process.env.NODE_ENV === 'production';
 export const TASKCLUSTER_ROOT_URL = PRODUCTION ? 'https://firefox-ci-tc.services.mozilla.com' : 'https://stage.taskcluster.nonprod.cloudops.mozgcp.net';
 
+const channel = PRODUCTION ? 'production' : 'testing';
+
 const config = {
-  artifactRoute: 'project.relman.production.bugzilla-dashboard.latest',
-  taskclusterSecrets: {
-    orgData: 'project/relman/bugzilla-dashboard/org',
-  },
+  artifactRoute: `project.relman.${channel}.bugzilla-dashboard.latest`,
   OAuth2Options: {
     clientId: PRODUCTION ? 'bugzilla-dashboard-production' : 'bugzilla-dashboard-localdev',
     scopes: ['queue:get-artifact:project/relman/bugzilla-dashboard/*'],
@@ -19,6 +18,7 @@ const config = {
   },
   productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
   reporteesMetrics: 'project/relman/bugzilla-dashboard/reportee_data.json.gz',
+  peopleTree: 'project/relman/bugzilla-dashboard/people.json.gz',
 };
 
 export const REPORTEES_CONFIG = {

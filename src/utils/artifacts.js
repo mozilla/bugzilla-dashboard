@@ -20,6 +20,10 @@ async function loadArtifact(userSession, route, artifactName) {
   );
   const resp = await fetch(url);
 
+  if (resp.status !== 200) {
+    throw new Error(`Failed to download artifact ${artifactName}`);
+  }
+
   return resp.arrayBuffer();
 }
 
