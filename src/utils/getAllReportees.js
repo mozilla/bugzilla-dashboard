@@ -1,68 +1,31 @@
+import pako from 'pako';
 import config from '../config';
+import loadArtifact from './artifacts';
 
-const buildOrgChartData = (people) => {
-  const org = {};
-  people.forEach((person) => {
-    const { mail } = person;
-    if (!org[mail]) {
-      org[mail] = person;
-      org[mail].reportees = [];
-    } else {
-      org[mail] = {
-        ...person,
-        reportees: org[mail].reportees,
-      };
+const findReportees = (org, parentId) => {
+  // Find all direct reportees of specified manager
+  const managerFilter = (acc, key) => {
+    if (org[key].manager !== parentId) {
+      return acc;
     }
-    const { manager } = person;
-    if (manager) {
-      const managerLDAPemail = manager.dn.split('mail=')[1].split(',o=')[0];
-      if (org[managerLDAPemail]) {
-        org[managerLDAPemail].reportees.push(mail);
-      } else {
-        org[managerLDAPemail] = {
-          reportees: [mail],
-        };
-      }
-    }
-    if (!org[mail].bugzillaEmail) {
-      org[mail].bugzillaEmail = mail;
-    }
-  });
-  return org;
-};
+    return { ...acc, [key]: org[key] };
+  };
+  let reportees = Object.keys(org).reduce(managerFilter, {});
 
-const findReportees = (completeOrg, email) => {
-  let allReportees = {};
-  // if non-LDAP user, replace user email by the last email in list. Last email
-  const allEmails = Object.keys(completeOrg);
-  const checkedEmail = (email in completeOrg) ? email : allEmails[allEmails.length - 1];
-
-  allReportees[email] = completeOrg[checkedEmail];
-  const { reportees } = completeOrg[checkedEmail];
-
-
+  // Add subordinates reportees too
   if (reportees.length !== 0) {
-    reportees.forEach((reporteeEmail) => {
-      const partialOrg = findReportees(completeOrg, reporteeEmail);
-      allReportees = { ...allReportees, ...partialOrg };
+    Object.keys(reportees).forEach((rId) => {
+      const subordinates = findReportees(org, rId);
+      reportees = { ...reportees, ...subordinates };
     });
   }
-  return allReportees;
+  return reportees;
 };
 
-const getAllReportees = async (userSession, ldapEmail) => {
-  let people;
-  if (process.env.ALTERNATIVE_AUTH) {
-    // if non-LDAP user, get fake data
-    people = await (await fetch('people.json')).json();
-  } else {
-    // LDAP user, retrieve data from the taskcluster secret
-    const secretsClient = userSession.getTaskClusterSecretsClient();
-    const { secret } = await await secretsClient.get(config.taskclusterSecrets.orgData);
-    people = secret.employees;
-  }
-  const completeOrg = await buildOrgChartData(people);
-  return findReportees(completeOrg, ldapEmail);
+const getAllReportees = async (userSession, userId) => {
+  const peopleGZ = await loadArtifact(userSession, config.artifactRoute, config.peopleTree);
+  const people = JSON.parse(pako.inflate(peopleGZ, { to: 'string' }));
+  return findReportees(people, userId || userSession.userId);
 };
 
 export default getAllReportees;

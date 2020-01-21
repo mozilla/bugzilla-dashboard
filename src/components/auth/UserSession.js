@@ -1,5 +1,7 @@
-import { Secrets, Index } from 'taskcluster-client-web';
+import { Index } from 'taskcluster-client-web';
 import { TASKCLUSTER_ROOT_URL } from '../../config';
+
+const USER_ID_REGEX = /mozilla-auth0\/([\w-|]+)\/bugzilla-dashboard-([\w-]+)/;
 
 /**
  * An object representing a user session.  Tools supports a variety of login methods,
@@ -56,6 +58,16 @@ export default class UserSession {
     );
   }
 
+  get userId() {
+    // Find the user ID in Taskcluster credentials
+    const match = USER_ID_REGEX.exec(this.credentials.clientId);
+    if (match === null) {
+      return this.credentials.clientId;
+    }
+
+    return match[1];
+  }
+
   // get the args used to create a new client object
   get clientArgs() {
     return { credentials: this.credentials };
@@ -75,11 +87,6 @@ export default class UserSession {
   serialize() {
     return JSON.stringify({ ...this, credentialAgent: undefined });
   }
-
-  getTaskClusterSecretsClient = () => new Secrets({
-    ...this.clientArgs,
-    rootUrl: TASKCLUSTER_ROOT_URL,
-  });
 
   getTaskClusterIndexClient = () => new Index({
     ...this.clientArgs,

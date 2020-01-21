@@ -12,11 +12,11 @@ const styles = {
 
 class Reportees extends React.PureComponent {
   getMergedProps() {
-    const { metrics, partialOrg, ldapEmail } = this.props;
+    const { metrics, partialOrg, userId } = this.props;
 
     // filter out the manager
     const reportees = Object.values(partialOrg)
-      .filter(({ mail }) => mail !== ldapEmail);
+      .filter(({ mail }) => mail !== userId);
 
     // add metrics
     const reporteesWithMetrics = reportees.map(reportee => ({
@@ -24,7 +24,7 @@ class Reportees extends React.PureComponent {
       ...metrics[reportee.bugzillaEmail],
     }));
     // Sort dataset in ascending order and return
-    return reporteesWithMetrics.sort((a, b) => a.cn.localeCompare(b.cn));
+    return reporteesWithMetrics.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // Custom styles to override default MUI theme
@@ -63,7 +63,7 @@ class Reportees extends React.PureComponent {
     // Form Table column headers using metricsArray
     // Add Full name directly into columns Heading array
     const firstColumn = {
-      name: 'cn',
+      name: 'name',
       label: 'Full Name',
     };
 
@@ -110,14 +110,14 @@ class Reportees extends React.PureComponent {
 }
 Reportees.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  ldapEmail: PropTypes.string,
+  userId: PropTypes.string,
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),
 };
 
 Reportees.defaultProps = {
   metrics: {},
-  ldapEmail: '',
+  userId: '',
 };
 
 export default withStyles(styles)(Reportees);
