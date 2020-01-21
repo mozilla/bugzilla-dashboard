@@ -1,6 +1,8 @@
 import { Index } from 'taskcluster-client-web';
 import { TASKCLUSTER_ROOT_URL } from '../../config';
 
+const USER_ID_REGEX = /mozilla-auth0\/([\w-|]+)\/bugzilla-dashboard-([\w-]+)/;
+
 /**
  * An object representing a user session.  Tools supports a variety of login methods,
  * so this combines them all in a single representation.
@@ -57,19 +59,13 @@ export default class UserSession {
   }
 
   get userId() {
-    let userId = this.credentials.clientId;
-
-    // Remove auth0 prefix
-    if (userId.startsWith('mozilla-auth0/')) {
-      userId = userId.substring(14);
+    // Find the user ID in Taskcluster credentials
+    const match = USER_ID_REGEX.exec(this.credentials.clientId);
+    if (match === null) {
+      return this.credentials.clientId;
     }
 
-    // Remove TC 3rd party suffix
-    const pos = userId.indexOf('/');
-    if (pos !== -1) {
-      userId = userId.substring(0, pos);
-    }
-    return userId;
+    return match[1];
   }
 
   // get the args used to create a new client object
