@@ -24,7 +24,7 @@ class Reportees extends React.PureComponent {
       ...metrics[reportee.bugzillaEmail],
     }));
     // Sort dataset in ascending order and return
-    return reporteesWithMetrics.sort((a, b) => a.cn.localeCompare(b.cn));
+    return reporteesWithMetrics.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // Custom styles to override default MUI theme
@@ -63,7 +63,7 @@ class Reportees extends React.PureComponent {
     // Form Table column headers using metricsArray
     // Add Full name directly into columns Heading array
     const firstColumn = {
-      name: 'cn',
+      name: 'name',
       label: 'Full Name',
     };
 
