@@ -56,6 +56,22 @@ export default class UserSession {
     );
   }
 
+  get userId() {
+    let userId = this.credentials.clientId;
+
+    // Remove auth0 prefix
+    if (userId.startsWith('mozilla-auth0/')) {
+      userId = userId.substring(14);
+    }
+
+    // Remove TC 3rd party suffix
+    const pos = userId.indexOf('/');
+    if (pos !== -1) {
+      userId = userId.substring(0, pos);
+    }
+    return userId;
+  }
+
   // get the args used to create a new client object
   get clientArgs() {
     return { credentials: this.credentials };

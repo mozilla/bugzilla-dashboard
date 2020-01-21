@@ -2,38 +2,16 @@ import pako from 'pako';
 import config from '../config';
 import loadArtifact from './artifacts';
 
-const buildOrgChartData = (people) => {
-  const org = {};
-  people.forEach((person) => {
-    const { mail } = person;
-    if (!org[mail]) {
-      org[mail] = person;
-      org[mail].reportees = [];
-    } else {
-      org[mail] = {
-        ...person,
-        reportees: org[mail].reportees,
-      };
+const findReportees = (org, userId) => {
+  console.log('Find all reportees of', userId);
+  const managerFilter = (acc, key) => {
+    if (org[key].manager !== userId) {
+      return acc;
     }
-    const { manager } = person;
-    if (manager) {
-      const managerLDAPemail = manager.dn.split('mail=')[1].split(',o=')[0];
-      if (org[managerLDAPemail]) {
-        org[managerLDAPemail].reportees.push(mail);
-      } else {
-        org[managerLDAPemail] = {
-          reportees: [mail],
-        };
-      }
-    }
-    if (!org[mail].bugzillaEmail) {
-      org[mail].bugzillaEmail = mail;
-    }
-  });
-  return org;
-};
-
-const findReportees = (completeOrg, email) => {
+    return { ...acc, [key]: org[key] };
+  };
+  return Object.keys(org).reduce(managerFilter, {});
+/*
   let allReportees = {};
   // if non-LDAP user, replace user email by the last email in list. Last email
   const allEmails = Object.keys(completeOrg);
@@ -50,16 +28,14 @@ const findReportees = (completeOrg, email) => {
     });
   }
   return allReportees;
+*/
 };
 
-const getAllReportees = async (userSession, ldapEmail) => {
+const getAllReportees = async (userSession, userId) => {
   const peopleGZ = await loadArtifact(userSession, config.artifactRoute, config.peopleTree);
   const people = JSON.parse(pako.inflate(peopleGZ, { to: 'string' }));
 
-  console.log(people);
-
-  const completeOrg = await buildOrgChartData(people);
-  return findReportees(completeOrg, ldapEmail);
+  return findReportees(people, userId || userSession.userId);
 };
 
 export default getAllReportees;

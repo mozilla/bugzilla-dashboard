@@ -17,13 +17,13 @@ const styles = theme => ({
 });
 
 const Header = ({
-  classes, selectedTabIndex, handleTabChange, ldapEmail,
+  classes, selectedTabIndex, handleTabChange, userId,
 }) => (
   <AppBar position="static">
     <Toolbar className={classes.styledToolbar}>
       <Tabs value={selectedTabIndex} onChange={handleTabChange}>
-        <Tab label="Reportees" component={NavLink} to={`reportees?ldapEmail=${ldapEmail}`} />
-        <Tab label="Components" component={NavLink} to={`components?ldapEmail=${ldapEmail}`} />
+        <Tab label="Reportees" component={NavLink} to={`reportees?userId=${userId}`} />
+        <Tab label="Components" component={NavLink} to={`components?userId=${userId}`} />
       </Tabs>
       <CredentialsMenu />
     </Toolbar>
@@ -34,7 +34,7 @@ Header.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   selectedTabIndex: PropTypes.number.isRequired,
   handleTabChange: PropTypes.func.isRequired,
-  ldapEmail: PropTypes.string.isRequired,
+  userId: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(Header);

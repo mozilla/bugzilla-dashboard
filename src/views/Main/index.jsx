@@ -28,7 +28,7 @@ const DEFAULT_STATE = {
   selectedTabIndex: 0,
   reporteesMetrics: {},
   componentDetails: undefined,
-  ldapEmail: '',
+  userId: '',
 };
 
 const PATHNAME_TO_TAB_INDEX = {
@@ -79,8 +79,8 @@ class MainContainer extends Component {
       }
     }
 
-    async getReportees(userSession, ldapEmail) {
-      const partialOrg = await getAllReportees(userSession, ldapEmail);
+    async getReportees(userSession, userId) {
+      const partialOrg = await getAllReportees(userSession, userId);
       this.setState({ partialOrg });
       return partialOrg;
     }
@@ -103,9 +103,9 @@ class MainContainer extends Component {
         // We show the spinner after having signed in
         this.setState({ doneLoading: false });
         const { location } = this.props;
-        const ldapEmail = new URLSearchParams(location.search).get('ldapEmail') || (userSession && userSession.email);
-        this.setState({ ldapEmail });
-        this.retrieveData(userSession, ldapEmail);
+        const userId = new URLSearchParams(location.search).get('userId') || userSession.userId;
+        this.setState({ userId });
+        this.retrieveData(userSession, userId);
       } else {
         this.setState(DEFAULT_STATE);
       }
@@ -189,10 +189,10 @@ class MainContainer extends Component {
       );
     }
 
-    async retrieveData(userSession, ldapEmail) {
+    async retrieveData(userSession, userId) {
       const [bzOwners, partialOrg] = await Promise.all([
         getBugzillaOwners(),
-        this.getReportees(userSession, ldapEmail),
+        this.getReportees(userSession, userId),
       ]);
       // Fetch this data first since it's the landing tab
       await this.reporteesMetrics(userSession, partialOrg);
@@ -262,7 +262,7 @@ class MainContainer extends Component {
         doneLoading,
         componentDetails,
         bugzillaComponents,
-        ldapEmail,
+        userId,
         partialOrg,
         teamComponents,
         selectedTabIndex,
@@ -275,9 +275,9 @@ class MainContainer extends Component {
       return (
         <div>
           <Header
+            userId={userId}
             selectedTabIndex={selectedTabIndex}
             handleTabChange={this.handleNavigateAndClear}
-            ldapEmail={ldapEmail}
           />
           <div className={classes.content}>
             {!userSession && <h3>Please sign in</h3>}
@@ -295,7 +295,7 @@ class MainContainer extends Component {
                   <PropsRoute
                     path="/reportees"
                     component={Reportees}
-                    ldapEmail={ldapEmail}
+                    userId={userId}
                     partialOrg={partialOrg}
                     metrics={reporteesMetrics}
                   />
