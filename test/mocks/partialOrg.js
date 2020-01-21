@@ -1,15 +1,13 @@
 const partialOrg = {
   'someone@mozilla.com': {
     bugzillaEmail: 'someone@mozilla.com',
-    cn: 'Someone',
+    name: 'Someone',
     mail: 'someone@mozilla.com',
-    manager: {
-      dn: 'mail=manager@mozilla.com,o=com,dc=mozilla',
-    },
+    manager: 'manager@mozilla.com',
   },
   'manager@mozilla.com': {
     bugzillaEmail: 'someone@mozilla.com',
-    cn: 'Manager',
+    name: 'Manager',
     mail: 'manager@mozilla.com',
     manager: null,
   },

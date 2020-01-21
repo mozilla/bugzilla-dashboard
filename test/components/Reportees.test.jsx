@@ -7,7 +7,7 @@ it('renders Someone with no reportees', () => {
   const tree = renderer
     .create((
       <Reportees
-        ldapEmail="someone@mozilla.com"
+        userId="someone@mozilla.com"
         partialOrg={partialOrg}
       />
     ))
@@ -19,7 +19,7 @@ it('renders Manager who has reportees', () => {
   const tree = renderer
     .create((
       <Reportees
-        ldapEmail="manager@mozilla.com"
+        userId="manager@mozilla.com"
         partialOrg={partialOrg}
       />
     ))
@@ -31,7 +31,7 @@ it('renders Manager who has reportees & metrics', () => {
   const tree = renderer
     .create((
       <Reportees
-        ldapEmail="manager@mozilla.com"
+        userId="manager@mozilla.com"
         partialOrg={partialOrg}
         metrics={{
           'someone@mozilla.com': {
