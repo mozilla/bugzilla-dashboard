@@ -27,37 +27,14 @@ const styles = () => ({
   },
 });
 
-class App extends React.Component {
-  static propTypes = {
-    classes: PropTypes.shape({}).isRequired,
-  };
 
+class App extends React.Component {
   state = {
     authReady: false,
     error: undefined,
   };
 
   authController = new AuthController();
-
-  componentWillUnmount() {
-    this.authController.removeListener(
-      'user-session-changed',
-      this.handleUserSessionChanged,
-    );
-  }
-
-  handleUserSessionChanged = (userSession) => {
-    // Consider auth "ready" when we have no userSession, a userSession with no
-    // renewAfter, or a renewAfter that is not in the past.  Once auth is
-    // ready, it never becomes non-ready again.
-    const { authReady } = this.state;
-    if (!authReady) {
-      const newState = !userSession
-        || !userSession.renewAfter
-        || new Date(userSession.renewAfter) > new Date();
-      this.setState({ authReady: newState });
-    }
-  };
 
   // eslint-disable-next-line camelcase
   UNSAFE_componentWillMount() {
@@ -81,6 +58,25 @@ class App extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.authController.removeListener(
+      'user-session-changed',
+      this.handleUserSessionChanged,
+    );
+  }
+
+  handleUserSessionChanged = (userSession) => {
+    // Consider auth "ready" when we have no userSession, a userSession with no
+    // renewAfter, or a renewAfter that is not in the past.  Once auth is
+    // ready, it never becomes non-ready again.
+    const { authReady } = this.state;
+    if (!authReady) {
+      const newState = !userSession
+        || !userSession.renewAfter
+        || new Date(userSession.renewAfter) > new Date();
+      this.setState({ authReady: newState });
+    }
+  };
 
   render() {
     const { authReady, error } = this.state;
@@ -113,4 +109,7 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+};
 export default hot(module)(withStyles(styles)(App));

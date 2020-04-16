@@ -21,8 +21,8 @@ const DrilldownIcon = ({
   <div
     className={classes.svgWrapper}
     name={name}
-    onKeyPress={e => onChange(e, properties)}
-    onClick={e => onChange(e, properties)}
+    onKeyPress={(e) => onChange(e, properties)}
+    onClick={(e) => onChange(e, properties)}
     role="button"
     tabIndex="0"
   >
@@ -31,7 +31,10 @@ const DrilldownIcon = ({
 );
 
 DrilldownIcon.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    svgWrapper: PropTypes.isRequired,
+    icon: PropTypes.isRequired,
+  }).isRequired,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   properties: PropTypes.shape({}).isRequired,

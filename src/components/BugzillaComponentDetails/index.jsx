@@ -79,7 +79,8 @@ const constructQuery = (metrics, product, component) => Object.values(metrics).m
   };
 });
 
-const ListItemLink = props => <ListItem button component="a" {...props} />;
+/* eslint-disable-next-line react/jsx-props-no-spreading */
+const ListItemLink = (props) => <ListItem button component="a" {...props} />;
 
 const BugzillaComponentDetails = ({
   classes, bugzillaEmail, product, component, title, metrics = {}, onGoBack,
@@ -92,7 +93,7 @@ const BugzillaComponentDetails = ({
             {bugzillaEmail && <h4 className={classes.metricHeader}>{bugzillaEmail}</h4>}
             <CardContent>
               <List aria-label="Main mailbox folders">
-                {Object.keys(metrics).sort().map(metric => (
+                {Object.keys(metrics).sort().map((metric) => (
                   metrics[metric] && (
                   <ListItem className={classes.metricContainer} key={metric}>
                     <p className={classes.metricLabel}>{metric}</p>
@@ -112,8 +113,7 @@ const BugzillaComponentDetails = ({
             </CardContent>
           </Card>
         )
-        : null
-      }
+        : null}
 
       <BugzillaGraph
         queries={constructQuery(PRODUCT_COMPONENT, product, component)}
@@ -123,7 +123,16 @@ const BugzillaComponentDetails = ({
 );
 
 BugzillaComponentDetails.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    card: PropTypes.shape({}),
+    metricButton: PropTypes.shape({}),
+    metricCardGraphContainer: PropTypes.shape({}),
+    metricContainer: PropTypes.shape({}),
+    metricCounter: PropTypes.shape({}),
+    metricHeader: PropTypes.shape({}),
+    metricLabel: PropTypes.shape({}),
+    metricLink: PropTypes.shape({}),
+  }).isRequired,
   bugzillaEmail: PropTypes.string,
   product: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),

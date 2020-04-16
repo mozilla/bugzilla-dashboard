@@ -33,7 +33,11 @@ const DetailView = ({
 );
 
 DetailView.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    root: PropTypes.isRequired,
+    mainContentContainer: PropTypes.isRequired,
+  }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

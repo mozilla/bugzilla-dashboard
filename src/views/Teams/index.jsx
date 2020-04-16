@@ -9,8 +9,9 @@ const styles = {
   },
 };
 
+/* eslint-disable react/jsx-props-no-spreading */
 const Teams = ({ classes, ...rest }) => (
-  <React.Fragment>
+  <>
     <div className={classes.message}>
       <span>The team view allows to group components to create a project view.</span>
       <br />
@@ -18,7 +19,7 @@ const Teams = ({ classes, ...rest }) => (
       <a href="https://github.com/mozilla/bugzilla-dashboard#generate-data">these instructions</a>
     </div>
     <BugzillaComponents {...rest} />
-  </React.Fragment>
+  </>
 );
 
 Teams.propTypes = {

@@ -19,7 +19,7 @@ class Reportees extends React.PureComponent {
       .filter(({ mail }) => mail !== userId);
 
     // add metrics
-    const reporteesWithMetrics = reportees.map(reportee => ({
+    const reporteesWithMetrics = reportees.map((reportee) => ({
       ...reportee,
       ...metrics[reportee.bugzillaEmail],
     }));
@@ -76,7 +76,7 @@ class Reportees extends React.PureComponent {
         label,
         options: {
           filter: false,
-          customBodyRender: value => (
+          customBodyRender: (value) => (
             <a
               href={value !== undefined ? value.link : '#'}
               target="_blank"
@@ -109,7 +109,9 @@ class Reportees extends React.PureComponent {
   }
 }
 Reportees.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    root: PropTypes.shape({}),
+  }).isRequired,
   userId: PropTypes.string,
   partialOrg: PropTypes.shape({}).isRequired,
   metrics: PropTypes.shape({}),

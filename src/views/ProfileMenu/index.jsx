@@ -15,8 +15,6 @@ const styles = ({
 });
 
 class ProfileMenu extends React.Component {
-    static contextType = AuthContext;
-
     state = {
       anchorEl: null,
     };
@@ -82,7 +80,11 @@ class ProfileMenu extends React.Component {
 }
 
 ProfileMenu.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    avatar: PropTypes.isRequired,
+  }).isRequired,
 };
+
+ProfileMenu.contextType = AuthContext;
 
 export default withStyles(styles)(ProfileMenu);

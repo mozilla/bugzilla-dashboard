@@ -6,9 +6,9 @@ import COLORS from '../chartJs/colors';
 /* eslint-disable camelcase */
 // Count bugs created/closed each week
 // startDate allow us to group bugs older than such date
-const bugsGroupedByWeek = bugs => (
+const bugsGroupedByWeek = (bugs) => (
   bugs.reduce((result, { creation_time, cf_last_resolved }) => {
-    const newResult = Object.assign({}, result);
+    const newResult = { ...result };
     const createdDate = toDayOfWeek(creation_time);
     if (!newResult[createdDate]) {
       newResult[createdDate] = 0;

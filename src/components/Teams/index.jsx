@@ -22,7 +22,10 @@ const Teams = ({ classes, teams }) => (
 );
 
 Teams.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    root: PropTypes.isRequired,
+    header: PropTypes.isRequired,
+  }).isRequired,
   teams: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
   })).isRequired,

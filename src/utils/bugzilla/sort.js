@@ -3,7 +3,7 @@
   * @param {String} order asc or dsc
   * @returns {Number} 1 || -1
   */
-const ascDescSortFunc = order => (order === 'desc' ? 1 : -1);
+const ascDescSortFunc = (order) => (order === 'desc' ? 1 : -1);
 
 /**
  * @description checks falsy values and sorts each item from array accordingly

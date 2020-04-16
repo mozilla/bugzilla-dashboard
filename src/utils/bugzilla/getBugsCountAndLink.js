@@ -2,7 +2,7 @@ import { stringify } from 'query-string';
 import settings from './settings';
 import queryBugzilla from './queryBugzilla';
 
-const getBugzillaComponentLink = queryParameters => (
+const getBugzillaComponentLink = (queryParameters) => (
   `${settings.BZ_HOST}/buglist.cgi?${stringify(queryParameters)}`);
 
 /* eslint-disable camelcase */
