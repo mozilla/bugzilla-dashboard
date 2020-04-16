@@ -11,7 +11,7 @@ const config = {
     authorizationUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/authorize`,
     accessTokenUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/token`,
     credentialsUri: `${TASKCLUSTER_ROOT_URL}/login/oauth/credentials`,
-    redirectUri: PRODUCTION ? 'https://bugzilla-management-dashboard.netlify.com' : 'http://localhost:5000',
+    redirectUri: PRODUCTION ? 'https://bugzilla-management-dashboard.netlify.app' : 'http://localhost:5000',
     whitelisted: true,
     responseType: 'code',
     maxExpires: '15 minutes',
