@@ -32,7 +32,7 @@ const Header = ({
 
 Header.propTypes = {
   classes: PropTypes.shape({
-    styledToolbar: PropTypes.shape({}).isRequired,
+    styledToolbar: PropTypes.string.isRequired,
   }).isRequired,
   selectedTabIndex: PropTypes.number.isRequired,
   handleTabChange: PropTypes.func.isRequired,
