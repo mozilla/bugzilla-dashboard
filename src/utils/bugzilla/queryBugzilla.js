@@ -6,9 +6,9 @@ const TRANSFORM_FIELD = {
   chfieldfrom: 'creation_time',
 };
 
-const advancedSearchToRestApi = parameters => (
+const advancedSearchToRestApi = (parameters) => (
   Object.keys(parameters).reduce((result, key) => {
-    const newResult = Object.assign({}, result);
+    const newResult = { ...result };
     const newKey = TRANSFORM_FIELD[key] || key;
     newResult[newKey] = parameters[key];
     return newResult;
@@ -27,7 +27,7 @@ const generateBugzillaRestApiUrl = (queryParameters) => {
   return `${settings.BZ_HOST}/rest/bug?${query}`;
 };
 
-const queryBugzilla = async queryParameters => (
+const queryBugzilla = async (queryParameters) => (
   fetchJson(generateBugzillaRestApiUrl(queryParameters)));
 
 export default queryBugzilla;

@@ -45,8 +45,6 @@ const styles = ({
 });
 
 class MainContainer extends Component {
-    static contextType = AuthContext;
-
     state = DEFAULT_STATE;
 
     constructor(props) {
@@ -234,14 +232,14 @@ class MainContainer extends Component {
       // the same data structure and make this logic simpler. We could use a
       // property 'team' to distinguish a component from a set of components
       if (teamKey) {
-        this.setState(prevState => ({
+        this.setState((prevState) => ({
           componentDetails: {
             title: prevState.teamComponents[teamKey].label,
             ...prevState.teamComponents[teamKey],
           },
         }));
       } else {
-        this.setState(prevState => ({
+        this.setState((prevState) => ({
           componentDetails: {
             title: componentKey,
             ...prevState.bugzillaComponents[componentKey],
@@ -272,6 +270,7 @@ class MainContainer extends Component {
       const { context } = this;
       const userSession = context.getUserSession();
 
+      /* eslint-disable react/jsx-props-no-spreading */
       return (
         <div>
           <Header
@@ -333,5 +332,7 @@ MainContainer.propTypes = {
   classes: PropTypes.shape().isRequired,
   location: PropTypes.shape().isRequired,
 };
+
+MainContainer.contextType = AuthContext;
 
 export default withStyles(styles)(MainContainer);

@@ -82,16 +82,16 @@ const getTableHeaders = (data, onComponentDetails) => {
     options: {
       filter: false,
       viewColumns: false,
-      customBodyRender: value => (
+      customBodyRender: (value) => (
         value
           ? (
             <Link
               href="/#"
-              onClick={e => onComponentDetails(e, {
+              onClick={(e) => onComponentDetails(e, {
                 componentKey: `${value.product}::${value.component}`,
                 teamKey: value.teamKey,
               })}
-              onKeyPress={e => onComponentDetails(e, {
+              onKeyPress={(e) => onComponentDetails(e, {
                 componentKey: `${value.product}::${value.component}`,
                 teamKey: value.teamKey,
               })}
@@ -118,7 +118,7 @@ const getTableHeaders = (data, onComponentDetails) => {
       viewColumns: showColumn,
       // If hidden is true, hide the column in the table by default
       display: !showColumn,
-      customBodyRender: value => (
+      customBodyRender: (value) => (
         <Link
           href={value ? value.link : '#'}
           target="_blank"
@@ -157,7 +157,7 @@ const options = {
    * @returns Array<metric | null>
    */
 const BZqueryToDataCount = (query, metrics) => (
-  Object.keys(query).map(eachQuery => (metrics[eachQuery] ? metrics[eachQuery] : null))
+  Object.keys(query).map((eachQuery) => (metrics[eachQuery] ? metrics[eachQuery] : null))
 );
 
 /**
@@ -165,7 +165,7 @@ const BZqueryToDataCount = (query, metrics) => (
    * @param {Array} bugzillaComponents
    * @returns {Array}
    */
-const getBugzillaComponentsData = bugzillaComponents => bugzillaComponents
+const getBugzillaComponentsData = (bugzillaComponents) => bugzillaComponents
   .sort(sortByComponentName)
   .map(({
     label, component, product, metrics = {}, teamKey = null,
@@ -199,6 +199,7 @@ const BugzillaComponents = ({
 
 BugzillaComponents.propTypes = {
   classes: PropTypes.shape({}).isRequired,
+  title: PropTypes.string.isRequired,
   bugzillaComponents: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,

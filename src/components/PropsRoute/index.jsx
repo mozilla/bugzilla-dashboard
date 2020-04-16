@@ -4,8 +4,9 @@ import { Route } from 'react-router-dom';
 
 const PropsRoute = ({ component, ...props }) => (
   <Route
+    /* eslint-disable react/jsx-props-no-spreading */
     {...props}
-    render={routeProps => React.createElement(component, Object.assign({}, routeProps, props))}
+    render={(routeProps) => React.createElement(component, { ...routeProps, ...props })}
   />
 );
 

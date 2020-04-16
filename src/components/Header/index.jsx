@@ -8,7 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import { NavLink } from 'react-router-dom';
 import CredentialsMenu from '../../views/CredentialsMenu';
 
-const styles = theme => ({
+const styles = (theme) => ({
   styledToolbar: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -31,7 +31,9 @@ const Header = ({
 );
 
 Header.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    styledToolbar: PropTypes.string.isRequired,
+  }).isRequired,
   selectedTabIndex: PropTypes.number.isRequired,
   handleTabChange: PropTypes.func.isRequired,
   userId: PropTypes.string.isRequired,

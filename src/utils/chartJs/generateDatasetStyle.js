@@ -1,4 +1,4 @@
-const generateLineChartStyle = color => ({
+const generateLineChartStyle = (color) => ({
   backgroundColor: color,
   borderColor: color,
   fill: false,
@@ -7,7 +7,7 @@ const generateLineChartStyle = color => ({
   lineTension: '0',
 });
 
-const generateScatterChartStyle = color => ({
+const generateScatterChartStyle = (color) => ({
   backgroundColor: color,
 });
 

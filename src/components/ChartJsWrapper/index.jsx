@@ -35,7 +35,9 @@ const ChartJsWrapper = ({
 
 // The properties are to match ChartJs properties
 ChartJsWrapper.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({
+    chartContainer: PropTypes.isRequired,
+  }).isRequired,
   options: PropTypes.shape({
     reverse: PropTypes.bool,
     scaleLabel: PropTypes.string,
