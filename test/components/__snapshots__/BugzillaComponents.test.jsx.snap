@@ -19,7 +19,7 @@ exports[`renders components 1`] = `
         <h6
           className="MuiTypography-root-59 MuiTypography-h6-76 MUIDataTableToolbar-titleText-48"
         >
-          
+          Unknown
         </h6>
       </div>
     </div>
@@ -144,7 +144,7 @@ exports[`renders components 1`] = `
       <caption
         className="MUIDataTable-caption-12"
       >
-        
+        Unknown
       </caption>
       <thead
         className="MuiTableHead-root-129 MUIDataTableHead-responsiveStacked-128 MUIDataTableHead-main-127"
@@ -1383,7 +1383,7 @@ exports[`renders components bucketed as teams 1`] = `
         <h6
           className="MuiTypography-root-299 MuiTypography-h6-316 MUIDataTableToolbar-titleText-288"
         >
-          
+          Unknown
         </h6>
       </div>
     </div>
@@ -1508,7 +1508,7 @@ exports[`renders components bucketed as teams 1`] = `
       <caption
         className="MUIDataTable-caption-252"
       >
-        
+        Unknown
       </caption>
       <thead
         className="MuiTableHead-root-369 MUIDataTableHead-responsiveStacked-368 MUIDataTableHead-main-367"

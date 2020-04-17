@@ -110,7 +110,7 @@ class Reportees extends React.PureComponent {
 }
 Reportees.propTypes = {
   classes: PropTypes.shape({
-    root: PropTypes.shape({}),
+    root: PropTypes.string.isRequired,
   }).isRequired,
   userId: PropTypes.string,
   partialOrg: PropTypes.shape({}).isRequired,

@@ -124,14 +124,14 @@ const BugzillaComponentDetails = ({
 
 BugzillaComponentDetails.propTypes = {
   classes: PropTypes.shape({
-    card: PropTypes.shape({}),
-    metricButton: PropTypes.shape({}),
-    metricCardGraphContainer: PropTypes.shape({}),
-    metricContainer: PropTypes.shape({}),
-    metricCounter: PropTypes.shape({}),
-    metricHeader: PropTypes.shape({}),
-    metricLabel: PropTypes.shape({}),
-    metricLink: PropTypes.shape({}),
+    card: PropTypes.string.isRequired,
+    metricButton: PropTypes.string.isRequired,
+    metricCardGraphContainer: PropTypes.string.isRequired,
+    metricContainer: PropTypes.string.isRequired,
+    metricCounter: PropTypes.string.isRequired,
+    metricHeader: PropTypes.string.isRequired,
+    metricLabel: PropTypes.string.isRequired,
+    metricLink: PropTypes.string.isRequired,
   }).isRequired,
   bugzillaEmail: PropTypes.string,
   product: PropTypes.oneOfType([
