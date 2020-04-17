@@ -199,7 +199,7 @@ const BugzillaComponents = ({
 
 BugzillaComponents.propTypes = {
   classes: PropTypes.shape({}).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   bugzillaComponents: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -219,6 +219,7 @@ BugzillaComponents.propTypes = {
 
 BugzillaComponents.defaultProps = {
   onComponentDetails: undefined,
+  title: 'Unknown',
 };
 
 export default withStyles(styles)(BugzillaComponents);
