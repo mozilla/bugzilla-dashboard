@@ -14,7 +14,9 @@ const config = {
     redirectUri: PRODUCTION ? 'https://bugzilla-management-dashboard.netlify.app' : 'http://localhost:5000',
     whitelisted: true,
     responseType: 'code',
-    maxExpires: '15 minutes',
+    query: {
+      expires: '2 weeks',
+    },
   },
   productComponentMetrics: 'project/relman/bugzilla-dashboard/product_component_data.json.gz',
   reporteesMetrics: 'project/relman/bugzilla-dashboard/reportee_data.json.gz',

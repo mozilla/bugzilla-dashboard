@@ -1,7 +1,9 @@
 import mitt from 'mitt';
 import UserSession from './UserSession';
 
-import { userSessionFromCode, renew as auth0Renew } from './oauth2';
+import { userSessionFromCode } from './oauth2';
+
+const STORAGE_KEY = 'taskcluster_user_session';
 
 /**
  * Controller for authentication-related pieces of the site.
@@ -21,7 +23,7 @@ export default class AuthController {
     this.renewalTimer = null;
 
     window.addEventListener('storage', ({ storageArea, key }) => {
-      if (storageArea === localStorage && key === 'userSession') {
+      if (storageArea === localStorage && key === STORAGE_KEY) {
         this.loadUserSession();
       }
     });
@@ -48,7 +50,7 @@ export default class AuthController {
 
       this.renewalTimer = window.setTimeout(() => {
         this.renewalTimer = null;
-        this.renew({ userSession });
+        this.renew(userSession);
       }, timeout);
     }
   }
@@ -68,7 +70,7 @@ export default class AuthController {
    * return the user session.
    */
   loadUserSession() {
-    const storedUserSession = localStorage.getItem('userSession');
+    const storedUserSession = localStorage.getItem(STORAGE_KEY);
     const userSession = storedUserSession
       ? UserSession.deserialize(storedUserSession)
       : null;
@@ -93,9 +95,9 @@ export default class AuthController {
    */
   setUserSession = (userSession) => {
     if (!userSession) {
-      localStorage.removeItem('userSession');
+      localStorage.removeItem(STORAGE_KEY);
     } else {
-      localStorage.setItem('userSession', userSession.serialize());
+      localStorage.setItem(STORAGE_KEY, userSession.serialize());
     }
 
     // localStorage updates do not trigger event listeners on the current window/tab,
@@ -104,14 +106,10 @@ export default class AuthController {
   };
 
   /**
-   * Renew the user session.  This is not possible for all auth methods, and will trivially succeed
-   * for methods that do not support it.  If it fails, the user will be logged out.
+   * Renew the user session.
+   * This is not currently supported by the Taskcluster OAuth, so we just clean the session
    */
-  async renew({ userSession }) {
-    try {
-      await auth0Renew({ userSession, authController: this });
-    } catch (err) {
-      this.setUserSession(null);
-    }
+  async renew() {
+    this.setUserSession(null);
   }
 }

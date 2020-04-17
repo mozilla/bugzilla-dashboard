@@ -72,6 +72,10 @@ class ProfileMenu extends React.Component {
             onClose={this.handleClose}
           >
             <MenuItem>{userSession.name}</MenuItem>
+            <MenuItem>
+              <span>Expires in&nbsp;</span>
+              {userSession.expiresIn}
+            </MenuItem>
             <MenuItem onClick={() => context.setUserSession(null)}>Sign out</MenuItem>
           </Menu>
         </div>
