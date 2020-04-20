@@ -1,4 +1,5 @@
 import { Index } from 'taskcluster-client-web';
+import moment from 'moment';
 import { TASKCLUSTER_ROOT_URL } from '../../config';
 
 const USER_ID_REGEX = /mozilla-auth0\/([\w-|]+)\/bugzilla-dashboard-([\w-]+)/;
@@ -31,8 +32,18 @@ export default class UserSession {
     Object.assign(this, options);
   }
 
-  static fromCredentials(credentials) {
-    return new UserSession({ type: 'credentials', email: 'nobody@mozilla.org', credentials });
+  static fromTaskclusterAuth(token, payload) {
+    // Detect when the credentials will expire
+    // And substract 1 minute to fetch new credentials before expiry
+    const expires = moment(payload.expires).subtract(1, 'minute');
+
+    return new UserSession({
+      type: 'credentials',
+      email: 'nobody@mozilla.org',
+      renewToken: token,
+      credentials: payload.credentials,
+      renewAfter: expires,
+    });
   }
 
   // determine whether the user changed from old to new; this is used by other components
@@ -52,10 +63,22 @@ export default class UserSession {
   // get the user's name
   get name() {
     return (
-      this.fullName
-      || (this.credentials && this.credentials.clientId)
+      (this.credentials && this.credentials.clientId)
       || 'unknown'
     );
+  }
+
+  // Get the expiry date as a nicely formated string
+  get expiresIn() {
+    const diff = moment(this.renewAfter).diff(moment());
+    const duration = moment.duration(diff);
+    if (duration.days() > 0) {
+      return `${duration.days()} days`;
+    }
+    if (duration.hours() > 0) {
+      return `${duration.hours()} hours`;
+    }
+    return `${duration.minutes()} minutes`;
   }
 
   get userId() {
@@ -75,9 +98,7 @@ export default class UserSession {
 
   // load Taskcluster credentials for this user
   getCredentials() {
-    return this.credentials
-      ? Promise.resolve(this.credentials)
-      : this.credentialAgent.getCredentials({});
+    return Promise.resolve(this.credentials);
   }
 
   static deserialize(value) {
@@ -85,7 +106,7 @@ export default class UserSession {
   }
 
   serialize() {
-    return JSON.stringify({ ...this, credentialAgent: undefined });
+    return JSON.stringify({ ...this });
   }
 
   getTaskClusterIndexClient = () => new Index({
