@@ -1,2517 +1,15 @@
 {
-    "ic@mozilla.com": [],
-    "someone@mydomain.com": [
+    "jwhitlock@mozilla.com": [
         {
-            "product": "Core",
-            "component": "DOM"
+            "product": "Location",
+            "component": "API Key"
         },
         {
-            "product": "Core",
-            "component": "DOM: Core & HTML"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Events"
-        },
-        {
-            "product": "Core",
-            "component": "Drag and Drop"
-        },
-        {
-            "product": "Core",
-            "component": "Editor"
-        },
-        {
-            "product": "Core",
-            "component": "Event Handling"
-        },
-        {
-            "product": "Core",
-            "component": "HTML: Form Submission"
-        },
-        {
-            "product": "Core",
-            "component": "HTML: Parser"
-        },
-        {
-            "product": "Core",
-            "component": "Keyboard: Navigation"
-        },
-        {
-            "product": "Core",
-            "component": "Selection"
-        },
-        {
-            "product": "Core",
-            "component": "Serializers"
-        }
-    ],
-    "manager@mozilla.com": [],
-    "nobody@mozilla.org": [
-        {
-            "product": "NSS",
-            "component": "Build"
-        },
-        {
-            "product": "NSS",
-            "component": "Tools"
-        },
-        {
-            "product": "Toolkit Graveyard",
-            "component": "Spatial Navigation"
-        },
-        {
-            "product": "Mozilla Localizations",
-            "component": "ia / Interlingua"
-        },
-        {
-            "product": "Core Graveyard",
-            "component": "DOM: Apps"
-        },
-        {
-            "product": "Core Graveyard",
-            "component": "DOM: Contacts"
-        },
-        {
-            "product": "Core Graveyard",
-            "component": "Widget: Gonk"
-        },
-        {
-            "product": "Firefox",
-            "component": "Shell Integration"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Web Apps"
-        },
-        {
-            "product": "Core",
-            "component": "X-remote"
-        },
-        {
-            "product": "Core",
-            "component": "XP Toolkit/Widgets: Menus"
-        },
-        {
-            "product": "Context Graph",
-            "component": "General"
-        },
-        {
-            "product": "Context Graph",
-            "component": "Recommendation Engine"
-        }
-    ],
-    "kwilson@mozilla.com": [
-        {
-            "product": "NSS",
-            "component": "CA Certificate Compliance"
-        },
-        {
-            "product": "NSS",
-            "component": "CA Certificate Root Program"
-        },
-        {
-            "product": "NSS",
-            "component": "CA Certificates Code"
-        }
-    ],
-    "jjones@mozilla.com": [
-        {
-            "product": "NSS",
-            "component": "Documentation"
-        },
-        {
-            "product": "Core",
-            "component": "Security Blacklists, Whitelists, and other State"
-        },
-        {
-            "product": "NSPR",
-            "component": "NSPR"
-        }
-    ],
-    "franziskuskiefer@gmail.com": [
-        {
-            "product": "NSS",
-            "component": "Libraries"
-        }
-    ],
-    "mwobensmith@mozilla.com": [
-        {
-            "product": "NSS",
-            "component": "Test"
-        }
-    ],
-    "jvehent@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "IP Reputation/ Tigerblood"
-        }
-    ],
-    "sphilp@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "Mission Control"
-        }
-    ],
-    "bpitts@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "Operations: Delivery Console"
-        }
-    ],
-    "mathieu@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "Server: Remote Settings"
-        },
-        {
-            "product": "Firefox",
-            "component": "Remote Settings Client"
-        }
-    ],
-    "ianb@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "Server: Screenshots"
-        },
-        {
-            "product": "Firefox",
-            "component": "Screenshots"
-        }
-    ],
-    "lcrouch@mozilla.com": [
-        {
-            "product": "Cloud Services",
-            "component": "Server: Shavar"
-        }
-    ],
-    "sdaswani@mozilla.com": [
-        {
-            "product": "Focus",
-            "component": "Security: Android"
-        },
-        {
-            "product": "Focus",
-            "component": "Security: iOS"
-        },
-        {
-            "product": "Firefox for FireTV",
-            "component": "Security: General"
-        },
-        {
-            "product": "Firefox for Echo Show",
-            "component": "Security: General"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Activity Stream"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Awesomescreen"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Custom Tabs"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Download Manager"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Favicon Handling"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "First Run"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "General"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Locale switching and selection"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Logins, Passwords and Form Fill"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Metrics"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Overlays"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Profile Handling"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Reader View"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Screencasting"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Settings and Preferences"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Text Selection"
-        }
-    ],
-    "jdescottes@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "about:debugging"
-        },
-        {
-            "product": "DevTools",
-            "component": "Application Panel"
-        },
-        {
-            "product": "DevTools",
-            "component": "Scratchpad"
-        },
-        {
-            "product": "DevTools",
-            "component": "WebIDE"
-        }
-    ],
-    "yzenevich@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Accessibility Tools"
-        }
-    ],
-    "dakatsuka@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Animation Inspector"
-        }
-    ],
-    "vporof@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Canvas Debugger"
-        },
-        {
-            "product": "DevTools",
-            "component": "WebGL Shader Editor"
-        }
-    ],
-    "gl@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Computed Styles Inspector"
-        },
-        {
-            "product": "DevTools",
-            "component": "CSS Rules Inspector"
-        },
-        {
-            "product": "DevTools",
-            "component": "Inspector"
-        },
-        {
-            "product": "DevTools",
-            "component": "Measuring Tool"
-        },
-        {
-            "product": "DevTools",
-            "component": "Responsive Design Mode"
-        },
-        {
-            "product": "DevTools",
-            "component": "Source Editor"
-        },
-        {
-            "product": "DevTools",
-            "component": "Style Editor"
-        }
-    ],
-    "nchevobbe@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Console"
-        },
-        {
-            "product": "DevTools",
-            "component": "Object Inspector"
-        }
-    ],
-    "jlaster@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Debugger"
-        }
-    ],
-    "odvarko@gmail.com": [
-        {
-            "product": "DevTools",
-            "component": "DOM"
-        },
-        {
-            "product": "DevTools",
-            "component": "JSON Viewer"
-        },
-        {
-            "product": "DevTools",
-            "component": "Netmonitor"
-        },
-        {
-            "product": "DevTools",
-            "component": "Shared Components"
-        }
-    ],
-    "rcaliman@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Font Inspector"
-        }
-    ],
-    "pbrosset@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Framework"
-        },
-        {
-            "product": "DevTools",
+            "product": "Location",
             "component": "General"
         }
     ],
-    "felash@gmail.com": [
-        {
-            "product": "DevTools",
-            "component": "Memory"
-        },
-        {
-            "product": "DevTools",
-            "component": "Performance Tools (Profiler/Timeline)"
-        }
-    ],
-    "mratcliffe@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Storage Inspector"
-        }
-    ],
-    "spenades@mozilla.com": [
-        {
-            "product": "DevTools",
-            "component": "Web Audio Editor"
-        }
-    ],
-    "ehumphries@mozilla.com": [
-        {
-            "product": "Shield",
-            "component": "Rollouts"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Administration"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Bulk Bug Edit Requests"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Editbugs Requests"
-        }
-    ],
-    "mdoglio@mozilla.com": [
-        {
-            "product": "Data Platform and Tools Graveyard",
-            "component": "Datasets: Crash Aggregates"
-        }
-    ],
-    "rharter@mozilla.com": [
-        {
-            "product": "Data Platform and Tools Graveyard",
-            "component": "Datasets: Cross-Sectional"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Search"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Documentation and Knowledge Repo (RTMO)"
-        },
-        {
-            "product": "Data Science",
-            "component": "Documentation"
-        }
-    ],
-    "rvitillo@mozilla.com": [
-        {
-            "product": "Data Platform and Tools Graveyard",
-            "component": "HBase"
-        }
-    ],
-    "rmcguigan@mozilla.com": [
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Ask a Question Workflow"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Contributor and Question Forums"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Forum"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Questions"
-        }
-    ],
-    "rtanglao@mozilla.com": [
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Feature request"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Knowledge Base Software"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Knowledge Base Software"
-        }
-    ],
-    "mana@mozilla.com": [
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "General"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Metrics / LSI"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "App"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Army of Awesome"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Code Quality"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "General"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Lithium Migration"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Mobile"
-        }
-    ],
-    "jsavage@mozilla.com": [
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Knowledge Base Content"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Search"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "User Experience & Design"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Knowledge Base Articles"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Knowledge Base Content"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Search"
-        }
-    ],
-    "mdziewonski@mozilla.com": [
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Localization"
-        },
-        {
-            "product": "support.mozilla.org - Lithium",
-            "component": "Users & Groups"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Localization"
-        },
-        {
-            "product": "support.mozilla.org",
-            "component": "Users and Groups"
-        }
-    ],
-    "gps@mozilla.com": [
-        {
-            "product": "Toolkit Graveyard",
-            "component": "Build Config"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "Mach Core"
-        }
-    ],
-    "miket@mozilla.com": [
-        {
-            "product": "Tech Evangelism",
-            "component": "Add-ons"
-        },
-        {
-            "product": "Tech Evangelism",
-            "component": "Desktop"
-        },
-        {
-            "product": "Tech Evangelism",
-            "component": "Mobile"
-        },
-        {
-            "product": "Web Compatibility Tools",
-            "component": "General"
-        },
-        {
-            "product": "Web Compatibility Tools",
-            "component": "Go Faster"
-        }
-    ],
-    "dustin@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Authentication"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Hooks"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Login"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Platform and Services"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Platform Libraries"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Scheduler"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Secrets"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "Task Configuration"
-        }
-    ],
-    "jhford@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "AWS-Provisioner"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Queue"
-        }
-    ],
-    "bstack@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Client Libraries"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Documentation"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Index"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Operations"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Redeployability"
-        }
-    ],
-    "wcosta@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Docker-Worker"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Integration"
-        }
-    ],
-    "coop@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "General"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Service Request"
-        }
-    ],
-    "pmoore@mozilla.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Generic-Worker"
-        },
-        {
-            "product": "Taskcluster",
-            "component": "Worker"
-        }
-    ],
-    "bugzeeeeee@gmail.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Github"
-        }
-    ],
-    "helfi92@gmail.com": [
-        {
-            "product": "Taskcluster",
-            "component": "Tools"
-        }
-    ],
-    "mcastelluccio@mozilla.com": [
-        {
-            "product": "External Software Affecting Firefox",
-            "component": "Flash (Adobe)"
-        },
-        {
-            "product": "External Software Affecting Firefox",
-            "component": "OpenH264"
-        },
-        {
-            "product": "External Software Affecting Firefox",
-            "component": "Other"
-        }
-    ],
-    "willkg@mozilla.com": [
-        {
-            "product": "Socorro",
-            "component": "Antenna"
-        },
-        {
-            "product": "Socorro",
-            "component": "Processor"
-        },
-        {
-            "product": "Socorro",
-            "component": "Signature"
-        }
-    ],
-    "peterbe@mozilla.com": [
-        {
-            "product": "Socorro",
-            "component": "Tecken Integration"
-        }
-    ],
-    "ddurst@mozilla.com": [
-        {
-            "product": "WebExtensions",
-            "component": "Android"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Compatibility"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Developer Tools"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Experiments"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Frontend"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "General"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Request Handling"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Storage"
-        },
-        {
-            "product": "WebExtensions",
-            "component": "Untriaged"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Add-on Manager"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Add-ons Manager"
-        }
-    ],
-    "mdeboer@mozilla.com": [
-        {
-            "product": "WebExtensions",
-            "component": "Themes"
-        },
-        {
-            "product": "Firefox",
-            "component": "Session Restore"
-        },
-        {
-            "product": "Core",
-            "component": "Find Backend"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Find Toolbar"
-        }
-    ],
-    "francesco.lodolo@gmail.com": [
-        {
-            "product": "Mozilla Localizations",
-            "component": "crh / Crimean Tatar"
-        },
-        {
-            "product": "Mozilla Localizations",
-            "component": "en-CA / English (Canada)"
-        },
-        {
-            "product": "Mozilla Localizations",
-            "component": "meh / Mixteco Yucuhiti"
-        },
-        {
-            "product": "Mozilla Localizations",
-            "component": "mix / Mixtepec Mixtec"
-        }
-    ],
-    "bhearsum@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Applications: Balrog (backend)"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Applications: Balrog (frontend)"
-        }
-    ],
-    "jlund@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Applications: MozharnessCore"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Custom Release Requests"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Release Requests"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "CIDuty"
-        }
-    ],
-    "rgarbas@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Applications: ServicesCore"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Applications: ToolTool"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Applications: TreeStatus"
-        }
-    ],
-    "rail@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Applications: Shipit (backend)"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Applications: Shipit (frontend)"
-        }
-    ],
-    "sfraser@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Documentation"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Other"
-        }
-    ],
-    "catlee@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "General"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Tools"
-        }
-    ],
-    "mtabara@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Bouncer"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Updates"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Uploading"
-        }
-    ],
-    "bugspam.Callek@gmail.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: L10N"
-        }
-    ],
-    "jlorenzo@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Pushapk"
-        },
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Snap"
-        }
-    ],
-    "aki@mozilla.com": [
-        {
-            "product": "Release Engineering",
-            "component": "Release Automation: Signing"
-        }
-    ],
-    "andy+bugzilla@mckay.pub": [
-        {
-            "product": "Testing Graveyard",
-            "component": "TPS"
-        }
-    ],
-    "kvijayan@mozilla.com": [
-        {
-            "product": "Core Graveyard",
-            "component": "DOM: Flyweb"
-        }
-    ],
-    "mak77@bonardo.net": [
-        {
-            "product": "Core Graveyard",
-            "component": "History: Global"
-        },
-        {
-            "product": "Firefox",
-            "component": "Address Bar"
-        },
-        {
-            "product": "Firefox",
-            "component": "Bookmarks & History"
-        },
-        {
-            "product": "Firefox",
-            "component": "RSS Discovery and Preview"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Autocomplete"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Places"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Storage"
-        }
-    ],
-    "l10n@mozilla.com": [
-        {
-            "product": "Core Graveyard",
-            "component": "RDF"
-        },
-        {
-            "product": "Core",
-            "component": "Localization"
-        }
-    ],
-    "philipp@bugzilla.kewis.ch": [
-        {
-            "product": "Thunderbird",
-            "component": "Add-Ons: Extensions API"
-        },
-        {
-            "product": "Thunderbird",
-            "component": "Add-Ons: General"
-        }
-    ],
-    "rob@thunderbird.net": [
-        {
-            "product": "Thunderbird",
-            "component": "Build Config"
-        },
-        {
-            "product": "MailNews Core",
-            "component": "Build Config"
-        }
-    ],
-    "justin@getpocket.com": [
-        {
-            "product": "Pocket",
-            "component": "Android client"
-        },
-        {
-            "product": "Pocket",
-            "component": "iOS client"
-        },
-        {
-            "product": "Firefox",
-            "component": "Pocket"
-        }
-    ],
-    "matt@getpocket.com": [
-        {
-            "product": "Pocket",
-            "component": "getpocket.com"
-        }
-    ],
-    "kmoir@mozilla.com": [
-        {
-            "product": "Firefox Build System",
-            "component": "Bootstrap Configuration"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "Developer Environment Integration"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "General"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "General: Unsupported Platforms"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "Generated Documentation"
-        }
-    ],
-    "ahal@mozilla.com": [
-        {
-            "product": "Firefox Build System",
-            "component": "Lint and Formatting"
-        },
-        {
-            "product": "Firefox Build System",
-            "component": "Try"
-        },
-        {
-            "product": "Testing",
-            "component": "CPPUnitTest"
-        },
-        {
-            "product": "Testing",
-            "component": "GTest"
-        },
-        {
-            "product": "Testing",
-            "component": "Mochitest"
-        },
-        {
-            "product": "Testing",
-            "component": "Python Test"
-        },
-        {
-            "product": "Testing",
-            "component": "Reftest"
-        }
-    ],
-    "sledru@mozilla.com": [
-        {
-            "product": "Firefox Build System",
-            "component": "Source Code Analysis"
-        }
-    ],
-    "nfroyd@mozilla.com": [
-        {
-            "product": "Firefox Build System",
-            "component": "Toolchains"
-        },
-        {
-            "product": "Core",
-            "component": "MFBT"
-        },
-        {
-            "product": "Core",
-            "component": "String"
-        },
-        {
-            "product": "Core",
-            "component": "XPCOM"
-        }
-    ],
-    "klahnakoski@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "ActiveData"
-        },
-        {
-            "product": "Testing",
-            "component": "Bugzilla-ETL"
-        },
-        {
-            "product": "Testing",
-            "component": "Code Coverage"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Bugzilla Anthropology Metrics"
-        }
-    ],
-    "bob@bclary.com": [
-        {
-            "product": "Testing",
-            "component": "Autophone"
-        },
-        {
-            "product": "Testing",
-            "component": "AWFY"
-        },
-        {
-            "product": "Testing",
-            "component": "AWSY"
-        }
-    ],
-    "hskupin@gmail.com": [
-        {
-            "product": "Testing",
-            "component": "Firefox UI Tests"
-        },
-        {
-            "product": "Testing",
-            "component": "geckodriver"
-        }
-    ],
-    "gbrown@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "General"
-        },
-        {
-            "product": "Testing",
-            "component": "Mozbase"
-        },
-        {
-            "product": "Testing",
-            "component": "XPCShell Harness"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Testing"
-        },
-        {
-            "product": "Tree Management",
-            "component": "OrangeFactor"
-        }
-    ],
-    "dburns@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "Marionette"
-        }
-    ],
-    "james@hoppipolla.co.uk": [
-        {
-            "product": "Testing",
-            "component": "Mozbase Rust"
-        },
-        {
-            "product": "Testing",
-            "component": "web-platform-tests"
-        }
-    ],
-    "wlachance@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "mozregression"
-        }
-    ],
-    "MattN+bmo@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "mozscreenshots"
-        },
-        {
-            "product": "Firefox",
-            "component": "Migration"
-        },
-        {
-            "product": "Firefox",
-            "component": "Tours"
-        },
-        {
-            "product": "Firefox",
-            "component": "WebPayments UI"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Form Autofill"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Form Manager"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Notifications and Alerts"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Password Manager"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Password Manager: Site Compatibility"
-        },
-        {
-            "product": "Toolkit",
-            "component": "WebPayments UI"
-        }
-    ],
-    "dave.hunt@gmail.com": [
-        {
-            "product": "Testing",
-            "component": "Performance"
-        }
-    ],
-    "rwood@mozilla.com": [
-        {
-            "product": "Testing",
-            "component": "Raptor"
-        },
-        {
-            "product": "Testing",
-            "component": "Talos"
-        }
-    ],
-    "jwalker@mozilla.com": [
-        {
-            "product": "DevTools Graveyard",
-            "component": "Graphic Commandline and Toolbar"
-        }
-    ],
-    "tspurway@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Activity Streams: Application Servers"
-        },
-        {
-            "product": "Firefox",
-            "component": "Activity Streams: General"
-        },
-        {
-            "product": "Firefox",
-            "component": "Activity Streams: Newtab"
-        },
-        {
-            "product": "Firefox",
-            "component": "Activity Streams: Server Operations"
-        },
-        {
-            "product": "Firefox",
-            "component": "Activity Streams: Timeline"
-        },
-        {
-            "product": "Firefox",
-            "component": "New Tab Page"
-        }
-    ],
-    "jhofmann@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Device Permissions"
-        },
-        {
-            "product": "Firefox",
-            "component": "Site Identity and Permission Panels"
-        },
-        {
-            "product": "Firefox",
-            "component": "Tracking Protection"
-        },
-        {
-            "product": "Core",
-            "component": "Permission Manager"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Data Sanitization"
-        }
-    ],
-    "mzehe@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Disability Access"
-        }
-    ],
-    "mozilla@kaply.com": [
-        {
-            "product": "Firefox",
-            "component": "Distributions"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Android partner distribution"
-        },
-        {
-            "product": "Core",
-            "component": "AutoConfig (Mission Control Desktop)"
-        }
-    ],
-    "paolo.mozmail@amadzone.org": [
-        {
-            "product": "Firefox",
-            "component": "Downloads Panel"
-        },
-        {
-            "product": "Firefox",
-            "component": "File Handling"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Downloads API"
-        }
-    ],
-    "felipc@gmail.com": [
-        {
-            "product": "Firefox",
-            "component": "Enterprise Policies"
-        },
-        {
-            "product": "Firefox",
-            "component": "Translation"
-        }
-    ],
-    "jorge@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Extension Compatibility"
-        }
-    ],
-    "markh@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Firefox Accounts"
-        },
-        {
-            "product": "Firefox",
-            "component": "Sync"
-        }
-    ],
-    "nhnt11@gmail.com": [
-        {
-            "product": "Firefox",
-            "component": "Firefox Monitor"
-        }
-    ],
-    "krupa.mozbugs@gmail.com": [
-        {
-            "product": "Firefox",
-            "component": "Foxfooding"
-        }
-    ],
-    "dolske@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "General"
-        },
-        {
-            "product": "Toolkit",
-            "component": "General"
-        }
-    ],
-    "bdahl@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Headless"
-        },
-        {
-            "product": "Firefox",
-            "component": "PDF Viewer"
-        }
-    ],
-    "mhowell@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Installer"
-        },
-        {
-            "product": "Toolkit",
-            "component": "NSIS Installer"
-        }
-    ],
-    "dao+bmo@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Keyboard Navigation"
-        },
-        {
-            "product": "Firefox",
-            "component": "Tabbed Browser"
-        },
-        {
-            "product": "Firefox",
-            "component": "Theme"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Themes"
-        }
-    ],
-    "jaws@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Menus"
-        },
-        {
-            "product": "Firefox",
-            "component": "Preferences"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Video/Audio Controls"
-        }
-    ],
-    "mcooper@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Normandy Client"
-        },
-        {
-            "product": "Firefox",
-            "component": "Normandy Server"
-        }
-    ],
-    "florian@queze.net": [
-        {
-            "product": "Firefox",
-            "component": "Page Info Window"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Startup and Profile System"
-        }
-    ],
-    "josh@joshmatthews.net": [
-        {
-            "product": "Firefox",
-            "component": "Private Browsing"
-        },
-        {
-            "product": "Core",
-            "component": "Geolocation"
-        }
-    ],
-    "adw@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Search"
-        }
-    ],
-    "wleung@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Security"
-        },
-        {
-            "product": "Core",
-            "component": "Security"
-        }
-    ],
-    "ptheriault@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Security: Review Requests"
-        }
-    ],
-    "mixedpuppy@gmail.com": [
-        {
-            "product": "Firefox",
-            "component": "SocialAPI"
-        },
-        {
-            "product": "Firefox",
-            "component": "SocialAPI: Providers"
-        }
-    ],
-    "gijskruitbosch+bugs@gmail.com": [
-        {
-            "product": "Firefox",
-            "component": "Toolbars and Customization"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Blocklist Implementation"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Reader Mode"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Toolbars and Toolbar Customization"
-        }
-    ],
-    "past@mozilla.com": [
-        {
-            "product": "Firefox",
-            "component": "Untriaged"
-        }
-    ],
-    "max@mxli.us": [
-        {
-            "product": "Emerging Markets",
-            "component": "General"
-        },
-        {
-            "product": "Emerging Markets",
-            "component": "Security: Rocket"
-        }
-    ],
-    "gkruglov@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "Android Sync"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Data Providers"
-        },
-        {
-            "product": "Firefox for Android",
-            "component": "Firefox Accounts"
-        }
-    ],
-    "jyavenard@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "Audio/Video"
-        }
-    ],
-    "nalexander@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "Build Config & IDE Support"
-        }
-    ],
-    "cpeterson@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "GeckoView"
-        }
-    ],
-    "snorp@snorp.net": [
-        {
-            "product": "Firefox for Android",
-            "component": "JimDB"
-        },
-        {
-            "product": "Core",
-            "component": "Widget: Android"
-        }
-    ],
-    "m_kato@ga2.so-net.ne.jp": [
-        {
-            "product": "Firefox for Android",
-            "component": "Keyboards and IME"
-        },
-        {
-            "product": "Core",
-            "component": "Editor"
-        },
-        {
-            "product": "Core",
-            "component": "Internationalization"
-        }
-    ],
-    "jh+bugzilla@buttercookie.de": [
-        {
-            "product": "Firefox for Android",
-            "component": "Session Restore"
-        }
-    ],
-    "alam@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "Theme and Visual Design"
-        }
-    ],
-    "rbarker@mozilla.com": [
-        {
-            "product": "Firefox for Android",
-            "component": "Toolbar"
-        }
-    ],
-    "mrichards@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Conference Rooms"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Corsica"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Crestron"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Projects"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Vidyo"
-        }
-    ],
-    "akochendorfer@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "AVOps: Streaming"
-        }
-    ],
-    "smani@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "Blogs"
-        }
-    ],
-    "dhouse@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "RelOps: Hardware"
-        },
-        {
-            "product": "Infrastructure & Operations",
-            "component": "RelOps: Roller"
-        }
-    ],
-    "rthijssen@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "RelOps: OpenCloudConfig"
-        }
-    ],
-    "jwatkins@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "RelOps: Posix OS"
-        }
-    ],
-    "mcornmesser@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "RelOps: Windows OS"
-        }
-    ],
-    "cshields@mozilla.com": [
-        {
-            "product": "Infrastructure & Operations",
-            "component": "Runtime"
-        }
-    ],
-    "jorgk@jorgk.com": [
-        {
-            "product": "MailNews Core",
-            "component": "General"
-        },
-        {
-            "product": "MailNews Core",
-            "component": "XUL Replacements"
-        }
-    ],
-    "mcote@mozilla.com": [
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Bugzilla Change Notification System"
-        },
-        {
-            "product": "Conduit",
-            "component": "Administration"
-        },
-        {
-            "product": "Conduit",
-            "component": "Documentation"
-        },
-        {
-            "product": "Conduit",
-            "component": "General"
-        },
-        {
-            "product": "Conduit",
-            "component": "Infrastructure"
-        },
-        {
-            "product": "Conduit",
-            "component": "Lando"
-        },
-        {
-            "product": "Conduit",
-            "component": "Phabricator"
-        }
-    ],
-    "dylan@mozilla.com": [
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Continous Integration"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "General"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Graveyard Tasks"
-        },
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Search"
-        }
-    ],
-    "dkl@mozilla.com": [
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Extensions: PhabBugz"
-        }
-    ],
-    "ckolos@mozilla.com": [
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "Infrastructure"
-        }
-    ],
-    "kohei.yoshino@gmail.com": [
-        {
-            "product": "bugzilla.mozilla.org",
-            "component": "User Interface"
-        }
-    ],
-    "drno@ohlmeier.org": [
-        {
-            "product": "Core",
-            "component": "Audio/Video"
-        },
-        {
-            "product": "Core",
-            "component": "Audio/Video: cubeb"
-        },
-        {
-            "product": "Core",
-            "component": "Audio/Video: GMP"
-        },
-        {
-            "product": "Core",
-            "component": "Audio/Video: MediaStreamGraph"
-        },
-        {
-            "product": "Core",
-            "component": "Audio/Video: Playback"
-        },
-        {
-            "product": "Core",
-            "component": "Audio/Video: Recording"
-        },
-        {
-            "product": "Core",
-            "component": "Web Audio"
-        },
-        {
-            "product": "Core",
-            "component": "WebRTC"
-        },
-        {
-            "product": "Core",
-            "component": "WebRTC: Networking"
-        },
-        {
-            "product": "Core",
-            "component": "WebRTC: Signaling"
-        }
-    ],
-    "lsalzman@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Canvas: 2D"
-        },
-        {
-            "product": "Core",
-            "component": "Graphics: Text"
-        }
-    ],
-    "jgilbert@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Canvas: WebGL"
-        }
-    ],
-    "svoisen@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "CSS Parsing and Computation"
-        },
-        {
-            "product": "Core",
-            "component": "CSS Transitions and Animations"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: CSS Object Model"
-        },
-        {
-            "product": "Core",
-            "component": "Layout"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Block and Inline"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Columns"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Flexbox"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Floats"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Form Controls"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Generated Content, Lists, and Counters"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Grid"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Images, Video, and HTML Frames"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Positioned"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Ruby"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Scrolling and Overflow"
-        },
-        {
-            "product": "Core",
-            "component": "Layout: Tables"
-        },
-        {
-            "product": "Core",
-            "component": "Print Preview"
-        },
-        {
-            "product": "Core",
-            "component": "Printing: Output"
-        },
-        {
-            "product": "Core",
-            "component": "Printing: Setup"
-        },
-        {
-            "product": "Core",
-            "component": "SVG"
-        }
-    ],
-    "surkov.alexander@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Disability Access APIs"
-        }
-    ],
-    "n.nethercote@gmail.com": [
-        {
-            "product": "Core",
-            "component": "DMD"
-        },
-        {
-            "product": "Core",
-            "component": "Preferences: Backend"
-        },
-        {
-            "product": "Toolkit",
-            "component": "about:memory"
-        }
-    ],
-    "kyle@nonpolynomial.com": [
-        {
-            "product": "Core",
-            "component": "Document Navigation"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Bindings (WebIDL)"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Device Interfaces"
-        }
-    ],
-    "htsai@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Core & HTML"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Events"
-        },
-        {
-            "product": "Core",
-            "component": "Event Handling"
-        },
-        {
-            "product": "Core",
-            "component": "HTML: Form Submission"
-        },
-        {
-            "product": "Core",
-            "component": "HTML: Parser"
-        },
-        {
-            "product": "Core",
-            "component": "Keyboard: Navigation"
-        },
-        {
-            "product": "Core",
-            "component": "Selection"
-        },
-        {
-            "product": "Core",
-            "component": "Serializers"
-        }
-    ],
-    "bbirtles@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM: Animation"
-        }
-    ],
-    "jmathies@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM: Content Processes"
-        },
-        {
-            "product": "Core",
-            "component": "IPC"
-        },
-        {
-            "product": "Core",
-            "component": "Plug-ins"
-        },
-        {
-            "product": "Core",
-            "component": "Security: Process Sandboxing"
-        },
-        {
-            "product": "Core",
-            "component": "Spelling checker"
-        },
-        {
-            "product": "Core",
-            "component": "Widget"
-        },
-        {
-            "product": "Core",
-            "component": "Widget: Gtk"
-        },
-        {
-            "product": "Core",
-            "component": "Widget: Win32"
-        },
-        {
-            "product": "Core",
-            "component": "Widget: WinRT"
-        }
-    ],
-    "amarchesini@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM: File"
-        }
-    ],
-    "overholt@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM: IndexedDB"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Push Notifications"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Quota Manager"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Service Workers"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Web Payments"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Web Storage"
-        },
-        {
-            "product": "Core",
-            "component": "DOM: Workers"
-        }
-    ],
-    "sdeckelmann@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "DOM: Networking"
-        },
-        {
-            "product": "Core",
-            "component": "General"
-        },
-        {
-            "product": "Core",
-            "component": "Networking"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: Cache"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: Cookies"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: DNS"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: Domain Lists"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: File"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: FTP"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: HTTP"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: JAR"
-        },
-        {
-            "product": "Core",
-            "component": "Networking: WebSockets"
-        },
-        {
-            "product": "Core",
-            "component": "Security: CAPS"
-        },
-        {
-            "product": "Core",
-            "component": "Untriaged"
-        }
-    ],
-    "ckerschb@christophkerschbaumer.com": [
-        {
-            "product": "Core",
-            "component": "DOM: Security"
-        }
-    ],
-    "enndeakin@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Drag and Drop"
-        },
-        {
-            "product": "Core",
-            "component": "Window Management"
-        },
-        {
-            "product": "Core",
-            "component": "XUL"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Preferences"
-        },
-        {
-            "product": "Toolkit",
-            "component": "XUL Widgets"
-        }
-    ],
-    "myk@mykzilla.org": [
-        {
-            "product": "Core",
-            "component": "Embedding: APIs"
-        }
-    ],
-    "gtatum@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Gecko Profiler"
-        }
-    ],
-    "jbonisteel@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "GFX: Color Management"
-        },
-        {
-            "product": "Core",
-            "component": "Graphics"
-        },
-        {
-            "product": "Core",
-            "component": "Graphics: Layers"
-        }
-    ],
-    "mreavy@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Graphics: WebRender"
-        },
-        {
-            "product": "Firefox Graveyard",
-            "component": "Screen Sharing Whitelist"
-        }
-    ],
-    "gsvelto@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Hardware Abstraction Layer (HAL)"
-        }
-    ],
-    "ferjmoreno@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Identity"
-        }
-    ],
-    "aosmond@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Image Blocking"
-        },
-        {
-            "product": "Core",
-            "component": "ImageLib"
-        }
-    ],
-    "aklotz@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "IPC: MSCOM"
-        }
-    ],
-    "sdetar@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "JavaScript Engine"
-        },
-        {
-            "product": "Core",
-            "component": "JavaScript Engine: JIT"
-        }
-    ],
-    "jcoppeard@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "JavaScript: GC"
-        }
-    ],
-    "jwalden+bmo@mit.edu": [
-        {
-            "product": "Core",
-            "component": "JavaScript: Internationalization API"
-        }
-    ],
-    "jorendorff@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "JavaScript: Standard Library"
-        },
-        {
-            "product": "Core",
-            "component": "js-ctypes"
-        }
-    ],
-    "ajones@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Javascript: Web Assembly"
-        },
-        {
-            "product": "Core",
-            "component": "MathML"
-        },
-        {
-            "product": "Toolkit",
-            "component": "Crash Reporting"
-        }
-    ],
-    "jfkthame@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Layout: Text and Fonts"
-        }
-    ],
-    "mh+mozilla@glandium.org": [
-        {
-            "product": "Core",
-            "component": "Memory Allocator"
-        },
-        {
-            "product": "Core",
-            "component": "mozglue"
-        }
-    ],
-    "kats@bugmash.staktrace.com": [
-        {
-            "product": "Core",
-            "component": "Panning and Zooming"
-        }
-    ],
-    "vchin@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Performance"
-        }
-    ],
-    "abillings@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Platform Fuzzing Team"
-        }
-    ],
-    "dkeeler@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Security: PSM"
-        }
-    ],
-    "matt.woodrow@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Web Painting"
-        }
-    ],
-    "bhackett1024@gmail.com": [
-        {
-            "product": "Core",
-            "component": "Web Replay"
-        }
-    ],
-    "anatal@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "Web Speech"
-        }
-    ],
-    "jib@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "WebRTC: Audio/Video"
-        }
-    ],
-    "kgilbert@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "WebVR"
-        }
-    ],
-    "mstange@themasta.com": [
-        {
-            "product": "Core",
-            "component": "Widget: Cocoa"
-        }
-    ],
-    "nkochar@mozilla.com": [
-        {
-            "product": "Core",
-            "component": "XML"
-        },
-        {
-            "product": "Core",
-            "component": "XPConnect"
-        },
-        {
-            "product": "Core",
-            "component": "XSLT"
-        }
-    ],
-    "robert.strong.bugs@gmail.com": [
-        {
-            "product": "Toolkit",
-            "component": "Application Update"
-        }
-    ],
-    "dteller@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Async Tooling"
-        },
-        {
-            "product": "Toolkit",
-            "component": "OS.File"
-        }
-    ],
-    "awagner@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Blocklist Policy Requests"
-        }
-    ],
-    "tantek@cs.stanford.edu": [
-        {
-            "product": "Toolkit",
-            "component": "Microformats"
-        }
-    ],
-    "tarek@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Performance Monitoring"
-        }
-    ],
-    "mconley@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Printing"
-        }
-    ],
-    "dlee@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Safe Browsing"
-        }
-    ],
-    "gfritzsche@mozilla.com": [
-        {
-            "product": "Toolkit",
-            "component": "Telemetry"
-        }
-    ],
-    "jryans@gmail.com": [
-        {
-            "product": "Toolkit",
-            "component": "View Source"
-        }
-    ],
-    "stas@mozilla.com": [
-        {
-            "product": "Localization Infrastructure and Tools",
-            "component": "Fluent Migration"
-        }
-    ],
-    "mlopatka@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Add-on Recommender"
-        },
-        {
-            "product": "Context Graph",
-            "component": "Heatmap"
-        },
-        {
-            "product": "Context Graph",
-            "component": "Web Morphology"
-        }
-    ],
-    "mreid@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Addons"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: General"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Main Summary"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Pipeline Ingestion"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Telemetry APIs for Analysis"
-        }
-    ],
-    "fbertsch@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Client Count"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Error Aggregates"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Longitudinal"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Mobile"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Telemetry Aggregates"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Telemetry Aggregation Service"
-        }
-    ],
-    "ssuh@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Events"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Datasets: Experiments"
-        }
-    ],
-    "rmiller@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Distribution Viewer"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Redash (STMO)"
-        }
-    ],
-    "thuelbert@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "General"
-        }
-    ],
-    "moconnor@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Monitoring & Alerting"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Operations"
-        }
-    ],
-    "bimsland@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Presto"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Spark"
-        }
-    ],
-    "jezdez@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Scheduling"
-        },
-        {
-            "product": "Data Platform and Tools",
-            "component": "Telemetry Analysis Service (ATMO)"
-        }
-    ],
-    "chutten@mozilla.com": [
-        {
-            "product": "Data Platform and Tools",
-            "component": "Telemetry Dashboards (TMO)"
-        }
-    ],
-    "sarentz@mozilla.com": [
+    "jeevans@mozilla.com": [
         {
             "product": "Firefox for iOS",
             "component": "Browser"
@@ -2573,20 +71,418 @@
             "component": "Theme & Visual Design"
         },
         {
+            "product": "Firefox for iOS",
+            "component": "Third Party Security Issues"
+        }
+    ],
+    "sheehan@mozilla.com": [
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: bundleclone"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: bzexport"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: bzpost"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: configwizard"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: firefoxtree"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: hg.mozilla.org"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: mozext"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: Pushlog"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: qbackout"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: qimportbz"
+        },
+        {
+            "product": "Developer Services",
+            "component": "Mercurial: robustcheckout"
+        }
+    ],
+    "dustin@mozilla.com": [
+        {
+            "product": "Taskcluster Graveyard",
+            "component": "Scheduler"
+        }
+    ],
+    "sarentz@mozilla.com": [
+        {
+            "product": "Firefox for Echo Show",
+            "component": "Security: General"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Activity Stream"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Awesomescreen"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Custom Tabs"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Download Manager"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Favicon Handling"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "First Run"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Locale switching and selection"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Logins, Passwords and Form Fill"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Metrics"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Overlays"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Profile Handling"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Reader View"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Screencasting"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Settings and Preferences"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Text Selection"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Web Apps (PWAs)"
+        },
+        {
+            "product": "Focus",
+            "component": "Security: Android"
+        },
+        {
+            "product": "Focus",
+            "component": "Security: iOS"
+        },
+        {
+            "product": "Firefox for FireTV",
+            "component": "Security: General"
+        },
+        {
+            "product": "Fenix",
+            "component": "Security: Android"
+        },
+        {
             "product": "Focus-iOS",
+            "component": "General"
+        },
+        {
+            "product": "Fenix Graveyard",
             "component": "General"
         }
     ],
-    "erik@mozilla.com": [
+    "zeid@mozilla.com": [
         {
-            "product": "Context Graph",
-            "component": "Fathom"
+            "product": "Conduit",
+            "component": "Administration"
+        },
+        {
+            "product": "Conduit",
+            "component": "Documentation"
+        },
+        {
+            "product": "Conduit",
+            "component": "General"
+        },
+        {
+            "product": "Conduit",
+            "component": "Infrastructure"
+        },
+        {
+            "product": "Conduit",
+            "component": "Lando"
+        },
+        {
+            "product": "Conduit",
+            "component": "moz-phab"
+        },
+        {
+            "product": "Conduit",
+            "component": "Phabricator"
         }
     ],
-    "chris.lonnen@gmail.com": [
+    "glob@mozilla.com": [
         {
-            "product": "Context Graph",
-            "component": "Miracle"
+            "product": "Conduit",
+            "component": "Transplant"
+        }
+    ],
+    "mana@mozilla.com": [
+        {
+            "product": "support.mozilla.org",
+            "component": "App"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Army of Awesome"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Code Quality"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Forum"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "General"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Lithium Migration"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Localization"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Mobile"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Questions"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Users and Groups"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Ask a Question Workflow"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Contributor and Question Forums"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "General"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Localization"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Metrics / LSI"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Users & Groups"
+        }
+    ],
+    "jsavage@mozilla.com": [
+        {
+            "product": "support.mozilla.org",
+            "component": "Knowledge Base Articles"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Knowledge Base Content"
+        },
+        {
+            "product": "support.mozilla.org",
+            "component": "Search"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Knowledge Base Content"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Search"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "User Experience & Design"
+        }
+    ],
+    "rtanglao@mozilla.com": [
+        {
+            "product": "support.mozilla.org",
+            "component": "Knowledge Base Software"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Feature request"
+        },
+        {
+            "product": "support.mozilla.org - Lithium",
+            "component": "Knowledge Base Software"
+        }
+    ],
+    "mixedpuppy@gmail.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Add-on Manager"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Add-ons Manager"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Android"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Compatibility"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Developer Outreach"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Developer Tools"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Experiments"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Frontend"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "General"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Request Handling"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Storage"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Themes"
+        },
+        {
+            "product": "WebExtensions",
+            "component": "Untriaged"
+        },
+        {
+            "product": "Firefox Graveyard",
+            "component": "SocialAPI"
+        },
+        {
+            "product": "Firefox Graveyard",
+            "component": "SocialAPI: Providers"
+        }
+    ],
+    "mozilla@kaply.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Android partner distribution"
+        },
+        {
+            "product": "Core",
+            "component": "AutoConfig (Mission Control Desktop)"
+        },
+        {
+            "product": "Firefox",
+            "component": "Distributions"
+        },
+        {
+            "product": "Firefox",
+            "component": "Enterprise Policies"
+        }
+    ],
+    "gkruglov@mozilla.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Android Sync"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Data Providers"
+        },
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Firefox Accounts"
+        }
+    ],
+    "bvandyk@mozilla.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Audio/Video"
+        },
+        {
+            "product": "Core",
+            "component": "Audio/Video"
+        },
+        {
+            "product": "Core",
+            "component": "Audio/Video: GMP"
+        },
+        {
+            "product": "Core",
+            "component": "Audio/Video: Playback"
+        }
+    ],
+    "m_kato@ga2.so-net.ne.jp": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Keyboards and IME"
+        },
+        {
+            "product": "Core",
+            "component": "Internationalization"
         }
     ],
     "michael.l.comella@gmail.com": [
@@ -2595,13 +491,1433 @@
             "component": "Search Activity"
         }
     ],
+    "jh+bugzilla@buttercookie.de": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Session Restore"
+        }
+    ],
+    "alam@mozilla.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Theme and Visual Design"
+        }
+    ],
+    "rbarker@mozilla.com": [
+        {
+            "product": "Firefox for Android Graveyard",
+            "component": "Toolbar"
+        }
+    ],
+    "nobody@mozilla.org": [
+        {
+            "product": "Core Graveyard",
+            "component": "DOM: Apps"
+        },
+        {
+            "product": "Core Graveyard",
+            "component": "DOM: Contacts"
+        },
+        {
+            "product": "Core Graveyard",
+            "component": "Widget: Gonk"
+        },
+        {
+            "product": "Core Graveyard",
+            "component": "X-remote"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "ia / Interlingua"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Bastion Access"
+        },
+        {
+            "product": "Toolkit Graveyard",
+            "component": "Spatial Navigation"
+        },
+        {
+            "product": "Core",
+            "component": "String"
+        },
+        {
+            "product": "Context Graph Graveyard",
+            "component": "General"
+        },
+        {
+            "product": "Context Graph Graveyard",
+            "component": "Recommendation Engine"
+        }
+    ],
+    "kvijayan@mozilla.com": [
+        {
+            "product": "Core Graveyard",
+            "component": "DOM: Flyweb"
+        }
+    ],
+    "myk@mykzilla.org": [
+        {
+            "product": "Core Graveyard",
+            "component": "Embedding: APIs"
+        }
+    ],
+    "mak@mozilla.com": [
+        {
+            "product": "Core Graveyard",
+            "component": "History: Global"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Autocomplete"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Downloads API"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Places"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Storage"
+        },
+        {
+            "product": "Firefox",
+            "component": "Bookmarks & History"
+        },
+        {
+            "product": "Firefox",
+            "component": "Downloads Panel"
+        },
+        {
+            "product": "Firefox Graveyard",
+            "component": "RSS Discovery and Preview"
+        }
+    ],
+    "l10n@mozilla.com": [
+        {
+            "product": "Core Graveyard",
+            "component": "RDF"
+        }
+    ],
+    "jmathies@mozilla.com": [
+        {
+            "product": "Core Graveyard",
+            "component": "Widget: WinRT"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Form Autofill"
+        },
+        {
+            "product": "Core",
+            "component": "Graphics"
+        },
+        {
+            "product": "Core",
+            "component": "Graphics: Layers"
+        },
+        {
+            "product": "Core",
+            "component": "Graphics: WebRender"
+        },
+        {
+            "product": "Core",
+            "component": "Plug-ins"
+        },
+        {
+            "product": "Core",
+            "component": "Widget"
+        },
+        {
+            "product": "Core",
+            "component": "Widget: Win32"
+        },
+        {
+            "product": "Firefox",
+            "component": "WebPayments UI"
+        },
+        {
+            "product": "External Software Affecting Firefox",
+            "component": "Flash (Adobe)"
+        }
+    ],
+    "etoop@mozilla.com": [
+        {
+            "product": "GeckoView",
+            "component": "Extensions"
+        },
+        {
+            "product": "GeckoView",
+            "component": "GeckoViewExample"
+        },
+        {
+            "product": "GeckoView",
+            "component": "General"
+        },
+        {
+            "product": "GeckoView",
+            "component": "Tracking Protection"
+        }
+    ],
+    "kbrosnan@mozilla.com": [
+        {
+            "product": "Focus",
+            "component": "Stability"
+        },
+        {
+            "product": "Lockwise",
+            "component": "Security"
+        },
+        {
+            "product": "Fenix",
+            "component": "Stability"
+        }
+    ],
+    "vporof@mozilla.com": [
+        {
+            "product": "DevTools Graveyard",
+            "component": "Canvas Debugger"
+        },
+        {
+            "product": "DevTools Graveyard",
+            "component": "WebGL Shader Editor"
+        }
+    ],
+    "jdescottes@mozilla.com": [
+        {
+            "product": "DevTools Graveyard",
+            "component": "Scratchpad"
+        },
+        {
+            "product": "DevTools Graveyard",
+            "component": "WebIDE"
+        },
+        {
+            "product": "DevTools",
+            "component": "about:debugging"
+        },
+        {
+            "product": "DevTools",
+            "component": "Inspector"
+        },
+        {
+            "product": "DevTools",
+            "component": "Inspector: Changes"
+        },
+        {
+            "product": "DevTools",
+            "component": "Inspector: Layout"
+        },
+        {
+            "product": "DevTools",
+            "component": "Inspector: Rules"
+        },
+        {
+            "product": "DevTools",
+            "component": "Style Editor"
+        }
+    ],
+    "spenades@mozilla.com": [
+        {
+            "product": "DevTools Graveyard",
+            "component": "Web Audio Editor"
+        }
+    ],
+    "odvarko@gmail.com": [
+        {
+            "product": "DevTools Graveyard",
+            "component": "What's New"
+        },
+        {
+            "product": "DevTools",
+            "component": "Debugger"
+        },
+        {
+            "product": "DevTools",
+            "component": "Documentation"
+        },
+        {
+            "product": "DevTools",
+            "component": "DOM"
+        },
+        {
+            "product": "DevTools",
+            "component": "General"
+        },
+        {
+            "product": "DevTools",
+            "component": "JSON Viewer"
+        },
+        {
+            "product": "DevTools",
+            "component": "Netmonitor"
+        },
+        {
+            "product": "DevTools",
+            "component": "Shared Components"
+        },
+        {
+            "product": "Toolkit",
+            "component": "View Source"
+        }
+    ],
+    "mgrimes@mozilla.com": [
+        {
+            "product": "Product Innovation",
+            "component": "Consultation"
+        },
+        {
+            "product": "Product Innovation",
+            "component": "Project Request"
+        }
+    ],
+    "willkg@mozilla.com": [
+        {
+            "product": "Tecken",
+            "component": "General"
+        },
+        {
+            "product": "Tecken",
+            "component": "Symbolication"
+        },
+        {
+            "product": "Tecken",
+            "component": "Upload"
+        },
+        {
+            "product": "Socorro",
+            "component": "Antenna"
+        },
+        {
+            "product": "Socorro",
+            "component": "Processor"
+        },
+        {
+            "product": "Socorro",
+            "component": "Signature"
+        },
+        {
+            "product": "Socorro",
+            "component": "Tecken"
+        }
+    ],
+    "rob@thunderbird.net": [
+        {
+            "product": "MailNews Core",
+            "component": "Build Config"
+        },
+        {
+            "product": "Thunderbird",
+            "component": "Build Config"
+        }
+    ],
+    "jorgk-bmo@jorgk.com": [
+        {
+            "product": "MailNews Core",
+            "component": "General"
+        },
+        {
+            "product": "MailNews Core",
+            "component": "XUL Replacements"
+        }
+    ],
+    "kaie@kuix.de": [
+        {
+            "product": "MailNews Core",
+            "component": "Security: OpenPGP"
+        },
+        {
+            "product": "NSPR",
+            "component": "NSPR"
+        },
+        {
+            "product": "Chat Core",
+            "component": "Security: OTR"
+        }
+    ],
+    "klahnakoski@mozilla.com": [
+        {
+            "product": "bugzilla.mozilla.org Graveyard",
+            "component": "Bugzilla Anthropology Metrics"
+        },
+        {
+            "product": "Tree Management Graveyard",
+            "component": "Treeherder: Client Libraries"
+        },
+        {
+            "product": "Testing",
+            "component": "Bugzilla-ETL"
+        }
+    ],
+    "kmoir@mozilla.com": [
+        {
+            "product": "bugzilla.mozilla.org Graveyard",
+            "component": "Bugzilla Change Notification System"
+        },
+        {
+            "product": "Developer Infrastructure",
+            "component": "General"
+        },
+        {
+            "product": "Core",
+            "component": "Performance"
+        }
+    ],
+    "yzenevich@mozilla.com": [
+        {
+            "product": "DevTools",
+            "component": "Accessibility Tools"
+        }
+    ],
+    "balbeza@mozilla.com": [
+        {
+            "product": "DevTools",
+            "component": "Application Panel"
+        },
+        {
+            "product": "DevTools",
+            "component": "CSS and Themes"
+        },
+        {
+            "product": "DevTools",
+            "component": "Storage Inspector"
+        }
+    ],
+    "nchevobbe@mozilla.com": [
+        {
+            "product": "DevTools",
+            "component": "Console"
+        },
+        {
+            "product": "DevTools",
+            "component": "Object Inspector"
+        },
+        {
+            "product": "DevTools",
+            "component": "Responsive Design Mode"
+        },
+        {
+            "product": "DevTools",
+            "component": "Source Editor"
+        }
+    ],
+    "poirot.alex@gmail.com": [
+        {
+            "product": "DevTools",
+            "component": "Framework"
+        }
+    ],
+    "daisuke@birchill.co.jp": [
+        {
+            "product": "DevTools",
+            "component": "Inspector: Animations"
+        },
+        {
+            "product": "DevTools",
+            "component": "Inspector: Compatibility"
+        }
+    ],
+    "felash@gmail.com": [
+        {
+            "product": "DevTools",
+            "component": "Memory"
+        },
+        {
+            "product": "DevTools",
+            "component": "Performance Tools (Profiler/Timeline)"
+        }
+    ],
+    "coopcoopbware@gmail.com": [
+        {
+            "product": "Webtools",
+            "component": "Pulse"
+        }
+    ],
+    "stefancosten@mozilla.org.uk": [
+        {
+            "product": "Participation Infrastructure",
+            "component": "MCWS"
+        }
+    ],
+    "rgarbas@mozilla.com": [
+        {
+            "product": "Release Engineering",
+            "component": "Applications: Mapper"
+        },
+        {
+            "product": "Release Engineering Graveyard",
+            "component": "Applications: ServicesCore"
+        }
+    ],
+    "aki@mozilla.com": [
+        {
+            "product": "Release Engineering",
+            "component": "Applications: MozharnessCore"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Custom Release Requests"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: L10N"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Signing"
+        }
+    ],
+    "bhearsum@mozilla.com": [
+        {
+            "product": "Release Engineering",
+            "component": "Applications: Shipit (backend)"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Applications: Shipit (frontend)"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Applications: ToolTool"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Applications: TreeStatus"
+        },
+        {
+            "product": "Release Engineering Graveyard",
+            "component": "Applications: Balrog (backend)"
+        },
+        {
+            "product": "Release Engineering Graveyard",
+            "component": "Applications: Balrog (frontend)"
+        }
+    ],
+    "mtabara@mozilla.com": [
+        {
+            "product": "Release Engineering",
+            "component": "Documentation"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Firefox-CI Administration"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "General"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Bouncer"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Other"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Updates"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Uploading"
+        }
+    ],
+    "u504868@disabled.tld": [
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Pushapk"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Automation: Snap"
+        },
+        {
+            "product": "Release Engineering",
+            "component": "Release Requests"
+        }
+    ],
+    "catlee@mozilla.com": [
+        {
+            "product": "Release Engineering",
+            "component": "Tools"
+        }
+    ],
+    "andy+bugzilla@mckay.pub": [
+        {
+            "product": "Testing Graveyard",
+            "component": "TPS"
+        }
+    ],
+    "hskupin@gmail.com": [
+        {
+            "product": "Remote Protocol",
+            "component": "Agent"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Browser"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Debugger"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "DOM"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Emulation"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Fetch"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Input"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Inspector"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "IO"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Log"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Network"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Page"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Performance"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Runtime"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Security"
+        },
+        {
+            "product": "Remote Protocol",
+            "component": "Target"
+        },
+        {
+            "product": "Testing",
+            "component": "Firefox UI Tests"
+        },
+        {
+            "product": "Testing",
+            "component": "geckodriver"
+        },
+        {
+            "product": "Testing",
+            "component": "Marionette"
+        }
+    ],
+    "gene@mozilla.com": [
+        {
+            "product": "Enterprise Information Security Graveyard",
+            "component": "MIG"
+        },
+        {
+            "product": "Enterprise Information Security Graveyard",
+            "component": "MozDef"
+        },
+        {
+            "product": "Enterprise Information Security Graveyard",
+            "component": "NSM"
+        },
+        {
+            "product": "Enterprise Information Security Graveyard",
+            "component": "Penetration Test"
+        },
+        {
+            "product": "Enterprise Information Security Graveyard",
+            "component": "Threat Modeling"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "General"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "Incident"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "Investigation"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "Rapid Risk Analysis"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "Risk Record"
+        },
+        {
+            "product": "Enterprise Information Security",
+            "component": "Vulnerability Assessment"
+        }
+    ],
+    "mschwarzlose@mozilla.com": [
+        {
+            "product": "UX Systems",
+            "component": "Asset"
+        },
+        {
+            "product": "UX Systems",
+            "component": "Component"
+        },
+        {
+            "product": "UX Systems",
+            "component": "Design Review"
+        }
+    ],
+    "continuation@gmail.com": [
+        {
+            "product": "Toolkit",
+            "component": "about:memory"
+        },
+        {
+            "product": "Core",
+            "component": "DMD"
+        }
+    ],
+    "rtublitz@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Application Update"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Server: Sync"
+        },
+        {
+            "product": "Firefox",
+            "component": "Installer"
+        },
+        {
+            "product": "Firefox",
+            "component": "Shell Integration"
+        }
+    ],
+    "gijskruitbosch+bugs@gmail.com": [
+        {
+            "product": "Toolkit",
+            "component": "Async Tooling"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Blocklist Implementation"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Reader Mode"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Toolbars and Toolbar Customization"
+        },
+        {
+            "product": "Firefox",
+            "component": "File Handling"
+        },
+        {
+            "product": "Firefox",
+            "component": "Migration"
+        },
+        {
+            "product": "Firefox",
+            "component": "Toolbars and Customization"
+        }
+    ],
+    "awagner@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Blocklist Policy Requests"
+        }
+    ],
+    "gsvelto@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Crash Reporting"
+        },
+        {
+            "product": "Core",
+            "component": "Hardware Abstraction Layer (HAL)"
+        }
+    ],
+    "jhofmann@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Data Sanitization"
+        },
+        {
+            "product": "Firefox",
+            "component": "Private Browsing"
+        },
+        {
+            "product": "Firefox",
+            "component": "Security"
+        }
+    ],
+    "mcooper@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "FeatureGate"
+        },
+        {
+            "product": "Firefox",
+            "component": "Normandy Client"
+        },
+        {
+            "product": "Firefox",
+            "component": "Normandy Server"
+        }
+    ],
+    "mdeboer@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Find Toolbar"
+        },
+        {
+            "product": "Core",
+            "component": "Find Backend"
+        },
+        {
+            "product": "Firefox",
+            "component": "Session Restore"
+        }
+    ],
+    "sfoster@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Form Manager"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Password Manager"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Password Manager: Site Compatibility"
+        },
+        {
+            "product": "Firefox",
+            "component": "about:logins"
+        }
+    ],
+    "dtownsend@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "General"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Startup and Profile System"
+        },
+        {
+            "product": "Firefox",
+            "component": "General"
+        }
+    ],
+    "tspurway@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Notifications and Alerts"
+        },
+        {
+            "product": "Firefox",
+            "component": "Activity Streams: General"
+        },
+        {
+            "product": "Firefox",
+            "component": "Activity Streams: Server Operations"
+        },
+        {
+            "product": "Firefox",
+            "component": "Activity Streams: Timeline"
+        },
+        {
+            "product": "Firefox",
+            "component": "Messaging System"
+        }
+    ],
+    "mhowell@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "NSIS Installer"
+        }
+    ],
+    "brennie@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "OS.File"
+        }
+    ],
+    "florian@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Performance Monitoring"
+        },
+        {
+            "product": "Firefox",
+            "component": "Page Info Window"
+        },
+        {
+            "product": "Firefox",
+            "component": "Translation"
+        }
+    ],
+    "jaws@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Preferences"
+        },
+        {
+            "product": "Toolkit",
+            "component": "Video/Audio Controls"
+        },
+        {
+            "product": "Firefox",
+            "component": "Menus"
+        },
+        {
+            "product": "Firefox",
+            "component": "Preferences"
+        }
+    ],
+    "mstriemer@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Printing"
+        },
+        {
+            "product": "Toolkit",
+            "component": "XUL Widgets"
+        }
+    ],
+    "dlee@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Safe Browsing"
+        }
+    ],
+    "chutten@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Telemetry"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Telemetry Dashboards (TMO)"
+        }
+    ],
+    "dao+bmo@mozilla.com": [
+        {
+            "product": "Toolkit",
+            "component": "Themes"
+        },
+        {
+            "product": "Firefox",
+            "component": "Keyboard Navigation"
+        },
+        {
+            "product": "Firefox",
+            "component": "Tabbed Browser"
+        },
+        {
+            "product": "Firefox",
+            "component": "Theme"
+        },
+        {
+            "product": "Firefox",
+            "component": "Top Sites"
+        }
+    ],
+    "mozilla+bmo@noorenberghe.ca": [
+        {
+            "product": "Toolkit",
+            "component": "WebPayments UI"
+        },
+        {
+            "product": "Testing",
+            "component": "mozscreenshots"
+        }
+    ],
+    "francesco.lodolo@gmail.com": [
+        {
+            "product": "Mozilla Localizations",
+            "component": "bn / Bengali"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "bo / Tibetan"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "ca-valencia / Catalan (Valencian)"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "crh / Crimean Tatar"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "en-CA / English (Canada)"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "meh / Mixteco Yucuhiti"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "mix / Mixtepec Mixtec"
+        },
+        {
+            "product": "Mozilla Localizations",
+            "component": "szl / Silesian"
+        }
+    ],
+    "pmo@mozilla.com": [
+        {
+            "product": "Mozilla Localizations",
+            "component": "Other"
+        }
+    ],
+    "giorgos@mozilla.com": [
+        {
+            "product": "Snippets",
+            "component": "Service"
+        }
+    ],
+    "scolville@mozilla.com": [
+        {
+            "product": "addons.mozilla.org",
+            "component": "Security"
+        }
+    ],
+    "dkl@mozilla.com": [
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Administration"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "API"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Bug Creation/Editing"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Bulk Bug Edit Requests"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Continous Integration"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Custom Bug Entry Forms"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Documentation"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Editbugs Requests"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Email Notifications"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Extensions"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "General"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Graveyard Tasks"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "MyDashboard"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Phabricator Integration"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Search"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Splinter"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "User Interface"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "User Interface: Modal"
+        }
+    ],
+    "ckolos@mozilla.com": [
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Developer Box"
+        },
+        {
+            "product": "bugzilla.mozilla.org",
+            "component": "Infrastructure"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Bugzilla"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: QA Tools"
+        }
+    ],
+    "wlachance@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Iodide"
+        },
+        {
+            "product": "Testing",
+            "component": "mozregression"
+        }
+    ],
+    "gguthe@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Autograph"
+        }
+    ],
+    "bobm@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Firefox Monitor"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Firefox Private Relay"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Sync"
+        }
+    ],
+    "jbuckley@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Firefox Private Network"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Send"
+        },
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Speech"
+        }
+    ],
+    "jwajsberg@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Firefox Profiler"
+        }
+    ],
+    "bpitts@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Operations: Taskcluster"
+        }
+    ],
+    "abahnken@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Security Alerts"
+        }
+    ],
+    "mathieu@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Server: Remote Settings"
+        },
+        {
+            "product": "Firefox",
+            "component": "Remote Settings Client"
+        }
+    ],
+    "ianb@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Server: Screenshots"
+        }
+    ],
+    "lcrouch@mozilla.com": [
+        {
+            "product": "Cloud Services",
+            "component": "Server: Shavar"
+        },
+        {
+            "product": "Firefox",
+            "component": "Firefox Monitor"
+        }
+    ],
+    "mreid@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Addons"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: General"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: Main Summary"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "General"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Telemetry APIs for Analysis"
+        }
+    ],
+    "fbertsch@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Client Count"
+        },
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Error Aggregates"
+        },
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Longitudinal"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: Mobile"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: Telemetry Aggregates"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Telemetry Aggregation Service"
+        }
+    ],
+    "mdoglio@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Crash Aggregates"
+        }
+    ],
+    "rharter@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Datasets: Cross-Sectional"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Documentation and Knowledge Repo (RTMO)"
+        },
+        {
+            "product": "Data Science",
+            "component": "Documentation"
+        }
+    ],
+    "rmiller@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Distribution Viewer"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Redash (STMO)"
+        }
+    ],
+    "rvitillo@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "HBase"
+        }
+    ],
+    "bimsland@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Presto"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Spark"
+        }
+    ],
+    "jezdez@mozilla.com": [
+        {
+            "product": "Data Platform and Tools Graveyard",
+            "component": "Telemetry Analysis Service (ATMO)"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Scheduling"
+        }
+    ],
+    "mhoye@mozilla.com": [
+        {
+            "product": "mozilla.org",
+            "component": "Discussion Forums"
+        },
+        {
+            "product": "mozilla.org",
+            "component": "Governance"
+        },
+        {
+            "product": "Websites",
+            "component": "pad.mozilla.org"
+        },
+        {
+            "product": "Websites",
+            "component": "paste.mozilla.org"
+        },
+        {
+            "product": "Infrastructure & Operations",
+            "component": "Matrix"
+        }
+    ],
+    "josh@joshmatthews.net": [
+        {
+            "product": "mozilla.org",
+            "component": "Repository Account Requests"
+        }
+    ],
+    "chrismore.bugzilla@gmail.com": [
+        {
+            "product": "Firefox Private Network",
+            "component": "General"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Client for Android"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Client for iOS"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Client for Linux"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Client for Mac"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Client for Windows"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "General"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Platform"
+        },
+        {
+            "product": "Mozilla VPN",
+            "component": "Website"
+        }
+    ],
+    "kdubost@mozilla.com": [
+        {
+            "product": "Web Compatibility",
+            "component": "Desktop"
+        },
+        {
+            "product": "Web Compatibility",
+            "component": "Interventions"
+        },
+        {
+            "product": "Web Compatibility",
+            "component": "Mobile"
+        },
+        {
+            "product": "Web Compatibility",
+            "component": "Tooling & Investigations"
+        }
+    ],
+    "smalolepszy@gmail.com": [
+        {
+            "product": "Localization Infrastructure and Tools",
+            "component": "Fluent Migration"
+        }
+    ],
+    "gps@mozilla.com": [
+        {
+            "product": "Toolkit Graveyard",
+            "component": "Build Config"
+        }
+    ],
+    "tantek@cs.stanford.edu": [
+        {
+            "product": "Toolkit Graveyard",
+            "component": "Microformats"
+        }
+    ],
+    "mjaritz@mozilla.com": [
+        {
+            "product": "User Experience Design",
+            "component": "Firefox Desktop: Consultation"
+        },
+        {
+            "product": "User Experience Design",
+            "component": "Firefox Desktop: Project Request"
+        }
+    ],
     "mthayer@mozilla.com": [
         {
             "product": "Websites",
             "component": "irlpodcast.org"
         }
     ],
-    "pgerman@mozilla.com": [
+    "echo@mozilla.com": [
         {
             "product": "Websites",
             "component": "Web Analytics"
@@ -2611,6 +1927,1000 @@
         {
             "product": "Websites",
             "component": "wiki.mozilla.org"
+        }
+    ],
+    "anatal@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Applied Machine Learning"
+        }
+    ],
+    "padenot@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Audio/Video: cubeb"
+        },
+        {
+            "product": "Core",
+            "component": "Audio/Video: MediaStreamGraph"
+        },
+        {
+            "product": "Core",
+            "component": "Audio/Video: Recording"
+        },
+        {
+            "product": "Core",
+            "component": "Web Audio"
+        }
+    ],
+    "lsalzman@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Canvas: 2D"
+        },
+        {
+            "product": "Core",
+            "component": "Graphics: Text"
+        }
+    ],
+    "jgilbert@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Canvas: WebGL"
+        }
+    ],
+    "cam@mcc.id.au": [
+        {
+            "product": "Core",
+            "component": "CSS Parsing and Computation"
+        }
+    ],
+    "boris.chiou@gmail.com": [
+        {
+            "product": "Core",
+            "component": "CSS Transitions and Animations"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Animation"
+        }
+    ],
+    "jteh@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Disability Access APIs"
+        }
+    ],
+    "echen@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Bindings (WebIDL)"
+        }
+    ],
+    "nkochar@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Content Processes"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Navigation"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Window and Location"
+        }
+    ],
+    "jstutte@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Core & HTML"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Drag & Drop"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Editor"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Events"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: File"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Forms"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Geolocation"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: HTML Parser"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Networking"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: postMessage"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Push Notifications"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Selection"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Serializers"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Service Workers"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: UI Events & Focus Handling"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Web Payments"
+        },
+        {
+            "product": "Core",
+            "component": "DOM: Workers"
+        },
+        {
+            "product": "Core",
+            "component": "Networking"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: Cache"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: Cookies"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: DNS"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: Domain Lists"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: File"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: FTP"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: HTTP"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: JAR"
+        },
+        {
+            "product": "Core",
+            "component": "Networking: WebSockets"
+        },
+        {
+            "product": "Core",
+            "component": "Storage: Cache API"
+        },
+        {
+            "product": "Core",
+            "component": "Storage: IndexedDB"
+        },
+        {
+            "product": "Core",
+            "component": "Storage: localStorage & sessionStorage"
+        },
+        {
+            "product": "Core",
+            "component": "Storage: Quota Manager"
+        },
+        {
+            "product": "Core",
+            "component": "Storage: StorageManager"
+        }
+    ],
+    "emilio@crisal.io": [
+        {
+            "product": "Core",
+            "component": "DOM: CSS Object Model"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Form Controls"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Images, Video, and HTML Frames"
+        },
+        {
+            "product": "Core",
+            "component": "MathML"
+        }
+    ],
+    "dmu@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Device Interfaces"
+        }
+    ],
+    "ckerschb@christophkerschbaumer.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Security"
+        },
+        {
+            "product": "Core",
+            "component": "Security: CAPS"
+        }
+    ],
+    "dveditz@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Web Authentication"
+        },
+        {
+            "product": "Core",
+            "component": "Security"
+        }
+    ],
+    "dkeeler@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "DOM: Web Crypto"
+        },
+        {
+            "product": "Core",
+            "component": "Security Block-lists, Allow-lists, and other State"
+        },
+        {
+            "product": "Core",
+            "component": "Security: PSM"
+        }
+    ],
+    "choller@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Fuzzing"
+        },
+        {
+            "product": "Core",
+            "component": "Sanitizers"
+        }
+    ],
+    "gsquelart@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Gecko Profiler"
+        }
+    ],
+    "overholt@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "General"
+        },
+        {
+            "product": "Core",
+            "component": "Untriaged"
+        }
+    ],
+    "aosmond@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "GFX: Color Management"
+        },
+        {
+            "product": "Core",
+            "component": "Image Blocking"
+        },
+        {
+            "product": "Core",
+            "component": "ImageLib"
+        }
+    ],
+    "dmalyshau@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Graphics: WebGPU"
+        }
+    ],
+    "zbraniecki@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Internationalization: Localization"
+        }
+    ],
+    "jld@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "IPC"
+        }
+    ],
+    "aklotz@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "IPC: MSCOM"
+        }
+    ],
+    "sdetar@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "JavaScript Engine"
+        },
+        {
+            "product": "Core",
+            "component": "JavaScript Engine: JIT"
+        }
+    ],
+    "jcoppeard@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "JavaScript: GC"
+        }
+    ],
+    "jwalden@mit.edu": [
+        {
+            "product": "Core",
+            "component": "JavaScript: Internationalization API"
+        }
+    ],
+    "jorendorff@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "JavaScript: Standard Library"
+        },
+        {
+            "product": "Core",
+            "component": "js-ctypes"
+        }
+    ],
+    "lhansen@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Javascript: WebAssembly"
+        }
+    ],
+    "dholbert@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Layout"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Flexbox"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Positioned"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Ruby"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Tables"
+        }
+    ],
+    "jfkthame@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Layout: Block and Inline"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Text and Fonts"
+        }
+    ],
+    "aethanyc@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Layout: Columns"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Floats"
+        }
+    ],
+    "mats@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Layout: Generated Content, Lists, and Counters"
+        },
+        {
+            "product": "Core",
+            "component": "Layout: Grid"
+        }
+    ],
+    "hikezoe.birchill@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Layout: Scrolling and Overflow"
+        }
+    ],
+    "mh+mozilla@glandium.org": [
+        {
+            "product": "Core",
+            "component": "Memory Allocator"
+        },
+        {
+            "product": "Core",
+            "component": "mozglue"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "Toolchains"
+        }
+    ],
+    "sgiesecke@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "MFBT"
+        }
+    ],
+    "botond@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Panning and Zooming"
+        }
+    ],
+    "tihuang@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Permission Manager"
+        },
+        {
+            "product": "Core",
+            "component": "Privacy: Anti-Tracking"
+        }
+    ],
+    "kwright@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Preferences: Backend"
+        }
+    ],
+    "jwatt@jwatt.org": [
+        {
+            "product": "Core",
+            "component": "Print Preview"
+        },
+        {
+            "product": "Core",
+            "component": "Printing: Output"
+        },
+        {
+            "product": "Core",
+            "component": "Printing: Setup"
+        },
+        {
+            "product": "Core",
+            "component": "SVG"
+        }
+    ],
+    "gpascutto@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Security: Process Sandboxing"
+        },
+        {
+            "product": "External Software Affecting Firefox",
+            "component": "Other"
+        }
+    ],
+    "bugs@pettay.fi": [
+        {
+            "product": "Core",
+            "component": "Spelling checker"
+        }
+    ],
+    "matt.woodrow@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Web Painting"
+        }
+    ],
+    "anatal@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "Web Speech"
+        }
+    ],
+    "mfroman@nostrum.com": [
+        {
+            "product": "Core",
+            "component": "WebRTC"
+        },
+        {
+            "product": "External Software Affecting Firefox",
+            "component": "OpenH264"
+        }
+    ],
+    "jib@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "WebRTC: Audio/Video"
+        }
+    ],
+    "docfaraday@gmail.com": [
+        {
+            "product": "Core",
+            "component": "WebRTC: Networking"
+        }
+    ],
+    "na-g@nostrum.com": [
+        {
+            "product": "Core",
+            "component": "WebRTC: Signaling"
+        }
+    ],
+    "kearwood@kearwood.com": [
+        {
+            "product": "Core",
+            "component": "WebVR"
+        }
+    ],
+    "spohl.mozilla.bugs@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Widget: Cocoa"
+        }
+    ],
+    "stransky@redhat.com": [
+        {
+            "product": "Core",
+            "component": "Widget: Gtk"
+        }
+    ],
+    "enndeakin@gmail.com": [
+        {
+            "product": "Core",
+            "component": "Window Management"
+        },
+        {
+            "product": "Core",
+            "component": "XUL"
+        }
+    ],
+    "bgrinstead@mozilla.com": [
+        {
+            "product": "Core",
+            "component": "XBL"
+        }
+    ],
+    "peterv@propagandism.org": [
+        {
+            "product": "Core",
+            "component": "XML"
+        },
+        {
+            "product": "Core",
+            "component": "XPConnect"
+        },
+        {
+            "product": "Core",
+            "component": "XSLT"
+        }
+    ],
+    "nika@thelayzells.com": [
+        {
+            "product": "Core",
+            "component": "XPCOM"
+        }
+    ],
+    "bbeurdouche@mozilla.com": [
+        {
+            "product": "NSS",
+            "component": "Build"
+        },
+        {
+            "product": "NSS",
+            "component": "CA Certificates Code"
+        },
+        {
+            "product": "NSS",
+            "component": "Documentation"
+        },
+        {
+            "product": "NSS",
+            "component": "Libraries"
+        },
+        {
+            "product": "NSS",
+            "component": "Tools"
+        }
+    ],
+    "kwilson@mozilla.com": [
+        {
+            "product": "NSS",
+            "component": "CA Certificate Compliance"
+        },
+        {
+            "product": "NSS",
+            "component": "CA Certificate Root Program"
+        }
+    ],
+    "support@getpocket.com": [
+        {
+            "product": "Pocket",
+            "component": "Android client"
+        },
+        {
+            "product": "Pocket",
+            "component": "getpocket.com"
+        },
+        {
+            "product": "Pocket",
+            "component": "iOS client"
+        }
+    ],
+    "gpetrie@mozilla.com": [
+        {
+            "product": "User Research",
+            "component": "Consultation"
+        },
+        {
+            "product": "User Research",
+            "component": "Project Request"
+        }
+    ],
+    "adw@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Address Bar"
+        }
+    ],
+    "asa@mozilla.org": [
+        {
+            "product": "Firefox",
+            "component": "Disability Access"
+        }
+    ],
+    "jorge@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Extension Compatibility"
+        }
+    ],
+    "markh@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Firefox Accounts"
+        },
+        {
+            "product": "Firefox",
+            "component": "Sync"
+        }
+    ],
+    "bdahl@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Headless"
+        },
+        {
+            "product": "Firefox",
+            "component": "PDF Viewer"
+        }
+    ],
+    "tkikuchi@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Launcher Process"
+        },
+        {
+            "product": "External Software Affecting Firefox",
+            "component": "Telemetry"
+        }
+    ],
+    "sdowne@getpocket.com": [
+        {
+            "product": "Firefox",
+            "component": "New Tab Page"
+        },
+        {
+            "product": "Firefox",
+            "component": "Pocket"
+        }
+    ],
+    "khudson@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Nimbus Desktop Client"
+        }
+    ],
+    "rhelmer@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Pioneer"
+        }
+    ],
+    "ewright@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Protections UI"
+        }
+    ],
+    "emalysz@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Screenshots"
+        }
+    ],
+    "dharvey@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Search"
+        }
+    ],
+    "tarek@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Services Automation"
+        }
+    ],
+    "pbz@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Site Identity"
+        },
+        {
+            "product": "Firefox",
+            "component": "Site Permissions"
+        }
+    ],
+    "rdalal@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "System Add-ons: Off-train Deployment"
+        }
+    ],
+    "edilee@mozilla.com": [
+        {
+            "product": "Firefox",
+            "component": "Tours"
+        }
+    ],
+    "nalexander@mozilla.com": [
+        {
+            "product": "Firefox Build System",
+            "component": "Android Studio and Gradle Integration"
+        }
+    ],
+    "mhentges@mozilla.com": [
+        {
+            "product": "Firefox Build System",
+            "component": "Bootstrap Configuration"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "General"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "General: Unsupported Platforms"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "Mach Core"
+        }
+    ],
+    "bpostelnicu@mozilla.com": [
+        {
+            "product": "Firefox Build System",
+            "component": "Developer Environment Integration"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "Source Code Analysis"
+        }
+    ],
+    "sledru@mozilla.com": [
+        {
+            "product": "Firefox Build System",
+            "component": "Generated Documentation"
+        }
+    ],
+    "ahal@mozilla.com": [
+        {
+            "product": "Firefox Build System",
+            "component": "Lint and Formatting"
+        },
+        {
+            "product": "Firefox Build System",
+            "component": "Try"
+        },
+        {
+            "product": "Testing",
+            "component": "CPPUnitTest"
+        },
+        {
+            "product": "Testing",
+            "component": "General"
+        },
+        {
+            "product": "Testing",
+            "component": "GTest"
+        },
+        {
+            "product": "Testing",
+            "component": "Mochitest"
+        },
+        {
+            "product": "Testing",
+            "component": "Python Test"
+        }
+    ],
+    "mrichards@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "AVOps: Corsica"
+        },
+        {
+            "product": "Infrastructure & Operations",
+            "component": "AVOps: Crestron"
+        },
+        {
+            "product": "Infrastructure & Operations",
+            "component": "AVOps: Projects"
+        },
+        {
+            "product": "Infrastructure & Operations",
+            "component": "AVOps: Vidyo"
+        },
+        {
+            "product": "Infrastructure & Operations Graveyard",
+            "component": "AVOps: Conference Rooms"
+        }
+    ],
+    "akochendorfer@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "AVOps: Streaming"
+        }
+    ],
+    "kferrando@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "Blogs"
+        }
+    ],
+    "dhouse@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "RelOps: Hardware"
+        },
+        {
+            "product": "Infrastructure & Operations",
+            "component": "RelOps: Roller"
+        }
+    ],
+    "rthijssen@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "RelOps: OpenCloudConfig"
+        }
+    ],
+    "jwatkins@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "RelOps: Posix OS"
+        }
+    ],
+    "mcornmesser@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "RelOps: Windows OS"
+        }
+    ],
+    "cshields@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "Runtime"
+        }
+    ],
+    "jdow@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "SSO: Issues"
+        }
+    ],
+    "adelbarrio@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations",
+            "component": "SSO: Requests"
+        }
+    ],
+    "mlopatka@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Add-on Recommender"
+        },
+        {
+            "product": "Context Graph Graveyard",
+            "component": "Heatmap"
+        },
+        {
+            "product": "Context Graph Graveyard",
+            "component": "Web Morphology"
+        }
+    ],
+    "ssuh@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: Events"
+        },
+        {
+            "product": "Data Platform and Tools",
+            "component": "Datasets: Experiments"
+        }
+    ],
+    "alessio.placitelli@gmail.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Glean Metric Types"
+        }
+    ],
+    "jrediger@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Glean: SDK"
+        }
+    ],
+    "brizental@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Glean.js"
+        }
+    ],
+    "moconnor@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Monitoring & Alerting"
+        }
+    ],
+    "jthomas@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Operations"
+        }
+    ],
+    "jklukas@mozilla.com": [
+        {
+            "product": "Data Platform and Tools",
+            "component": "Pipeline Ingestion"
+        }
+    ],
+    "bzhao@mozilla.com": [
+        {
+            "product": "Mozilla China",
+            "component": "General"
+        }
+    ],
+    "bstack@mozilla.com": [
+        {
+            "product": "Taskcluster",
+            "component": "General"
         }
     ],
     "rweiss@mozilla.com": [
@@ -2632,7 +2942,203 @@
         },
         {
             "product": "Data Science",
+            "component": "Meta"
+        },
+        {
+            "product": "Data Science",
             "component": "Review"
+        }
+    ],
+    "krupa.mozbugs@gmail.com": [
+        {
+            "product": "Firefox Graveyard",
+            "component": "Foxfooding"
+        }
+    ],
+    "mreavy@mozilla.com": [
+        {
+            "product": "Firefox Graveyard",
+            "component": "Screen Sharing Whitelist"
+        }
+    ],
+    "ptheriault@mozilla.com": [
+        {
+            "product": "Firefox Graveyard",
+            "component": "Security: Review Requests"
+        }
+    ],
+    "jlund@mozilla.com": [
+        {
+            "product": "Infrastructure & Operations Graveyard",
+            "component": "CIDuty"
+        }
+    ],
+    "aryx.bugmail@gmx-topmail.de": [
+        {
+            "product": "Tree Management",
+            "component": "Bugherder"
+        }
+    ],
+    "sclements@mozilla.com": [
+        {
+            "product": "Tree Management",
+            "component": "Database"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Intermittent Failures View"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Perfherder"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Push Health"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: API"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Changelog"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Data Ingestion"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Docs & Development"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Frontend"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Infrastructure"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Job Triggering & Cancellation"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Log Parsing & Classification"
+        },
+        {
+            "product": "Tree Management",
+            "component": "Treeherder: Log Viewer"
+        },
+        {
+            "product": "Tree Management Graveyard",
+            "component": "OrangeFactor"
+        }
+    ],
+    "erik@mozilla.com": [
+        {
+            "product": "Context Graph Graveyard",
+            "component": "Fathom"
+        }
+    ],
+    "chris.lonnen@gmail.com": [
+        {
+            "product": "Context Graph Graveyard",
+            "component": "Miracle"
+        }
+    ],
+    "armenzg@gmail.com": [
+        {
+            "product": "Tree Management Graveyard",
+            "component": "Treeherder: SETA"
+        },
+        {
+            "product": "Tree Management Graveyard",
+            "component": "Web Tools"
+        }
+    ],
+    "cameron@dawsoncode.com": [
+        {
+            "product": "Tree Management Graveyard",
+            "component": "Treeherder: Test-based View"
+        }
+    ],
+    "john@thunderbird.net": [
+        {
+            "product": "Thunderbird",
+            "component": "Add-Ons: Extensions API"
+        },
+        {
+            "product": "Thunderbird",
+            "component": "Add-Ons: General"
+        }
+    ],
+    "mkmelin+mozilla@iki.fi": [
+        {
+            "product": "Thunderbird",
+            "component": "Upstream Synchronization"
+        }
+    ],
+    "dave.hunt@gmail.com": [
+        {
+            "product": "Testing",
+            "component": "AWSY"
+        },
+        {
+            "product": "Testing",
+            "component": "Performance"
+        }
+    ],
+    "mcastelluccio@mozilla.com": [
+        {
+            "product": "Testing",
+            "component": "Code Coverage"
+        }
+    ],
+    "gmierz2@outlook.com": [
+        {
+            "product": "Testing",
+            "component": "Condprofile"
+        },
+        {
+            "product": "Testing",
+            "component": "mozperftest"
+        },
+        {
+            "product": "Testing",
+            "component": "Raptor"
+        },
+        {
+            "product": "Testing",
+            "component": "Talos"
+        }
+    ],
+    "james@hoppipolla.co.uk": [
+        {
+            "product": "Testing",
+            "component": "Mozbase Rust"
+        },
+        {
+            "product": "Testing",
+            "component": "web-platform-tests"
+        }
+    ],
+    "tnikkel@gmail.com": [
+        {
+            "product": "Testing",
+            "component": "Reftest"
+        }
+    ],
+    "jmaher@mozilla.com": [
+        {
+            "product": "Testing",
+            "component": "XPCShell Harness"
         }
     ]
 }
