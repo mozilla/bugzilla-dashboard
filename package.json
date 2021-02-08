@@ -54,7 +54,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^8.2.1",
     "neutrino": "^9.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "react-test-renderer": "^16.13.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",

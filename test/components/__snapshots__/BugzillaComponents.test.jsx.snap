@@ -280,6 +280,57 @@ exports[`renders components 1`] = `
                 <div
                   className="MUIDataTableHeadCell-data-156"
                 >
+                  S1s defect
+                </div>
+                <div
+                  className="MUIDataTableHeadCell-sortAction-157"
+                >
+                  <span
+                    className="MuiButtonBase-root-109 MuiTableSortLabel-root-175 MUIDataTableHeadCell-sortLabelRoot-158"
+                    onBlur={[Function]}
+                    onContextMenu={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  />
+                </div>
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-head-164 MUIDataTableHeadCell-root-149 MUIDataTableHeadCell-fixedHeaderCommon-151 MUIDataTableHeadCell-fixedHeaderXAxis-152 MUIDataTableHeadCell-fixedHeaderYAxis-153"
+            scope="col"
+          >
+            <span
+              className="MUIDataTableHeadCell-toolButton-160"
+              onClick={[Function]}
+              onKeyUp={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                aria-describedby={null}
+                className="MUIDataTableHeadCell-sortAction-157"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                title="Sort"
+              >
+                <div
+                  className="MUIDataTableHeadCell-data-156"
+                >
                   Unassigned tracked beta bugs
                 </div>
                 <div
@@ -545,7 +596,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -571,12 +622,12 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
-            data-testid="MuiDataTableBodyCell-7-0"
+            data-testid="MuiDataTableBodyCell-3-0"
             onClick={[Function]}
           >
             <a
@@ -597,7 +648,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -623,12 +674,38 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
             data-testid="MuiDataTableBodyCell-9-0"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-59 MuiTypography-colorPrimary-89 MuiTypography-inline-94 MuiLink-root-192 MuiLink-underlineHover-194"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
+            data-testid="MuiDataTableBodyCell-10-0"
             onClick={[Function]}
           >
             <a
@@ -728,7 +805,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -754,12 +831,12 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
-            data-testid="MuiDataTableBodyCell-7-1"
+            data-testid="MuiDataTableBodyCell-3-1"
             onClick={[Function]}
           >
             <a
@@ -780,7 +857,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -806,12 +883,38 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
             data-testid="MuiDataTableBodyCell-9-1"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-59 MuiTypography-colorPrimary-89 MuiTypography-inline-94 MuiLink-root-192 MuiLink-underlineHover-194"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
+            data-testid="MuiDataTableBodyCell-10-1"
             onClick={[Function]}
           >
             <a
@@ -911,7 +1014,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -937,12 +1040,12 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
-            data-testid="MuiDataTableBodyCell-7-2"
+            data-testid="MuiDataTableBodyCell-3-2"
             onClick={[Function]}
           >
             <a
@@ -963,7 +1066,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -989,12 +1092,38 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
             data-testid="MuiDataTableBodyCell-9-2"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-59 MuiTypography-colorPrimary-89 MuiTypography-inline-94 MuiLink-root-192 MuiLink-underlineHover-194"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
+            data-testid="MuiDataTableBodyCell-10-2"
             onClick={[Function]}
           >
             <a
@@ -1094,7 +1223,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -1120,12 +1249,12 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
-            data-testid="MuiDataTableBodyCell-7-3"
+            data-testid="MuiDataTableBodyCell-3-3"
             onClick={[Function]}
           >
             <a
@@ -1146,7 +1275,7 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -1172,12 +1301,38 @@ exports[`renders components 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
             data-testid="MuiDataTableBodyCell-9-3"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-59 MuiTypography-colorPrimary-89 MuiTypography-inline-94 MuiLink-root-192 MuiLink-underlineHover-194"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-cellHide-188 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-cellStackedSmall-190"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-163 MuiTableCell-body-165 MUIDataTableBodyCell-root-187 MUIDataTableBodyCell-stackedCommon-189 MUIDataTableBodyCell-responsiveStackedSmall-191"
+            data-testid="MuiDataTableBodyCell-10-3"
             onClick={[Function]}
           >
             <a
@@ -1644,6 +1799,57 @@ exports[`renders components bucketed as teams 1`] = `
                 <div
                   className="MUIDataTableHeadCell-data-396"
                 >
+                  S1s defect
+                </div>
+                <div
+                  className="MUIDataTableHeadCell-sortAction-397"
+                >
+                  <span
+                    className="MuiButtonBase-root-349 MuiTableSortLabel-root-415 MUIDataTableHeadCell-sortLabelRoot-398"
+                    onBlur={[Function]}
+                    onContextMenu={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  />
+                </div>
+              </div>
+            </span>
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-head-404 MUIDataTableHeadCell-root-389 MUIDataTableHeadCell-fixedHeaderCommon-391 MUIDataTableHeadCell-fixedHeaderXAxis-392 MUIDataTableHeadCell-fixedHeaderYAxis-393"
+            scope="col"
+          >
+            <span
+              className="MUIDataTableHeadCell-toolButton-400"
+              onClick={[Function]}
+              onKeyUp={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                aria-describedby={null}
+                className="MUIDataTableHeadCell-sortAction-397"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOver={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                title="Sort"
+              >
+                <div
+                  className="MUIDataTableHeadCell-data-396"
+                >
                   Unassigned tracked beta bugs
                 </div>
                 <div
@@ -1909,7 +2115,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -1935,12 +2141,12 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
-            data-testid="MuiDataTableBodyCell-7-0"
+            data-testid="MuiDataTableBodyCell-3-0"
             onClick={[Function]}
           >
             <a
@@ -1961,7 +2167,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -1987,12 +2193,38 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
             data-testid="MuiDataTableBodyCell-9-0"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-299 MuiTypography-colorPrimary-329 MuiTypography-inline-334 MuiLink-root-432 MuiLink-underlineHover-434"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
+            data-testid="MuiDataTableBodyCell-10-0"
             onClick={[Function]}
           >
             <a
@@ -2092,7 +2324,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -2118,12 +2350,12 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
-            data-testid="MuiDataTableBodyCell-7-1"
+            data-testid="MuiDataTableBodyCell-3-1"
             onClick={[Function]}
           >
             <a
@@ -2144,7 +2376,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -2170,12 +2402,38 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
             data-testid="MuiDataTableBodyCell-9-1"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-299 MuiTypography-colorPrimary-329 MuiTypography-inline-334 MuiLink-root-432 MuiLink-underlineHover-434"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
+            data-testid="MuiDataTableBodyCell-10-1"
             onClick={[Function]}
           >
             <a
@@ -2275,7 +2533,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            Unassigned tracked beta bugs
+            S1s defect
           </td>
           <td
             aria-sort={null}
@@ -2301,12 +2559,12 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s task
+            Unassigned tracked beta bugs
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
-            data-testid="MuiDataTableBodyCell-7-2"
+            data-testid="MuiDataTableBodyCell-3-2"
             onClick={[Function]}
           >
             <a
@@ -2327,7 +2585,7 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            P1s enhancement
+            P1s task
           </td>
           <td
             aria-sort={null}
@@ -2353,12 +2611,38 @@ exports[`renders components bucketed as teams 1`] = `
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
           >
-            sec-{critical, high}
+            P1s enhancement
           </td>
           <td
             aria-sort={null}
             className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
             data-testid="MuiDataTableBodyCell-9-2"
+            onClick={[Function]}
+          >
+            <a
+              className="MuiTypography-root-299 MuiTypography-colorPrimary-329 MuiTypography-inline-334 MuiLink-root-432 MuiLink-underlineHover-434"
+              href="#"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+              target="_blank"
+            >
+              
+            </a>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-cellHide-428 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-cellStackedSmall-430"
+          >
+            sec-{critical, high}
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root-403 MuiTableCell-body-405 MUIDataTableBodyCell-root-427 MUIDataTableBodyCell-stackedCommon-429 MUIDataTableBodyCell-responsiveStackedSmall-431"
+            data-testid="MuiDataTableBodyCell-10-2"
             onClick={[Function]}
           >
             <a

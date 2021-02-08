@@ -89,7 +89,16 @@ export const PRODUCT_COMPONENT = {
           bug_type: 'defect',
       },
   },
-  unassignedBetaBugs: {
+  S1Defect: {
+    label: 'S1s defect',
+    parameters: {
+        f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
+        severity: 'S1',
+        resolution: '---',
+        bug_type: 'defect',
+    },
+},
+unassignedBetaBugs: {
       label: 'Unassigned tracked beta bugs',
       parameters: {
           // TODO: make that dynamic when https://github.com/mozilla-bteam/bmo/pull/1165
