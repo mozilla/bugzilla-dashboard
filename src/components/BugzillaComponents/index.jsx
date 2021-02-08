@@ -107,7 +107,7 @@ const getTableHeaders = (data, onComponentDetails) => {
     },
   };
 
-  const getColor = (value, key) => (key === 'P1Defect' && (value && value.count) > 0 ? 'red' : 'blue');
+  const getColor = (value, key) => ((key === 'P1Defect' || key === 'S1Defect') && (value && value.count) > 0 ? 'red' : 'blue');
 
   const Headers = Object.entries(data).map(([key, { label, hidden: showColumn = false }]) => ({
     name: `${label}`,
