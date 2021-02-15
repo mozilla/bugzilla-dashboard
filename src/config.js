@@ -93,7 +93,7 @@ export const PRODUCT_COMPONENT = {
     label: 'S1s defect',
     parameters: {
         f1: 'creation_ts', o1: 'greaterthaneq', v1: '-1y',
-        severity: 'S1',
+        bug_severity: 'S1',
         resolution: '---',
         bug_type: 'defect',
     },
